@@ -10,6 +10,9 @@
       <FileRef
          location = "group:TDTHotChocolateDummy.m">
       </FileRef>
+      <FileRef
+         location = "group:TDTHotChocolate.h">
+      </FileRef>
    </Group>
    <FileRef
       location = "group:Tests/TDTHotChocolateTests.xcodeproj">
