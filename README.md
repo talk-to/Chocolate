@@ -45,9 +45,9 @@ need to install them the first time around.
 Subsequently, you can use the `iOSTests` and `OSXTests` targets to run the
 test suite.
 
-Note: You will need to install [xcproj] ([why?][whyxcproj]) if you intend to
+Note: You will need to install [xcproj] \([why?][whyxcproj]) if you intend to
 modify `Tests/Podfile`.
 
 [CocoaPods]: http://cocoapods.org/
 [xcproj]: https://github.com/0xced/xcproj
-[whyxcproj]: https://github.com/CocoaPods/CocoaPods/wiki/Generate-ASCII-format-xcodeproj 
+[whyxcproj]: https://github.com/CocoaPods/CocoaPods/wiki/Generate-ASCII-format-xcodeproj
