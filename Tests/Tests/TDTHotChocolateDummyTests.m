@@ -1,4 +1,5 @@
 #import <XCTest/XCTest.h>
+#import <TDTHotChocolate/TDTHotChocolateDummy.h>
 
 @interface TDTHotChocolateDummyTests : XCTestCase
 
@@ -7,7 +8,8 @@
 @implementation TDTHotChocolateDummyTests
 
 - (void)testExample {
-  XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+  TDTHotChocolateDummy *dummy = [[TDTHotChocolateDummy alloc] init];
+  XCTAssertTrue([dummy isYummy], @"");
 }
 
 @end
