@@ -17,5 +17,6 @@ DerivedData
 *.hmap
 *.xccheckout
 
-#CocoaPods
-Pods
+# CocoaPods
+Tests/Pods
+Tests/Podfile.lock

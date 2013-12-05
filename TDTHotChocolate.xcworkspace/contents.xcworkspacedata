@@ -1,17 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Workspace
-   version = "1.0">
-   <Group
-      location = "group:TDTHotChocolate"
-      name = "TDTHotChocolate">
-      <FileRef
-         location = "group:TDTHotChocolateDummy.h">
-      </FileRef>
-      <FileRef
-         location = "group:TDTHotChocolateDummy.m">
-      </FileRef>
-   </Group>
-   <FileRef
-      location = "group:Tests/TDTHotChocolateTests.xcodeproj">
-   </FileRef>
-</Workspace>
+<?xml version='1.0' encoding='UTF-8'?><Workspace version='1.0'><FileRef location='group:Tests/TDTHotChocolateTests.xcodeproj'/><FileRef location='group:Tests/Pods/Pods.xcodeproj'/></Workspace>
