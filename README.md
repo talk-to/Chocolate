@@ -18,8 +18,6 @@ finding the headers and linking to the source files:
 Hot Chocolate is also a "pod", so you can compress the above manual steps by
 using [CocoaPods] and adding the following to your `Podfile`.
 
-#### Podfile
-
     pod 'TDTHotChocolate', :git => 'https://github.com/talk-to/hot-chocolate.git'
 
 
