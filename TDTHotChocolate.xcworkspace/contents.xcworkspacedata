@@ -13,6 +13,19 @@
       <FileRef
          location = "group:TDTHotChocolate.h">
       </FileRef>
+      <FileRef
+         location = "group:TDTFoundationAdditions.h">
+      </FileRef>
+      <Group
+         location = "group:FoundationAdditions"
+         name = "FoundationAdditions">
+         <FileRef
+            location = "group:TDTObjectOrDefault.h">
+         </FileRef>
+         <FileRef
+            location = "group:TDTObjectOrDefault.m">
+         </FileRef>
+      </Group>
    </Group>
    <FileRef
       location = "group:Tests/TDTHotChocolateTests.xcodeproj">
