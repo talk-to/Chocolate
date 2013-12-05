@@ -19,16 +19,6 @@
 		D46FB91842224DD9815F6940 /* libPods-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B19883317C304CA6BFFAC8AF /* libPods-osx.a */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		6919A18118505B4D000AB434 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6919A12A18504BD4000AB434 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6919A15F185058C5000AB434;
-			remoteInfo = OSXTests;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		1E8E579B402948FEB0484223 /* Pods-ios.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.xcconfig"; path = "Pods/Pods-ios.xcconfig"; sourceTree = "<group>"; };
 		66F91BDB14454ABB9E945B66 /* Pods-osx.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osx.xcconfig"; path = "Pods/Pods-osx.xcconfig"; sourceTree = "<group>"; };
@@ -201,7 +191,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				6919A18218505B4D000AB434 /* PBXTargetDependency */,
 			);
 			name = iOSTests;
 			productName = iOSTests;
@@ -340,14 +329,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		6919A18218505B4D000AB434 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6919A15F185058C5000AB434 /* OSXTests */;
-			targetProxy = 6919A18118505B4D000AB434 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6919A165185058C5000AB434 /* InfoPlist.strings */ = {
