@@ -48,6 +48,6 @@ test suite.
 Note: You will need to install [xcproj] ([why?][whyxcproj]) if you intend to
 modify `Tests/Podfile`.
 
-[CocoaPods]: http://cocoapods.org/ ""
-[xcproj]: https://github.com/0xced/xcproj "xcproj"
+[CocoaPods]: http://cocoapods.org/
+[xcproj]: https://github.com/0xced/xcproj
 [whyxcproj]: https://github.com/CocoaPods/CocoaPods/wiki/Generate-ASCII-format-xcodeproj 
