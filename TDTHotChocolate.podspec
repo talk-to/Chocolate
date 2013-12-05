@@ -10,5 +10,4 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = '10.9'
 
   s.source_files = 'TDTHotChocolate/**'
-  s.public_header_files = 'TDTHotChocolate/**.h'
 end
