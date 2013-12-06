@@ -10,9 +10,12 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = '10.9'
 
   s.source_files = 'TDTHotChocolate/TDTHotChocolate.h'
-  s.source_files = 'TDTHotChocolate/TDTHotChocolateDummy.{h,m}'
 
   s.header_mappings_dir = 'TDTHotChocolate'
+  
+  s.subspec 'Assertions' do |ss|
+    ss.source_files = 'TDTHotChocolate/TDTAssert.h'
+  end
   
   s.subspec 'FoundationAdditions' do |ss|
     ss.source_files = [ 'TDTHotChocolate/FoundationAdditions/*.{h,m}',

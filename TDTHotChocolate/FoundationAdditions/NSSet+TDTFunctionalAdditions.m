@@ -1,4 +1,5 @@
 #import "NSSet+TDTFunctionalAdditions.h"
+#import "../TDTAssert.h"
 #import "TDTSuppressPerformSelectorLeakWarning.h"
 
 @implementation NSSet (TDTFunctionalAdditions)
@@ -11,9 +12,7 @@
   } else if ([collection isKindOfClass:[NSDictionary class]]) {
     return [self setWithArray:[collection allValues]];
   } else {
-    @throw [NSException exceptionWithName:NSInvalidArgumentException
-                                   reason:@"collection should be either an NSSet, NSArray or NSDictionary"
-                                 userInfo:nil];
+    TDTAssertFailure(@"collection should be either an NSSet, NSArray or NSDictionary");
   }
 }
 

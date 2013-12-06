@@ -1,4 +1,5 @@
 #import "TDTRandomFixtures.h"
+#import <TDTHotChocolate/TDTAssert.h>
 
 @implementation NSString (TDTRandomFixtures)
 
@@ -33,7 +34,7 @@
         randomObject = [NSArray randomArrayOfLength:1];
         break;
       default:
-        abort();
+        TDTAssertFailure(nil);
     }
     [result addObject:randomObject];
   }
