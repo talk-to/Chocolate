@@ -18,6 +18,12 @@
 
 @end
 
+@interface NSArray (TDTRandomFixtures)
+
++ (instancetype)randomArrayOfLength:(NSUInteger)length;
+
+@end
+
 @interface NSURL (TDTRandomFixtures)
 
 + (instancetype)randomURL;
