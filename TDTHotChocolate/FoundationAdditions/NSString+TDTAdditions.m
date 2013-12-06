@@ -43,4 +43,8 @@
   return [self stringWithFormat:@"%lu", (unsigned long)uInteger];
 }
 
+- (BOOL)containsString:(NSString *)string {
+  return ([self rangeOfString:string].location != NSNotFound);
+}
+
 @end

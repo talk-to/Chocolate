@@ -23,6 +23,11 @@
 - (NSString *)stringByNillingBlanks;
 
 /**
+ @return YES if the receiver contains `string`
+ */
+- (BOOL)containsString:(NSString *)string;
+
+/**
  There is no platform agnostic format specifier for an `NSUInteger`. Ergo this.
  */
 + (NSString *)stringWithUnsignedInteger:(NSUInteger)uInteger;

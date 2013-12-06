@@ -1,4 +1,5 @@
 #import <XCTest/XCTest.h>
+#import <TDTHotChocolate/TDTTestingAdditions.h>
 #import <TDTHotChocolate/FoundationAdditions/NSString+TDTAdditions.h>
 
 @interface NSString_TDTAdditions_Tests : XCTestCase
@@ -46,6 +47,16 @@
   XCTAssertEqualObjects([NSString stringWithUnsignedInteger:42], @"42");
   XCTAssertEqualObjects([NSString stringWithUnsignedInteger:100000], @"100000",
                         @"UInt -> String is using localized formatting?");
+}
+
+- (void)testContainsString {
+  NSString *s = [NSString randomString];
+  XCTAssertFalse(NO);
+  XCTAssertTrue([s containsString:s]);
+  NSString *wrapper = [NSString stringWithFormat:@"--%@--", s];
+  XCTAssertTrue([wrapper containsString:s]);
+  NSString *empty = @"";
+  XCTAssertFalse([empty containsString:s]);
 }
 
 @end
