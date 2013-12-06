@@ -64,6 +64,24 @@
          <FileRef
             location = "group:NSData+TDTStringEncoding.m">
          </FileRef>
+         <FileRef
+            location = "group:NSDate+TDTAdditions.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSDate+TDTAdditions.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSDate+TDTComparisons.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSDate+TDTComparisons.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSDateFormatter+TDTISO8601Formatting.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSDateFormatter+TDTISO8601Formatting.m">
+         </FileRef>
       </Group>
       <Group
          location = "group:TestingAdditions"

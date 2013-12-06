@@ -7,3 +7,6 @@
 #import "FoundationAdditions/NSArray+TDTAdditions.h"
 #import "FoundationAdditions/NSString+TDTAdditions.h"
 #import "FoundationAdditions/NSData+TDTStringEncoding.h"
+#import "FoundationAdditions/NSDate+TDTAdditions.h"
+#import "FoundationAdditions/NSDate+TDTComparisons.h"
+#import "FoundationAdditions/NSDateFormatter+TDTISO8601Formatting.h"
