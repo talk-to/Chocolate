@@ -6,3 +6,4 @@
 #import "FoundationAdditions/TDTObjectOrDefault.h"
 #import "FoundationAdditions/NSArray+TDTAdditions.h"
 #import "FoundationAdditions/NSString+TDTAdditions.h"
+#import "FoundationAdditions/NSData+TDTStringEncoding.h"

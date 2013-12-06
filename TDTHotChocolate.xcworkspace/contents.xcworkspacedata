@@ -58,6 +58,12 @@
          <FileRef
             location = "group:NSString+TDTAdditions.m">
          </FileRef>
+         <FileRef
+            location = "group:NSData+TDTStringEncoding.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSData+TDTStringEncoding.m">
+         </FileRef>
       </Group>
       <Group
          location = "group:TestingAdditions"
