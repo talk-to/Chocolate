@@ -82,6 +82,12 @@
          <FileRef
             location = "group:NSDateFormatter+TDTISO8601Formatting.m">
          </FileRef>
+         <FileRef
+            location = "group:NSFileManager+TDTAdditions.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSFileManager+TDTAdditions.m">
+         </FileRef>
       </Group>
       <Group
          location = "group:TestingAdditions"

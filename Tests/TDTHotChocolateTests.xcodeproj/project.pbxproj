@@ -28,6 +28,8 @@
 		69ECAE421851CA63006C3176 /* NSDate_TDTAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ECAE3E1851CA63006C3176 /* NSDate_TDTAdditions_Tests.m */; };
 		69ECAE431851CA63006C3176 /* NSDate_TDTComparisons_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ECAE401851CA63006C3176 /* NSDate_TDTComparisons_Tests.m */; };
 		69ECAE441851CA63006C3176 /* NSDate_TDTComparisons_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ECAE401851CA63006C3176 /* NSDate_TDTComparisons_Tests.m */; };
+		69ECAE461851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ECAE451851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m */; };
+		69ECAE471851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ECAE451851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m */; };
 		D46FB91842224DD9815F6940 /* libPods-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B19883317C304CA6BFFAC8AF /* libPods-osx.a */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,7 @@
 		69E1C30C1850AF6B00E93E23 /* TDTObjectOrDefaultTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTObjectOrDefaultTests.m; sourceTree = "<group>"; };
 		69ECAE3E1851CA63006C3176 /* NSDate_TDTAdditions_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDate_TDTAdditions_Tests.m; sourceTree = "<group>"; };
 		69ECAE401851CA63006C3176 /* NSDate_TDTComparisons_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDate_TDTComparisons_Tests.m; sourceTree = "<group>"; };
+		69ECAE451851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFileManager_TDTAdditions_Tests.m; sourceTree = "<group>"; };
 		70C6CC271A614C068905497B /* libPods-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B19883317C304CA6BFFAC8AF /* libPods-osx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-osx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -176,6 +179,7 @@
 				69CB6FD31851B98F004D35DB /* NSString_TDTAdditions_Tests.m */,
 				69ECAE3E1851CA63006C3176 /* NSDate_TDTAdditions_Tests.m */,
 				69ECAE401851CA63006C3176 /* NSDate_TDTComparisons_Tests.m */,
+				69ECAE451851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -341,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69ECAE431851CA63006C3176 /* NSDate_TDTComparisons_Tests.m in Sources */,
+				69ECAE461851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m in Sources */,
 				69CB6FCA18517E63004D35DB /* NSArray_TDTFunctionalAdditions_Tests.m in Sources */,
 				69ECAE411851CA63006C3176 /* NSDate_TDTAdditions_Tests.m in Sources */,
 				69E1C30D1850AF6B00E93E23 /* TDTObjectOrDefaultTests.m in Sources */,
@@ -355,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69ECAE441851CA63006C3176 /* NSDate_TDTComparisons_Tests.m in Sources */,
+				69ECAE471851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m in Sources */,
 				69CB6FCB18517E63004D35DB /* NSArray_TDTFunctionalAdditions_Tests.m in Sources */,
 				69ECAE421851CA63006C3176 /* NSDate_TDTAdditions_Tests.m in Sources */,
 				69E1C30E1850AF6B00E93E23 /* TDTObjectOrDefaultTests.m in Sources */,
