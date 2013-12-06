@@ -16,6 +16,9 @@
       <FileRef
          location = "group:TDTAssert.h">
       </FileRef>
+      <FileRef
+         location = "group:TDTRuntimeAdditions.h">
+      </FileRef>
       <Group
          location = "group:FoundationAdditions"
          name = "FoundationAdditions">
@@ -58,6 +61,16 @@
          </FileRef>
          <FileRef
             location = "group:NSString+TDTNegation.m">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:RuntimeAdditions"
+         name = "RuntimeAdditions">
+         <FileRef
+            location = "group:TDTIsApplicationRunningTests.h">
+         </FileRef>
+         <FileRef
+            location = "group:TDTIsApplicationRunningTests.m">
          </FileRef>
       </Group>
    </Group>
