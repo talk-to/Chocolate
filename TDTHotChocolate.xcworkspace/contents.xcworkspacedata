@@ -20,6 +20,24 @@
          location = "group:FoundationAdditions"
          name = "FoundationAdditions">
          <FileRef
+            location = "group:NSArray+TDTFunctionalAdditions.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSArray+TDTFunctionalAdditions.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSSet+TDTFunctionalAdditions.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSSet+TDTFunctionalAdditions.m">
+         </FileRef>
+         <FileRef
+            location = "group:TDTFunctionalAdditionsBlockTypedefs.h">
+         </FileRef>
+         <FileRef
+            location = "group:TDTSuppressPerformSelectorLeakWarning.h">
+         </FileRef>
+         <FileRef
             location = "group:TDTObjectOrDefault.h">
          </FileRef>
          <FileRef

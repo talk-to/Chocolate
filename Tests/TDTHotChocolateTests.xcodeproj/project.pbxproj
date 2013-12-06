@@ -16,6 +16,10 @@
 		6919A17D18505B4D000AB434 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6919A17B18505B4D000AB434 /* InfoPlist.strings */; };
 		6919A18818505C92000AB434 /* TDTHotChocolateDummyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6919A18718505C92000AB434 /* TDTHotChocolateDummyTests.m */; };
 		6919A18918505C92000AB434 /* TDTHotChocolateDummyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6919A18718505C92000AB434 /* TDTHotChocolateDummyTests.m */; };
+		69CB6FCA18517E63004D35DB /* NSArray_TDTFunctionalAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CB6FC918517E63004D35DB /* NSArray_TDTFunctionalAdditions_Tests.m */; };
+		69CB6FCB18517E63004D35DB /* NSArray_TDTFunctionalAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CB6FC918517E63004D35DB /* NSArray_TDTFunctionalAdditions_Tests.m */; };
+		69CB6FCD18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CB6FCC18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m */; };
+		69CB6FCE18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CB6FCC18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m */; };
 		69E1C30D1850AF6B00E93E23 /* TDTObjectOrDefaultTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E1C30C1850AF6B00E93E23 /* TDTObjectOrDefaultTests.m */; };
 		69E1C30E1850AF6B00E93E23 /* TDTObjectOrDefaultTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E1C30C1850AF6B00E93E23 /* TDTObjectOrDefaultTests.m */; };
 		D46FB91842224DD9815F6940 /* libPods-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B19883317C304CA6BFFAC8AF /* libPods-osx.a */; };
@@ -40,6 +44,8 @@
 		6919A17C18505B4D000AB434 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6919A18018505B4D000AB434 /* iOSTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSTests-Prefix.pch"; sourceTree = "<group>"; };
 		6919A18718505C92000AB434 /* TDTHotChocolateDummyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTHotChocolateDummyTests.m; sourceTree = "<group>"; };
+		69CB6FC918517E63004D35DB /* NSArray_TDTFunctionalAdditions_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_TDTFunctionalAdditions_Tests.m; sourceTree = "<group>"; };
+		69CB6FCC18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSSet_TDTFunctionalAdditions_Tests.m; sourceTree = "<group>"; };
 		69E1C30C1850AF6B00E93E23 /* TDTObjectOrDefaultTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTObjectOrDefaultTests.m; sourceTree = "<group>"; };
 		70C6CC271A614C068905497B /* libPods-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B19883317C304CA6BFFAC8AF /* libPods-osx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-osx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				6919A18718505C92000AB434 /* TDTHotChocolateDummyTests.m */,
+				69CB6FC918517E63004D35DB /* NSArray_TDTFunctionalAdditions_Tests.m */,
+				69CB6FCC18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m */,
 				69E1C30C1850AF6B00E93E23 /* TDTObjectOrDefaultTests.m */,
 			);
 			path = Tests;
@@ -320,8 +328,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69CB6FCA18517E63004D35DB /* NSArray_TDTFunctionalAdditions_Tests.m in Sources */,
 				69E1C30D1850AF6B00E93E23 /* TDTObjectOrDefaultTests.m in Sources */,
 				6919A18818505C92000AB434 /* TDTHotChocolateDummyTests.m in Sources */,
+				69CB6FCD18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,8 +339,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69CB6FCB18517E63004D35DB /* NSArray_TDTFunctionalAdditions_Tests.m in Sources */,
 				69E1C30E1850AF6B00E93E23 /* TDTObjectOrDefaultTests.m in Sources */,
 				6919A18918505C92000AB434 /* TDTHotChocolateDummyTests.m in Sources */,
+				69CB6FCE18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

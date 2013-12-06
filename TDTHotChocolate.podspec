@@ -15,6 +15,7 @@ Pod::Spec.new do |s|
   s.header_mappings_dir = 'TDTHotChocolate'
   
   s.subspec 'FoundationAdditions' do |ss|
-    ss.source_files = 'TDTHotChocolate/FoundationAdditions/TDTObjectOrDefault.{h,m}', 'TDTHotChocolate/TDTFoundationAdditions.h'
+    ss.source_files = [ 'TDTHotChocolate/FoundationAdditions/*.{h,m}',
+                        'TDTHotChocolate/TDTFoundationAdditions.h' ]
   end
 end
