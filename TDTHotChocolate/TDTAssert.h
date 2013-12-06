@@ -26,6 +26,7 @@
                                                             file:[NSString stringWithUTF8String:__FILE__] \
                                                       lineNumber:__LINE__ \
                                                      description:(desc), ##__VA_ARGS__]; \
+     __builtin_unreachable(); \
      }				\
   __PRAGMA_POP_NO_EXTRA_ARG_WARNINGS \
   } while(0)
@@ -47,6 +48,7 @@
                                                             file:[NSString stringWithUTF8String:__FILE__] \
                                                       lineNumber:__LINE__ \
                                                      description:(desc), ##__VA_ARGS__]; \
+    __builtin_unreachable(); \
     }				\
   __PRAGMA_POP_NO_EXTRA_ARG_WARNINGS \
   } while(0)
