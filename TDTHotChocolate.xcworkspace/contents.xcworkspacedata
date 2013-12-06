@@ -5,12 +5,6 @@
       location = "group:TDTHotChocolate"
       name = "TDTHotChocolate">
       <FileRef
-         location = "group:TDTHotChocolateDummy.h">
-      </FileRef>
-      <FileRef
-         location = "group:TDTHotChocolateDummy.m">
-      </FileRef>
-      <FileRef
          location = "group:TDTHotChocolate.h">
       </FileRef>
       <FileRef
