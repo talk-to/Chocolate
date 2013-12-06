@@ -1,6 +1,7 @@
 #import <XCTest/XCTest.h>
 #import <TDTHotChocolate/TDTTestingAdditions.h>
 #import <TDTHotChocolate/FoundationAdditions/NSFileManager+TDTAdditions.h>
+#import <TDTHotChocolate/FoundationAdditions/NSString+TDTAdditions.h>
 
 @interface NSFileManager_TDTAdditions_Tests : XCTestCase
 
@@ -16,7 +17,7 @@
                                                           suffix:suffix];
   XCTAssertTrue(url.isFileURL);
   NSString *urlString = url.absoluteString;
-  XCTAssertNotEqual([urlString rangeOfString:prefix].location, NSNotFound);
+  XCTAssertTrue([urlString containsString:prefix]);
   XCTAssertTrue([urlString hasSuffix:suffix]);
 }
 
