@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
 
+#import "TDTAssert.h"
 #import "TDTFoundationAdditions.h"
 
 /**

@@ -13,6 +13,9 @@
       <FileRef
          location = "group:TDTTestingAdditions.h">
       </FileRef>
+      <FileRef
+         location = "group:TDTAssert.h">
+      </FileRef>
       <Group
          location = "group:FoundationAdditions"
          name = "FoundationAdditions">
