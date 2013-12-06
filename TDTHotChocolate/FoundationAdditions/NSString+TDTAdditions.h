@@ -3,7 +3,7 @@
 @interface NSString (TDTAdditions)
 
 /**
- @return a string representing a newly generated version 4 random UUID
+ @return A string representing a newly generated version 4 random UUID
  */
 + (instancetype)randomUUID;
 
@@ -13,7 +13,7 @@
 - (NSString *)sha1Digest;
 
 /** 
- @return a new string by trimming non alphanumeric characters from the receiver
+ @return A new string by trimming non alphanumeric characters from the receiver
  */
 - (NSString *)stringByTrimmingNonAlphaNumericCharacters;
 
