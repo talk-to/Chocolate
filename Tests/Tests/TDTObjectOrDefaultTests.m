@@ -1,4 +1,5 @@
 #import <XCTest/XCTest.h>
+#import <TDTHotChocolate/TDTTestingAdditions.h>
 #import <TDTHotChocolate/FoundationAdditions/TDTObjectOrDefault.h>
 
 @interface TDTObjectOrDefaultTests : XCTestCase
@@ -8,13 +9,13 @@
 @implementation TDTObjectOrDefaultTests
 
 - (void)testNilIsReplacedByDefault {
-  id defaultValue = @(43);
+  id defaultValue = [NSNumber randomNumber];
   XCTAssertEqualObjects(TDTObjectOrDefault(nil, defaultValue), defaultValue);
 }
 
 - (void)testNonNilIsUnchanged {
-  id object = @(43);
-  id defaultValue = @(1);
+  id object = [NSNumber randomNumber];
+  id defaultValue = [NSNumber randomNumber];
   XCTAssertEqualObjects(TDTObjectOrDefault(object, defaultValue), object);
 }
 

@@ -1,4 +1,5 @@
 #import <XCTest/XCTest.h>
+#import <TDTHotChocolate/TDTTestingAdditions.h>
 #import <TDTHotChocolate/FoundationAdditions/NSArray+TDTFunctionalAdditions.h>
 
 @interface NSArray_TDTFunctionalAdditions_Tests : XCTestCase
@@ -17,7 +18,7 @@
   self.identitySelector = @selector(self);
   self.identityBlock = ^(id obj) { return obj; };
   self.emptyArray = @[];
-  self.nonEmptyArray = @[@"foo", @"bar", @(43), @"baz"];
+  self.nonEmptyArray = [NSArray randomArrayOfLength:4];
   self.tautology = ^(id obj) { return YES; };
   self.contradiction = ^(id obj) { return NO; };
 }
