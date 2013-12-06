@@ -18,4 +18,9 @@ Pod::Spec.new do |s|
     ss.source_files = [ 'TDTHotChocolate/FoundationAdditions/*.{h,m}',
                         'TDTHotChocolate/TDTFoundationAdditions.h' ]
   end
+  
+  s.subspec 'TestingAdditions' do |ss|
+    ss.source_files = [ 'TDTHotChocolate/TestingAdditions/*.{h,m}',
+                        'TDTHotChocolate/TDTTestingAdditions.h' ]
+  end
 end

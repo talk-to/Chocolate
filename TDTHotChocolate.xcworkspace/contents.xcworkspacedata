@@ -16,6 +16,9 @@
       <FileRef
          location = "group:TDTFoundationAdditions.h">
       </FileRef>
+      <FileRef
+         location = "group:TDTTestingAdditions.h">
+      </FileRef>
       <Group
          location = "group:FoundationAdditions"
          name = "FoundationAdditions">
@@ -42,6 +45,22 @@
          </FileRef>
          <FileRef
             location = "group:TDTObjectOrDefault.m">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:TestingAdditions"
+         name = "TestingAdditions">
+         <FileRef
+            location = "group:NSString+TDTRandomGeneration.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSString+TDTRandomGeneration.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSString+TDTNegation.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSString+TDTNegation.m">
          </FileRef>
       </Group>
    </Group>
