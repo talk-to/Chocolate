@@ -62,14 +62,17 @@
 
 #pragma mark - Convenience Assertions
 
+/// Signal an assertion failure if `expr` is NO.
+#define TDTAssertTrue(expr) TDTAssert(expr, nil)
+
+/// Signal an assertion failure if `expr` is nil.
+#define TDTAssertNotNil(expr) TDTAssert((expr) != nil, nil);
+
 /// Signal an unconditional assertion failure
 #define TDTAssertFailure(desc) TDTAssert(NO, desc)
 
 /// Signal an unconditional assertion failure -- this corresponds to NSAssert1
 #define TDTAssertFailure1(desc, arg1) TDTAssert1(NO, desc, arg1)
-
-/// Signal an assertion failure if `expr` is nil.
-#define TDTAssertNonNil(expr) TDTAssert((expr) != nil, @"NonNilAssertionFailure");
 
 /// Ensure that the current line is not executed on the main thread
 #define TDTAssertIsNotMainThread() \
