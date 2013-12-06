@@ -45,7 +45,17 @@ need to install them the first time around.
 Subsequently, you can use the `iOSTests` and `OSXTests` targets to run the
 test suite.
 
-Note: You will need to install [xcproj] \([why?][whyxcproj]) if you intend to
+Notes:
+
+* CocoaPod adds file links to the original source files in `TDTHotChocolate/`
+when we do a pod install from the `Tests/` directory. This means that additions
+and deletions of files in the `TDTHotChocolate/` will not be automatically
+tracked. In such cases, you'll need to do a pod install again to update the
+links. You could use the following incantation to make things faster:
+
+        $ pod install --no-repo-update
+
+* You will need to install [xcproj] \([why?][whyxcproj]) if you intend to
 modify `Tests/Podfile`.
 
 [CocoaPods]: http://cocoapods.org/
