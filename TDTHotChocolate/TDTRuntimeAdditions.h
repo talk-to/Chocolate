@@ -1,3 +1,3 @@
 #import <Foundation/Foundation.h>
 
-#import "RuntimeAdditions/TDTIsApplicationRunningTests.h"
+#import "RuntimeAdditions/NSProcessInfo+TDTEnviromnentDetection.h"

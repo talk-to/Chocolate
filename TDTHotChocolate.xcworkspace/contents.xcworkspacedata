@@ -109,10 +109,10 @@
          location = "group:RuntimeAdditions"
          name = "RuntimeAdditions">
          <FileRef
-            location = "group:TDTIsApplicationRunningTests.h">
+            location = "group:NSProcessInfo+TDTTEnvironmentDetection.h">
          </FileRef>
          <FileRef
-            location = "group:TDTIsApplicationRunningTests.m">
+            location = "group:NSProcessInfo+TDTEnvironmentDetection.m">
          </FileRef>
       </Group>
    </Group>
