@@ -4,7 +4,7 @@
 
 @implementation NSDateFormatter (TDTISO8601Formatting)
 
-+ (instancetype)ISO8601Formatter {
++ (instancetype)sharedISO8601Formatter {
   static dispatch_once_t onceToken;
   static NSDateFormatter *formatter;
   dispatch_once(&onceToken, ^{

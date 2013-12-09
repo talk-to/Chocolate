@@ -9,4 +9,5 @@
  */
 
 #import "TDTAssert.h"
+#import "TDTLog.h"
 #import "TDTFoundationAdditions.h"

@@ -8,13 +8,16 @@
          location = "group:TDTHotChocolate.h">
       </FileRef>
       <FileRef
+         location = "group:TDTAssert.h">
+      </FileRef>
+      <FileRef
+         location = "group:TDTLog.h">
+      </FileRef>
+      <FileRef
          location = "group:TDTFoundationAdditions.h">
       </FileRef>
       <FileRef
          location = "group:TDTTestingAdditions.h">
-      </FileRef>
-      <FileRef
-         location = "group:TDTAssert.h">
       </FileRef>
       <FileRef
          location = "group:TDTRuntimeAdditions.h">
@@ -87,6 +90,16 @@
          </FileRef>
          <FileRef
             location = "group:NSFileManager+TDTAdditions.m">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Logging"
+         name = "Logging">
+         <FileRef
+            location = "group:TDTLog.h">
+         </FileRef>
+         <FileRef
+            location = "group:TDTLog.m">
          </FileRef>
       </Group>
       <Group

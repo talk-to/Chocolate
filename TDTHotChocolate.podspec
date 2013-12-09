@@ -17,6 +17,11 @@ Pod::Spec.new do |s|
     ss.source_files = 'TDTHotChocolate/TDTAssert.h'
   end
   
+  s.subspec 'Logging' do |ss|
+    ss.source_files = [ 'TDTHotChocolate/Logging/*.{h,m}',
+                        'TDTHotChocolate/TDTLog.h' ]
+  end
+  
   s.subspec 'FoundationAdditions' do |ss|
     ss.source_files = [ 'TDTHotChocolate/FoundationAdditions/*.{h,m}',
                         'TDTHotChocolate/TDTFoundationAdditions.h' ]
