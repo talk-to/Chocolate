@@ -5,30 +5,21 @@ simplify writing Objective C code for OSX/iOS. The things that Apple forgot.
 
 ### Manually
 
-Hot Chocolate is a source distribution, which means using it is as simple as
-finding the headers and linking to the source files:
-
 * Copy the `TDTHotChocolate/` subdirectory to somewhere in your source tree.
-* Add this directory to the "User Header Search Paths" Build Setting in Xcode.
+* Add it the "User Header Search Paths" Build Setting in Xcode.
 * Link all the implementation files in `TDTHotChocolate/` to your target.
-* Import the umbrella `TDTHotChocolate/TDTHotChocolate.h` header, and hack away.
 
 ### CocoaPods
 
-Hot Chocolate is also a "pod", so you can compress the above manual steps by
-using [CocoaPods] and adding the following to your `Podfile`.
+Hot Chocolate is also published as a [CocoaPod][CocoaPods], available from our
+[private spec repository][private-spec-repo].
 
-    pod 'TDTHotChocolate', :git => 'https://github.com/talk-to/hot-chocolate.git'
-
-
-## Setting up for Development
-
-This section is intended for programmers who wish to modify Hot Chocolate.
+## Development
 
 #### Workspace
 
 The top level `TDTHotChocolate.xcworkspace` groups together all Hot Chocolate
-source and test files for easy access from Xcode. Use it.
+source and test files for easy access from Xcode.
 
 #### Unit Tests
 
@@ -59,5 +50,6 @@ links. You could use the following incantation to make things faster:
 modify `Tests/Podfile`.
 
 [CocoaPods]: http://cocoapods.org/
+[private-spec-repo]: https://github.com/talk-to/private-cocoapod-specs
 [xcproj]: https://github.com/0xced/xcproj
 [whyxcproj]: https://github.com/CocoaPods/CocoaPods/wiki/Generate-ASCII-format-xcodeproj
