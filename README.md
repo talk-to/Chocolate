@@ -49,6 +49,10 @@ links. You could use the following incantation to make things faster:
 * You will need to install [xcproj] \([why?][whyxcproj]) if you intend to
 modify `Tests/Podfile`.
 
+### Updating the Podspec
+
+    $ rake release
+
 [CocoaPods]: http://cocoapods.org/
 [private-spec-repo]: https://github.com/talk-to/private-cocoapod-specs
 [xcproj]: https://github.com/0xced/xcproj
