@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 
 /**
- Simple wrappers over `[NSDate compare:]` to make comparisons more readable.
+ Wrappers over `[NSDate compare:]` to make comparisons more readable.
  */
 
 @interface NSDate (TDTComparisons)
