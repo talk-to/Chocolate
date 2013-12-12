@@ -25,4 +25,12 @@ Pod::Spec.new do |s|
     ss.source_files = [ 'TDTHotChocolate/TestingAdditions/*.{h,m}',
                         'TDTHotChocolate/TDTTestingAdditions.h' ]
   end
+
+  s.subspec 'CoreDataAdditions' do |ss|
+    ss.source_files = [ 'TDTHotChocolate/CoreDataAdditions/*.{h,m}',
+                        'TDTHotChocolate/TDTCoreDataAdditions.h' ]
+        
+    ss.frameworks = 'CoreData'
+    ss.osx.exclude_files = 'TDTHotChocolate/CoreDataAdditions/NSFetchedResultsController+TDTAdditions.{h,m}'
+  end
 end

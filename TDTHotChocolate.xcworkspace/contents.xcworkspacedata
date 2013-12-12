@@ -10,6 +10,9 @@
       <FileRef
          location = "group:TDTTestingAdditions.h">
       </FileRef>
+      <FileRef
+         location = "group:TDTCoreDataAdditions.h">
+      </FileRef>
       <Group
          location = "group:FoundationAdditions"
          name = "FoundationAdditions">
@@ -115,6 +118,31 @@
          </FileRef>
          <FileRef
             location = "group:NSRunLoop+TDTAsyncVerification.m">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:CoreDataAdditions"
+         name = "CoreDataAdditions">
+         <FileRef
+            location = "group:NSManagedObject+TDTAdditions.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSManagedObject+TDTAdditions.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSManagedObjectContext+TDTAdditions.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSManagedObjectContext+TDTAdditions.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSFetchedResultsController+TDTAdditions.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSFetchedResultsController+TDTAdditions.m">
+         </FileRef>
+         <FileRef
+            location = "group:TDTCoreDataUtilityMacros.h">
          </FileRef>
       </Group>
    </Group>
