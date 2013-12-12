@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'TDTHotChocolate'
-  s.version  = '0.1.1'
+  s.version  = '0.1.2'
   s.summary  = 'Library containing additions to Cocoa and Cocoa Touch'
   s.homepage = 'https://github.com/talk-to/hot-chocolate'
   s.author   = 'Talk.to'
