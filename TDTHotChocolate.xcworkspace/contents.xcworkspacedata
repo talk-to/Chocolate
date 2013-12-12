@@ -110,6 +110,12 @@
          <FileRef
             location = "group:NSString+TDTNegation.m">
          </FileRef>
+         <FileRef
+            location = "group:NSRunLoop+TDTAsyncVerification.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSRunLoop+TDTAsyncVerification.m">
+         </FileRef>
       </Group>
    </Group>
    <FileRef
