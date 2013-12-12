@@ -53,6 +53,10 @@ modify `Tests/Podfile`.
 
     $ rake release
 
+If you understand the implications, then you can avoid the prompting by
+
+    $ rake release:next
+
 [CocoaPods]: http://cocoapods.org/
 [private-spec-repo]: https://github.com/talk-to/private-cocoapod-specs
 [xcproj]: https://github.com/0xced/xcproj

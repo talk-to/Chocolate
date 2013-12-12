@@ -2,11 +2,18 @@ INITIAL_VERSION = '0.1.0'
 DEFAULT_SPEC_REPO = 'talk-to'
 
 desc "Release a new version of the Pod"
-task :release do
-  release
+namespace :release do
+  task :all do
+    release
+  end
+  task :next do
+    release :use_defaults => true
+  end
 end
 
-def release
+def release(**options)
+  use_defaults = options[:use_defaults]
+
   podspec_path = any_podspec_in_current_dir
   puts "- Found Podspec: " + blue(podspec_path)
 
@@ -29,11 +36,17 @@ def release
 
   next_version = bump_version(current_version)
 
-  version_prompt = "Enter the new version"
-  new_version = ask_user :prompt => version_prompt, :default => next_version
-  spec_prompt = "Enter the name of the spec repository"
-  spec_repo = ask_user :prompt => spec_prompt, :default => DEFAULT_SPEC_REPO
-  exit unless confirm "Are you sure you want to release version #{red(new_version)} to #{red(spec_repo)}"
+  if use_defaults
+    new_version = next_version
+    spec_repo = DEFAULT_SPEC_REPO
+    puts "* Releasing version #{red(new_version)} to #{red(spec_repo)}"
+  else
+    version_prompt = "Enter the new version"
+    new_version = ask_user :prompt => version_prompt, :default => next_version
+    spec_prompt = "Enter the name of the spec repository"
+    spec_repo = ask_user :prompt => spec_prompt, :default => DEFAULT_SPEC_REPO
+    exit unless confirm "Are you sure you want to release version #{red(new_version)} to #{red(spec_repo)}"
+  end
 
   replace_spec_version(podspec_path, current_version, new_version)
 
