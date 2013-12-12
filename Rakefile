@@ -3,6 +3,10 @@ DEFAULT_SPEC_REPO = 'talk-to'
 
 desc "Release a new version of the Pod"
 task :release do
+  release
+end
+
+def release
   podspec_path = any_podspec_in_current_dir
   puts "- Found Podspec: " + blue(podspec_path)
 
@@ -23,20 +27,20 @@ task :release do
   puts "- Current Version: " + blue(local_version)
   current_version = local_version || INITIAL_VERSION
 
-  new_version = bump_version(current_version)
+  next_version = bump_version(current_version)
 
   version_prompt = "Enter the new version"
-  version = ask_user :prompt => version_prompt, :default => new_version
+  new_version = ask_user :prompt => version_prompt, :default => next_version
   spec_prompt = "Enter the name of the spec repository"
   spec_repo = ask_user :prompt => spec_prompt, :default => DEFAULT_SPEC_REPO
-  exit unless confirm "Are you sure you want to release version #{red(version)} to #{red(spec_repo)}"
+  exit unless confirm "Are you sure you want to release version #{red(new_version)} to #{red(spec_repo)}"
 
   replace_spec_version(podspec_path, current_version, new_version)
 
-  sh "git commit #{podspec_path} -m 'Release #{version}'"
-  sh "git tag #{tag}"
+  sh "git commit #{podspec_path} -m 'Release #{new_version}'"
+  sh "git tag #{new_version}"
   sh "git push origin master"
-  sh "git push origin --tags"
+  sh "git push origin #{new_version}"
   sh "pod push #{spec_repo} #{podspec_path}"
 end
 
