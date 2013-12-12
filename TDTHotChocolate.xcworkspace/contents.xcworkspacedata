@@ -88,6 +88,12 @@
          <FileRef
             location = "group:NSFileManager+TDTAdditions.m">
          </FileRef>
+         <FileRef
+            location = "group:TDTBlockAdditions.h">
+         </FileRef>
+         <FileRef
+            location = "group:TDTBlockAdditions.m">
+         </FileRef>
       </Group>
       <Group
          location = "group:TestingAdditions"
