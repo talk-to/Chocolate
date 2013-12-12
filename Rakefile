@@ -17,6 +17,11 @@ task :release => 'release:prompt'
 def release(**options)
   use_defaults = options[:use_defaults]
 
+  if current_branch != 'master'
+    puts "Error: you need to be on the `master` branch to do a release"
+    exit
+  end
+
   podspec_path = any_podspec_in_current_dir
   puts "- Found Podspec: " + blue(podspec_path)
 
@@ -58,6 +63,10 @@ def release(**options)
   sh "git push origin master"
   sh "git push origin #{new_version}"
   sh "pod push #{spec_repo} #{podspec_path}"
+end
+
+def current_branch
+  `git rev-parse --abbrev-ref HEAD`.strip
 end
 
 def any_podspec_in_current_dir
