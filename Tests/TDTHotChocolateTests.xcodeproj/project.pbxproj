@@ -16,6 +16,8 @@
 		6919A17D18505B4D000AB434 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6919A17B18505B4D000AB434 /* InfoPlist.strings */; };
 		697F99731859D1B600DDF2A3 /* TDTSmokeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 697F99721859D1B600DDF2A3 /* TDTSmokeTests.m */; };
 		697F99741859D1B600DDF2A3 /* TDTSmokeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 697F99721859D1B600DDF2A3 /* TDTSmokeTests.m */; };
+		697F99761859D4F900DDF2A3 /* TDTBlockAdditionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 697F99751859D4F900DDF2A3 /* TDTBlockAdditionsTests.m */; };
+		697F99771859D4F900DDF2A3 /* TDTBlockAdditionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 697F99751859D4F900DDF2A3 /* TDTBlockAdditionsTests.m */; };
 		69CB6FCA18517E63004D35DB /* NSArray_TDTFunctionalAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CB6FC918517E63004D35DB /* NSArray_TDTFunctionalAdditions_Tests.m */; };
 		69CB6FCB18517E63004D35DB /* NSArray_TDTFunctionalAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CB6FC918517E63004D35DB /* NSArray_TDTFunctionalAdditions_Tests.m */; };
 		69CB6FCD18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CB6FCC18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m */; };
@@ -54,6 +56,7 @@
 		6919A17C18505B4D000AB434 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6919A18018505B4D000AB434 /* iOSTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSTests-Prefix.pch"; sourceTree = "<group>"; };
 		697F99721859D1B600DDF2A3 /* TDTSmokeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTSmokeTests.m; sourceTree = "<group>"; };
+		697F99751859D4F900DDF2A3 /* TDTBlockAdditionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTBlockAdditionsTests.m; sourceTree = "<group>"; };
 		69CB6FC918517E63004D35DB /* NSArray_TDTFunctionalAdditions_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_TDTFunctionalAdditions_Tests.m; sourceTree = "<group>"; };
 		69CB6FCC18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSSet_TDTFunctionalAdditions_Tests.m; sourceTree = "<group>"; };
 		69CB6FCF1851B57D004D35DB /* NSArray_TDTAdditions_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_TDTAdditions_Tests.m; sourceTree = "<group>"; };
@@ -184,6 +187,7 @@
 				69ECAE401851CA63006C3176 /* NSDate_TDTComparisons_Tests.m */,
 				69ECAE451851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m */,
 				697F99721859D1B600DDF2A3 /* TDTSmokeTests.m */,
+				697F99751859D4F900DDF2A3 /* TDTBlockAdditionsTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -352,6 +356,7 @@
 				69ECAE461851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m in Sources */,
 				69CB6FCA18517E63004D35DB /* NSArray_TDTFunctionalAdditions_Tests.m in Sources */,
 				69ECAE411851CA63006C3176 /* NSDate_TDTAdditions_Tests.m in Sources */,
+				697F99761859D4F900DDF2A3 /* TDTBlockAdditionsTests.m in Sources */,
 				69E1C30D1850AF6B00E93E23 /* TDTObjectOrDefaultTests.m in Sources */,
 				697F99731859D1B600DDF2A3 /* TDTSmokeTests.m in Sources */,
 				69CB6FD41851B98F004D35DB /* NSString_TDTAdditions_Tests.m in Sources */,
@@ -368,6 +373,7 @@
 				69ECAE471851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m in Sources */,
 				69CB6FCB18517E63004D35DB /* NSArray_TDTFunctionalAdditions_Tests.m in Sources */,
 				69ECAE421851CA63006C3176 /* NSDate_TDTAdditions_Tests.m in Sources */,
+				697F99771859D4F900DDF2A3 /* TDTBlockAdditionsTests.m in Sources */,
 				69E1C30E1850AF6B00E93E23 /* TDTObjectOrDefaultTests.m in Sources */,
 				697F99741859D1B600DDF2A3 /* TDTSmokeTests.m in Sources */,
 				69CB6FD51851B98F004D35DB /* NSString_TDTAdditions_Tests.m in Sources */,
