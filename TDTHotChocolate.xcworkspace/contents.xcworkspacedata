@@ -13,6 +13,9 @@
       <FileRef
          location = "group:TDTCoreDataAdditions.h">
       </FileRef>
+      <FileRef
+         location = "group:TDTSecurityAdditions.h">
+      </FileRef>
       <Group
          location = "group:FoundationAdditions"
          name = "FoundationAdditions">
@@ -143,6 +146,16 @@
          </FileRef>
          <FileRef
             location = "group:TDTCoreDataUtilityMacros.h">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:SecurityAdditions"
+         name = "SecurityAdditions">
+         <FileRef
+            location = "group:TDTAppKeychain.h">
+         </FileRef>
+         <FileRef
+            location = "group:TDTAppKeychain.m">
          </FileRef>
       </Group>
    </Group>

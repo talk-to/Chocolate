@@ -15,3 +15,4 @@
 #import "FoundationAdditions/NSFileManager+TDTAdditions.h"
 #import "FoundationAdditions/NSProcessInfo+TDTEnviromnentDetection.h"
 #import "FoundationAdditions/TDTBlockAdditions.h"
+#import "FoundationAdditions/TDTKeychain.h"
