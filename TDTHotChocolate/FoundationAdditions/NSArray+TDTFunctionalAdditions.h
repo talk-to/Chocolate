@@ -4,7 +4,7 @@
 @interface NSArray (TDTFunctionalAdditions)
 
 /**
-  Apply `selector` to every object in the receiver and return the array formed
+ Apply `selector` to every object in the receiver and return the array formed
  by collecting the results.
 
  The order of elements in this array corresponds to the order of original
