@@ -1,5 +1,5 @@
 #import "NSFileManager+TDTAdditions.h"
-#import "../TDTAssert.h"
+#import "TDTAssert.h"
 
 @implementation NSFileManager (TDTAdditions)
 

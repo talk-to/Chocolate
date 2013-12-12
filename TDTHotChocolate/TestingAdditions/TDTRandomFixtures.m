@@ -1,5 +1,5 @@
 #import "TDTRandomFixtures.h"
-#import "../TDTAssert.h"
+#import "../FoundationAdditions/TDTAssert.h"
 
 @implementation NSString (TDTRandomFixtures)
 

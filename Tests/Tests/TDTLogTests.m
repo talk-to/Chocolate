@@ -1,5 +1,5 @@
 #import <XCTest/XCTest.h>
-#import <TDTHotChocolate/TDTLog.h>
+#import <TDTHotChocolate/FoundationAdditions/TDTLog.h>
 
 @interface TDTLogTests : XCTestCase
 

@@ -1,5 +1,5 @@
 #import "NSSet+TDTFunctionalAdditions.h"
-#import "../TDTAssert.h"
+#import "TDTAssert.h"
 #import "TDTSuppressPerformSelectorLeakWarning.h"
 
 @implementation NSSet (TDTFunctionalAdditions)

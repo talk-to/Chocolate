@@ -1,5 +1,5 @@
 #import "NSString+TDTAdditions.h"
-#import "../TDTAssert.h"
+#import "TDTAssert.h"
 #import <CommonCrypto/CommonDigest.h>
 
 @implementation NSString (TDTAdditions)
