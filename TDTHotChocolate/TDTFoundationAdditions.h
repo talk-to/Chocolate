@@ -1,5 +1,3 @@
-#import <Foundation/Foundation.h>
-
 #import "FoundationAdditions/TDTLog.h"
 #import "FoundationAdditions/TDTAssert.h"
 #import "FoundationAdditions/TDTSuppressPerformSelectorLeakWarning.h"
