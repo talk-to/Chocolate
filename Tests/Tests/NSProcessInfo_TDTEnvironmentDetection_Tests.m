@@ -1,5 +1,5 @@
 #import <XCTest/XCTest.h>
-#import <TDTHotChocolate/RuntimeAdditions/NSProcessInfo+TDTTEnvironmentDetection.h>
+#import <TDTHotChocolate/FoundationAdditions/NSProcessInfo+TDTTEnvironmentDetection.h>
 
 @interface NSProcessInfo_TDTEnvironmentDetection_Tests : XCTestCase
 

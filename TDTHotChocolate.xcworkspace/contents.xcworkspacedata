@@ -111,16 +111,6 @@
             location = "group:NSString+TDTNegation.m">
          </FileRef>
       </Group>
-      <Group
-         location = "group:RuntimeAdditions"
-         name = "RuntimeAdditions">
-         <FileRef
-            location = "group:NSProcessInfo+TDTTEnvironmentDetection.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSProcessInfo+TDTEnvironmentDetection.m">
-         </FileRef>
-      </Group>
    </Group>
    <FileRef
       location = "group:Tests/TDTHotChocolateTests.xcodeproj">
