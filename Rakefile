@@ -1,15 +1,18 @@
 INITIAL_VERSION = '0.1.0'
 DEFAULT_SPEC_REPO = 'talk-to'
 
-desc "Release a new version of the Pod"
 namespace :release do
-  task :all do
+  task :prompt do
     release
   end
+  desc "Release the next version of the Pod"
   task :next do
     release :use_defaults => true
   end
 end
+
+desc "Release a new version of the Pod"
+task :release => 'release:prompt'
 
 def release(**options)
   use_defaults = options[:use_defaults]
