@@ -16,16 +16,18 @@ extern const NSTimeInterval TDTAsyncVerificationTimeoutDefault;
 @interface NSRunLoop (TDTAsyncVerification)
 
 /**
- Keep spinning until either the object pointed to by `object` becomes
- non NULL, or `timeout` occurs.
+ Keep spinning until either
+ - the object pointed to by `object` becomes non NULL
+ - or `timeout` occurs.
  @param object Pointer to the object. It should not be NULL.
  */
 - (void)runUntilObjectIsInitialized:(id __strong *)object
                             timeout:(NSTimeInterval)timeout;
 
 /**
- Keep spinning until either the BOOL pointed to by `completionIndicator`
- becomes YES, or `timeout` occurs.
+ Keep spinning until either
+ - the BOOL pointed to by `completionIndicator` becomes YES
+ - or `timeout` occurs.
  @param completionIndicator Pointer to the BOOL to watch. It should not be NULL.
  */
 - (void)runUntilCompletionIndicator:(BOOL *)completionIndicator
