@@ -27,6 +27,10 @@
   return output;
 }
 
+- (NSString *)stringByTrimmingWhitespaceAndNewlines {
+  return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+}
+
 - (NSString *)stringByTrimmingNonAlphaNumericCharacters {
   NSCharacterSet *charactersToRemove = [[NSCharacterSet alphanumericCharacterSet] invertedSet];
   return [self stringByTrimmingCharactersInSet:charactersToRemove];

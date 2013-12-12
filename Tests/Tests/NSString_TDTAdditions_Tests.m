@@ -24,6 +24,15 @@
   XCTAssertEqualObjects([testString sha1Digest], sha1Digest);
 }
 
+- (void)testStringByTrimmingWhitespaceAndNewline {
+  NSString *empty = @"";
+  XCTAssertEqualObjects([empty stringByTrimmingWhitespaceAndNewlines], empty);
+  XCTAssertEqualObjects([@" prefix" stringByTrimmingWhitespaceAndNewlines], @"prefix");
+  XCTAssertEqualObjects([@" suffix" stringByTrimmingWhitespaceAndNewlines], @"suffix");
+  XCTAssertEqualObjects([@" both  " stringByTrimmingWhitespaceAndNewlines], @"both");
+  XCTAssertEqualObjects([@"\n newlinesANDspaces\n\n  " stringByTrimmingWhitespaceAndNewlines], @"newlinesANDspaces");
+}
+
 - (void)testStringByTrimmingNonAlphaNumericCharacters {
   XCTAssertEqualObjects(@"HOME",
                         [@"#@HOME#@" stringByTrimmingNonAlphaNumericCharacters]);

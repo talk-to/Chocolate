@@ -12,6 +12,11 @@
  */
 - (NSString *)sha1Digest;
 
+/**
+ @return A new string by trimming whitespace (including newlines) from the receiver.
+ */
+- (NSString *)stringByTrimmingWhitespaceAndNewlines;
+
 /** 
  @return A new string by trimming non alphanumeric characters from the receiver
  */
