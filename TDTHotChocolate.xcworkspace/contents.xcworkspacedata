@@ -5,16 +5,10 @@
       location = "group:TDTHotChocolate"
       name = "TDTHotChocolate">
       <FileRef
-         location = "group:TDTHotChocolate.h">
-      </FileRef>
-      <FileRef
          location = "group:TDTFoundationAdditions.h">
       </FileRef>
       <FileRef
          location = "group:TDTTestingAdditions.h">
-      </FileRef>
-      <FileRef
-         location = "group:TDTRuntimeAdditions.h">
       </FileRef>
       <Group
          location = "group:FoundationAdditions"
