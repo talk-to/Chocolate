@@ -11,6 +11,5 @@
 #import "FoundationAdditions/NSDate+TDTComparisons.h"
 #import "FoundationAdditions/NSDateFormatter+TDTISO8601Formatting.h"
 #import "FoundationAdditions/NSFileManager+TDTAdditions.h"
-#import "FoundationAdditions/NSProcessInfo+TDTEnvironmentAdditions.h"
+#import "FoundationAdditions/NSProcessInfo+TDTEnvironmentDetection.h"
 #import "FoundationAdditions/TDTBlockAdditions.h"
-#import "FoundationAdditions/TDTKeychain.h"
