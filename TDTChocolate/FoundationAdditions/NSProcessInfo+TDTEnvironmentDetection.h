@@ -4,7 +4,7 @@
 
 /**
  Determine if the current process is running inside a unit test context.
- 
+
  Use case:
  When running unit tests on iOS, it is not necessary to fully initialize the
  application. The following check can be used to return early in the application

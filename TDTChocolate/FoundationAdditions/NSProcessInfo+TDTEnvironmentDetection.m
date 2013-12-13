@@ -1,4 +1,4 @@
-#import "NSProcessInfo+TDTTEnvironmentDetection.h"
+#import "NSProcessInfo+TDTEnvironmentDetection.h"
 
 @implementation NSProcessInfo (TDTEnvironmentDetection)
 

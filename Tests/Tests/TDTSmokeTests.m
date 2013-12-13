@@ -11,7 +11,7 @@
 
 #import <XCTest/XCTest.h>
 #import <TDTChocolate/FoundationAdditions/TDTLog.h>
-#import <TDTChocolate/FoundationAdditions/NSProcessInfo+TDTTEnvironmentDetection.h>
+#import <TDTChocolate/FoundationAdditions/NSProcessInfo+TDTEnvironmentDetection.h>
 
 @interface TDTSmokeTests : XCTestCase
 
