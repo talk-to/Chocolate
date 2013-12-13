@@ -95,6 +95,12 @@
             location = "group:NSFileManager+TDTAdditions.m">
          </FileRef>
          <FileRef
+            location = "group:NSProcessInfo+TDTEnvironmentDetection.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSProcessInfo+TDTTEnvironmentDetection.h">
+         </FileRef>
+         <FileRef
             location = "group:TDTBlockAdditions.h">
          </FileRef>
          <FileRef
