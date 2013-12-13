@@ -10,8 +10,8 @@
 #ifdef SMOKE_TEST
 
 #import <XCTest/XCTest.h>
-#import <TDTHotChocolate/FoundationAdditions/TDTLog.h>
-#import <TDTHotChocolate/FoundationAdditions/NSProcessInfo+TDTTEnvironmentDetection.h>
+#import <TDTChocolate/FoundationAdditions/TDTLog.h>
+#import <TDTChocolate/FoundationAdditions/NSProcessInfo+TDTTEnvironmentDetection.h>
 
 @interface TDTSmokeTests : XCTestCase
 

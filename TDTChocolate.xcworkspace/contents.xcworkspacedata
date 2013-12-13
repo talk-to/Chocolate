@@ -2,8 +2,8 @@
 <Workspace
    version = "1.0">
    <Group
-      location = "group:TDTHotChocolate"
-      name = "TDTHotChocolate">
+      location = "group:TDTChocolate"
+      name = "TDTChocolate">
       <FileRef
          location = "group:TDTFoundationAdditions.h">
       </FileRef>
@@ -160,7 +160,7 @@
       </Group>
    </Group>
    <FileRef
-      location = "group:Tests/TDTHotChocolateTests.xcodeproj">
+      location = "group:Tests/TDTChocolateTests.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Tests/Pods/Pods.xcodeproj">

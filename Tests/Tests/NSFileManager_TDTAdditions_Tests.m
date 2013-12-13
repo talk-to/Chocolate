@@ -1,7 +1,7 @@
 #import <XCTest/XCTest.h>
-#import <TDTHotChocolate/TDTTestingAdditions.h>
-#import <TDTHotChocolate/FoundationAdditions/NSFileManager+TDTAdditions.h>
-#import <TDTHotChocolate/FoundationAdditions/NSString+TDTAdditions.h>
+#import <TDTChocolate/TDTTestingAdditions.h>
+#import <TDTChocolate/FoundationAdditions/NSFileManager+TDTAdditions.h>
+#import <TDTChocolate/FoundationAdditions/NSString+TDTAdditions.h>
 
 @interface NSFileManager_TDTAdditions_Tests : XCTestCase
 

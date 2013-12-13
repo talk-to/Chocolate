@@ -1,6 +1,6 @@
 #import <XCTest/XCTest.h>
-#import <TDTHotChocolate/TDTTestingAdditions.h>
-#import <TDTHotChocolate/FoundationAdditions/NSArray+TDTFunctionalAdditions.h>
+#import <TDTChocolate/TDTTestingAdditions.h>
+#import <TDTChocolate/FoundationAdditions/NSArray+TDTFunctionalAdditions.h>
 
 @interface NSArray_TDTFunctionalAdditions_Tests : XCTestCase
 @property (nonatomic) SEL identitySelector;

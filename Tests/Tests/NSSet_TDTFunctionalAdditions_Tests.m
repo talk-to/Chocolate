@@ -1,5 +1,5 @@
 #import <XCTest/XCTest.h>
-#import <TDTHotChocolate/FoundationAdditions/NSSet+TDTFunctionalAdditions.h>
+#import <TDTChocolate/FoundationAdditions/NSSet+TDTFunctionalAdditions.h>
 
 @interface NSSet_FunctionalUtils_Tests : XCTestCase
 

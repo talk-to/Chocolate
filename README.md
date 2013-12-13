@@ -1,30 +1,30 @@
-Hot Chocolate is a library containing additions to Cocoa and Cocoa Touch that
+Chocolate is a library containing additions to Cocoa and Cocoa Touch that
 simplify writing Objective C code for OSX/iOS. The things that Apple forgot.
 
 ## Installation
 
 ### Manually
 
-* Copy the `TDTHotChocolate/` subdirectory to somewhere in your source tree.
+* Copy the `TDTChocolate/` subdirectory to somewhere in your source tree.
 * Add it the "User Header Search Paths" Build Setting in Xcode.
-* Link all the implementation files in `TDTHotChocolate/` to your target.
+* Link all the implementation files in `TDTChocolate/` to your target.
 
 ### CocoaPods
 
-Hot Chocolate is also published as a [CocoaPod][CocoaPods], available from our
+Chocolate is also published as a [CocoaPod][CocoaPods], available from our
 [private spec repository][private-spec-repo].
 
 ## Development
 
 #### Workspace
 
-The top level `TDTHotChocolate.xcworkspace` groups together all Hot Chocolate
+The top level `TDTChocolate.xcworkspace` groups together all Chocolate
 source and test files for easy access from Xcode.
 
 #### Unit Tests
 
-Hot Chocolate comes with a test suite within the `Tests` subdirectory. The
-`Tests/TDTHotChocolateTests.xcodeproj` project provides two separate targets
+Chocolate comes with a test suite within the `Tests` subdirectory. The
+`Tests/TDTChocolateTests.xcodeproj` project provides two separate targets
 for running the tests on either OSX or iOS.
 
 The test suite itself uses [CocoaPods] to manage it's dependencies, so you'll
@@ -38,9 +38,9 @@ test suite.
 
 Notes:
 
-* CocoaPod adds file links to the original source files in `TDTHotChocolate/`
+* CocoaPod adds file links to the original source files in `TDTChocolate/`
 when we do a pod install from the `Tests/` directory. This means that additions
-and deletions of files in the `TDTHotChocolate/` will not be automatically
+and deletions of files in the `TDTChocolate/` will not be automatically
 tracked. In such cases, you'll need to do a pod install again to update the
 links. You could use the following incantation to make things faster:
 

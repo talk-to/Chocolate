@@ -1,5 +1,5 @@
 #import <XCTest/XCTest.h>
-#import <TDTHotChocolate/FoundationAdditions/NSDate+TDTAdditions.h>
+#import <TDTChocolate/FoundationAdditions/NSDate+TDTAdditions.h>
 
 @interface NSDate_TDTAdditions_Tests : XCTestCase
 

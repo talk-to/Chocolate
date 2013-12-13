@@ -1,6 +1,6 @@
 #import <XCTest/XCTest.h>
-#import <TDTHotChocolate/TDTTestingAdditions.h>
-#import <TDTHotChocolate/FoundationAdditions/NSArray+TDTAdditions.h>
+#import <TDTChocolate/TDTTestingAdditions.h>
+#import <TDTChocolate/FoundationAdditions/NSArray+TDTAdditions.h>
 
 @interface NSArray_TDTAdditions_Tests : XCTestCase
 

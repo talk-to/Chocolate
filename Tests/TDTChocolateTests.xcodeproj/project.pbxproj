@@ -247,7 +247,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6919A12D18504BD4000AB434 /* Build configuration list for PBXProject "TDTHotChocolateTests" */;
+			buildConfigurationList = 6919A12D18504BD4000AB434 /* Build configuration list for PBXProject "TDTChocolateTests" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -558,7 +558,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6919A12D18504BD4000AB434 /* Build configuration list for PBXProject "TDTHotChocolateTests" */ = {
+		6919A12D18504BD4000AB434 /* Build configuration list for PBXProject "TDTChocolateTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6919A15418504BD4000AB434 /* Debug */,

@@ -1,8 +1,8 @@
-xcodeproj 'TDTHotChocolateTests'
-workspace '../TDTHotChocolate'
+xcodeproj 'TDTChocolateTests'
+workspace '../TDTChocolate'
 
 def import_pods
-  pod 'TDTHotChocolate', :path => '../'
+  pod 'TDTChocolate', :path => '../'
 end
 
 target :ios do
