@@ -16,6 +16,16 @@
 
 @end
 
+@interface NSData (TDTRandomFixtures)
+
+/**
+ @return Data consisting of random bytes.
+         It is guranteed to be non empty.
+ */
++ (instancetype)randomData;
+
+@end
+
 @interface NSNumber (TDTRandomFixtures)
 
 + (instancetype)randomNumber;

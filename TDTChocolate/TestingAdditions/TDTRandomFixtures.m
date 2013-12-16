@@ -9,6 +9,14 @@
 
 @end
 
+@implementation NSData (TDTRandomFixtures)
+
++ (instancetype)randomData {
+  return [[NSString randomString] dataUsingEncoding:NSUTF8StringEncoding];
+}
+
+@end
+
 @implementation NSNumber (TDTRandomFixtures)
 
 + (instancetype)randomNumber {
