@@ -8,6 +8,10 @@
 
 @interface NSString (TDTRandomFixtures)
 
+/**
+ @return A string consisting of random characters.
+         It is guranteed to be non empty.
+ */
 + (instancetype)randomString;
 
 @end
