@@ -9,7 +9,7 @@
   return (NSString *)CFBridgingRelease(CFUUIDCreateString(NULL, uuid));
 }
 
-- (NSString *)sha1Digest {
+- (NSString *)SHA1Digest {
   const char *cstr = [self cStringUsingEncoding:NSUTF8StringEncoding];
   NSData *data = [NSData dataWithBytes:cstr length:self.length];
 

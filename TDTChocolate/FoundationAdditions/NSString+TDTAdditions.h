@@ -10,7 +10,7 @@
 /**
  @return The SHA1 of the receiver
  */
-- (NSString *)sha1Digest;
+- (NSString *)SHA1Digest;
 
 /**
  @return A new string by trimming whitespace (including newlines) from the receiver.

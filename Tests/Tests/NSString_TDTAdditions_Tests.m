@@ -20,8 +20,8 @@
 - (void)testSha1SumIsCorrectlyCalculated {
   NSString *testString = @"interesting";
   // $ shasum <(echo -n "interesting")
-  NSString *sha1Digest = @"68f55551796668375c528bd96b0d0fbc847bd123";
-  XCTAssertEqualObjects([testString sha1Digest], sha1Digest);
+  NSString *SHA1Digest = @"68f55551796668375c528bd96b0d0fbc847bd123";
+  XCTAssertEqualObjects([testString SHA1Digest], SHA1Digest);
 }
 
 - (void)testStringByTrimmingWhitespaceAndNewline {
