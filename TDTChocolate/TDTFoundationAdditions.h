@@ -13,3 +13,4 @@
 #import "FoundationAdditions/NSFileManager+TDTAdditions.h"
 #import "FoundationAdditions/NSProcessInfo+TDTEnvironmentDetection.h"
 #import "FoundationAdditions/TDTBlockAdditions.h"
+#import "FoundationAdditions/NSArray+TDTRangeAdditions.h"

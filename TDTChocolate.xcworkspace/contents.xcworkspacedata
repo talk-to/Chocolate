@@ -106,6 +106,12 @@
          <FileRef
             location = "group:TDTBlockAdditions.m">
          </FileRef>
+         <FileRef
+            location = "group:NSArray+TDTRangeAdditions.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSArray+TDTRangeAdditions.m">
+         </FileRef>
       </Group>
       <Group
          location = "group:TestingAdditions"

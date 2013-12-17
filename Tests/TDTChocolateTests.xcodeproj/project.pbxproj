@@ -28,6 +28,8 @@
 		69CB6FD11851B57D004D35DB /* NSArray_TDTAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CB6FCF1851B57D004D35DB /* NSArray_TDTAdditions_Tests.m */; };
 		69CB6FD41851B98F004D35DB /* NSString_TDTAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CB6FD31851B98F004D35DB /* NSString_TDTAdditions_Tests.m */; };
 		69CB6FD51851B98F004D35DB /* NSString_TDTAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CB6FD31851B98F004D35DB /* NSString_TDTAdditions_Tests.m */; };
+		69D1554C18601BC700D5B392 /* NSArray_TDTRangeAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D1554B18601BC700D5B392 /* NSArray_TDTRangeAdditions_Tests.m */; };
+		69D1554D18601BC700D5B392 /* NSArray_TDTRangeAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D1554B18601BC700D5B392 /* NSArray_TDTRangeAdditions_Tests.m */; };
 		69E1C30D1850AF6B00E93E23 /* TDTObjectOrDefaultTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E1C30C1850AF6B00E93E23 /* TDTObjectOrDefaultTests.m */; };
 		69E1C30E1850AF6B00E93E23 /* TDTObjectOrDefaultTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E1C30C1850AF6B00E93E23 /* TDTObjectOrDefaultTests.m */; };
 		69ECAE411851CA63006C3176 /* NSDate_TDTAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ECAE3E1851CA63006C3176 /* NSDate_TDTAdditions_Tests.m */; };
@@ -64,6 +66,7 @@
 		69CB6FCC18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSSet_TDTFunctionalAdditions_Tests.m; sourceTree = "<group>"; };
 		69CB6FCF1851B57D004D35DB /* NSArray_TDTAdditions_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_TDTAdditions_Tests.m; sourceTree = "<group>"; };
 		69CB6FD31851B98F004D35DB /* NSString_TDTAdditions_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSString_TDTAdditions_Tests.m; sourceTree = "<group>"; };
+		69D1554B18601BC700D5B392 /* NSArray_TDTRangeAdditions_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_TDTRangeAdditions_Tests.m; sourceTree = "<group>"; };
 		69E1C30C1850AF6B00E93E23 /* TDTObjectOrDefaultTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTObjectOrDefaultTests.m; sourceTree = "<group>"; };
 		69ECAE3E1851CA63006C3176 /* NSDate_TDTAdditions_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDate_TDTAdditions_Tests.m; sourceTree = "<group>"; };
 		69ECAE401851CA63006C3176 /* NSDate_TDTComparisons_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDate_TDTComparisons_Tests.m; sourceTree = "<group>"; };
@@ -192,6 +195,7 @@
 				6961BA83185B384900C6B2EF /* TDTUmbrellaHeaderTextualSanityTests.m */,
 				697F99721859D1B600DDF2A3 /* TDTSmokeTests.m */,
 				697F99751859D4F900DDF2A3 /* TDTBlockAdditionsTests.m */,
+				69D1554B18601BC700D5B392 /* NSArray_TDTRangeAdditions_Tests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -363,6 +367,7 @@
 				697F99761859D4F900DDF2A3 /* TDTBlockAdditionsTests.m in Sources */,
 				69E1C30D1850AF6B00E93E23 /* TDTObjectOrDefaultTests.m in Sources */,
 				697F99731859D1B600DDF2A3 /* TDTSmokeTests.m in Sources */,
+				69D1554C18601BC700D5B392 /* NSArray_TDTRangeAdditions_Tests.m in Sources */,
 				6961BA84185B384900C6B2EF /* TDTUmbrellaHeaderTextualSanityTests.m in Sources */,
 				69CB6FD41851B98F004D35DB /* NSString_TDTAdditions_Tests.m in Sources */,
 				69CB6FCD18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m in Sources */,
@@ -381,6 +386,7 @@
 				697F99771859D4F900DDF2A3 /* TDTBlockAdditionsTests.m in Sources */,
 				69E1C30E1850AF6B00E93E23 /* TDTObjectOrDefaultTests.m in Sources */,
 				697F99741859D1B600DDF2A3 /* TDTSmokeTests.m in Sources */,
+				69D1554D18601BC700D5B392 /* NSArray_TDTRangeAdditions_Tests.m in Sources */,
 				6961BA85185B384900C6B2EF /* TDTUmbrellaHeaderTextualSanityTests.m in Sources */,
 				69CB6FD51851B98F004D35DB /* NSString_TDTAdditions_Tests.m in Sources */,
 				69CB6FCE18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m in Sources */,
