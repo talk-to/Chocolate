@@ -68,4 +68,9 @@
   XCTAssertFalse([empty containsString:s]);
 }
 
+- (void)testDataWithUTF8Encoding {
+  NSString *s = [NSString randomString];
+  XCTAssertEqualObjects([s dataUsingUTF8Encoding], [s dataUsingEncoding:NSUTF8StringEncoding]);
+}
+
 @end

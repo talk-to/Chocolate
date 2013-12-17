@@ -37,4 +37,9 @@
  */
 - (BOOL)containsString:(NSString *)string;
 
+/**
+ @return NSData containing the UTF8 encoding of the receiver.
+ */
+- (NSData *)dataUsingUTF8Encoding;
+
 @end

@@ -51,4 +51,8 @@
   return ([self rangeOfString:string].location != NSNotFound);
 }
 
+- (NSData *)dataUsingUTF8Encoding {
+  return [self dataUsingEncoding:NSUTF8StringEncoding];
+}
+
 @end
