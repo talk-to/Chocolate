@@ -41,10 +41,7 @@
 }
 
 - (NSString *)stringByNillingBlanks {
-  if ([self length] == 0) {
-    return nil;
-  }
-  return self;
+  return [self isNonEmpty] ? self : nil;
 }
 
 - (BOOL)containsString:(NSString *)string {
@@ -53,6 +50,10 @@
 
 - (NSData *)dataUsingUTF8Encoding {
   return [self dataUsingEncoding:NSUTF8StringEncoding];
+}
+
+- (BOOL)isNonEmpty {
+  return (self.length > 0);
 }
 
 @end

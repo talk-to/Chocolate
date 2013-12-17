@@ -42,4 +42,9 @@
  */
 - (NSData *)dataUsingUTF8Encoding;
 
+/**
+ @return YES if the receiver is the empty string.
+ */
+- (BOOL)isNonEmpty;
+
 @end

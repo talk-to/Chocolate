@@ -11,4 +11,9 @@
 
 - (instancetype)flatten;
 
+/**
+ @return YES if the receiver contains any object.
+ */
+- (BOOL)isNonEmpty;
+
 @end

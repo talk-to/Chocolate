@@ -54,7 +54,7 @@
 }
 
 - (void)testNonBlanksShouldBePassedUnchanged {
-  NSString *nonBlankString = @"Foo";
+  NSString *nonBlankString = [NSString randomString];
   XCTAssertEqualObjects([nonBlankString stringByNillingBlanks], nonBlankString);
 }
 
@@ -71,6 +71,11 @@
 - (void)testDataWithUTF8Encoding {
   NSString *s = [NSString randomString];
   XCTAssertEqualObjects([s dataUsingUTF8Encoding], [s dataUsingEncoding:NSUTF8StringEncoding]);
+}
+
+- (void)testIsNonEmpty {
+  XCTAssertTrue([[NSString randomString] isNonEmpty]);
+  XCTAssertFalse([@"" isNonEmpty]);
 }
 
 @end

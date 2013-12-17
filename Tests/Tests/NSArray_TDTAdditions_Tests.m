@@ -41,4 +41,9 @@
   XCTAssertEqualObjects([doublyNestedArray flatten], nestedArray);
 }
 
+- (void)testIsNonEmpty {
+  XCTAssertTrue([[NSArray randomArrayOfLength:1] isNonEmpty]);
+  XCTAssertFalse([@[] isNonEmpty]);
+}
+
 @end
