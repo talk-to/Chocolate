@@ -9,6 +9,10 @@
   return (NSString *)CFBridgingRelease(CFUUIDCreateString(NULL, uuid));
 }
 
++ (NSString *)stringWithUnsignedInteger:(NSUInteger)uInteger {
+  return [self stringWithFormat:@"%lu", (unsigned long)uInteger];
+}
+
 - (NSString *)SHA1Digest {
   const char *cstr = [self cStringUsingEncoding:NSUTF8StringEncoding];
   NSData *data = [NSData dataWithBytes:cstr length:self.length];
@@ -41,10 +45,6 @@
     return nil;
   }
   return self;
-}
-
-+ (NSString *)stringWithUnsignedInteger:(NSUInteger)uInteger {
-  return [self stringWithFormat:@"%lu", (unsigned long)uInteger];
 }
 
 - (BOOL)containsString:(NSString *)string {

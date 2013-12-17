@@ -8,6 +8,11 @@
 + (instancetype)randomUUID;
 
 /**
+ There is no platform agnostic format specifier for an `NSUInteger`. Ergo this.
+ */
++ (NSString *)stringWithUnsignedInteger:(NSUInteger)uInteger;
+
+/**
  @return The SHA1 of the receiver
  */
 - (NSString *)SHA1Digest;
@@ -31,10 +36,5 @@
  @return YES if the receiver contains `string`
  */
 - (BOOL)containsString:(NSString *)string;
-
-/**
- There is no platform agnostic format specifier for an `NSUInteger`. Ergo this.
- */
-+ (NSString *)stringWithUnsignedInteger:(NSUInteger)uInteger;
 
 @end

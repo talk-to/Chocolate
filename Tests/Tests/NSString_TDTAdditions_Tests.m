@@ -17,6 +17,13 @@
   XCTAssertNotEqualObjects([NSString randomUUID], [NSString randomUUID]);
 }
 
+- (void)testStringFromUIntegerConstruction {
+  XCTAssertEqualObjects([NSString stringWithUnsignedInteger:0], @"0");
+  XCTAssertEqualObjects([NSString stringWithUnsignedInteger:42], @"42");
+  XCTAssertEqualObjects([NSString stringWithUnsignedInteger:100000], @"100000",
+                        @"UInt -> String is using localized formatting?");
+}
+
 - (void)testSHA1SumIsCorrectlyCalculated {
   NSString *testString = @"interesting";
   // $ shasum <(echo -n "interesting")
@@ -49,13 +56,6 @@
 - (void)testNonBlanksShouldBePassedUnchanged {
   NSString *nonBlankString = @"Foo";
   XCTAssertEqualObjects([nonBlankString stringByNillingBlanks], nonBlankString);
-}
-
-- (void)testStringFromUIntegerConstruction {
-  XCTAssertEqualObjects([NSString stringWithUnsignedInteger:0], @"0");
-  XCTAssertEqualObjects([NSString stringWithUnsignedInteger:42], @"42");
-  XCTAssertEqualObjects([NSString stringWithUnsignedInteger:100000], @"100000",
-                        @"UInt -> String is using localized formatting?");
 }
 
 - (void)testContainsString {
