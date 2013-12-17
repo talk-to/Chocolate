@@ -9,15 +9,15 @@
 @implementation NSString_TDTAdditions_Tests
 
 - (void)testRandomUUIDIsNotEmpty {
-  NSString *uuid = [NSString randomUUID];
-  XCTAssertTrue(uuid.length > 0);
+  NSString *UUID = [NSString randomUUID];
+  XCTAssertTrue(UUID.length > 0);
 }
 
 - (void)testNewUUIDIsGeneratedForEachCall {
   XCTAssertNotEqualObjects([NSString randomUUID], [NSString randomUUID]);
 }
 
-- (void)testSha1SumIsCorrectlyCalculated {
+- (void)testSHA1SumIsCorrectlyCalculated {
   NSString *testString = @"interesting";
   // $ shasum <(echo -n "interesting")
   NSString *SHA1Digest = @"68f55551796668375c528bd96b0d0fbc847bd123";
