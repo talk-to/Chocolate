@@ -10,7 +10,7 @@
 /**
  There is no platform agnostic format specifier for an `NSUInteger`. Ergo this.
  */
-+ (NSString *)stringWithUnsignedInteger:(NSUInteger)uInteger;
++ (NSString *)stringWithUnsignedInteger:(NSUInteger)unsignedInteger;
 
 /**
  @return The SHA1 of the receiver

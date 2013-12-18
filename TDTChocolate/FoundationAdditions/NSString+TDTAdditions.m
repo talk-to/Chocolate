@@ -9,8 +9,8 @@
   return (NSString *)CFBridgingRelease(CFUUIDCreateString(NULL, uuid));
 }
 
-+ (NSString *)stringWithUnsignedInteger:(NSUInteger)uInteger {
-  return [self stringWithFormat:@"%lu", (unsigned long)uInteger];
++ (NSString *)stringWithUnsignedInteger:(NSUInteger)unsignedInteger {
+  return [self stringWithFormat:@"%lu", (unsigned long)unsignedInteger];
 }
 
 - (NSString *)SHA1Digest {
