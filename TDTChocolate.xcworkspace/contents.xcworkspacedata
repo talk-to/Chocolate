@@ -134,6 +134,12 @@
          <FileRef
             location = "group:NSRunLoop+TDTAsyncVerification.m">
          </FileRef>
+         <FileRef
+            location = "group:NSInvocation+TDTIndexTranslation.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSInvocation+TDTIndexTranslation.m">
+         </FileRef>
       </Group>
       <Group
          location = "group:CoreDataAdditions"
