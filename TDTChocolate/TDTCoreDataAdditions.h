@@ -2,6 +2,7 @@
 #import "CoreDataAdditions/NSManagedObjectContext+TDTAdditions.h"
 #import "CoreDataAdditions/TDTCoreDataUtilityMacros.h"
 
-#ifdef TARGET_IPHONE_OS
+#import "TargetConditionals.h"
+#if TARGET_OS_IPHONE
   #import "CoreDataAdditions/NSFetchedResultsController+TDTAdditions.h"
 #endif
