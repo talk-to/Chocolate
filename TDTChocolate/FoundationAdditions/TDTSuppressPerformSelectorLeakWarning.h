@@ -7,4 +7,3 @@
     code; \
     _Pragma("clang diagnostic pop") \
   } while (0)
-

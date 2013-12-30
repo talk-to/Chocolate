@@ -116,5 +116,4 @@
   XCTAssertFalse([array anyWithBlock:predicateMatchingNoElement]);
 }
 
-
 @end
