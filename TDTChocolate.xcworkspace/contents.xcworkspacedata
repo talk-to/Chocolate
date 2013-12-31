@@ -71,10 +71,10 @@
             location = "group:TDTNSStringExtendedComparison.m">
          </FileRef>
          <FileRef
-            location = "group:NSData+TDTStringEncoding.h">
+            location = "group:NSData+TDTAdditions.h">
          </FileRef>
          <FileRef
-            location = "group:NSData+TDTStringEncoding.m">
+            location = "group:NSData+TDTAdditions.m">
          </FileRef>
          <FileRef
             location = "group:NSDate+TDTAdditions.h">
