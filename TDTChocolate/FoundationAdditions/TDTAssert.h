@@ -31,11 +31,6 @@
   __PRAGMA_POP_NO_EXTRA_ARG_WARNINGS \
   } while(0)
 
-#define TDTAssert1(condition, desc, arg1) TDTAssert((condition), (desc), (arg1))
-#define TDTAssert2(condition, desc, arg1, arg2) TDTAssert((condition), (desc), (arg1), (arg2))
-#define TDTAssert3(condition, desc, arg1, arg2, arg3) TDTAssert((condition), (desc), (arg1), (arg2), (arg3))
-#define TDTAssert4(condition, desc, arg1, arg2, arg3, arg4) TDTAssert((condition), (desc), (arg1), (arg2), (arg3), (arg4))
-#define TDTAssert5(condition, desc, arg1, arg2, arg3, arg4, arg5) TDTAssert((condition), (desc), (arg1), (arg2), (arg3), (arg4), (arg5))
 #define TDTParameterAssert(condition) TDTAssert((condition), @"Invalid parameter not satisfying: %s", #condition)
 
 #pragma mark - TDTCAssert
@@ -53,11 +48,6 @@
   __PRAGMA_POP_NO_EXTRA_ARG_WARNINGS \
   } while(0)
 
-#define TDTCAssert1(condition, desc, arg1) TDTCAssert((condition), (desc), (arg1))
-#define TDTCAssert2(condition, desc, arg1, arg2) TDTCAssert((condition), (desc), (arg1), (arg2))
-#define TDTCAssert3(condition, desc, arg1, arg2, arg3) TDTCAssert((condition), (desc), (arg1), (arg2), (arg3))
-#define TDTCAssert4(condition, desc, arg1, arg2, arg3, arg4) TDTCAssert((condition), (desc), (arg1), (arg2), (arg3), (arg4))
-#define TDTCAssert5(condition, desc, arg1, arg2, arg3, arg4, arg5) TDTCAssert((condition), (desc), (arg1), (arg2), (arg3), (arg4), (arg5))
 #define TDTCParameterAssert(condition) TDTCAssert((condition), @"Invalid parameter not satisfying: %s", #condition)
 
 #pragma mark - Convenience Assertions
