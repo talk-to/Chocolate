@@ -12,7 +12,7 @@
   } else if ([collection isKindOfClass:[NSDictionary class]]) {
     return [self setWithArray:[collection allValues]];
   } else {
-    TDTAssertFailure(@"collection should be either an NSSet, NSArray or NSDictionary");
+    TDTAssertFailure(@"collection should be either an NSSet, NSArray or NSDictionary", nil);
   }
 }
 

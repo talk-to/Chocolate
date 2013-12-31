@@ -59,10 +59,7 @@
 #define TDTAssertNotNil(expr) TDTAssert((expr) != nil, nil);
 
 /// Signal an unconditional assertion failure
-#define TDTAssertFailure(desc) TDTAssert(NO, desc)
-
-/// Signal an unconditional assertion failure -- this corresponds to NSAssert1
-#define TDTAssertFailure1(desc, arg1) TDTAssert1(NO, desc, arg1)
+#define TDTAssertFailure(desc, ...) TDTAssert(NO, desc, __VA_ARGS__)
 
 /// Ensure that the current line is not executed on the main thread
 #define TDTAssertIsNotMainThread() \
