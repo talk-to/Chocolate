@@ -20,10 +20,30 @@ void TDTLog(NSString *fmt, ...);
  Prepends log type, __PRETTY_FUNCTION__, and line number to the formatted log message.
  */
 
-#define TDTLogError(format, ...)    do { if (DEBUG_ERROR) TDTLog((@"ERROR %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__); } while (0)
+#define TDTLogError(format, ...) \
+  do { \
+    if (DEBUG_ERROR) {\
+      TDTLog((@"ERROR %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__); \
+    } \
+  } while (0)
 
-#define TDTLogWarn(format, ...)     do { if (DEBUG_WARN) TDTLog((@"WARN %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__); } while (0)
+#define TDTLogWarn(format, ...) \
+  do { \
+   if (DEBUG_WARN) { \
+     TDTLog((@"WARN %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__); \
+   } \
+  } while (0)
 
-#define TDTLogInfo(format, ...)     do { if (DEBUG_INFO) TDTLog((@"INFO %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__); } while (0)
+#define TDTLogInfo(format, ...) \
+  do { \
+    if (DEBUG_INFO) { \
+      TDTLog((@"INFO %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__); \
+    } \
+  } while (0)
 
-#define TDTLogVerbose(format, ...)  do { if (DEBUG_VERBOSE) TDTLog((@"VERBOSE %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__); } while (0)
+#define TDTLogVerbose(format, ...) \
+  do { \
+    if (DEBUG_VERBOSE) { \
+      TDTLog((@"VERBOSE %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__); \
+    } \
+  } while (0)

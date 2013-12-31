@@ -20,7 +20,10 @@
 @implementation TDTSmokeTests
 
 - (void)testLogging {
-  TDTLogInfo("Why so serious?");
+  TDTLogError("Error");
+  TDTLogWarn("Warn");
+  TDTLogInfo("Info");
+  TDTLogVerbose("Verbose");
 }
 
 - (void)testEnvironmentDetection {
