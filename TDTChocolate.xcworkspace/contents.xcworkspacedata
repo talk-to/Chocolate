@@ -118,6 +118,12 @@
          <FileRef
             location = "group:NSArray+TDTRangeAdditions.m">
          </FileRef>
+         <FileRef
+            location = "group:TDTVersionStringComparisons.h">
+         </FileRef>
+         <FileRef
+            location = "group:TDTVersionStringComparisons.m">
+         </FileRef>
       </Group>
       <Group
          location = "group:TestingAdditions"

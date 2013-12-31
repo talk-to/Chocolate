@@ -15,3 +15,4 @@
 #import "FoundationAdditions/NSProcessInfo+TDTEnvironmentDetection.h"
 #import "FoundationAdditions/TDTBlockAdditions.h"
 #import "FoundationAdditions/NSArray+TDTRangeAdditions.h"
+#import "FoundationAdditions/TDTVersionStringComparisons.h"
