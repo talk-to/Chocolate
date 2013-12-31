@@ -6,6 +6,7 @@
 #import "FoundationAdditions/TDTObjectOrDefault.h"
 #import "FoundationAdditions/NSArray+TDTAdditions.h"
 #import "FoundationAdditions/NSString+TDTAdditions.h"
+#import "FoundationAdditions/TDTNSStringExtendedComparison.h"
 #import "FoundationAdditions/NSData+TDTStringEncoding.h"
 #import "FoundationAdditions/NSDate+TDTAdditions.h"
 #import "FoundationAdditions/NSDate+TDTComparisons.h"

@@ -20,6 +20,8 @@
 		697F99741859D1B600DDF2A3 /* TDTSmokeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 697F99721859D1B600DDF2A3 /* TDTSmokeTests.m */; };
 		697F99761859D4F900DDF2A3 /* TDTBlockAdditionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 697F99751859D4F900DDF2A3 /* TDTBlockAdditionsTests.m */; };
 		697F99771859D4F900DDF2A3 /* TDTBlockAdditionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 697F99751859D4F900DDF2A3 /* TDTBlockAdditionsTests.m */; };
+		69C2DEF41872935A0004C535 /* TDTNSStringExtendedComparisonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C2DEF31872935A0004C535 /* TDTNSStringExtendedComparisonTests.m */; };
+		69C2DEF51872935A0004C535 /* TDTNSStringExtendedComparisonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C2DEF31872935A0004C535 /* TDTNSStringExtendedComparisonTests.m */; };
 		69CB6FCA18517E63004D35DB /* NSArray_TDTFunctionalAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CB6FC918517E63004D35DB /* NSArray_TDTFunctionalAdditions_Tests.m */; };
 		69CB6FCB18517E63004D35DB /* NSArray_TDTFunctionalAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CB6FC918517E63004D35DB /* NSArray_TDTFunctionalAdditions_Tests.m */; };
 		69CB6FCD18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CB6FCC18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m */; };
@@ -62,6 +64,7 @@
 		6961BA83185B384900C6B2EF /* TDTUmbrellaHeaderTextualSanityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTUmbrellaHeaderTextualSanityTests.m; sourceTree = "<group>"; };
 		697F99721859D1B600DDF2A3 /* TDTSmokeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTSmokeTests.m; sourceTree = "<group>"; };
 		697F99751859D4F900DDF2A3 /* TDTBlockAdditionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTBlockAdditionsTests.m; sourceTree = "<group>"; };
+		69C2DEF31872935A0004C535 /* TDTNSStringExtendedComparisonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTNSStringExtendedComparisonTests.m; sourceTree = "<group>"; };
 		69CB6FC918517E63004D35DB /* NSArray_TDTFunctionalAdditions_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_TDTFunctionalAdditions_Tests.m; sourceTree = "<group>"; };
 		69CB6FCC18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSSet_TDTFunctionalAdditions_Tests.m; sourceTree = "<group>"; };
 		69CB6FCF1851B57D004D35DB /* NSArray_TDTAdditions_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_TDTAdditions_Tests.m; sourceTree = "<group>"; };
@@ -196,6 +199,7 @@
 				697F99721859D1B600DDF2A3 /* TDTSmokeTests.m */,
 				697F99751859D4F900DDF2A3 /* TDTBlockAdditionsTests.m */,
 				69D1554B18601BC700D5B392 /* NSArray_TDTRangeAdditions_Tests.m */,
+				69C2DEF31872935A0004C535 /* TDTNSStringExtendedComparisonTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -370,6 +374,7 @@
 				69D1554C18601BC700D5B392 /* NSArray_TDTRangeAdditions_Tests.m in Sources */,
 				6961BA84185B384900C6B2EF /* TDTUmbrellaHeaderTextualSanityTests.m in Sources */,
 				69CB6FD41851B98F004D35DB /* NSString_TDTAdditions_Tests.m in Sources */,
+				69C2DEF41872935A0004C535 /* TDTNSStringExtendedComparisonTests.m in Sources */,
 				69CB6FCD18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m in Sources */,
 				69CB6FD01851B57D004D35DB /* NSArray_TDTAdditions_Tests.m in Sources */,
 			);
@@ -389,6 +394,7 @@
 				69D1554D18601BC700D5B392 /* NSArray_TDTRangeAdditions_Tests.m in Sources */,
 				6961BA85185B384900C6B2EF /* TDTUmbrellaHeaderTextualSanityTests.m in Sources */,
 				69CB6FD51851B98F004D35DB /* NSString_TDTAdditions_Tests.m in Sources */,
+				69C2DEF51872935A0004C535 /* TDTNSStringExtendedComparisonTests.m in Sources */,
 				69CB6FCE18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m in Sources */,
 				69CB6FD11851B57D004D35DB /* NSArray_TDTAdditions_Tests.m in Sources */,
 			);
