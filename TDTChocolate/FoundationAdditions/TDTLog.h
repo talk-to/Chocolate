@@ -10,12 +10,12 @@
 #define DEBUG_VERBOSE (DEBUG_LEVEL >= 4)
 
 /**
- Logging macros. 
- 
- Make sure that 'format' is a literal Objective-C string. We need it to be a
- literal since we are relying on string literal contatenation here.
+ Enhanced Logging Macros.
 
- Prepends log type, __PRETTY_FUNCTION__, and line number to the formatted log message.
+ Prepend log type, __PRETTY_FUNCTION__, and line number to the formatted log message.
+
+ @note Make sure that 'format' is a literal Objective-C string. We need it to
+       be a literal since we are relying on string literal contatenation here.
 
  Clients can set the `TDTLogErrorWarningHook` function pointer to point to
  a function which will then be invoked with the formatted log message whenever
@@ -63,6 +63,6 @@ extern TDTLogErrorWarningHookFunction TDTLogErrorWarningHook;
 
 
 /**
- Vanilla (but more performant) replacement for `NSLog`.
+ Plain (but more performant) replacement for `NSLog`.
  */
 void TDTLog(NSString *format, ...);
