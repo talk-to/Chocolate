@@ -28,34 +28,41 @@ extern TDTLogErrorWarningHookFunction TDTLogErrorWarningHook;
 #define TDTLogError(format, ...) \
   do { \
     if (DEBUG_ERROR) {\
-      __TDTLog(YES, (@"ERROR %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__); \
+      NSString *__msg = [[NSString alloc] initWithFormat:(@"ERROR %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__]; \
+      TDTLog(__msg); \
+      if (TDTLogErrorWarningHook != NULL) { \
+        TDTLogErrorWarningHook(__msg); \
+      } \
     } \
   } while (0)
 
 #define TDTLogWarn(format, ...) \
   do { \
-   if (DEBUG_WARN) { \
-     __TDTLog(YES, (@"WARN %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__); \
+    if (DEBUG_WARN) { \
+      NSString *__msg = [[NSString alloc] initWithFormat:(@"WARN %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__]; \
+      TDTLog(__msg); \
+      if (TDTLogErrorWarningHook != NULL) { \
+        TDTLogErrorWarningHook(__msg); \
+      } \
    } \
   } while (0)
 
 #define TDTLogInfo(format, ...) \
   do { \
     if (DEBUG_INFO) { \
-      __TDTLog(NO, (@"INFO %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__); \
+      TDTLog((@"INFO %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__); \
     } \
   } while (0)
 
 #define TDTLogVerbose(format, ...) \
   do { \
     if (DEBUG_VERBOSE) { \
-      __TDTLog(NO, (@"VERBOSE %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__); \
+      TDTLog((@"VERBOSE %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__); \
     } \
   } while (0)
 
 
 /**
- @note Clients should not directly invoke this function, and should instead
-       use one of the predefined logging macros defined above.
+ Vanilla (but more performant) replacement for `NSLog`.
  */
-void __TDTLog(BOOL shouldInvokeErrorWarningHook, NSString *format, ...);
+void TDTLog(NSString *format, ...);

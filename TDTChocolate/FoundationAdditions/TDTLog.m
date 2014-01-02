@@ -17,7 +17,7 @@ TDTLogErrorWarningHookFunction TDTLogErrorWarningHook;
 // TDTLog: ~0.1s
 // Plain fprintf (without any date string): ~0.01s
 
-void __TDTLog(BOOL shouldInvokeErrorWarningHook, NSString *format, ...) {
+void TDTLog(NSString *format, ...) {
   va_list args;
   va_start(args, format);
   NSString *message = [[NSString alloc] initWithFormat:format arguments:args];
@@ -30,9 +30,6 @@ void __TDTLog(BOOL shouldInvokeErrorWarningHook, NSString *format, ...) {
   if (fprintf(stderr, "%s %s\n", [dateString UTF8String], [message UTF8String]) < 0) {
     NSString *errorString = @(strerror(errno));
     NSLog(@"Couldn't print (%@) to stderr because: %@", message, errorString);
-  }
-  if (shouldInvokeErrorWarningHook && TDTLogErrorWarningHook != NULL) {
-    TDTLogErrorWarningHook(message);
   }
   va_end(args);
 }
