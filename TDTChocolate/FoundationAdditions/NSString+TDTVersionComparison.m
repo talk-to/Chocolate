@@ -1,8 +1,10 @@
-#import "TDTVersionStringComparisons.h"
+#import "NSString+TDTVersionComparison.h"
 
-NSComparisonResult TDTCompareVersionStrings(NSString *v1, NSString *v2) {
-  NSArray *baseVersionFields = [v1 componentsSeparatedByString:@"."];
-  NSArray *newVersionFields = [v2 componentsSeparatedByString:@"."];
+@implementation NSString (TDTVersionComparison)
+
+- (NSComparisonResult)versionCompare:(NSString *)other {
+  NSArray *baseVersionFields = [self componentsSeparatedByString:@"."];
+  NSArray *newVersionFields = [other componentsSeparatedByString:@"."];
 
   NSUInteger minVersionFieldsCount = MIN([newVersionFields count], [baseVersionFields count]);
   for (NSUInteger index = 0; index < minVersionFieldsCount; index++) {
@@ -26,3 +28,5 @@ NSComparisonResult TDTCompareVersionStrings(NSString *v1, NSString *v2) {
     return NSOrderedSame;
   }
 }
+
+@end
