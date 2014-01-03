@@ -28,10 +28,10 @@ extern TDTLogErrorWarningHookFunction TDTLogErrorWarningHook;
 #define TDTLogError(format, ...) \
   do { \
     if (DEBUG_ERROR) {\
-      NSString *__msg = [[NSString alloc] initWithFormat:(@"ERROR %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__]; \
-      TDTLog(__msg); \
+      NSString *__msg00 = [[NSString alloc] initWithFormat:(@"ERROR %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__]; \
+      TDTLog(__msg00); \
       if (TDTLogErrorWarningHook != NULL) { \
-        TDTLogErrorWarningHook(__msg); \
+        TDTLogErrorWarningHook(__msg00); \
       } \
     } \
   } while (0)
@@ -39,10 +39,10 @@ extern TDTLogErrorWarningHookFunction TDTLogErrorWarningHook;
 #define TDTLogWarn(format, ...) \
   do { \
     if (DEBUG_WARN) { \
-      NSString *__msg = [[NSString alloc] initWithFormat:(@"WARN %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__]; \
-      TDTLog(__msg); \
+      NSString *__msg00 = [[NSString alloc] initWithFormat:(@"WARN %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__]; \
+      TDTLog(__msg00); \
       if (TDTLogErrorWarningHook != NULL) { \
-        TDTLogErrorWarningHook(__msg); \
+        TDTLogErrorWarningHook(__msg00); \
       } \
    } \
   } while (0)
