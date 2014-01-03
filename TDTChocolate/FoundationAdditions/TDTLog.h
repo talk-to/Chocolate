@@ -29,7 +29,7 @@ extern TDTLogErrorWarningHookFunction TDTLogErrorWarningHook;
   do { \
     if (DEBUG_ERROR) {\
       NSString *__msg00 = [[NSString alloc] initWithFormat:(@"ERROR %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__]; \
-      TDTLog(__msg00); \
+      TDTLog(@"%@", __msg00); \
       if (TDTLogErrorWarningHook != NULL) { \
         TDTLogErrorWarningHook(__msg00); \
       } \
@@ -40,7 +40,7 @@ extern TDTLogErrorWarningHookFunction TDTLogErrorWarningHook;
   do { \
     if (DEBUG_WARN) { \
       NSString *__msg00 = [[NSString alloc] initWithFormat:(@"WARN %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__]; \
-      TDTLog(__msg00); \
+      TDTLog(@"%@", __msg00); \
       if (TDTLogErrorWarningHook != NULL) { \
         TDTLogErrorWarningHook(__msg00); \
       } \
