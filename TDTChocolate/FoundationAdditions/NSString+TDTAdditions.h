@@ -13,6 +13,11 @@
 + (NSString *)stringWithUnsignedInteger:(NSUInteger)unsignedInteger;
 
 /**
+ @return "YES" or "NO"
+ */
++ (NSString *)stringWithBOOL:(BOOL)b;
+
+/**
  @return The SHA1 of the receiver
  */
 - (NSString *)SHA1Digest;

@@ -13,6 +13,10 @@
   return [self stringWithFormat:@"%lu", (unsigned long)unsignedInteger];
 }
 
++ (NSString *)stringWithBOOL:(BOOL)b {
+  return b ? @"YES" : @"NO";
+}
+
 - (NSString *)SHA1Digest {
   const char *cstr = [self cStringUsingEncoding:NSUTF8StringEncoding];
   NSData *data = [NSData dataWithBytes:cstr length:self.length];

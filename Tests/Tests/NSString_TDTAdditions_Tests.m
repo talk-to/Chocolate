@@ -24,6 +24,11 @@
                         @"UInt -> String is using localized formatting?");
 }
 
+- (void)testStringFromBOOLConstruction {
+  XCTAssertEqualObjects([NSString stringWithBOOL:NO], @"NO");
+  XCTAssertEqualObjects([NSString stringWithBOOL:YES], @"YES");
+}
+
 - (void)testSHA1SumIsCorrectlyCalculated {
   NSString *testString = @"interesting";
   // $ shasum <(echo -n "interesting")
