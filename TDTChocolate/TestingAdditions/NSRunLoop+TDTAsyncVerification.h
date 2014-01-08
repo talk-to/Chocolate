@@ -13,6 +13,8 @@
 
 extern const NSTimeInterval TDTAsyncVerificationTimeoutDefault;
 
+typedef BOOL (^TDTAsyncVerificationCompletionTest)();
+
 @interface NSRunLoop (TDTAsyncVerification)
 
 /**
@@ -41,6 +43,28 @@ extern const NSTimeInterval TDTAsyncVerificationTimeoutDefault;
 - (void)runUntilCompletionIndicator:(BOOL *)completionIndicator;
 
 /**
+ Keep spinning in `NSDefaultRunLoopMode` (for at the most
+ `TDTAsyncVerificationTimeoutDefault` seconds)
+ until `completionTest` returns YES.
+ */
+- (void)runUntilCompletionTest:(TDTAsyncVerificationCompletionTest)completionTest;
+
+/**
+ Keep spinning in `NSDefaultRunLoopMode` until either
+ `completionTest` returns YES or `timeout` occurs.
+ */
+- (void)runUntilCompletionTest:(TDTAsyncVerificationCompletionTest)completionTest
+                       timeout:(NSTimeInterval)timeout;
+
+/**
+ Keep spinning in `mode` until either
+ `completionTest` returns YES or `timeout` occurs.
+ */
+- (void)runUntilCompletionTest:(TDTAsyncVerificationCompletionTest)completionTest
+                       timeout:(NSTimeInterval)timeout
+                          mode:(NSString *)mode;
+
+/**
  Keep spinning until `timeout`.
  This is useful for ensuring that a given asynchronous method is NOT called.
  */
@@ -51,7 +75,7 @@ extern const NSTimeInterval TDTAsyncVerificationTimeoutDefault;
  timeouts that should generally be enough for a few context switches to happen.
 
  @note As is the case with `performSelector:afterDelay:0`, it is easy to misuse
-       this function and end up with a fragile test suite.
+ this function and end up with a fragile test suite.
  */
 - (void)runLongEnoughForSomeThreadSwitches;
 

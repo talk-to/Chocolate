@@ -35,6 +35,29 @@ const NSTimeInterval TDTAsyncVerificationTimeoutDefault = 0.1;
                             timeout:TDTAsyncVerificationTimeoutDefault];
 }
 
+- (void)runUntilCompletionTest:(TDTAsyncVerificationCompletionTest)completionTest {
+  [self runUntilCompletionTest:completionTest
+                       timeout:TDTAsyncVerificationTimeoutDefault];
+}
+
+- (void)runUntilCompletionTest:(TDTAsyncVerificationCompletionTest)completionTest
+                       timeout:(NSTimeInterval)timeout {
+  [self runUntilCompletionTest:completionTest
+                       timeout:timeout
+                          mode:NSDefaultRunLoopMode];
+}
+
+- (void)runUntilCompletionTest:(TDTAsyncVerificationCompletionTest)completionTest
+                       timeout:(NSTimeInterval)timeout
+                          mode:(NSString *)mode {
+  NSParameterAssert(completionTest);
+  NSDate *loopUntil = [NSDate dateWithTimeIntervalSinceNow:timeout];
+  while (completionTest() == NO && [loopUntil timeIntervalSinceNow] > 0) {
+    [[NSRunLoop currentRunLoop] runMode:mode
+                             beforeDate:loopUntil];
+  }
+}
+
 - (void)runUntilTimeout:(NSTimeInterval)timeout {
   NSDate *loopUntil = [NSDate dateWithTimeIntervalSinceNow:timeout];
   while ([loopUntil timeIntervalSinceNow] > 0) {
