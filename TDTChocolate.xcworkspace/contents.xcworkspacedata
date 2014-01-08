@@ -124,6 +124,12 @@
          <FileRef
             location = "group:NSString+TDTVersionComparison.m">
          </FileRef>
+         <FileRef
+            location = "group:NSMutableArray+TDTQueueing.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSMutableArray+TDTQueueing.m">
+         </FileRef>
       </Group>
       <Group
          location = "group:TestingAdditions"
