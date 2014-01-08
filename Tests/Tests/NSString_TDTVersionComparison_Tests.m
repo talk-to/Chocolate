@@ -1,11 +1,11 @@
 #import <XCTest/XCTest.h>
 #import <TDTChocolate/FoundationAdditions/NSString+TDTVersionComparison.h>
 
-@interface TDTVersionStringComparisonsTests : XCTestCase
+@interface NSString_TDTVersionComparison_Tests : XCTestCase
 
 @end
 
-@implementation TDTVersionStringComparisonsTests
+@implementation NSString_TDTVersionComparison_Tests
 
 - (void)testCompareWithEqualVersion {
   XCTAssertEqual([@"1.0.0.2" versionCompare:@"1.0.0.2"], NSOrderedSame);
