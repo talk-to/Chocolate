@@ -18,3 +18,5 @@
 #import "FoundationAdditions/NSString+TDTVersionComparison.h"
 #import "FoundationAdditions/NSMutableArray+TDTQueueing.h"
 #import "FoundationAdditions/NSOperationQueue+TDTSerialQueueAdditions.h"
+#import "FoundationAdditions/TDTSizeofArray.h"
+#import "FoundationAdditions/TDTNSDataFromByteArray.h"
