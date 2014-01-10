@@ -20,3 +20,4 @@
 #import "FoundationAdditions/NSOperationQueue+TDTSerialQueueAdditions.h"
 #import "FoundationAdditions/TDTSizeofArray.h"
 #import "FoundationAdditions/TDTNSDataFromByteArray.h"
+#import "FoundationAdditions/TDTRandom.h"
