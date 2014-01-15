@@ -5,11 +5,12 @@ double TDTRandomDouble() {
   // From `man arc4random`
   // "The arc4random() function returns pseudo-random numbers in the range
   //  of 0 to (2**32)-1".
-  return (arc4random() / 0x100000000);
+  static const double Arc4randomUpperBoundExclusive = (double)0x100000000;
+  return (arc4random() / Arc4randomUpperBoundExclusive);
 }
 
 double TDTRandomDoubleInInterval(double fromInclusive, double toExclusive) {
-  TDTCParameterAssert(fromInclusive < toExclusive);
-  double range = fromInclusive - toExclusive;
+  TDTCParameterAssert(toExclusive > fromInclusive);
+  double range = toExclusive - fromInclusive;
   return fromInclusive + (TDTRandomDouble() * range);
 }

@@ -13,6 +13,12 @@
   XCTAssertTrue(result < 1);
 }
 
+- (void)testResultOfDefaultGeneratorIsNotAlwaysTheSame {
+  double firstResult = TDTRandomDouble();
+  double secondResult = TDTRandomDouble();
+  XCTAssertNotEqual(firstResult, secondResult);
+}
+
 - (void)testResultOfIntervalGeneratorIsInExpectedRange {
   double lowerBound = 10;
   double upperBound = 11;
