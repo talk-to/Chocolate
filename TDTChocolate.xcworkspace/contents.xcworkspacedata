@@ -170,6 +170,12 @@
          <FileRef
             location = "group:NSInvocation+TDTIndexTranslation.m">
          </FileRef>
+         <FileRef
+            location = "group:TDTPrimitiveConstants.h">
+         </FileRef>
+         <FileRef
+            location = "group:TDTPrimitiveConstants.m">
+         </FileRef>
       </Group>
       <Group
          location = "group:CoreDataAdditions"
