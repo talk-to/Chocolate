@@ -6,14 +6,14 @@
 - (NSManagedObject *)existingObjectWithID:(NSManagedObjectID *)objectID {
   NSError *error;
   NSManagedObject *object = [self existingObjectWithID:objectID error:&error];
-  TDTAssert(object, @"%@", error);
+  TDTAssertNotNil(object, @"%@", error);
   return object;
 }
 
 - (NSArray *)executeFetchRequest:(NSFetchRequest *)fetchRequest {
   NSError *error;
   NSArray *results = [self executeFetchRequest:fetchRequest error:&error];
-  TDTAssert(results, @"%@", error);
+  TDTAssertNotNil(results, @"%@", error);
   return results;
 }
 

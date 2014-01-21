@@ -52,11 +52,30 @@
 
 #pragma mark - Convenience Assertions
 
+/**
+ Signal an assertion failure if either one of `a1` and `a2` is nil, or if they
+ do not compare equal under `isEqual:`.
+
+ The arguments are evaluated only once.
+ */
+#define TDTAssertEqualObjects(a1, a2, format...) \
+  ({ \
+    id __TDT_v1 = (a1); \
+    id __TDT_v2 = (a2); \
+    TDTAssert((__TDT_v1 == a2value) || [__TDT_v1 isEqual:__TDT_v2], ## format); \
+  })
+
 /// Signal an assertion failure if `expr` is NO.
 #define TDTAssertTrue(expr, format...) TDTAssert(expr, ## format)
 
+/// Signal an assertion failure if `expr` is YES.
+#define TDTAssertFalse(expr, format...) TDTAssert(expr == YES, ## format)
+
 /// Signal an assertion failure if `expr` is nil.
 #define TDTAssertNotNil(expr, format...) TDTAssert((expr) != nil, ## format);
+
+/// Signal an assertion failure if `expr` is not nil.
+#define TDTAssertNil(expr, format...) TDTAssert((expr) == nil, ## format);
 
 /// Signal an unconditional assertion failure
 #define TDTAssertFailure(format...) TDTAssert(NO, ## format)
