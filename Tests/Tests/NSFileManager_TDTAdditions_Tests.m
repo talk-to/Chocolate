@@ -21,4 +21,16 @@
   XCTAssertTrue([urlString hasSuffix:suffix]);
 }
 
+- (void)testTemporaryFilePathURLsShouldBeDifferentOnEachRun {
+  NSFileManager *fileManager = [NSFileManager defaultManager];
+  NSString *prefix = [NSString randomString];
+  NSString *suffix = [NSString randomString];
+  NSURL *urlOne = [fileManager fileURLToTemporaryFileWithNamePrefix:prefix
+                                                             suffix:suffix];
+  NSURL *urlTwo = [fileManager fileURLToTemporaryFileWithNamePrefix:prefix
+                                                             suffix:suffix];
+  XCTAssertNotEqualObjects(urlOne, urlTwo);
+}
+
+
 @end

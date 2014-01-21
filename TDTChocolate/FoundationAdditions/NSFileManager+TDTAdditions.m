@@ -10,14 +10,15 @@
 - (NSURL *)fileURLToTemporaryFileWithNamePrefix:(NSString *)prefix
                                          suffix:(NSString *)suffix {
   NSString *temporaryDirectory = NSTemporaryDirectory();
-  NSString *nameTemplate = [NSString stringWithFormat:@"%@-XXXXX.%@", prefix, suffix];
+  NSString *dottedSuffix = [@"." stringByAppendingString:suffix];
+  NSString *nameTemplate = [NSString stringWithFormat:@"%@-XXXXX%@", prefix, dottedSuffix];
   NSString *tempFileTemplate = [temporaryDirectory                                stringByAppendingPathComponent:nameTemplate];
 
   const char *tempFileTemplateCString = [tempFileTemplate fileSystemRepresentation];
 
   char *tempFilePathCString = (char *)malloc(strlen(tempFileTemplateCString) + sizeof(char));
   strcpy(tempFilePathCString, tempFileTemplateCString);
-  int fileDescriptor = mkstemps(tempFilePathCString, (int)[suffix length]);
+  int fileDescriptor = mkstemps(tempFilePathCString, (int)[dottedSuffix length]);
   TDTAssert(fileDescriptor != -1, @"Could not create temporary file");
   close(fileDescriptor);
 
