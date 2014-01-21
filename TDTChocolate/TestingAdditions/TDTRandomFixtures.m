@@ -42,7 +42,7 @@
         randomObject = [NSArray randomArrayOfLength:1];
         break;
       default:
-        TDTAssertFailure(@"Unexpected Case");
+        TDTAssertFailure();
     }
     [result addObject:randomObject];
   }

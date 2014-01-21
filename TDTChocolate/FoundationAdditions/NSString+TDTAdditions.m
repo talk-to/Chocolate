@@ -24,7 +24,7 @@
   uint8_t digest[CC_SHA1_DIGEST_LENGTH];
 
   NSUInteger length = data.length;
-  TDTAssert(length < UINT32_MAX, nil);
+  TDTAssert(length < UINT32_MAX);
   CC_SHA1(data.bytes, (CC_LONG)length, digest);
 
   NSMutableString *output = [NSMutableString stringWithCapacity:CC_SHA1_DIGEST_LENGTH * 2];
