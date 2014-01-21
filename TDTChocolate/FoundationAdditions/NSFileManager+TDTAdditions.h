@@ -10,11 +10,11 @@
 
 /**
  Creates a temporary file in a suitable temporary directory.
- 
+
  The generated file has a name of the form "prefix-random.suffix",
  where "random" denotes a string of random integers to gurantee uniqueness.
- 
- @return URL to the temporary file
+
+ @return URL to the temporary file.
  */
 - (NSURL *)fileURLToTemporaryFileWithNamePrefix:(NSString *)prefix
                                          suffix:(NSString *)suffix;
