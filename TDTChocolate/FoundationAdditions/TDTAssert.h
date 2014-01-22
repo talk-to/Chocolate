@@ -62,7 +62,7 @@
   ({ \
     id __TDT_v1 = (a1); \
     id __TDT_v2 = (a2); \
-    TDTAssert((__TDT_v1 == a2value) || [__TDT_v1 isEqual:__TDT_v2], ## format); \
+    TDTAssert((__TDT_v1 == __TDT_v2) || [__TDT_v1 isEqual:__TDT_v2], ## format); \
   })
 
 /// Signal an assertion failure if `expr` is NO.
