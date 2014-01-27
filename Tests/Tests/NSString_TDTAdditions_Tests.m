@@ -83,4 +83,24 @@
   XCTAssertFalse([@"" isNonEmpty]);
 }
 
+- (void)testSmallNumbersAreConverted {
+  NSString *smallNumberString = @"123";
+  STAssertEquals([smallNumberString unsignedIntegerValue], (NSUInteger)123, nil);
+}
+
+- (void)testNegativeNumbersAreConverted {
+  NSString *negativeNumberString = @"-123";
+  STAssertEquals([negativeNumberString unsignedIntegerValue], (NSUInteger)(-123), nil);
+}
+
+- (void)testBiggestNumberIsConverted {
+  NSString *bigNumberString = [NSString stringWithUnsignedInteger:NSUIntegerMax];
+  STAssertEquals([bigNumberString unsignedIntegerValue], (NSUInteger)NSUIntegerMax, nil);
+}
+
+- (void)testOutOfRangeNumbersAreClamped {
+  NSString *outOfRangeNumberString = @"5000000000";
+  STAssertEquals([outOfRangeNumberString unsignedIntegerValue], (NSUInteger)NSUIntegerMax, nil);
+}
+
 @end
