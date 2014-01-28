@@ -60,4 +60,12 @@
   return (self.length > 0);
 }
 
+- (NSUInteger)unsignedIntegerValue {
+  unsigned long ul = strtoul([self cStringUsingEncoding:NSUTF8StringEncoding], NULL, 10);
+  if (ul > NSUIntegerMax) {
+    ul = NSUIntegerMax;
+  }
+  return (NSUInteger)ul;
+}
+
 @end

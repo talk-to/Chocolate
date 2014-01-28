@@ -52,4 +52,13 @@
  */
 - (BOOL)isNonEmpty;
 
+/**
+ @return The NSUInteger value of the receiver’s text, assuming a decimal
+         representation.
+
+ @note If the converted value is greater than `NSUIntegerMax` then the return
+       value is `NSUIntegerMax`.
+ */
+- (NSUInteger)unsignedIntegerValue;
+
 @end

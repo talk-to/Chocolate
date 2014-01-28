@@ -83,4 +83,21 @@
   XCTAssertFalse([@"" isNonEmpty]);
 }
 
+- (void)testNumbersAreConverted {
+  NSNumber *randomNumber = [NSNumber randomNumber];
+  NSUInteger value = [randomNumber unsignedIntegerValue];
+  NSString *s = [NSString stringWithUnsignedInteger:value];
+  XCTAssertEqual([s unsignedIntegerValue], value);
+}
+
+- (void)testBiggestNumberIsConverted {
+  NSString *bigNumberString = [NSString stringWithUnsignedInteger:NSUIntegerMax];
+  XCTAssertEqual([bigNumberString unsignedIntegerValue], (NSUInteger)NSUIntegerMax);
+}
+
+- (void)testOutOfRangeNumbersAreClamped {
+  NSString *outOfRangeNumberString = @"5000000000";
+  XCTAssertEqual([outOfRangeNumberString unsignedIntegerValue], (NSUInteger)NSUIntegerMax);
+}
+
 @end
