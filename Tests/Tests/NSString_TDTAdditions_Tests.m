@@ -83,9 +83,11 @@
   XCTAssertFalse([@"" isNonEmpty]);
 }
 
-- (void)testSmallNumbersAreConverted {
-  NSString *smallNumberString = @"123";
-  STAssertEquals([smallNumberString unsignedIntegerValue], (NSUInteger)123, nil);
+- (void)testNumbersAreConverted {
+  NSNumber *randomNumber = [NSNumber randomNumber];
+  NSUInteger value = [randomNumber unsignedIntegerValue];
+  NSString *s = [NSString stringWithUnsignedInteger:value];
+  XCTAssertEqual([s unsignedIntegerValue], value);
 }
 
 - (void)testBiggestNumberIsConverted {
