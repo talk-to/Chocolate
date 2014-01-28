@@ -92,12 +92,12 @@
 
 - (void)testBiggestNumberIsConverted {
   NSString *bigNumberString = [NSString stringWithUnsignedInteger:NSUIntegerMax];
-  STAssertEquals([bigNumberString unsignedIntegerValue], (NSUInteger)NSUIntegerMax, nil);
+  XCTAssertEqual([bigNumberString unsignedIntegerValue], (NSUInteger)NSUIntegerMax);
 }
 
 - (void)testOutOfRangeNumbersAreClamped {
   NSString *outOfRangeNumberString = @"5000000000";
-  STAssertEquals([outOfRangeNumberString unsignedIntegerValue], (NSUInteger)NSUIntegerMax, nil);
+  XCTAssertEqual([outOfRangeNumberString unsignedIntegerValue], (NSUInteger)NSUIntegerMax);
 }
 
 @end
