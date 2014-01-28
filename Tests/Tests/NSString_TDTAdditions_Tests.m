@@ -88,11 +88,6 @@
   STAssertEquals([smallNumberString unsignedIntegerValue], (NSUInteger)123, nil);
 }
 
-- (void)testNegativeNumbersAreConverted {
-  NSString *negativeNumberString = @"-123";
-  STAssertEquals([negativeNumberString unsignedIntegerValue], (NSUInteger)(-123), nil);
-}
-
 - (void)testBiggestNumberIsConverted {
   NSString *bigNumberString = [NSString stringWithUnsignedInteger:NSUIntegerMax];
   STAssertEquals([bigNumberString unsignedIntegerValue], (NSUInteger)NSUIntegerMax, nil);
