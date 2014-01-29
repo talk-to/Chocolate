@@ -39,4 +39,9 @@ Pod::Spec.new do |s|
     ss.frameworks = 'CoreData'
     ss.osx.exclude_files = 'TDTChocolate/CoreDataAdditions/NSFetchedResultsController+TDTAdditions.{h,m}'
   end
+
+  s.subspec 'ZlibAdditions' do |ss|
+    ss.source_files = [ 'TDTChocolate/ZlibAdditions/*.{h,m}',
+                        'TDTChocolate/TDTZlibAdditions.h' ]
+  end
 end
