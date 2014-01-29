@@ -56,6 +56,9 @@
 		69ECAE441851CA63006C3176 /* NSDate_TDTComparisons_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ECAE401851CA63006C3176 /* NSDate_TDTComparisons_Tests.m */; };
 		69ECAE461851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ECAE451851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m */; };
 		69ECAE471851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ECAE451851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m */; };
+		AD85CE2B189912B500B6F750 /* TDTZlibTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD85CE2A189912B500B6F750 /* TDTZlibTests.m */; };
+		AD85CE2E18991DBB00B6F750 /* largeFile1.dat in Resources */ = {isa = PBXBuildFile; fileRef = AD85CE2D18991DBB00B6F750 /* largeFile1.dat */; };
+		AD85CE32189931B700B6F750 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AD85CE31189931B700B6F750 /* libz.dylib */; };
 		D46FB91842224DD9815F6940 /* libPods-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B19883317C304CA6BFFAC8AF /* libPods-osx.a */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +102,10 @@
 		69ECAE401851CA63006C3176 /* NSDate_TDTComparisons_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDate_TDTComparisons_Tests.m; sourceTree = "<group>"; };
 		69ECAE451851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFileManager_TDTAdditions_Tests.m; sourceTree = "<group>"; };
 		70C6CC271A614C068905497B /* libPods-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD85CE29189912B500B6F750 /* TDTZlibTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDTZlibTests.h; sourceTree = "<group>"; };
+		AD85CE2A189912B500B6F750 /* TDTZlibTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTZlibTests.m; sourceTree = "<group>"; };
+		AD85CE2D18991DBB00B6F750 /* largeFile1.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = largeFile1.dat; sourceTree = "<group>"; };
+		AD85CE31189931B700B6F750 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		B19883317C304CA6BFFAC8AF /* libPods-osx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-osx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -107,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD85CE32189931B700B6F750 /* libz.dylib in Frameworks */,
 				6919A161185058C5000AB434 /* XCTest.framework in Frameworks */,
 				D46FB91842224DD9815F6940 /* libPods-osx.a in Frameworks */,
 			);
@@ -151,6 +159,7 @@
 		6919A13418504BD4000AB434 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AD85CE31189931B700B6F750 /* libz.dylib */,
 				6919A13518504BD4000AB434 /* Cocoa.framework */,
 				6919A14618504BD4000AB434 /* XCTest.framework */,
 				6919A17418505B4D000AB434 /* Foundation.framework */,
@@ -175,6 +184,9 @@
 		6919A162185058C5000AB434 /* OSXTests */ = {
 			isa = PBXGroup;
 			children = (
+				AD85CE2C18991DBB00B6F750 /* Resources */,
+				AD85CE29189912B500B6F750 /* TDTZlibTests.h */,
+				AD85CE2A189912B500B6F750 /* TDTZlibTests.m */,
 				6919A163185058C5000AB434 /* Supporting Files */,
 			);
 			path = OSXTests;
@@ -234,6 +246,14 @@
 				699FF3D6187FC9FB00F8257C /* TDTRandomTests.m */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		AD85CE2C18991DBB00B6F750 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AD85CE2D18991DBB00B6F750 /* largeFile1.dat */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6919A167185058C5000AB434 /* InfoPlist.strings in Resources */,
+				AD85CE2E18991DBB00B6F750 /* largeFile1.dat in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +426,7 @@
 				69C2DF131872D3BB0004C535 /* NSData_TDTAdditions_Tests.m in Sources */,
 				69CB6FCA18517E63004D35DB /* NSArray_TDTFunctionalAdditions_Tests.m in Sources */,
 				69ECAE411851CA63006C3176 /* NSDate_TDTAdditions_Tests.m in Sources */,
+				AD85CE2B189912B500B6F750 /* TDTZlibTests.m in Sources */,
 				697F99761859D4F900DDF2A3 /* TDTBlockAdditionsTests.m in Sources */,
 				69E1C30D1850AF6B00E93E23 /* TDTObjectOrDefaultTests.m in Sources */,
 				697F99731859D1B600DDF2A3 /* TDTSmokeTests.m in Sources */,
