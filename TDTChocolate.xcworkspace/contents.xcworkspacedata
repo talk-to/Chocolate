@@ -4,16 +4,6 @@
    <Group
       location = "group:TDTChocolate"
       name = "TDTChocolate">
-      <Group
-         location = "group:ZlibAdditions"
-         name = "ZlibAdditions">
-         <FileRef
-            location = "group:TDTZlib.h">
-         </FileRef>
-         <FileRef
-            location = "group:TDTZlib.m">
-         </FileRef>
-      </Group>
       <FileRef
          location = "group:TDTFoundationAdditions.h">
       </FileRef>
@@ -220,6 +210,16 @@
          </FileRef>
          <FileRef
             location = "group:TDTAppKeychain.m">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:ZlibAdditions"
+         name = "ZlibAdditions">
+         <FileRef
+            location = "group:TDTZlib.h">
+         </FileRef>
+         <FileRef
+            location = "group:TDTZlib.m">
          </FileRef>
       </Group>
    </Group>
