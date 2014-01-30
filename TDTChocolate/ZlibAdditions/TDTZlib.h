@@ -1,10 +1,3 @@
-//
-//  TDTZlib.h
-//  Talkto
-//
-//  Created by Chaitanya Gupta on 14/08/12.
-//  Copyright (c) 2012 Talk.to FZC. All rights reserved.
-//
 // This file provides convenient Objective-C'esque wrappers over the zlib library.
 
 #import <Foundation/Foundation.h>
