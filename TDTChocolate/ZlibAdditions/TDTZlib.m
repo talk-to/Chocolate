@@ -1,11 +1,3 @@
-//
-//  TDTZlib.m
-//  Talkto
-//
-//  Created by Chaitanya Gupta on 14/08/12.
-//  Copyright (c) 2012 Talk.to FZC. All rights reserved.
-//
-
 #import "TDTZlib.h"
 #include <zlib.h>
 

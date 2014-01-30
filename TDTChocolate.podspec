@@ -41,6 +41,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'ZlibAdditions' do |ss|
+    ss.library = 'z'
     ss.source_files = [ 'TDTChocolate/ZlibAdditions/*.{h,m}',
                         'TDTChocolate/TDTZlibAdditions.h' ]
   end
