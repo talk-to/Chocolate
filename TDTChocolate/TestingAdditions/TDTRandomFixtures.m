@@ -1,5 +1,6 @@
 #import "TDTRandomFixtures.h"
 #import "../FoundationAdditions/TDTAssert.h"
+#import "../FoundationAdditions/TDTRandom.h"
 
 @implementation NSString (TDTRandomFixtures)
 
@@ -55,6 +56,15 @@
 
 + (instancetype)randomURL {
   return [self URLWithString:[NSString randomString]];
+}
+
+@end
+
+@implementation NSDate (TDTRandomFixtures)
+
++ (instancetype)randomDate {
+  NSTimeInterval randomTimeInterval = TDTRandomDouble() * arc4random();
+  return [self dateWithTimeIntervalSince1970:randomTimeInterval];
 }
 
 @end

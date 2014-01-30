@@ -43,3 +43,9 @@
 + (instancetype)randomURL;
 
 @end
+
+@interface NSDate (TDTRandomFixtures)
+
++ (instancetype)randomDate;
+
+@end
