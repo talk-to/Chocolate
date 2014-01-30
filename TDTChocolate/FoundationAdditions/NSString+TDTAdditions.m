@@ -68,4 +68,10 @@
   return (NSUInteger)ul;
 }
 
+- (NSDate *)dateByInterpretingAsEpochMilliseconds {
+  long long millisecondsSinceEpoch = [self longLongValue];
+  NSTimeInterval secondsSinceEpoch = millisecondsSinceEpoch / 1000.0;
+  return [NSDate dateWithTimeIntervalSince1970:secondsSinceEpoch];
+}
+
 @end

@@ -1,6 +1,7 @@
 #import <XCTest/XCTest.h>
 #import <TDTChocolate/TDTTestingAdditions.h>
 #import <TDTChocolate/FoundationAdditions/NSString+TDTAdditions.h>
+#import <TDTChocolate/FoundationAdditions/NSDate+TDTAdditions.h>
 
 @interface NSString_TDTAdditions_Tests : XCTestCase
 
@@ -98,6 +99,15 @@
 - (void)testOutOfRangeNumbersAreClamped {
   NSString *outOfRangeNumberString = @"5000000000";
   XCTAssertEqual([outOfRangeNumberString unsignedIntegerValue], (NSUInteger)NSUIntegerMax);
+}
+
+- (void)testInterpretationOfEpochMilliseconds {
+  NSDate *date = [NSDate randomDate];
+  int64_t millisecondsSinceEpoch = [date millisecondsSinceEpoch];
+  NSString *string = [NSString stringWithFormat:@"%lld", millisecondsSinceEpoch];
+  NSDate *parsedDate = [string dateByInterpretingAsEpochMilliseconds];
+  int64_t millisecondsSinceEpochInParsedDate = [parsedDate millisecondsSinceEpoch];
+  XCTAssertEqual(millisecondsSinceEpoch, millisecondsSinceEpochInParsedDate);
 }
 
 @end
