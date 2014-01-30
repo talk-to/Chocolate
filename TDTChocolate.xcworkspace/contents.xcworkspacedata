@@ -16,6 +16,9 @@
       <FileRef
          location = "group:TDTSecurityAdditions.h">
       </FileRef>
+      <FileRef
+         location = "group:TDTZlibAdditions.h">
+      </FileRef>
       <Group
          location = "group:FoundationAdditions"
          name = "FoundationAdditions">
