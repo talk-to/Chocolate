@@ -102,7 +102,6 @@
 		69ECAE401851CA63006C3176 /* NSDate_TDTComparisons_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDate_TDTComparisons_Tests.m; sourceTree = "<group>"; };
 		69ECAE451851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFileManager_TDTAdditions_Tests.m; sourceTree = "<group>"; };
 		70C6CC271A614C068905497B /* libPods-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD85CE29189912B500B6F750 /* TDTZlibTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDTZlibTests.h; sourceTree = "<group>"; };
 		AD85CE2A189912B500B6F750 /* TDTZlibTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTZlibTests.m; sourceTree = "<group>"; };
 		AD85CE2D18991DBB00B6F750 /* largeFile1.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = largeFile1.dat; sourceTree = "<group>"; };
 		AD85CE31189931B700B6F750 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -185,7 +184,6 @@
 			isa = PBXGroup;
 			children = (
 				AD85CE2C18991DBB00B6F750 /* Resources */,
-				AD85CE29189912B500B6F750 /* TDTZlibTests.h */,
 				AD85CE2A189912B500B6F750 /* TDTZlibTests.m */,
 				6919A163185058C5000AB434 /* Supporting Files */,
 			);
