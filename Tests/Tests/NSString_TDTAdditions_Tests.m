@@ -97,7 +97,7 @@
 }
 
 - (void)testOutOfRangeNumbersAreClamped {
-  NSString *outOfRangeNumberString = @"5000000000";
+  NSString *outOfRangeNumberString = @"20000000000000000000";
   XCTAssertEqual([outOfRangeNumberString unsignedIntegerValue], (NSUInteger)NSUIntegerMax);
 }
 
