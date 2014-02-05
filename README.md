@@ -48,6 +48,14 @@ links. You could use the following incantation to make things faster:
 * You will need to install [xcproj] \([why?][whyxcproj]) if you intend to
 modify `Tests/Podfile`.
 
+#### Versioning
+
+Chocolate tags follow semantic versioning. Chocolate ships with a `Rakefile`
+that to automate the tagging and changing the `Podspec` version
+
+    $ rake release      # For releasing an arbitrary version
+    $ rake release:next # For releasing the next patch version
+
 [CocoaPods]: http://cocoapods.org/
 [xcproj]: https://github.com/0xced/xcproj
 [whyxcproj]: https://github.com/CocoaPods/CocoaPods/wiki/Generate-ASCII-format-xcodeproj
