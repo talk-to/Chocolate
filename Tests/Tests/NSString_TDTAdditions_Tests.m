@@ -102,13 +102,4 @@
   XCTAssertEqual([outOfRangeNumberString unsignedIntegerValue], (NSUInteger)NSUIntegerMax);
 }
 
-- (void)testInterpretationOfEpochMilliseconds {
-  NSDate *date = [NSDate randomDate];
-  int64_t millisecondsSinceEpoch = [date millisecondsSinceEpoch];
-  NSString *string = [NSString stringWithFormat:@"%lld", millisecondsSinceEpoch];
-  NSDate *parsedDate = [string dateByInterpretingAsEpochMilliseconds];
-  int64_t millisecondsSinceEpochInParsedDate = [parsedDate millisecondsSinceEpoch];
-  XCTAssertEqual(millisecondsSinceEpoch, millisecondsSinceEpochInParsedDate);
-}
-
 @end

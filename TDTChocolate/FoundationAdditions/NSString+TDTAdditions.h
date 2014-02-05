@@ -61,12 +61,4 @@
  */
 - (NSUInteger)unsignedIntegerValue;
 
-/**
- Interpret the receiver as the number of milliseconds since epoch.
-
- @warn If the string value cannot be interpreted as a number, then this method
-       will silently return an `NSDate` representing the epoch.
- */
-- (NSDate *)dateByInterpretingAsEpochMilliseconds;
-
 @end
