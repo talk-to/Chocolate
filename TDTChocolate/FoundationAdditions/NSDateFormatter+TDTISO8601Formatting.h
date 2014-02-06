@@ -8,6 +8,6 @@
  
  @return A shared instance of the formatter for ISO 8601 dates
  */
-+ (instancetype)sharedISO8601Formatter;
++ (instancetype)ISO8601Formatter;
 
 @end

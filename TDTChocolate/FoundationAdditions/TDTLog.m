@@ -3,6 +3,19 @@
 
 TDTLogErrorWarningHookFunction TDTLogErrorWarningHook;
 
+static NSString *TDTLogRepresentationOfDate(NSDate *date) {
+  static NSDateFormatter *formatter;
+  NSString *dateString;
+  NSLock *lock = [[NSLock alloc] init];
+  [lock lock];
+  if (formatter == nil) {
+    formatter = [NSDateFormatter ISO8601Formatter];
+  }
+  dateString = [formatter stringFromDate:date];
+  [lock unlock];
+  return dateString;
+}
+
 // When TDTLog is invoked, it prints the current date in ISO 8601
 // format first thing on the line, followed by a single space, followed
 // by the formatted string provided by the user, followed by newline.
@@ -22,11 +35,7 @@ void TDTLog(NSString *format, ...) {
   va_start(args, format);
   NSString *message = [[NSString alloc] initWithFormat:format arguments:args];
   NSDate *date = [NSDate date];
-  NSDateFormatter *formatter = [NSDateFormatter sharedISO8601Formatter];
-  NSString *dateString;
-  @synchronized(formatter) {
-    dateString = [formatter stringFromDate:date];
-  }
+  NSString *dateString = TDTLogRepresentationOfDate(date);
   if (fprintf(stderr, "%s %s\n", [dateString UTF8String], [message UTF8String]) < 0) {
     NSString *errorString = @(strerror(errno));
     NSLog(@"Couldn't print (%@) to stderr because: %@", message, errorString);
