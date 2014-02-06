@@ -1,18 +1,19 @@
 #import "TDTLog.h"
 #import "../FoundationAdditions/NSDateFormatter+TDTISO8601Formatting.h"
+#import <libkern/OSAtomic.h>
 
 TDTLogErrorWarningHookFunction TDTLogErrorWarningHook;
 
 static NSString *TDTLogRepresentationOfDate(NSDate *date) {
   static NSDateFormatter *formatter;
+  static OSSpinLock spinlock = OS_SPINLOCK_INIT;
   NSString *dateString;
-  NSLock *lock = [[NSLock alloc] init];
-  [lock lock];
+  OSSpinLockLock(&spinlock);
   if (formatter == nil) {
     formatter = [NSDateFormatter ISO8601Formatter];
   }
   dateString = [formatter stringFromDate:date];
-  [lock unlock];
+  OSSpinLockUnlock(&spinlock);
   return dateString;
 }
 
