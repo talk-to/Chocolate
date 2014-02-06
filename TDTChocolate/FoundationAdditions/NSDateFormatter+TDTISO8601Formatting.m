@@ -5,14 +5,10 @@
 @implementation NSDateFormatter (TDTISO8601Formatting)
 
 + (instancetype)ISO8601Formatter {
-  static dispatch_once_t onceToken;
-  static NSDateFormatter *formatter;
-  dispatch_once(&onceToken, ^{
-    formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = ISO_DATE_FORMAT;
-    formatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
-    formatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
-  });
+  NSDateFormatter *formatter = [[self alloc] init];
+  formatter.dateFormat = ISO_DATE_FORMAT;
+  formatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
+  formatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
   return formatter;
 }
 
