@@ -81,3 +81,35 @@
   [self willChangeValueForKey:KEY]; \
   self.PRIMITIVE_PROPERTY = VALUE; \
   [self didChangeValueForKey:KEY]
+
+/**
+ Emit declarations for a `customGetter` that relays the value of
+ `originalProperty`, and override the setter for `originalProperty` (using
+ the name `linkedSetter`) to also generate KVO notifications for `customGetter`.
+ `primitiveProperty` is used for accessing and updating `originalProperty`
+
+ Do not put a semicolon after this macro.
+
+ Example:
+
+ @property BOOL isFoo;
+ @property BOOL foo;
+ @property NSNumber *primitiveFoo;
+ ...
+ TDT_COREDATA_CUSTOM_GETTER_FOR_BOOL_PROPERTY(isFoo, setFoo, foo, primitiveFoo)
+ */
+#define TDT_COREDATA_CUSTOM_GETTER_FOR_BOOL_PROPERTY(customGetter, linkedSetter, originalProperty, primitiveProperty) \
+- (BOOL)customGetter { \
+  [self willAccessValueForKey:NSStringFromSelector(@selector(customGetter))]; \
+  NSNumber *tmp = self.primitiveProperty; \
+  [self didAccessValueForKey:NSStringFromSelector(@selector(customGetter))]; \
+  return [tmp boolValue]; \
+} \
+\
+- (void)linkedSetter:(BOOL)tmp { \
+  [self willChangeValueForKey:NSStringFromSelector(@selector(customGetter))]; \
+  [self willChangeValueForKey:NSStringFromSelector(@selector(originalProperty))]; \
+  self.primitiveProperty = @(tmp); \
+  [self didChangeValueForKey:NSStringFromSelector(@selector(originalProperty))]; \
+  [self didChangeValueForKey:NSStringFromSelector(@selector(customGetter))]; \
+}
