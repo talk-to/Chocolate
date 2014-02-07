@@ -140,6 +140,12 @@
             location = "group:NSOperationQueue+TDTSerialQueueAdditions.m">
          </FileRef>
          <FileRef
+            location = "group:NSOperationQueue+TDTScheduling.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSOperationQueue+TDTScheduling.m">
+         </FileRef>
+         <FileRef
             location = "group:TDTSizeofArray.h">
          </FileRef>
          <FileRef

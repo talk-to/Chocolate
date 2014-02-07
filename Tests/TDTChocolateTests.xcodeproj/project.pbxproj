@@ -16,6 +16,8 @@
 		6919A17D18505B4D000AB434 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6919A17B18505B4D000AB434 /* InfoPlist.strings */; };
 		6961BA84185B384900C6B2EF /* TDTUmbrellaHeaderTextualSanityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6961BA83185B384900C6B2EF /* TDTUmbrellaHeaderTextualSanityTests.m */; };
 		6961BA85185B384900C6B2EF /* TDTUmbrellaHeaderTextualSanityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6961BA83185B384900C6B2EF /* TDTUmbrellaHeaderTextualSanityTests.m */; };
+		6965729718A4ABE0006A1A40 /* NSOperationQueue_TDTScheduling_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6965729618A4ABE0006A1A40 /* NSOperationQueue_TDTScheduling_Tests.m */; };
+		6965729818A4ABE0006A1A40 /* NSOperationQueue_TDTScheduling_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6965729618A4ABE0006A1A40 /* NSOperationQueue_TDTScheduling_Tests.m */; };
 		697F99731859D1B600DDF2A3 /* TDTSmokeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 697F99721859D1B600DDF2A3 /* TDTSmokeTests.m */; };
 		697F99741859D1B600DDF2A3 /* TDTSmokeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 697F99721859D1B600DDF2A3 /* TDTSmokeTests.m */; };
 		697F99761859D4F900DDF2A3 /* TDTBlockAdditionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 697F99751859D4F900DDF2A3 /* TDTBlockAdditionsTests.m */; };
@@ -81,6 +83,7 @@
 		6919A17C18505B4D000AB434 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6919A18018505B4D000AB434 /* iOSTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSTests-Prefix.pch"; sourceTree = "<group>"; };
 		6961BA83185B384900C6B2EF /* TDTUmbrellaHeaderTextualSanityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTUmbrellaHeaderTextualSanityTests.m; sourceTree = "<group>"; };
+		6965729618A4ABE0006A1A40 /* NSOperationQueue_TDTScheduling_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSOperationQueue_TDTScheduling_Tests.m; sourceTree = "<group>"; };
 		697F99721859D1B600DDF2A3 /* TDTSmokeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTSmokeTests.m; sourceTree = "<group>"; };
 		697F99751859D4F900DDF2A3 /* TDTBlockAdditionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTBlockAdditionsTests.m; sourceTree = "<group>"; };
 		699FF3D6187FC9FB00F8257C /* TDTRandomTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTRandomTests.m; sourceTree = "<group>"; };
@@ -242,6 +245,7 @@
 				69C0196D187D3AD400DFF308 /* TDTSizeofArrayTests.m */,
 				69C4DB03187D448A00BDB0C2 /* TDTNSDataFromByteArrayTests.m */,
 				699FF3D6187FC9FB00F8257C /* TDTRandomTests.m */,
+				6965729618A4ABE0006A1A40 /* NSOperationQueue_TDTScheduling_Tests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -415,6 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6965729718A4ABE0006A1A40 /* NSOperationQueue_TDTScheduling_Tests.m in Sources */,
 				69ECAE431851CA63006C3176 /* NSDate_TDTComparisons_Tests.m in Sources */,
 				69ECAE461851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m in Sources */,
 				69C4DB01187D419800BDB0C2 /* TDTSizeofArrayTests.m in Sources */,
@@ -465,6 +470,7 @@
 				699FF3D8187FC9FB00F8257C /* TDTRandomTests.m in Sources */,
 				69CB6FCE18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m in Sources */,
 				69CB6FD11851B57D004D35DB /* NSArray_TDTAdditions_Tests.m in Sources */,
+				6965729818A4ABE0006A1A40 /* NSOperationQueue_TDTScheduling_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
