@@ -18,6 +18,7 @@ static NSTimeInterval VeryShortTimeInterval = 1e-4;
   }];
   [it tdt_addOperation:operation
             afterDelay:VeryShortTimeInterval];
+  [[NSRunLoop currentRunLoop] runUntilTimeout:(VeryShortTimeInterval/2)];
   XCTAssertFalse(operationCompleted);
   [[NSRunLoop currentRunLoop] runUntilCompletionIndicator:&operationCompleted];
   XCTAssertTrue(operationCompleted);
