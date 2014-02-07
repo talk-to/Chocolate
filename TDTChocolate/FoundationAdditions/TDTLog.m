@@ -4,14 +4,21 @@
 
 TDTLogErrorWarningHookFunction TDTLogErrorWarningHook;
 
-static NSString *TDTLogRepresentationOfDate(NSDate *date) {
+static NSDateFormatter *SharedISO8601DateFormatter() {
   static NSDateFormatter *formatter;
-  static OSSpinLock spinlock = OS_SPINLOCK_INIT;
-  NSString *dateString;
-  OSSpinLockLock(&spinlock);
-  if (formatter == nil) {
+  static dispatch_once_t onceToken;
+  dispatch_once(&onceToken, ^{
     formatter = [NSDateFormatter ISO8601Formatter];
-  }
+  });
+  return formatter;
+}
+
+static NSString *LogRepresentationOfDate(NSDate *date) {
+  NSDateFormatter *formatter = SharedISO8601DateFormatter();
+  NSString *dateString;
+  // NSDateFormatter is not thread safe.
+  static OSSpinLock spinlock = OS_SPINLOCK_INIT;
+  OSSpinLockLock(&spinlock);
   dateString = [formatter stringFromDate:date];
   OSSpinLockUnlock(&spinlock);
   return dateString;
@@ -36,7 +43,7 @@ void TDTLog(NSString *format, ...) {
   va_start(args, format);
   NSString *message = [[NSString alloc] initWithFormat:format arguments:args];
   NSDate *date = [NSDate date];
-  NSString *dateString = TDTLogRepresentationOfDate(date);
+  NSString *dateString = LogRepresentationOfDate(date);
   if (fprintf(stderr, "%s %s\n", [dateString UTF8String], [message UTF8String]) < 0) {
     NSString *errorString = @(strerror(errno));
     NSLog(@"Couldn't print (%@) to stderr because: %@", message, errorString);
