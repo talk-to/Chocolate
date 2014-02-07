@@ -1,7 +1,28 @@
 #import "TDTLog.h"
 #import "../FoundationAdditions/NSDateFormatter+TDTISO8601Formatting.h"
+#import <libkern/OSAtomic.h>
 
 TDTLogErrorWarningHookFunction TDTLogErrorWarningHook;
+
+static NSDateFormatter *SharedISO8601DateFormatter() {
+  static NSDateFormatter *formatter;
+  static dispatch_once_t onceToken;
+  dispatch_once(&onceToken, ^{
+    formatter = [NSDateFormatter ISO8601Formatter];
+  });
+  return formatter;
+}
+
+static NSString *LogRepresentationOfDate(NSDate *date) {
+  NSDateFormatter *formatter = SharedISO8601DateFormatter();
+  NSString *dateString;
+  // NSDateFormatter is not thread safe.
+  static OSSpinLock spinlock = OS_SPINLOCK_INIT;
+  OSSpinLockLock(&spinlock);
+  dateString = [formatter stringFromDate:date];
+  OSSpinLockUnlock(&spinlock);
+  return dateString;
+}
 
 // When TDTLog is invoked, it prints the current date in ISO 8601
 // format first thing on the line, followed by a single space, followed
@@ -22,11 +43,7 @@ void TDTLog(NSString *format, ...) {
   va_start(args, format);
   NSString *message = [[NSString alloc] initWithFormat:format arguments:args];
   NSDate *date = [NSDate date];
-  NSDateFormatter *formatter = [NSDateFormatter sharedISO8601Formatter];
-  NSString *dateString;
-  @synchronized(formatter) {
-    dateString = [formatter stringFromDate:date];
-  }
+  NSString *dateString = LogRepresentationOfDate(date);
   if (fprintf(stderr, "%s %s\n", [dateString UTF8String], [message UTF8String]) < 0) {
     NSString *errorString = @(strerror(errno));
     NSLog(@"Couldn't print (%@) to stderr because: %@", message, errorString);

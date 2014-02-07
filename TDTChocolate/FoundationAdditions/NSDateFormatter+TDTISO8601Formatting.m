@@ -1,18 +1,14 @@
 #import "NSDateFormatter+TDTISO8601Formatting.h"
 
-#define ISO_DATE_FORMAT @"yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'SSS'Z'"
+static NSString *const ISO8601DateFormat = @"yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'SSS'Z'";
 
 @implementation NSDateFormatter (TDTISO8601Formatting)
 
-+ (instancetype)sharedISO8601Formatter {
-  static dispatch_once_t onceToken;
-  static NSDateFormatter *formatter;
-  dispatch_once(&onceToken, ^{
-    formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = ISO_DATE_FORMAT;
-    formatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
-    formatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
-  });
++ (instancetype)ISO8601Formatter {
+  NSDateFormatter *formatter = [[self alloc] init];
+  formatter.dateFormat = ISO8601DateFormat;
+  formatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
+  formatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
   return formatter;
 }
 
