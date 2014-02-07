@@ -2,8 +2,8 @@
 
 @implementation NSOperationQueue (TDTScheduling)
 
-- (void)scheduleAfterDelay:(NSTimeInterval)delay
-                 operation:(NSOperation *)operation {
+- (void)tdt_addOperation:(NSOperation *)operation
+              afterDelay:(NSTimeInterval)delay {
   __weak typeof(self) weakSelf = self;
   double delayInSeconds = delay;
   dispatch_queue_t arbitraryQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);

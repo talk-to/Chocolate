@@ -2,7 +2,7 @@
 
 @interface NSOperationQueue (TDTScheduling)
 
-- (void)scheduleAfterDelay:(NSTimeInterval)delay
-                 operation:(NSOperation *)operation;
+- (void)tdt_addOperation:(NSOperation *)operation
+              afterDelay:(NSTimeInterval)delay;
 
 @end

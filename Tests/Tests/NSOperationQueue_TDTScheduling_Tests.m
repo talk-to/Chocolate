@@ -13,10 +13,11 @@ static NSTimeInterval VeryShortTimeInterval = 1e-4;
 - (void)testItRunsScheduledOperationAfterSpecifiedDelay {
   NSOperationQueue *it = [NSOperationQueue mainQueue];
   __block BOOL operationCompleted = NO;
-  [it scheduleAfterDelay:VeryShortTimeInterval
-               operation:[NSBlockOperation blockOperationWithBlock:^{
+  NSOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
     operationCompleted = YES;
-  }]];
+  }];
+  [it tdt_addOperation:operation
+            afterDelay:VeryShortTimeInterval];
   XCTAssertFalse(operationCompleted);
   [[NSRunLoop currentRunLoop] runUntilCompletionIndicator:&operationCompleted];
   XCTAssertTrue(operationCompleted);
@@ -24,10 +25,10 @@ static NSTimeInterval VeryShortTimeInterval = 1e-4;
 
 - (void)testItIsNotRetainedByAScheduledOperation {
   NSOperationQueue *it = [[NSOperationQueue alloc] init];
-  [it scheduleAfterDelay:TDTNSTimeIntervalInfinity
-               operation:[NSBlockOperation blockOperationWithBlock:^{
+  NSOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
     XCTFail();
-  }]];
+  }];
+  [it tdt_addOperation:operation afterDelay:TDTNSTimeIntervalInfinity];
   __weak typeof (it) weakIt = it;
   it = nil;
   XCTAssertNil(weakIt);
