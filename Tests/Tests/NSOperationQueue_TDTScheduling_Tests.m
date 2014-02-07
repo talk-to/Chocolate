@@ -35,4 +35,13 @@ static NSTimeInterval VeryShortTimeInterval = 1e-4;
   XCTAssertNil(weakIt);
 }
 
+- (void)testScheduledOperationIsNotPerformedIfItIsDeallocated {
+  NSOperationQueue *it = [[NSOperationQueue alloc] init];
+  NSOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
+    XCTFail();
+  }];
+  [it tdt_addOperation:operation afterDelay:VeryShortTimeInterval];
+  it = nil;
+  [[NSRunLoop currentRunLoop] runUntilTimeout:(2 * VeryShortTimeInterval)];
+}
 @end
