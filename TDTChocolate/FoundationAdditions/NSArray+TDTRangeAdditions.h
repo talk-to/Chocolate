@@ -8,7 +8,7 @@
  @param index It must be less than the length of the receiver.
  @return NSRange with location 0 and length equal to `index`.
  */
-- (NSRange)rangeToIndex:(NSUInteger)index;
+- (NSRange)tdt_rangeToIndex:(NSUInteger)index;
 
 /**
  Construct a range from `index` upto the end of the receiver.
@@ -17,6 +17,6 @@
  @return NSRange with location equal to `index` and length equal to the
          number of elements in the remainder of the receiver.
  */
-- (NSRange)rangeFromIndex:(NSUInteger)index;
+- (NSRange)tdt_rangeFromIndex:(NSUInteger)index;
 
 @end

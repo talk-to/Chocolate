@@ -5,6 +5,6 @@
 /**
  Wrapper over `performFetch:` that aborts on errors.
  */
-- (void)performFetch;
+- (void)tdt_performFetch;
 
 @end

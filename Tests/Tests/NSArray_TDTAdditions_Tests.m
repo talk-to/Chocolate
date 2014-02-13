@@ -9,13 +9,13 @@
 @implementation NSArray_TDTAdditions_Tests
 
 - (void)testFlatteningAnEmptyArrayIsEmpty {
-  XCTAssertEqualObjects([@[] flatten], @[]);
+  XCTAssertEqualObjects([@[] tdt_flatten], @[]);
 }
 
 - (void)testFlatteningAnArrayCreatesANewArrayConsistingOfElementsOfTheNestedArrays {
   NSArray *arrayWithSubarrays = @[@[@"string"], @[@{ @"dict": @(34) }], @[@(23)]];
   NSArray *concatentedSubarrays = @[@"string", @{ @"dict": @(34) }, @(23)];
-  XCTAssertEqualObjects([arrayWithSubarrays flatten], concatentedSubarrays);
+  XCTAssertEqualObjects([arrayWithSubarrays tdt_flatten], concatentedSubarrays);
 }
 
 - (void)testArrayWithNestedDictionariesIsFlattened {
@@ -25,25 +25,25 @@
   NSDictionary *dict = @{ @"dict": @(34) };
   NSArray *arrayWithDictionary = @[ dict ];
   NSArray *nestedArray = @[ arrayWithDictionary ];
-  XCTAssertEqualObjects([nestedArray flatten], arrayWithDictionary);
+  XCTAssertEqualObjects([nestedArray tdt_flatten], arrayWithDictionary);
 }
 
 - (void)testFlatteningIgnoresEmptyArray {
   NSArray *array = @[ @[], @[ @1 ], @[], @[], @[ @2 ], @[] ];
   NSArray *result = @[ @(1), @(2) ];
-  XCTAssertEqualObjects([array flatten], result);
+  XCTAssertEqualObjects([array tdt_flatten], result);
 }
 
 - (void)testFlatteningDoesNotWorksRecursively {
-  NSArray *array = @[ [NSString randomString], [NSNumber randomNumber] ];
+  NSArray *array = @[ [NSString tdt_randomString], [NSNumber tdt_randomNumber] ];
   NSArray *nestedArray = @[ array ];
   NSArray *doublyNestedArray = @[ nestedArray ];
-  XCTAssertEqualObjects([doublyNestedArray flatten], nestedArray);
+  XCTAssertEqualObjects([doublyNestedArray tdt_flatten], nestedArray);
 }
 
 - (void)testIsNonEmpty {
-  XCTAssertTrue([[NSArray randomArrayOfLength:1] isNonEmpty]);
-  XCTAssertFalse([@[] isNonEmpty]);
+  XCTAssertTrue([[NSArray tdt_randomArrayOfLength:1] tdt_isNonEmpty]);
+  XCTAssertFalse([@[] tdt_isNonEmpty]);
 }
 
 @end

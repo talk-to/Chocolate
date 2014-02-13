@@ -11,6 +11,6 @@
  @pre The result is undefined if either the receiver or `string` does not
       conform to the expected version format.
  */
-- (NSComparisonResult)versionCompare:(NSString *)string;
+- (NSComparisonResult)tdt_versionCompare:(NSString *)string;
 
 @end

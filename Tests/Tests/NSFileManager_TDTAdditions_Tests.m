@@ -11,23 +11,23 @@
 
 - (void)testTemporaryFilePathURLConstruction {
   NSFileManager *fileManager = [NSFileManager defaultManager];
-  NSString *prefix = [NSString randomString];
-  NSString *suffix = [NSString randomString];
-  NSURL *url = [fileManager fileURLToTemporaryFileWithNamePrefix:prefix
+  NSString *prefix = [NSString tdt_randomString];
+  NSString *suffix = [NSString tdt_randomString];
+  NSURL *url = [fileManager tdt_fileURLToTemporaryFileWithNamePrefix:prefix
                                                           suffix:suffix];
   XCTAssertTrue(url.isFileURL);
   NSString *urlString = url.absoluteString;
-  XCTAssertTrue([urlString containsString:prefix]);
+  XCTAssertTrue([urlString tdt_containsString:prefix]);
   XCTAssertTrue([urlString hasSuffix:suffix]);
 }
 
 - (void)testTemporaryFilePathURLsShouldBeDifferentOnEachRun {
   NSFileManager *fileManager = [NSFileManager defaultManager];
-  NSString *prefix = [NSString randomString];
-  NSString *suffix = [NSString randomString];
-  NSURL *urlOne = [fileManager fileURLToTemporaryFileWithNamePrefix:prefix
+  NSString *prefix = [NSString tdt_randomString];
+  NSString *suffix = [NSString tdt_randomString];
+  NSURL *urlOne = [fileManager tdt_fileURLToTemporaryFileWithNamePrefix:prefix
                                                              suffix:suffix];
-  NSURL *urlTwo = [fileManager fileURLToTemporaryFileWithNamePrefix:prefix
+  NSURL *urlTwo = [fileManager tdt_fileURLToTemporaryFileWithNamePrefix:prefix
                                                              suffix:suffix];
   XCTAssertNotEqualObjects(urlOne, urlTwo);
 }

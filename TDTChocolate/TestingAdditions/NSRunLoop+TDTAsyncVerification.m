@@ -4,7 +4,7 @@ const NSTimeInterval TDTAsyncVerificationTimeoutDefault = 0.1;
 
 @implementation NSRunLoop (TDTAsyncVerification)
 
-- (void)runUntilObjectIsInitialized:(__strong id *)object
+- (void)tdt_runUntilObjectIsInitialized:(__strong id *)object
                             timeout:(NSTimeInterval)timeout {
   NSParameterAssert(object);
   // http://stackoverflow.com/a/7829769/141220
@@ -15,12 +15,12 @@ const NSTimeInterval TDTAsyncVerificationTimeoutDefault = 0.1;
   }
 }
 
-- (void)runUntilObjectIsInitialized:(__strong id *)object {
-  [self runUntilObjectIsInitialized:object
+- (void)tdt_runUntilObjectIsInitialized:(__strong id *)object {
+  [self tdt_runUntilObjectIsInitialized:object
                             timeout:TDTAsyncVerificationTimeoutDefault];
 }
 
-- (void)runUntilCompletionIndicator:(BOOL *)completionIndicator
+- (void)tdt_runUntilCompletionIndicator:(BOOL *)completionIndicator
                             timeout:(NSTimeInterval)timeout {
   NSParameterAssert(completionIndicator);
   NSDate *loopUntil = [NSDate dateWithTimeIntervalSinceNow:timeout];
@@ -30,24 +30,24 @@ const NSTimeInterval TDTAsyncVerificationTimeoutDefault = 0.1;
   }
 }
 
-- (void)runUntilCompletionIndicator:(BOOL *)completionIndicator {
-  [self runUntilCompletionIndicator:completionIndicator
+- (void)tdt_runUntilCompletionIndicator:(BOOL *)completionIndicator {
+  [self tdt_runUntilCompletionIndicator:completionIndicator
                             timeout:TDTAsyncVerificationTimeoutDefault];
 }
 
-- (void)runUntilCompletionTest:(TDTAsyncVerificationCompletionTest)completionTest {
-  [self runUntilCompletionTest:completionTest
+- (void)tdt_runUntilCompletionTest:(TDTAsyncVerificationCompletionTest)completionTest {
+  [self tdt_runUntilCompletionTest:completionTest
                        timeout:TDTAsyncVerificationTimeoutDefault];
 }
 
-- (void)runUntilCompletionTest:(TDTAsyncVerificationCompletionTest)completionTest
+- (void)tdt_runUntilCompletionTest:(TDTAsyncVerificationCompletionTest)completionTest
                        timeout:(NSTimeInterval)timeout {
-  [self runUntilCompletionTest:completionTest
+  [self tdt_runUntilCompletionTest:completionTest
                        timeout:timeout
                           mode:NSDefaultRunLoopMode];
 }
 
-- (void)runUntilCompletionTest:(TDTAsyncVerificationCompletionTest)completionTest
+- (void)tdt_runUntilCompletionTest:(TDTAsyncVerificationCompletionTest)completionTest
                        timeout:(NSTimeInterval)timeout
                           mode:(NSString *)mode {
   NSParameterAssert(completionTest);
@@ -58,7 +58,7 @@ const NSTimeInterval TDTAsyncVerificationTimeoutDefault = 0.1;
   }
 }
 
-- (void)runUntilTimeout:(NSTimeInterval)timeout {
+- (void)tdt_runUntilTimeout:(NSTimeInterval)timeout {
   NSDate *loopUntil = [NSDate dateWithTimeIntervalSinceNow:timeout];
   while ([loopUntil timeIntervalSinceNow] > 0) {
     [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode
@@ -66,8 +66,8 @@ const NSTimeInterval TDTAsyncVerificationTimeoutDefault = 0.1;
   }
 }
 
-- (void)runLongEnoughForSomeThreadSwitches {
-  [self runUntilTimeout:0.1];
+- (void)tdt_runLongEnoughForSomeThreadSwitches {
+  [self tdt_runUntilTimeout:0.1];
 }
 
 @end

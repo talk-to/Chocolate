@@ -11,10 +11,10 @@
 
 - (void)testEnqueingAndDequeingAreDuals {
   NSMutableArray *array = [[NSMutableArray alloc] init];
-  id object = [NSString randomString];
-  [array enqueueObject:object];
-  XCTAssertEqual([array dequeueObject], object);
-  XCTAssertFalse([array isNonEmpty]);
+  id object = [NSString tdt_randomString];
+  [array tdt_enqueueObject:object];
+  XCTAssertEqual([array tdt_dequeueObject], object);
+  XCTAssertFalse([array tdt_isNonEmpty]);
 }
 
 @end

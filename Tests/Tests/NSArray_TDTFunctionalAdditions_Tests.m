@@ -18,7 +18,7 @@
   self.identitySelector = @selector(self);
   self.identityBlock = ^(id obj) { return obj; };
   self.emptyArray = @[];
-  self.nonEmptyArray = [NSArray randomArrayOfLength:4];
+  self.nonEmptyArray = [NSArray tdt_randomArrayOfLength:4];
   self.tautology = ^(id obj) { return YES; };
   self.contradiction = ^(id obj) { return NO; };
 }
@@ -34,31 +34,31 @@
 }
 
 - (void)testMapOfEmptyArray {
-  XCTAssertEqualObjects([self.emptyArray arrayByMappingWithSelector:self.identitySelector],
+  XCTAssertEqualObjects([self.emptyArray tdt_arrayByMappingWithSelector:self.identitySelector],
                        self.emptyArray);
-  XCTAssertEqualObjects([self.emptyArray arrayByMappingWithBlock:self.identityBlock],
+  XCTAssertEqualObjects([self.emptyArray tdt_arrayByMappingWithBlock:self.identityBlock],
                        self.emptyArray);
 }
 
 - (void)testMapOfNonEmptyArray {
-  XCTAssertEqualObjects([self.nonEmptyArray arrayByMappingWithSelector:self.identitySelector],
+  XCTAssertEqualObjects([self.nonEmptyArray tdt_arrayByMappingWithSelector:self.identitySelector],
                        self.nonEmptyArray);
-  XCTAssertEqualObjects([self.nonEmptyArray arrayByMappingWithBlock:self.identityBlock],
+  XCTAssertEqualObjects([self.nonEmptyArray tdt_arrayByMappingWithBlock:self.identityBlock],
                        self.nonEmptyArray);
 }
 
 - (void)testMappingTransformsTheArray {
   NSArray *array = @[@"a", @"b"];
   NSArray *expectedResult = @[@"A", @"B"];
-  XCTAssertEqualObjects([array arrayByMappingWithBlock:^id(id obj) {
+  XCTAssertEqualObjects([array tdt_arrayByMappingWithBlock:^id(id obj) {
     return [obj capitalizedString];
   }], expectedResult);
-  XCTAssertEqualObjects([array arrayByMappingWithSelector:@selector(capitalizedString)],
+  XCTAssertEqualObjects([array tdt_arrayByMappingWithSelector:@selector(capitalizedString)],
                        expectedResult);
 }
 
 - (void)testSplitOfEmptyArray {
-  NSArray *partition = [self.emptyArray partitionUsingBlock:self.tautology];
+  NSArray *partition = [self.emptyArray tdt_partitionUsingBlock:self.tautology];
   XCTAssertEqual(partition.count, (NSUInteger)2);
   XCTAssertEqualObjects(partition[0], self.emptyArray);
   XCTAssertEqualObjects(partition[1], self.emptyArray);
@@ -67,12 +67,12 @@
 - (void)testOneSidedSplits {
   NSArray *partition;
 
-  partition = [self.nonEmptyArray partitionUsingBlock:self.tautology];
+  partition = [self.nonEmptyArray tdt_partitionUsingBlock:self.tautology];
   XCTAssertEqual(partition.count, (NSUInteger)2);
   XCTAssertEqualObjects(partition[0], self.nonEmptyArray);
   XCTAssertEqualObjects(partition[1], self.emptyArray);
 
-  partition = [self.nonEmptyArray partitionUsingBlock:self.contradiction];
+  partition = [self.nonEmptyArray tdt_partitionUsingBlock:self.contradiction];
   XCTAssertEqual(partition.count, (NSUInteger)2);
   XCTAssertEqualObjects(partition[0], self.emptyArray);
   XCTAssertEqualObjects(partition[1], self.nonEmptyArray);
@@ -80,7 +80,7 @@
 
 - (void)testNormalSplits {
   NSArray *array = @[@"hob", @"nob"];
-  NSArray *partition = [array partitionUsingBlock:^(NSString *obj) {
+  NSArray *partition = [array tdt_partitionUsingBlock:^(NSString *obj) {
     return [obj hasPrefix:@"h"];
   }];
   XCTAssertEqual(partition.count, (NSUInteger)2);
@@ -89,7 +89,7 @@
 }
 
 - (void)testNothingSatisfiesPredicateInEmptyList {
-  XCTAssertFalse([self.emptyArray anyWithBlock:self.tautology]);
+  XCTAssertFalse([self.emptyArray tdt_anyWithBlock:self.tautology]);
 }
 
 - (void)testItReturnsTrueIfAnyElementSatisfiesPredicate {
@@ -103,9 +103,9 @@
   TDTPredicateBlock predicateMatchingAllElements = ^BOOL (id obj) {
     return ([obj integerValue] >= 3);
   };
-  XCTAssertTrue([array anyWithBlock:predicateMatchingOneElement]);
-  XCTAssertTrue([array anyWithBlock:predicateMatchingMultipleElements]);
-  XCTAssertTrue([array anyWithBlock:predicateMatchingAllElements]);
+  XCTAssertTrue([array tdt_anyWithBlock:predicateMatchingOneElement]);
+  XCTAssertTrue([array tdt_anyWithBlock:predicateMatchingMultipleElements]);
+  XCTAssertTrue([array tdt_anyWithBlock:predicateMatchingAllElements]);
 }
 
 - (void)testItReturnsFalseIfNoElementSatisfiesPredicate {
@@ -113,7 +113,7 @@
   TDTPredicateBlock predicateMatchingNoElement = ^BOOL (id obj) {
     return ([obj integerValue] == 44);
   };
-  XCTAssertFalse([array anyWithBlock:predicateMatchingNoElement]);
+  XCTAssertFalse([array tdt_anyWithBlock:predicateMatchingNoElement]);
 }
 
 @end

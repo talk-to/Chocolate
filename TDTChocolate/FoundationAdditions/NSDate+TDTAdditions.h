@@ -2,6 +2,6 @@
 
 @interface NSDate (TDTAdditions)
 
-- (int64_t)millisecondsSinceEpoch;
+- (int64_t)tdt_millisecondsSinceEpoch;
 
 @end

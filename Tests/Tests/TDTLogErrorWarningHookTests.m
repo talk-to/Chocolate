@@ -16,24 +16,24 @@ void ArgumentSavingHook (NSString *message) {
 
 - (void)testHookIsInvokedForErrorLogsWhenSet {
   TDTLogErrorWarningHook = ArgumentSavingHook;
-  NSString *message = [NSString randomString];
+  NSString *message = [NSString tdt_randomString];
   TDTLogError(@"%@", message);
-  XCTAssertTrue([HookInvocationMessage containsString:message]);
+  XCTAssertTrue([HookInvocationMessage tdt_containsString:message]);
   HookInvocationMessage = nil;
   TDTLogErrorWarningHook = NULL;
 }
 
 - (void)testHookIsInvokedForWarnLogsWhenSet {
   TDTLogErrorWarningHook = ArgumentSavingHook;
-  NSString *message = [NSString randomString];
+  NSString *message = [NSString tdt_randomString];
   TDTLogWarn(@"%@", message);
-  XCTAssertTrue([HookInvocationMessage containsString:message]);
+  XCTAssertTrue([HookInvocationMessage tdt_containsString:message]);
   HookInvocationMessage = nil;
   TDTLogErrorWarningHook = NULL;
 }
 
 - (void)testHookIsNotInvokedForErrorAndWarnLogsWhenNotSet {
-  NSString *message = [NSString randomString];
+  NSString *message = [NSString tdt_randomString];
   TDTLogError(@"%@", message);
   TDTLogWarn(@"%@", message);
   XCTAssertNil(HookInvocationMessage);
@@ -41,7 +41,7 @@ void ArgumentSavingHook (NSString *message) {
 
 - (void)testHookIsNotInvokedForInfoAndVerboseLogsEvenWhenSet {
   TDTLogErrorWarningHook = ArgumentSavingHook;
-  NSString *message = [NSString randomString];
+  NSString *message = [NSString tdt_randomString];
   TDTLogInfo(@"%@", message);
   TDTLogVerbose(@"%@", message);
   XCTAssertNil(HookInvocationMessage);

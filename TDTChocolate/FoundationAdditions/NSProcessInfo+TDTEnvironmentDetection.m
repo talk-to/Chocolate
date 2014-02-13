@@ -2,11 +2,11 @@
 
 @implementation NSProcessInfo (TDTEnvironmentDetection)
 
-@dynamic isRunningTests;
+@dynamic tdt_isRunningTests;
 
 // Source: http://www.objc.io/issue-1/testing-view-controllers.html
 
-- (BOOL)isRunningTests {
+- (BOOL)tdt_isRunningTests {
   NSString* injectBundle = self.environment[@"XCInjectBundle"];
   return [injectBundle.pathExtension isEqualToString:@"octest"];
 }

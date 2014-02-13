@@ -9,39 +9,39 @@
  - A collection can be either an `NSSet`, `NSArray` or an `NSDictionary`. 
  - In case its an `NSDictionary`, all of its values go into the set.
  */
-+ (instancetype)setWithCollection:(id)collection;
++ (instancetype)tdt_setWithCollection:(id)collection;
 
 /**
  Apply `selector` to every object in the receiver and return the set formed
  by collecting the results.
  */
-- (NSSet *)setByMappingWithSelector:(SEL)selector;
+- (NSSet *)tdt_setByMappingWithSelector:(SEL)selector;
 
 /**
  Apply `block` to every object in the receiver and return the set formed
  by collecting the results.
  */
-- (NSSet *)setByMappingWithBlock:(TDTMapBlock)block;
+- (NSSet *)tdt_setByMappingWithBlock:(TDTMapBlock)block;
 
 /**
  Apply `selector` to every object in the receiver.
  */
-- (void)applySelector:(SEL)selector;
+- (void)tdt_applySelector:(SEL)selector;
 
 /**
  Apply `block` to every object in the receiver.
  */
-- (void)applyBlock:(TDTApplyBlock)block;
+- (void)tdt_applyBlock:(TDTApplyBlock)block;
 
 /**
  @return A new set containing the objects in the receiver for which
          `predicate` returns YES.
  */
-- (NSSet *)filteredSetUsingBlock:(TDTPredicateBlock)block;
+- (NSSet *)tdt_filteredSetUsingBlock:(TDTPredicateBlock)block;
 
 /**
  @return YES if any object in the receiver satisfies `predicate`.
  */
-- (BOOL)anyWithBlock:(TDTPredicateBlock)predicate;
+- (BOOL)tdt_anyWithBlock:(TDTPredicateBlock)predicate;
 
 @end

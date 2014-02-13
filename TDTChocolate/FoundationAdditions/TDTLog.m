@@ -8,7 +8,7 @@ static NSDateFormatter *SharedISO8601DateFormatter() {
   static NSDateFormatter *formatter;
   static dispatch_once_t onceToken;
   dispatch_once(&onceToken, ^{
-    formatter = [NSDateFormatter ISO8601Formatter];
+    formatter = [NSDateFormatter tdt_ISO8601Formatter];
   });
   return formatter;
 }

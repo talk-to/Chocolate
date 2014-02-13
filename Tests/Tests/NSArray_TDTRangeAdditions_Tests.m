@@ -9,18 +9,18 @@
 @implementation NSArray_TDTRangeAdditions_Tests
 
 - (void)testRangeTo {
-  NSArray *array = [NSArray randomArrayOfLength:3];
+  NSArray *array = [NSArray tdt_randomArrayOfLength:3];
   NSUInteger index = 2;
-  NSRange rangeTo = [array rangeToIndex:index];
+  NSRange rangeTo = [array tdt_rangeToIndex:index];
   XCTAssertEqual(rangeTo.location, (NSUInteger)0);
   XCTAssertEqual(rangeTo.length, index);
 }
 
 - (void)testRangeFrom {
   NSUInteger length = 5;
-  NSArray *array = [NSArray randomArrayOfLength:length];
+  NSArray *array = [NSArray tdt_randomArrayOfLength:length];
   NSUInteger index = 2;
-  NSRange rangeTo = [array rangeFromIndex:index];
+  NSRange rangeTo = [array tdt_rangeFromIndex:index];
   XCTAssertEqual(rangeTo.location, index);
   XCTAssertEqual(rangeTo.length, length - index);
 }

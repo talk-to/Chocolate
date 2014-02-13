@@ -10,7 +10,7 @@
 - (void)testNothingSatisfiesPredicateInEmptySet {
   NSSet *emptySet = [NSSet set];
   TDTPredicateBlock tautology = ^(id obj) { return YES; };
-  XCTAssertFalse([emptySet anyWithBlock:tautology]);
+  XCTAssertFalse([emptySet tdt_anyWithBlock:tautology]);
 }
 
 - (void)testItReturnsTrueIfAnyElementSatisfiesPredicate {
@@ -24,9 +24,9 @@
   TDTPredicateBlock predicateMatchingAllElements = ^BOOL (id obj) {
     return ([obj integerValue] >= 3);
   };
-  XCTAssertTrue([set anyWithBlock:predicateMatchingOneElement]);
-  XCTAssertTrue([set anyWithBlock:predicateMatchingMultipleElements]);
-  XCTAssertTrue([set anyWithBlock:predicateMatchingAllElements]);
+  XCTAssertTrue([set tdt_anyWithBlock:predicateMatchingOneElement]);
+  XCTAssertTrue([set tdt_anyWithBlock:predicateMatchingMultipleElements]);
+  XCTAssertTrue([set tdt_anyWithBlock:predicateMatchingAllElements]);
 }
 
 - (void)testItReturnsFalseIfNoElementSatisfiesPredicate {
@@ -34,7 +34,7 @@
   TDTPredicateBlock predicateMatchingNoElement = ^BOOL (id obj) {
     return ([obj integerValue] == 44);
   };
-  XCTAssertFalse([set anyWithBlock:predicateMatchingNoElement]);
+  XCTAssertFalse([set tdt_anyWithBlock:predicateMatchingNoElement]);
 }
 
 @end

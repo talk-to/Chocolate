@@ -6,17 +6,17 @@
  Insert a new instance of the receiver in `managedObjectContext`.
  @return The newly inserted object.
  */
-+ (instancetype)insertNewObjectInManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
++ (instancetype)tdt_insertNewObjectInManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 
 /// String representation of the receiver.
-+ (NSString *)entityName;
++ (NSString *)tdt_entityName;
 
 /**
  @return Array containing all instances of the receiver that match `predicate`
          in `managedObjectContext`. The return value is guranteed to not be nil.
  @note This method aborts on errors.
  */
-+ (NSArray *)fetchObjectsForPredicate:(NSPredicate *)predicate
++ (NSArray *)tdt_fetchObjectsForPredicate:(NSPredicate *)predicate
                inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 
 /**
@@ -24,7 +24,7 @@
          The return value is guranteed to not be nil.
  @note This method aborts on errors.
  */
-+ (NSArray *)fetchAllObjectsInManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
++ (NSArray *)tdt_fetchAllObjectsInManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 
 /**
  @return The only instance of the receiver that matches `predicate` in 
@@ -32,7 +32,7 @@
  @note This method aborts if there is an error or if there are multiples
        instances that match `predicate`.
  */
-+ (instancetype)fetchObjectForPredicate:(NSPredicate *)predicate
++ (instancetype)tdt_fetchObjectForPredicate:(NSPredicate *)predicate
                  inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 
 /**
@@ -41,7 +41,7 @@
          and not `NSNotFound`.
  @note This method aborts on errors.
  */
-+ (NSUInteger)countForPredicate:(NSPredicate *)predicate
++ (NSUInteger)tdt_countForPredicate:(NSPredicate *)predicate
          inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 
 @end

@@ -2,11 +2,11 @@
 
 @implementation NSArray (TDTAdditions)
 
-- (instancetype)flatten {
+- (instancetype)tdt_flatten {
   return [self valueForKeyPath:@"@unionOfArrays.@self"];
 }
 
-- (BOOL)isNonEmpty {
+- (BOOL)tdt_isNonEmpty {
   return (self.count > 0);
 }
 

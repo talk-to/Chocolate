@@ -8,7 +8,7 @@
  */
 @interface NSArray (TDTQueueing)
 
-- (void)enqueueObject:(id)object;
-- (id)dequeueObject;
+- (void)tdt_enqueueObject:(id)object;
+- (id)tdt_dequeueObject;
 
 @end

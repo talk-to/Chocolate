@@ -2,12 +2,12 @@
 
 @implementation NSDate (TDTComparisons)
 
-- (BOOL)isEarlierThanDate:(NSDate *)date {
+- (BOOL)tdt_isEarlierThanDate:(NSDate *)date {
   NSParameterAssert(date);
   return ([self compare:date] == NSOrderedAscending);
 }
 
-- (BOOL)isEarlierThanOrEqualToDate:(NSDate *)date {
+- (BOOL)tdt_isEarlierThanOrEqualToDate:(NSDate *)date {
   NSParameterAssert(date);
   return ([self compare:date] != NSOrderedDescending);
 }

@@ -46,8 +46,8 @@
 }
 
 - (void)testNormalEqualityRemainsUnchanged {
-  NSString *x = [NSString randomString];
-  NSString *y = [NSString randomString];
+  NSString *x = [NSString tdt_randomString];
+  NSString *y = [NSString tdt_randomString];
   XCTAssertTrue(TDTNSStringEqualToStringExtended(x, x));
   XCTAssertFalse(TDTNSStringEqualToStringExtended(x, y));
 }

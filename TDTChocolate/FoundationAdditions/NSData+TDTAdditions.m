@@ -2,15 +2,15 @@
 
 @implementation NSData (TDTAdditions)
 
-- (NSString *)stringUsingEncoding:(NSStringEncoding)encoding {
+- (NSString *)tdt_stringUsingEncoding:(NSStringEncoding)encoding {
   return [[NSString alloc] initWithData:self encoding:encoding];
 }
 
-- (NSString *)stringUsingUTF8Encoding {
-  return [self stringUsingEncoding:NSUTF8StringEncoding];
+- (NSString *)tdt_stringUsingUTF8Encoding {
+  return [self tdt_stringUsingEncoding:NSUTF8StringEncoding];
 }
 
-- (NSString *)hexRepresentation {
+- (NSString *)tdt_hexRepresentation {
 	NSMutableString *stringBuffer = [NSMutableString stringWithCapacity:([self length] * 2)];
   const unsigned char *dataBuffer = [self bytes];
   for (NSUInteger i = 0; i < [self length]; ++i) {

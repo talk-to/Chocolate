@@ -4,43 +4,43 @@
 
 @implementation NSManagedObject (TDTAdditions)
 
-+ (instancetype)insertNewObjectInManagedObjectContext:(NSManagedObjectContext *)managedObjectContext {
++ (instancetype)tdt_insertNewObjectInManagedObjectContext:(NSManagedObjectContext *)managedObjectContext {
   NSParameterAssert(managedObjectContext);
-  return [NSEntityDescription insertNewObjectForEntityForName:[self entityName]
+  return [NSEntityDescription insertNewObjectForEntityForName:[self tdt_entityName]
                                        inManagedObjectContext:managedObjectContext];
 }
 
-+ (NSString *)entityName {
++ (NSString *)tdt_entityName {
   return NSStringFromClass(self);
 }
 
-+ (NSArray *)fetchObjectsForPredicate:(NSPredicate *)predicate
++ (NSArray *)tdt_fetchObjectsForPredicate:(NSPredicate *)predicate
                inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext {
   NSParameterAssert(managedObjectContext);
-  NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:[self entityName]];
+  NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:[self tdt_entityName]];
   if (predicate) {
     fetchRequest.predicate = predicate;
   }
-  return [managedObjectContext executeFetchRequest:fetchRequest];
+  return [managedObjectContext tdt_executeFetchRequest:fetchRequest];
 }
 
-+ (NSArray *)fetchAllObjectsInManagedObjectContext:(NSManagedObjectContext *)managedObjectContext {
-  return [self fetchObjectsForPredicate:nil
++ (NSArray *)tdt_fetchAllObjectsInManagedObjectContext:(NSManagedObjectContext *)managedObjectContext {
+  return [self tdt_fetchObjectsForPredicate:nil
                  inManagedObjectContext:managedObjectContext];
 }
 
-+ (instancetype)fetchObjectForPredicate:(NSPredicate *)predicate
++ (instancetype)tdt_fetchObjectForPredicate:(NSPredicate *)predicate
                  inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext {
-  NSArray *results = [self fetchObjectsForPredicate:predicate
+  NSArray *results = [self tdt_fetchObjectsForPredicate:predicate
                              inManagedObjectContext:managedObjectContext];
   TDTAssert([results count] <= 1, @"Multiple objects matching predicate (%@): %@", predicate, results);
   return [results firstObject];
 }
 
-+ (NSUInteger)countForPredicate:(NSPredicate *)predicate
++ (NSUInteger)tdt_countForPredicate:(NSPredicate *)predicate
          inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext {
   NSParameterAssert(managedObjectContext);
-  NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:[self entityName]];
+  NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:[self tdt_entityName]];
   fetchRequest.predicate = predicate;
   NSError *error;
   NSUInteger count = [managedObjectContext countForFetchRequest:fetchRequest
