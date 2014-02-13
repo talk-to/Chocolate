@@ -14,7 +14,7 @@
   NSString *prefix = [NSString tdt_randomString];
   NSString *suffix = [NSString tdt_randomString];
   NSURL *url = [fileManager tdt_fileURLToTemporaryFileWithNamePrefix:prefix
-                                                          suffix:suffix];
+                                                              suffix:suffix];
   XCTAssertTrue(url.isFileURL);
   NSString *urlString = url.absoluteString;
   XCTAssertTrue([urlString tdt_containsString:prefix]);
@@ -26,9 +26,9 @@
   NSString *prefix = [NSString tdt_randomString];
   NSString *suffix = [NSString tdt_randomString];
   NSURL *urlOne = [fileManager tdt_fileURLToTemporaryFileWithNamePrefix:prefix
-                                                             suffix:suffix];
+                                                                 suffix:suffix];
   NSURL *urlTwo = [fileManager tdt_fileURLToTemporaryFileWithNamePrefix:prefix
-                                                             suffix:suffix];
+                                                                 suffix:suffix];
   XCTAssertNotEqualObjects(urlOne, urlTwo);
 }
 

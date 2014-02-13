@@ -35,16 +35,16 @@
 
 - (void)testMapOfEmptyArray {
   XCTAssertEqualObjects([self.emptyArray tdt_arrayByMappingWithSelector:self.identitySelector],
-                       self.emptyArray);
+                        self.emptyArray);
   XCTAssertEqualObjects([self.emptyArray tdt_arrayByMappingWithBlock:self.identityBlock],
-                       self.emptyArray);
+                        self.emptyArray);
 }
 
 - (void)testMapOfNonEmptyArray {
   XCTAssertEqualObjects([self.nonEmptyArray tdt_arrayByMappingWithSelector:self.identitySelector],
-                       self.nonEmptyArray);
+                        self.nonEmptyArray);
   XCTAssertEqualObjects([self.nonEmptyArray tdt_arrayByMappingWithBlock:self.identityBlock],
-                       self.nonEmptyArray);
+                        self.nonEmptyArray);
 }
 
 - (void)testMappingTransformsTheArray {
@@ -54,7 +54,7 @@
     return [obj capitalizedString];
   }], expectedResult);
   XCTAssertEqualObjects([array tdt_arrayByMappingWithSelector:@selector(capitalizedString)],
-                       expectedResult);
+                        expectedResult);
 }
 
 - (void)testSplitOfEmptyArray {

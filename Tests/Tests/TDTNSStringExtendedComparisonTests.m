@@ -33,16 +33,16 @@
 
 - (void)testWhitespaceIsIgnored {
   XCTAssertTrue(TDTNSStringEqualToStringExtended(self.empty,
-                                                  self.whitespaceAndNewlineOnly));
+                                                 self.whitespaceAndNewlineOnly));
   XCTAssertTrue(TDTNSStringEqualToStringExtended(self.whitespaceAndNewlineOnly,
-                                                  self.empty));
+                                                 self.empty));
 }
 
 - (void)testWhitespaceIsIgnoredWhenMatchingNil {
   XCTAssertTrue(TDTNSStringEqualToStringExtended(self.whitespaceAndNewlineOnly,
-                                                  nil));
+                                                 nil));
   XCTAssertTrue(TDTNSStringEqualToStringExtended(nil,
-                                                  self.whitespaceAndNewlineOnly));
+                                                 self.whitespaceAndNewlineOnly));
 }
 
 - (void)testNormalEqualityRemainsUnchanged {
