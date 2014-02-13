@@ -2,7 +2,7 @@
 
 @implementation NSString (TDTVersionComparison)
 
-- (NSComparisonResult)versionCompare:(NSString *)other {
+- (NSComparisonResult)tdt_versionCompare:(NSString *)other {
   NSArray *baseVersionFields = [self componentsSeparatedByString:@"."];
   NSArray *newVersionFields = [other componentsSeparatedByString:@"."];
 

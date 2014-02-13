@@ -33,21 +33,21 @@
 
 - (void)testWhitespaceIsIgnored {
   XCTAssertTrue(TDTNSStringEqualToStringExtended(self.empty,
-                                                  self.whitespaceAndNewlineOnly));
+                                                 self.whitespaceAndNewlineOnly));
   XCTAssertTrue(TDTNSStringEqualToStringExtended(self.whitespaceAndNewlineOnly,
-                                                  self.empty));
+                                                 self.empty));
 }
 
 - (void)testWhitespaceIsIgnoredWhenMatchingNil {
   XCTAssertTrue(TDTNSStringEqualToStringExtended(self.whitespaceAndNewlineOnly,
-                                                  nil));
+                                                 nil));
   XCTAssertTrue(TDTNSStringEqualToStringExtended(nil,
-                                                  self.whitespaceAndNewlineOnly));
+                                                 self.whitespaceAndNewlineOnly));
 }
 
 - (void)testNormalEqualityRemainsUnchanged {
-  NSString *x = [NSString randomString];
-  NSString *y = [NSString randomString];
+  NSString *x = [NSString tdt_randomString];
+  NSString *y = [NSString tdt_randomString];
   XCTAssertTrue(TDTNSStringEqualToStringExtended(x, x));
   XCTAssertFalse(TDTNSStringEqualToStringExtended(x, y));
 }

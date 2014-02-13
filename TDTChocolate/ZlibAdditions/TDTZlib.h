@@ -8,12 +8,12 @@ typedef enum {
 } TDTCompressionFormat;
 
 
-/** 
+/**
  This class provides a wrapper over the compression related functions provided by zlib
  */
 @interface TDTZlibCompressor : NSObject
 
-/** 
+/**
  The compression level. Must be between between 0 and 9: 1 gives best speed,
  9 gives best compression, 0 gives no compression at all (the input data is
  simply copied a block at a time). Default is Z_DEFAULT_COMPRESSION from zlib.h
@@ -21,7 +21,7 @@ typedef enum {
  */
 @property (nonatomic) int level;
 
-/** 
+/**
  Window size is the size of the history buffer in bits. Should be between
  8 and 15. Defaults to 15.
  */
@@ -42,7 +42,7 @@ typedef enum {
  */
 @property (nonatomic) unsigned int outBufferChunkSize;
 
-/** 
+/**
  The designated initializer -- needs compression format and compression level
  */
 - (id)initWithCompressionFormat:(TDTCompressionFormat)compressionFormat level:(int)level;

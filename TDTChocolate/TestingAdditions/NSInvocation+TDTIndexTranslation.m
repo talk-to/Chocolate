@@ -2,7 +2,7 @@
 
 @implementation NSInvocation (TDTIndexTranslation)
 
-+ (NSInteger)invocationIndexForIndex:(NSUInteger)index {
++ (NSInteger)tdt_invocationIndexForIndex:(NSUInteger)index {
   return  2 + (NSInteger)index;
 }
 

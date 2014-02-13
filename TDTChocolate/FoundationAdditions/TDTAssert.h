@@ -18,35 +18,35 @@
 #pragma mark - TDTAssert
 
 #define TDTAssert(condition, format...)	\
-  do {				\
-  __PRAGMA_PUSH_NO_EXTRA_ARG_WARNINGS \
-    if (!(condition)) {		\
-      [[NSAssertionHandler currentHandler] handleFailureInMethod:_cmd \
-                                                          object:self \
-                                                            file:[NSString stringWithUTF8String:__FILE__] \
-                                                      lineNumber:__LINE__ \
-                                                     description:@"" format]; \
-     __builtin_unreachable(); \
-     }				\
-  __PRAGMA_POP_NO_EXTRA_ARG_WARNINGS \
-  } while(0)
+do {				\
+__PRAGMA_PUSH_NO_EXTRA_ARG_WARNINGS \
+if (!(condition)) {		\
+[[NSAssertionHandler currentHandler] handleFailureInMethod:_cmd \
+object:self \
+file:[NSString stringWithUTF8String:__FILE__] \
+lineNumber:__LINE__ \
+description:@"" format]; \
+__builtin_unreachable(); \
+}				\
+__PRAGMA_POP_NO_EXTRA_ARG_WARNINGS \
+} while(0)
 
 #define TDTParameterAssert(condition) TDTAssert((condition), @"Invalid parameter not satisfying: %s", #condition)
 
 #pragma mark - TDTCAssert
 
 #define TDTCAssert(condition, format...) \
-  do {				\
-  __PRAGMA_PUSH_NO_EXTRA_ARG_WARNINGS \
-    if (!(condition)) {		\
-    [[NSAssertionHandler currentHandler] handleFailureInFunction:[NSString stringWithUTF8String:__PRETTY_FUNCTION__] \
-                                                            file:[NSString stringWithUTF8String:__FILE__] \
-                                                      lineNumber:__LINE__ \
-                                                     description:@"" format]; \
-    __builtin_unreachable(); \
-    }				\
-  __PRAGMA_POP_NO_EXTRA_ARG_WARNINGS \
-  } while(0)
+do {				\
+__PRAGMA_PUSH_NO_EXTRA_ARG_WARNINGS \
+if (!(condition)) {		\
+[[NSAssertionHandler currentHandler] handleFailureInFunction:[NSString stringWithUTF8String:__PRETTY_FUNCTION__] \
+file:[NSString stringWithUTF8String:__FILE__] \
+lineNumber:__LINE__ \
+description:@"" format]; \
+__builtin_unreachable(); \
+}				\
+__PRAGMA_POP_NO_EXTRA_ARG_WARNINGS \
+} while(0)
 
 #define TDTCParameterAssert(condition) TDTCAssert((condition), @"Invalid parameter not satisfying: %s", #condition)
 
@@ -59,11 +59,11 @@
  The arguments are evaluated only once.
  */
 #define TDTAssertEqualObjects(a1, a2, format...) \
-  ({ \
-    id __TDT_v1 = (a1); \
-    id __TDT_v2 = (a2); \
-    TDTAssert((__TDT_v1 == __TDT_v2) || [__TDT_v1 isEqual:__TDT_v2], ## format); \
-  })
+({ \
+id __TDT_v1 = (a1); \
+id __TDT_v2 = (a2); \
+TDTAssert((__TDT_v1 == __TDT_v2) || [__TDT_v1 isEqual:__TDT_v2], ## format); \
+})
 
 /// Signal an assertion failure if `expr` is NO.
 #define TDTAssertTrue(expr, format...) TDTAssert(expr, ## format)
@@ -82,12 +82,12 @@
 
 /// Ensure that the current line is not executed on the main thread
 #define TDTAssertIsNotMainThread() \
-  TDTAssert(![NSThread isMainThread], \
-            @"attempt to run background thread method from main thread. stack trace: %@",\
-            [NSThread callStackSymbols])
+TDTAssert(![NSThread isMainThread], \
+@"attempt to run background thread method from main thread. stack trace: %@",\
+[NSThread callStackSymbols])
 
 /// Ensure that the current line is executed on the main thread
 #define TDTAssertIsMainThread() \
-  TDTAssert([NSThread isMainThread], \
-            @"attempt to run background thread method from main thread. stack trace: %@",\
-            [NSThread callStackSymbols])
+TDTAssert([NSThread isMainThread], \
+@"attempt to run background thread method from main thread. stack trace: %@",\
+[NSThread callStackSymbols])

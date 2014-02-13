@@ -2,13 +2,13 @@
 
 @implementation NSOperationQueue (TDTSerialQueueAdditions)
 
-+ (instancetype)serialOperationQueue {
++ (instancetype)tdt_serialOperationQueue {
   NSOperationQueue *queue = [[self alloc] init];
   [queue setMaxConcurrentOperationCount:1];
   return queue;
 }
 
-- (BOOL)isSerial {
+- (BOOL)tdt_isSerial {
   return (self.maxConcurrentOperationCount == 1);
 }
 

@@ -8,7 +8,7 @@
 @implementation NSOperationQueue_TDTSerialQueueAdditions_Tests
 
 - (void)testSerialQueueAdditionsAreInternallyConsistent {
-  XCTAssertTrue([[NSOperationQueue serialOperationQueue] isSerial]);
+  XCTAssertTrue([[NSOperationQueue tdt_serialOperationQueue] tdt_isSerial]);
 }
 
 @end

@@ -30,7 +30,7 @@
   // One would think that this should return YES when run here -- but this
   // works only when called inside the main application bundle.
   // So we just make sure it does not crash.
-  [[NSProcessInfo processInfo] isRunningTests];
+  [[NSProcessInfo processInfo] tdt_isRunningTests];
 }
 
 @end

@@ -13,7 +13,7 @@
   TDTRunOnThread([NSThread currentThread], NO, ^{
     wasRun = YES;
   });
-  [[NSRunLoop currentRunLoop] runUntilCompletionIndicator:&wasRun];
+  [[NSRunLoop currentRunLoop] tdt_runUntilCompletionIndicator:&wasRun];
   XCTAssertTrue(wasRun);
 }
 
@@ -22,7 +22,7 @@
   TDTRunAfterDelay(0.001, ^{
     wasRun = YES;
   });
-  [[NSRunLoop currentRunLoop] runUntilCompletionIndicator:&wasRun];
+  [[NSRunLoop currentRunLoop] tdt_runUntilCompletionIndicator:&wasRun];
   XCTAssertTrue(wasRun);
 }
 

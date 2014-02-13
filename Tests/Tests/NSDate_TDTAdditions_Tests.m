@@ -8,13 +8,13 @@
 @implementation NSDate_TDTAdditions_Tests
 
 - (void)testMillisecondsSinceEpochAreZeroForEpoch {
-  XCTAssertEqual([[NSDate dateWithTimeIntervalSince1970:0] millisecondsSinceEpoch],
+  XCTAssertEqual([[NSDate dateWithTimeIntervalSince1970:0] tdt_millisecondsSinceEpoch],
                  (int64_t)0);
 }
 
 - (void)testMillisecondsSinceEpochAreSameAsTimeIntervalInSeconds {
   int64_t seconds = 100;
-  XCTAssertEqual([[NSDate dateWithTimeIntervalSince1970:seconds] millisecondsSinceEpoch],
+  XCTAssertEqual([[NSDate dateWithTimeIntervalSince1970:seconds] tdt_millisecondsSinceEpoch],
                  (int64_t)(seconds * 1000));
 }
 

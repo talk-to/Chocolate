@@ -1,5 +1,5 @@
 
-/** 
+/**
  Typedefs shared by the `TDTFunctionalAdditions` categories on arrays and sets.
  */
 

@@ -7,6 +7,6 @@
  `NSInvocation` uses to reference the same argument.
  */
 
-+ (NSInteger)invocationIndexForIndex:(NSUInteger)index;
++ (NSInteger)tdt_invocationIndexForIndex:(NSUInteger)index;
 
 @end

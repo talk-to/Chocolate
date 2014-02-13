@@ -4,20 +4,20 @@
 
 @implementation NSString (TDTAdditions)
 
-+ (instancetype)randomUUID {
++ (instancetype)tdt_randomUUID {
   CFUUIDRef uuid = CFAutorelease(CFUUIDCreate(NULL));
   return (NSString *)CFBridgingRelease(CFUUIDCreateString(NULL, uuid));
 }
 
-+ (NSString *)stringWithUnsignedInteger:(NSUInteger)unsignedInteger {
++ (NSString *)tdt_stringWithUnsignedInteger:(NSUInteger)unsignedInteger {
   return [self stringWithFormat:@"%lu", (unsigned long)unsignedInteger];
 }
 
-+ (NSString *)stringWithBOOL:(BOOL)b {
++ (NSString *)tdt_stringWithBOOL:(BOOL)b {
   return b ? @"YES" : @"NO";
 }
 
-- (NSString *)SHA1Digest {
+- (NSString *)tdt_SHA1Digest {
   const char *cstr = [self cStringUsingEncoding:NSUTF8StringEncoding];
   NSData *data = [NSData dataWithBytes:cstr length:self.length];
 
@@ -35,32 +35,32 @@
   return output;
 }
 
-- (NSString *)stringByTrimmingWhitespaceAndNewlines {
+- (NSString *)tdt_stringByTrimmingWhitespaceAndNewlines {
   return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
-- (NSString *)stringByTrimmingNonAlphaNumericCharacters {
+- (NSString *)tdt_stringByTrimmingNonAlphaNumericCharacters {
   NSCharacterSet *charactersToRemove = [[NSCharacterSet alphanumericCharacterSet] invertedSet];
   return [self stringByTrimmingCharactersInSet:charactersToRemove];
 }
 
-- (NSString *)stringByNillingBlanks {
-  return [self isNonEmpty] ? self : nil;
+- (NSString *)tdt_stringByNillingBlanks {
+  return [self tdt_isNonEmpty] ? self : nil;
 }
 
-- (BOOL)containsString:(NSString *)string {
+- (BOOL)tdt_containsString:(NSString *)string {
   return ([self rangeOfString:string].location != NSNotFound);
 }
 
-- (NSData *)dataUsingUTF8Encoding {
+- (NSData *)tdt_dataUsingUTF8Encoding {
   return [self dataUsingEncoding:NSUTF8StringEncoding];
 }
 
-- (BOOL)isNonEmpty {
+- (BOOL)tdt_isNonEmpty {
   return (self.length > 0);
 }
 
-- (NSUInteger)unsignedIntegerValue {
+- (NSUInteger)tdt_unsignedIntegerValue {
   unsigned long ul = strtoul([self cStringUsingEncoding:NSUTF8StringEncoding], NULL, 10);
   if (ul > NSUIntegerMax) {
     ul = NSUIntegerMax;

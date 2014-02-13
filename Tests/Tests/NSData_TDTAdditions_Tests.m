@@ -10,7 +10,7 @@
 - (void)testHexRepresentation {
   static const uint8_t bytes[4] = { 0xde, 0xad, 0xbe, 0xef };
   NSData *data = [NSData dataWithBytes:bytes length:4];
-  XCTAssertEqualObjects([data hexRepresentation], @"deadbeef");
+  XCTAssertEqualObjects([data tdt_hexRepresentation], @"deadbeef");
 }
 
 @end

@@ -4,7 +4,7 @@ static NSString *const ISO8601DateFormat = @"yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'SSS
 
 @implementation NSDateFormatter (TDTISO8601Formatting)
 
-+ (instancetype)ISO8601Formatter {
++ (instancetype)tdt_ISO8601Formatter {
   NSDateFormatter *formatter = [[self alloc] init];
   formatter.dateFormat = ISO8601DateFormat;
   formatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];

@@ -3,7 +3,7 @@
 
 @implementation NSFetchedResultsController (TDTAdditions)
 
-- (void)performFetch {
+- (void)tdt_performFetch {
   NSError *error;
   BOOL res = [self performFetch:&error];
   TDTAssert(res, @"%@", error);

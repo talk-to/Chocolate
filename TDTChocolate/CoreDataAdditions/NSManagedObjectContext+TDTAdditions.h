@@ -5,16 +5,16 @@
 /**
  Wrapper over `existingObjectWithID:error:` that aborts on errors.
  */
-- (NSManagedObject *)existingObjectWithID:(NSManagedObjectID *)objectID;
+- (NSManagedObject *)tdt_existingObjectWithID:(NSManagedObjectID *)objectID;
 
 /**
  Wrapper over `executeFetchRequest:error:` that aborts on errors.
  */
-- (NSArray *)executeFetchRequest:(NSFetchRequest *)fetchRequest;
+- (NSArray *)tdt_executeFetchRequest:(NSFetchRequest *)fetchRequest;
 
 /**
  Wrapper over `save:` that aborts on errors.
  */
-- (void)save;
+- (void)tdt_save;
 
 @end

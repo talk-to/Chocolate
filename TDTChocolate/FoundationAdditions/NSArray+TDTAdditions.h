@@ -6,14 +6,14 @@
  Converts an array of arrays into an array consisting of the objects of the arrays.
 
  @pre All objects in the receiver must be an instance of `NSArray`.
- @note This does not recursively flatten the arrays beyond the first level.
+ @note This does not recursively tdt_flatten the arrays beyond the first level.
  */
 
-- (instancetype)flatten;
+- (instancetype)tdt_flatten;
 
 /**
  @return YES if the receiver contains any object.
  */
-- (BOOL)isNonEmpty;
+- (BOOL)tdt_isNonEmpty;
 
 @end
