@@ -8,7 +8,7 @@
 }
 
 - (NSURL *)tdt_fileURLToTemporaryFileWithNamePrefix:(NSString *)prefix
-                                         suffix:(NSString *)suffix {
+                                             suffix:(NSString *)suffix {
   NSString *temporaryDirectory = NSTemporaryDirectory();
   NSString *dottedSuffix = [@"." stringByAppendingString:suffix];
   NSString *nameTemplate = [NSString stringWithFormat:@"%@-XXXXX%@", prefix, dottedSuffix];

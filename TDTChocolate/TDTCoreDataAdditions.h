@@ -4,5 +4,5 @@
 
 #import "TargetConditionals.h"
 #if TARGET_OS_IPHONE
-  #import "CoreDataAdditions/NSFetchedResultsController+TDTAdditions.h"
+#import "CoreDataAdditions/NSFetchedResultsController+TDTAdditions.h"
 #endif

@@ -4,7 +4,7 @@
 
 /**
  @return URL to the any directory which matches the given search path in
-         the User's domain.
+ the User's domain.
  */
 - (NSURL *)tdt_userURLForDirectory:(NSSearchPathDirectory)directory;
 
@@ -17,6 +17,6 @@
  @return URL to the temporary file.
  */
 - (NSURL *)tdt_fileURLToTemporaryFileWithNamePrefix:(NSString *)prefix
-                                         suffix:(NSString *)suffix;
+                                             suffix:(NSString *)suffix;
 
 @end

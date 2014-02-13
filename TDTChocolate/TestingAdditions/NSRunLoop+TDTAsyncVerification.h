@@ -24,7 +24,7 @@ typedef BOOL (^TDTAsyncVerificationCompletionTest)();
  @param object Pointer to the object. It should not be NULL.
  */
 - (void)tdt_runUntilObjectIsInitialized:(id __strong *)object
-                            timeout:(NSTimeInterval)timeout;
+                                timeout:(NSTimeInterval)timeout;
 
 /**
  Keep spinning until either
@@ -33,7 +33,7 @@ typedef BOOL (^TDTAsyncVerificationCompletionTest)();
  @param completionIndicator Pointer to the BOOL to watch. It should not be NULL.
  */
 - (void)tdt_runUntilCompletionIndicator:(BOOL *)completionIndicator
-                            timeout:(NSTimeInterval)timeout;
+                                timeout:(NSTimeInterval)timeout;
 
 /**
  Convenience wrappers that forward the invocation with the `timeout`
@@ -54,15 +54,15 @@ typedef BOOL (^TDTAsyncVerificationCompletionTest)();
  `completionTest` returns YES or `timeout` occurs.
  */
 - (void)tdt_runUntilCompletionTest:(TDTAsyncVerificationCompletionTest)completionTest
-                       timeout:(NSTimeInterval)timeout;
+                           timeout:(NSTimeInterval)timeout;
 
 /**
  Keep spinning in `mode` until either
  `completionTest` returns YES or `timeout` occurs.
  */
 - (void)tdt_runUntilCompletionTest:(TDTAsyncVerificationCompletionTest)completionTest
-                       timeout:(NSTimeInterval)timeout
-                          mode:(NSString *)mode;
+                           timeout:(NSTimeInterval)timeout
+                              mode:(NSString *)mode;
 
 /**
  Keep spinning until `timeout`.

@@ -13,35 +13,35 @@
 
 /**
  @return Array containing all instances of the receiver that match `predicate`
-         in `managedObjectContext`. The return value is guranteed to not be nil.
+ in `managedObjectContext`. The return value is guranteed to not be nil.
  @note This method aborts on errors.
  */
 + (NSArray *)tdt_fetchObjectsForPredicate:(NSPredicate *)predicate
-               inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
+                   inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 
 /**
  @return Array containing all instances of the receiver in `managedObjectContext`.
-         The return value is guranteed to not be nil.
+ The return value is guranteed to not be nil.
  @note This method aborts on errors.
  */
 + (NSArray *)tdt_fetchAllObjectsInManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 
 /**
- @return The only instance of the receiver that matches `predicate` in 
-         `managedObjectContext`, or nil if there are no such instances.
+ @return The only instance of the receiver that matches `predicate` in
+ `managedObjectContext`, or nil if there are no such instances.
  @note This method aborts if there is an error or if there are multiples
-       instances that match `predicate`.
+ instances that match `predicate`.
  */
 + (instancetype)tdt_fetchObjectForPredicate:(NSPredicate *)predicate
-                 inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
+                     inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 
 /**
  @return Count of the number of instances of the receiver that match `predicate`
-         in `managedObjectContext`. The return value is guranteed to be valid
-         and not `NSNotFound`.
+ in `managedObjectContext`. The return value is guranteed to be valid
+ and not `NSNotFound`.
  @note This method aborts on errors.
  */
 + (NSUInteger)tdt_countForPredicate:(NSPredicate *)predicate
-         inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
+             inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 
 @end

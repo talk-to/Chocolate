@@ -1,69 +1,69 @@
 
 /**
- Macros to ease creation of core data accessors for scalar values. 
+ Macros to ease creation of core data accessors for scalar values.
  @see "Core Data Programming Guide" > "Non-Standard Persistent Attributes"
  */
 
 #define TDT_COREDATA_CREATE_INT_GETTER(key, type, getter, primitiveAccessor) \
-  - (type)getter { \
-    [self willAccessValueForKey:key]; \
-    NSNumber *tmp = self.primitiveAccessor; \
-    [self didAccessValueForKey:key]; \
-    return (type)[tmp integerValue]; \
-  }
+- (type)getter { \
+[self willAccessValueForKey:key]; \
+NSNumber *tmp = self.primitiveAccessor; \
+[self didAccessValueForKey:key]; \
+return (type)[tmp integerValue]; \
+}
 
 #define TDT_COREDATA_CREATE_INT_SETTER(key, type, setter, primitiveAccessor) \
-  - (void)setter : (type)x { \
-    NSNumber *tmp = [[NSNumber alloc] initWithInt:x]; \
-    [self willChangeValueForKey:key]; \
-    self.primitiveAccessor = tmp; \
-    [self didChangeValueForKey:key]; \
-  }
+- (void)setter : (type)x { \
+NSNumber *tmp = [[NSNumber alloc] initWithInt:x]; \
+[self willChangeValueForKey:key]; \
+self.primitiveAccessor = tmp; \
+[self didChangeValueForKey:key]; \
+}
 
 #define TDT_COREDATA_CREATE_INT_ACCESSOR(key, type, getter, setter, primitiveAccessor) \
-  TDT_COREDATA_CREATE_INT_GETTER(key, type, getter, primitiveAccessor) \
-  TDT_COREDATA_CREATE_INT_SETTER(key, type, setter, primitiveAccessor)
+TDT_COREDATA_CREATE_INT_GETTER(key, type, getter, primitiveAccessor) \
+TDT_COREDATA_CREATE_INT_SETTER(key, type, setter, primitiveAccessor)
 
 
 #define TDT_COREDATA_CREATE_BOOL_GETTER(key, type, getter, primitiveAccessor) \
-  - (type)getter { \
-    [self willAccessValueForKey:key]; \
-    NSNumber *tmp = self.primitiveAccessor; \
-    [self didAccessValueForKey:key]; \
-    return [tmp boolValue]; \
-  }
+- (type)getter { \
+[self willAccessValueForKey:key]; \
+NSNumber *tmp = self.primitiveAccessor; \
+[self didAccessValueForKey:key]; \
+return [tmp boolValue]; \
+}
 
 #define TDT_COREDATA_CREATE_BOOL_SETTER(key, type, setter, primitiveAccessor) \
-  - (void)setter : (type)x { \
-    NSNumber *tmp = [[NSNumber alloc] initWithBool:x]; \
-    [self willChangeValueForKey:key]; \
-    self.primitiveAccessor = tmp; \
-    [self didChangeValueForKey:key]; \
-  }
+- (void)setter : (type)x { \
+NSNumber *tmp = [[NSNumber alloc] initWithBool:x]; \
+[self willChangeValueForKey:key]; \
+self.primitiveAccessor = tmp; \
+[self didChangeValueForKey:key]; \
+}
 
 #define TDT_COREDATA_CREATE_BOOL_ACCESSOR(key, type, getter, setter, primitiveAccessor) \
-  TDT_COREDATA_CREATE_BOOL_GETTER(key, type, getter, primitiveAccessor) \
-  TDT_COREDATA_CREATE_BOOL_SETTER(key, type, setter, primitiveAccessor)
+TDT_COREDATA_CREATE_BOOL_GETTER(key, type, getter, primitiveAccessor) \
+TDT_COREDATA_CREATE_BOOL_SETTER(key, type, setter, primitiveAccessor)
 
 #define TDT_COREDATA_CREATE_FLOAT_GETTER(key, type, getter, primitiveAccessor) \
-  - (type)getter { \
-    [self willAccessValueForKey:key]; \
-    NSNumber *tmp = self.primitiveAccessor; \
-    [self didAccessValueForKey:key]; \
-    return (type)[tmp floatValue]; \
-  }
+- (type)getter { \
+[self willAccessValueForKey:key]; \
+NSNumber *tmp = self.primitiveAccessor; \
+[self didAccessValueForKey:key]; \
+return (type)[tmp floatValue]; \
+}
 
 #define TDT_COREDATA_CREATE_FLOAT_SETTER(key, type, setter, primitiveAccessor) \
-  - (void)setter : (type)x { \
-    NSNumber *tmp = [[NSNumber alloc] initWithFloat:x]; \
-    [self willChangeValueForKey:key]; \
-    self.primitiveAccessor = tmp; \
-    [self didChangeValueForKey:key]; \
-  }
+- (void)setter : (type)x { \
+NSNumber *tmp = [[NSNumber alloc] initWithFloat:x]; \
+[self willChangeValueForKey:key]; \
+self.primitiveAccessor = tmp; \
+[self didChangeValueForKey:key]; \
+}
 
 #define TDT_COREDATA_CREATE_FLOAT_ACCESSOR(key, type, getter, setter, primitiveAccessor) \
-  TDT_COREDATA_CREATE_FLOAT_GETTER(key, type, getter, primitiveAccessor) \
-  TDT_COREDATA_CREATE_FLOAT_SETTER(key, type, setter, primitiveAccessor)
+TDT_COREDATA_CREATE_FLOAT_GETTER(key, type, getter, primitiveAccessor) \
+TDT_COREDATA_CREATE_FLOAT_SETTER(key, type, setter, primitiveAccessor)
 
 /**
  Invoking the super (NSManagedObject) setter functionality in an overridden
@@ -73,14 +73,14 @@
  */
 
 #define TDT_COREDATA_INVOKE_SUPER_GETTER(KEY, VARIABLE, PRIMITIVE_PROPERTY) \
-  [self willAccessValueForKey:KEY]; \
-  VARIABLE = self.PRIMITIVE_PROPERTY; \
-  [self didAccessValueForKey:KEY]
+[self willAccessValueForKey:KEY]; \
+VARIABLE = self.PRIMITIVE_PROPERTY; \
+[self didAccessValueForKey:KEY]
 
 #define TDT_COREDATA_INVOKE_SUPER_SETTER(KEY, VALUE, PRIMITIVE_PROPERTY) \
-  [self willChangeValueForKey:KEY]; \
-  self.PRIMITIVE_PROPERTY = VALUE; \
-  [self didChangeValueForKey:KEY]
+[self willChangeValueForKey:KEY]; \
+self.PRIMITIVE_PROPERTY = VALUE; \
+[self didChangeValueForKey:KEY]
 
 /**
  Emit declarations for a `customGetter` that relays the value of
@@ -100,16 +100,16 @@
  */
 #define TDT_COREDATA_CUSTOM_GETTER_FOR_BOOL_PROPERTY(customGetter, linkedSetter, originalProperty, primitiveProperty) \
 - (BOOL)customGetter { \
-  [self willAccessValueForKey:NSStringFromSelector(@selector(customGetter))]; \
-  NSNumber *tmp = self.primitiveProperty; \
-  [self didAccessValueForKey:NSStringFromSelector(@selector(customGetter))]; \
-  return [tmp boolValue]; \
+[self willAccessValueForKey:NSStringFromSelector(@selector(customGetter))]; \
+NSNumber *tmp = self.primitiveProperty; \
+[self didAccessValueForKey:NSStringFromSelector(@selector(customGetter))]; \
+return [tmp boolValue]; \
 } \
 \
 - (void)linkedSetter:(BOOL)tmp { \
-  [self willChangeValueForKey:NSStringFromSelector(@selector(customGetter))]; \
-  [self willChangeValueForKey:NSStringFromSelector(@selector(originalProperty))]; \
-  self.primitiveProperty = @(tmp); \
-  [self didChangeValueForKey:NSStringFromSelector(@selector(originalProperty))]; \
-  [self didChangeValueForKey:NSStringFromSelector(@selector(customGetter))]; \
+[self willChangeValueForKey:NSStringFromSelector(@selector(customGetter))]; \
+[self willChangeValueForKey:NSStringFromSelector(@selector(originalProperty))]; \
+self.primitiveProperty = @(tmp); \
+[self didChangeValueForKey:NSStringFromSelector(@selector(originalProperty))]; \
+[self didChangeValueForKey:NSStringFromSelector(@selector(customGetter))]; \
 }

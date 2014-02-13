@@ -10,7 +10,7 @@
 
 /**
  @return A string consisting of random characters.
-         It is guranteed to be non empty.
+ It is guranteed to be non empty.
  */
 + (instancetype)tdt_randomString;
 
@@ -20,7 +20,7 @@
 
 /**
  @return Data consisting of random bytes.
-         It is guranteed to be non empty.
+ It is guranteed to be non empty.
  */
 + (instancetype)tdt_randomData;
 

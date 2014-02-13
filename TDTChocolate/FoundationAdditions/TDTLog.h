@@ -15,7 +15,7 @@
  Prepend log type, __PRETTY_FUNCTION__, and line number to the formatted log message.
 
  @note Make sure that 'format' is a literal Objective-C string. We need it to
-       be a literal since we are relying on string literal contatenation here.
+ be a literal since we are relying on string literal contatenation here.
 
  Clients can set the `TDTLogErrorWarningHook` function pointer to point to
  a function which will then be invoked with the formatted log message whenever
@@ -26,40 +26,40 @@ typedef void (*TDTLogErrorWarningHookFunction)(NSString *message);
 extern TDTLogErrorWarningHookFunction TDTLogErrorWarningHook;
 
 #define TDTLogError(format, ...) \
-  do { \
-    if (DEBUG_ERROR) {\
-      NSString *__msg00 = [[NSString alloc] initWithFormat:(@"ERROR %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__]; \
-      TDTLog(@"%@", __msg00); \
-      if (TDTLogErrorWarningHook != NULL) { \
-        TDTLogErrorWarningHook(__msg00); \
-      } \
-    } \
-  } while (0)
+do { \
+if (DEBUG_ERROR) {\
+NSString *__msg00 = [[NSString alloc] initWithFormat:(@"ERROR %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__]; \
+TDTLog(@"%@", __msg00); \
+if (TDTLogErrorWarningHook != NULL) { \
+TDTLogErrorWarningHook(__msg00); \
+} \
+} \
+} while (0)
 
 #define TDTLogWarn(format, ...) \
-  do { \
-    if (DEBUG_WARN) { \
-      NSString *__msg00 = [[NSString alloc] initWithFormat:(@"WARN %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__]; \
-      TDTLog(@"%@", __msg00); \
-      if (TDTLogErrorWarningHook != NULL) { \
-        TDTLogErrorWarningHook(__msg00); \
-      } \
-   } \
-  } while (0)
+do { \
+if (DEBUG_WARN) { \
+NSString *__msg00 = [[NSString alloc] initWithFormat:(@"WARN %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__]; \
+TDTLog(@"%@", __msg00); \
+if (TDTLogErrorWarningHook != NULL) { \
+TDTLogErrorWarningHook(__msg00); \
+} \
+} \
+} while (0)
 
 #define TDTLogInfo(format, ...) \
-  do { \
-    if (DEBUG_INFO) { \
-      TDTLog((@"INFO %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__); \
-    } \
-  } while (0)
+do { \
+if (DEBUG_INFO) { \
+TDTLog((@"INFO %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__); \
+} \
+} while (0)
 
 #define TDTLogVerbose(format, ...) \
-  do { \
-    if (DEBUG_VERBOSE) { \
-      TDTLog((@"VERBOSE %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__); \
-    } \
-  } while (0)
+do { \
+if (DEBUG_VERBOSE) { \
+TDTLog((@"VERBOSE %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__); \
+} \
+} while (0)
 
 
 /**

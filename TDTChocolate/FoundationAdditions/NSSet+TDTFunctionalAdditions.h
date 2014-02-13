@@ -3,10 +3,10 @@
 
 @interface NSSet (TDTFunctionalAdditions)
 
-/** 
- Creates a set from a collection. 
- 
- - A collection can be either an `NSSet`, `NSArray` or an `NSDictionary`. 
+/**
+ Creates a set from a collection.
+
+ - A collection can be either an `NSSet`, `NSArray` or an `NSDictionary`.
  - In case its an `NSDictionary`, all of its values go into the set.
  */
 + (instancetype)tdt_setWithCollection:(id)collection;
@@ -35,7 +35,7 @@
 
 /**
  @return A new set containing the objects in the receiver for which
-         `predicate` returns YES.
+ `predicate` returns YES.
  */
 - (NSSet *)tdt_filteredSetUsingBlock:(TDTPredicateBlock)block;
 
