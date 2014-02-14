@@ -9,11 +9,11 @@
 /**
  @return A new instance of a serial queue.
  */
-+ (instancetype)serialOperationQueue;
++ (instancetype)tdt_serialOperationQueue;
 
 /**
  @return YES if the receiver is a serial queue.
  */
-- (BOOL)isSerial;
+- (BOOL)tdt_isSerial;
 
 @end

@@ -10,9 +10,9 @@
 
 /**
  @return A string consisting of random characters.
-         It is guranteed to be non empty.
+ It is guranteed to be non empty.
  */
-+ (instancetype)randomString;
++ (instancetype)tdt_randomString;
 
 @end
 
@@ -20,32 +20,32 @@
 
 /**
  @return Data consisting of random bytes.
-         It is guranteed to be non empty.
+ It is guranteed to be non empty.
  */
-+ (instancetype)randomData;
++ (instancetype)tdt_randomData;
 
 @end
 
 @interface NSNumber (TDTRandomFixtures)
 
-+ (instancetype)randomNumber;
++ (instancetype)tdt_randomNumber;
 
 @end
 
 @interface NSArray (TDTRandomFixtures)
 
-+ (instancetype)randomArrayOfLength:(NSUInteger)length;
++ (instancetype)tdt_randomArrayOfLength:(NSUInteger)length;
 
 @end
 
 @interface NSURL (TDTRandomFixtures)
 
-+ (instancetype)randomURL;
++ (instancetype)tdt_randomURL;
 
 @end
 
 @interface NSDate (TDTRandomFixtures)
 
-+ (instancetype)randomDate;
++ (instancetype)tdt_randomDate;
 
 @end

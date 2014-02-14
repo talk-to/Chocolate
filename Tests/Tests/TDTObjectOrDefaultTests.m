@@ -9,13 +9,13 @@
 @implementation TDTObjectOrDefaultTests
 
 - (void)testNilIsReplacedByDefault {
-  id defaultValue = [NSNumber randomNumber];
+  id defaultValue = [NSNumber tdt_randomNumber];
   XCTAssertEqualObjects(TDTObjectOrDefault(nil, defaultValue), defaultValue);
 }
 
 - (void)testNonNilIsUnchanged {
-  id object = [NSNumber randomNumber];
-  id defaultValue = [NSNumber randomNumber];
+  id object = [NSNumber tdt_randomNumber];
+  id defaultValue = [NSNumber tdt_randomNumber];
   XCTAssertEqualObjects(TDTObjectOrDefault(object, defaultValue), object);
 }
 

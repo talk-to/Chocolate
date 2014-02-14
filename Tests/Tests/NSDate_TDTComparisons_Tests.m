@@ -11,18 +11,18 @@
   NSDate *past = [NSDate distantPast];
   NSDate *present = [NSDate date];
   NSDate *future = [NSDate distantFuture];
-  XCTAssertTrue([past isEarlierThanDate:present]);
-  XCTAssertFalse([past isEarlierThanDate:past]);
-  XCTAssertFalse([future isEarlierThanDate:present]);
+  XCTAssertTrue([past tdt_isEarlierThanDate:present]);
+  XCTAssertFalse([past tdt_isEarlierThanDate:past]);
+  XCTAssertFalse([future tdt_isEarlierThanDate:present]);
 }
 
 - (void)testIsEarlierThanOrEqualToDateComparisons {
   NSDate *past = [NSDate distantPast];
   NSDate *present = [NSDate date];
   NSDate *future = [NSDate distantFuture];
-  XCTAssertTrue([past isEarlierThanOrEqualToDate:present]);
-  XCTAssertTrue([past isEarlierThanOrEqualToDate:past]);
-  XCTAssertFalse([future isEarlierThanOrEqualToDate:present]);
+  XCTAssertTrue([past tdt_isEarlierThanOrEqualToDate:present]);
+  XCTAssertTrue([past tdt_isEarlierThanOrEqualToDate:past]);
+  XCTAssertFalse([future tdt_isEarlierThanOrEqualToDate:present]);
 }
 
 @end

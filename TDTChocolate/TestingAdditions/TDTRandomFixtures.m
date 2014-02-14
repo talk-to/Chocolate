@@ -4,7 +4,7 @@
 
 @implementation NSString (TDTRandomFixtures)
 
-+ (instancetype)randomString {
++ (instancetype)tdt_randomString {
   return [self stringWithFormat:@"%u", arc4random()];
 }
 
@@ -12,15 +12,15 @@
 
 @implementation NSData (TDTRandomFixtures)
 
-+ (instancetype)randomData {
-  return [[NSString randomString] dataUsingEncoding:NSUTF8StringEncoding];
++ (instancetype)tdt_randomData {
+  return [[NSString tdt_randomString] dataUsingEncoding:NSUTF8StringEncoding];
 }
 
 @end
 
 @implementation NSNumber (TDTRandomFixtures)
 
-+ (instancetype)randomNumber {
++ (instancetype)tdt_randomNumber {
   return [NSNumber numberWithLong:arc4random()];
 }
 
@@ -28,19 +28,19 @@
 
 @implementation NSArray (TDTRandomFixtures)
 
-+ (instancetype)randomArrayOfLength:(NSUInteger)length {
++ (instancetype)tdt_randomArrayOfLength:(NSUInteger)length {
   NSMutableArray *result = [NSMutableArray arrayWithCapacity:length];
   for (NSUInteger i = 0; i < length; i += 1) {
     id randomObject;
     switch (arc4random() % 3) {
       case 0:
-        randomObject = [NSString randomString];
+        randomObject = [NSString tdt_randomString];
         break;
       case 1:
-        randomObject = [NSNumber randomNumber];
+        randomObject = [NSNumber tdt_randomNumber];
         break;
       case 2:
-        randomObject = [NSArray randomArrayOfLength:1];
+        randomObject = [NSArray tdt_randomArrayOfLength:1];
         break;
       default:
         TDTAssertFailure();
@@ -54,15 +54,15 @@
 
 @implementation NSURL (TDTRandomFixtures)
 
-+ (instancetype)randomURL {
-  return [self URLWithString:[NSString randomString]];
++ (instancetype)tdt_randomURL {
+  return [self URLWithString:[NSString tdt_randomString]];
 }
 
 @end
 
 @implementation NSDate (TDTRandomFixtures)
 
-+ (instancetype)randomDate {
++ (instancetype)tdt_randomDate {
   NSTimeInterval randomTimeInterval = TDTRandomDouble() * arc4random();
   return [self dateWithTimeIntervalSince1970:randomTimeInterval];
 }

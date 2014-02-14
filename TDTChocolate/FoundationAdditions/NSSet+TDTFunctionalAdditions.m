@@ -4,7 +4,7 @@
 
 @implementation NSSet (TDTFunctionalAdditions)
 
-+ (instancetype)setWithCollection:(id)collection {
++ (instancetype)tdt_setWithCollection:(id)collection {
   if ([collection isKindOfClass:[NSSet class]]) {
     return [self setWithSet:collection];
   } else if ([collection isKindOfClass:[NSArray class]]) {
@@ -18,7 +18,7 @@
 
 #pragma mark Map
 
-- (NSSet *)setByMappingWithSelector:(SEL)selector {
+- (NSSet *)tdt_setByMappingWithSelector:(SEL)selector {
   NSMutableSet *result = [[NSMutableSet alloc] initWithCapacity:[self count]];
   for (id object in self) {
     TDTSuppressPerformSelectorLeakWarning([result addObject:[object performSelector:selector]]);
@@ -26,7 +26,7 @@
   return result;
 }
 
-- (NSSet *)setByMappingWithBlock:(TDTMapBlock)block {
+- (NSSet *)tdt_setByMappingWithBlock:(TDTMapBlock)block {
   NSMutableSet *result = [[NSMutableSet alloc] initWithCapacity:[self count]];
   for (id object in self) {
     [result addObject:block(object)];
@@ -36,13 +36,13 @@
 
 #pragma mark Apply
 
-- (void)applySelector:(SEL)selector {
+- (void)tdt_applySelector:(SEL)selector {
   for (id object in self) {
     TDTSuppressPerformSelectorLeakWarning([object performSelector:selector]);
   }
 }
 
-- (void)applyBlock:(TDTApplyBlock)block {
+- (void)tdt_applyBlock:(TDTApplyBlock)block {
   for (id object in self) {
     block(object);
   }
@@ -50,7 +50,7 @@
 
 #pragma mark Filter
 
-- (NSSet *)filteredSetUsingBlock:(TDTPredicateBlock)block {
+- (NSSet *)tdt_filteredSetUsingBlock:(TDTPredicateBlock)block {
   NSPredicate *predicate = [NSPredicate predicateWithBlock:^(id evaluatedObject, NSDictionary *bindings) {
     return block(evaluatedObject);
   }];
@@ -59,7 +59,7 @@
 
 #pragma mark Any
 
-- (BOOL)anyWithBlock:(TDTPredicateBlock)predicate {
+- (BOOL)tdt_anyWithBlock:(TDTPredicateBlock)predicate {
   for (id obj in self) {
     if (predicate(obj)) {
       return YES;

@@ -3,12 +3,12 @@
 
 @implementation NSFileManager (TDTAdditions)
 
-- (NSURL *)userURLForDirectory:(NSSearchPathDirectory)directory {
+- (NSURL *)tdt_userURLForDirectory:(NSSearchPathDirectory)directory {
   return [[self URLsForDirectory:directory inDomains:NSUserDomainMask] firstObject];
 }
 
-- (NSURL *)fileURLToTemporaryFileWithNamePrefix:(NSString *)prefix
-                                         suffix:(NSString *)suffix {
+- (NSURL *)tdt_fileURLToTemporaryFileWithNamePrefix:(NSString *)prefix
+                                             suffix:(NSString *)suffix {
   NSString *temporaryDirectory = NSTemporaryDirectory();
   NSString *dottedSuffix = [@"." stringByAppendingString:suffix];
   NSString *nameTemplate = [NSString stringWithFormat:@"%@-XXXXX%@", prefix, dottedSuffix];

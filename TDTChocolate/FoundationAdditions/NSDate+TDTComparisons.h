@@ -6,8 +6,8 @@
 
 @interface NSDate (TDTComparisons)
 
-- (BOOL)isEarlierThanDate:(NSDate *)date;
+- (BOOL)tdt_isEarlierThanDate:(NSDate *)date;
 
-- (BOOL)isEarlierThanOrEqualToDate:(NSDate *)date;
+- (BOOL)tdt_isEarlierThanOrEqualToDate:(NSDate *)date;
 
 @end

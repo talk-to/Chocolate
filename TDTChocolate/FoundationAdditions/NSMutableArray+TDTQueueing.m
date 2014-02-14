@@ -4,13 +4,13 @@
 
 @implementation NSMutableArray (TDTQueueing)
 
-- (void)enqueueObject:(id)object {
+- (void)tdt_enqueueObject:(id)object {
   TDTParameterAssert(object);
   [self addObject:object];
 }
 
-- (id)dequeueObject {
-  TDTParameterAssert([self isNonEmpty]);
+- (id)tdt_dequeueObject {
+  TDTParameterAssert([self tdt_isNonEmpty]);
   id object = [self firstObject];
   [self removeObjectAtIndex:0];
   return object;

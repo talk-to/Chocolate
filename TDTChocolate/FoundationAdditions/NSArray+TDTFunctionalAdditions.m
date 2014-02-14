@@ -5,7 +5,7 @@
 
 #pragma mark Map
 
-- (NSArray *)arrayByMappingWithBlock:(TDTMapBlock)block {
+- (NSArray *)tdt_arrayByMappingWithBlock:(TDTMapBlock)block {
   NSMutableArray *result = [[NSMutableArray alloc] initWithCapacity:self.count];
   for (id obj in self) {
     [result addObject:block(obj)];
@@ -13,7 +13,7 @@
   return result;
 }
 
--(NSArray *)arrayByMappingWithSelector:(SEL)selector {
+-(NSArray *)tdt_arrayByMappingWithSelector:(SEL)selector {
   NSMutableArray *result = [[NSMutableArray alloc] initWithCapacity:self.count];
   for (id obj in self) {
     TDTSuppressPerformSelectorLeakWarning([result addObject:[obj performSelector:selector]]);
@@ -23,13 +23,13 @@
 
 #pragma mark Apply
 
-- (void)applySelector:(SEL)selector {
+- (void)tdt_applySelector:(SEL)selector {
   for (id object in self) {
     TDTSuppressPerformSelectorLeakWarning([object performSelector:selector]);
   }
 }
 
-- (void)applyBlock:(TDTApplyBlock)block {
+- (void)tdt_applyBlock:(TDTApplyBlock)block {
   for (id object in self) {
     block(object);
   }
@@ -37,7 +37,7 @@
 
 #pragma mark Filter
 
-- (NSArray *)filteredArrayUsingBlock:(TDTPredicateBlock)block {
+- (NSArray *)tdt_filteredArrayUsingBlock:(TDTPredicateBlock)block {
   NSPredicate *predicate = [NSPredicate predicateWithBlock:^(id evaluatedObject, NSDictionary *bindings) {
     return block(evaluatedObject);
   }];
@@ -46,7 +46,7 @@
 
 #pragma mark Partition
 
-- (NSArray *)partitionUsingBlock:(TDTPredicateBlock)predicate {
+- (NSArray *)tdt_partitionUsingBlock:(TDTPredicateBlock)predicate {
   NSMutableArray *matching = [[NSMutableArray alloc] init];
   NSMutableArray *notMatching = [[NSMutableArray alloc] init];
   for (id obj in self) {
@@ -61,7 +61,7 @@
 
 #pragma mark Any
 
-- (BOOL)anyWithBlock:(TDTPredicateBlock)predicate {
+- (BOOL)tdt_anyWithBlock:(TDTPredicateBlock)predicate {
   for (id obj in self) {
     if (predicate(obj)) {
       return YES;
