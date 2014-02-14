@@ -16,9 +16,6 @@
       <FileRef
          location = "group:TDTSecurityAdditions.h">
       </FileRef>
-      <FileRef
-         location = "group:TDTZlibAdditions.h">
-      </FileRef>
       <Group
          location = "group:FoundationAdditions"
          name = "FoundationAdditions">
@@ -213,16 +210,6 @@
          </FileRef>
          <FileRef
             location = "group:TDTAppKeychain.m">
-         </FileRef>
-      </Group>
-      <Group
-         location = "group:ZlibAdditions"
-         name = "ZlibAdditions">
-         <FileRef
-            location = "group:TDTZlib.h">
-         </FileRef>
-         <FileRef
-            location = "group:TDTZlib.m">
          </FileRef>
       </Group>
    </Group>
