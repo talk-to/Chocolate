@@ -56,7 +56,6 @@
 		69ECAE441851CA63006C3176 /* NSDate_TDTComparisons_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ECAE401851CA63006C3176 /* NSDate_TDTComparisons_Tests.m */; };
 		69ECAE461851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ECAE451851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m */; };
 		69ECAE471851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ECAE451851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m */; };
-		AD85CE32189931B700B6F750 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AD85CE31189931B700B6F750 /* libz.dylib */; };
 		D46FB91842224DD9815F6940 /* libPods-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B19883317C304CA6BFFAC8AF /* libPods-osx.a */; };
 /* End PBXBuildFile section */
 
@@ -109,7 +108,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD85CE32189931B700B6F750 /* libz.dylib in Frameworks */,
 				6919A161185058C5000AB434 /* XCTest.framework in Frameworks */,
 				D46FB91842224DD9815F6940 /* libPods-osx.a in Frameworks */,
 			);
