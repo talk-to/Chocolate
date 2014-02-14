@@ -21,6 +21,6 @@
 
  @return YES if the process has been invoked to run the XCTest bundle.
  */
-@property (nonatomic) BOOL tdt_isRunningTests;
+@property (nonatomic, readonly) BOOL tdt_isRunningTests;
 
 @end
