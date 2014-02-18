@@ -65,4 +65,4 @@ TDTLog((@"VERBOSE %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS_
 /**
  Plain (but more performant) replacement for `NSLog`.
  */
-void TDTLog(NSString *format, ...);
+void TDTLog(NSString *format, ...) NS_FORMAT_FUNCTION(1, 2);
