@@ -11,6 +11,7 @@
 
 #import <XCTest/XCTest.h>
 #import <TDTChocolate/FoundationAdditions/TDTLog.h>
+#import <TDTChocolate/FoundationAdditions/TDTAssert.h>
 #import <TDTChocolate/FoundationAdditions/NSProcessInfo+TDTEnvironmentDetection.h>
 
 @interface TDTSmokeTests : XCTestCase
@@ -31,6 +32,16 @@
   // works only when called inside the main application bundle.
   // So we just make sure it does not crash.
   [[NSProcessInfo processInfo] tdt_isRunningTests];
+}
+
+- (void)testAssertionFormatStringArgumentsAreCheckedByTheCompiler {
+  // The following line should produce a warning.
+  TDTAssert(0, @"one: %@", 3);
+}
+
+- (void)testLogFormatStringArgumentsAreCheckedByTheCompiler {
+  // The following line should produce a warning.
+  TDTLog(@"one: %@", 3);
 }
 
 @end
