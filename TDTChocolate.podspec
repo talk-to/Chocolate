@@ -2,11 +2,11 @@ Pod::Spec.new do |s|
   s.name     = 'TDTChocolate'
   s.version  = '0.7.1'
   s.summary  = 'Library containing additions to Cocoa and Cocoa Touch'
-  s.homepage = 'https://github.com/talk-to/chocolate'
+  s.homepage = 'https://github.com/talk-to/Chocolate'
   s.author   = 'Talk.to'
   s.license  = { :type => 'COMMERCIAL', :text => 'Property of Talk.to FZC' }
   s.source   = {
-    :git => 'https://github.com/talk-to/chocolate.git',
+    :git => 'https://github.com/talk-to/Chocolate.git',
     :tag => "#{s.version}"
   }
   s.requires_arc = true
