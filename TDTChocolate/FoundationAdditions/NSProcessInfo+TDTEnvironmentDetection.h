@@ -23,4 +23,18 @@
  */
 @property (nonatomic, readonly) BOOL tdt_isRunningTests;
 
+/**
+ Determine if a debugger is attached to the current process.
+
+ This can be used, for example, to redirect standard error (and hence,
+ everything logged by @p TDTLog) to a file if the process is not
+ attached to a debugger.
+
+ Source: Technical Q&A QA1361 "Detecting the Debugger"
+
+ @note This method relies on a public but unstable Apple API. It
+ should not be used in a release build.
+ */
+- (BOOL) tdt_isDebugged;
+
 @end
