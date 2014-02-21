@@ -36,6 +36,6 @@
  @note This method relies on a public but unstable Apple API. It
  should not be used in a release build.
  */
-- (BOOL) tdt_isDebugged;
+- (BOOL)tdt_isDebugged;
 
 @end
