@@ -26,9 +26,10 @@
 /**
  Determine if a debugger is attached to the current process.
 
- This can be used, for example, to redirect standard error (and hence,
- everything logged by @p TDTLog) to a file if the process is not
- attached to a debugger.
+ This can help decide, for example, whether to redirect standard error
+ (and hence, everything logged by @p TDTLog) to a file. Usually, when
+ a process is attached to a debugger, you do not want to redirect
+ standard error.
 
  Source: Technical Q&A QA1361 "Detecting the Debugger"
 
