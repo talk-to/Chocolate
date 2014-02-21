@@ -3,4 +3,3 @@
 #import <TDTChocolate/TDTFoundationAdditions.h>
 #import <TDTChocolate/TDTTestingAdditions.h>
 #import <TDTChocolate/TDTCoreDataAdditions.h>
-#import <TDTChocolate/TDTSecurityAdditions.h>
