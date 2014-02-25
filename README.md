@@ -14,7 +14,7 @@ Chocolate consists of three "sub-libraries":
 
 ## Usage
 
-Chocolate is published as a [CocoaPods][CocoaPods], with each the
+Chocolate is published as a [CocoaPod][CocoaPods], with each the
 three "sub-libraries" above listed as a separate "subspec".
 
 For example, to use the first public release of Chocolate's Foundation Additions, we will need to add the following to our `Podfile`
