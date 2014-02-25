@@ -27,7 +27,7 @@ then run
 
 and finally import the public header for the Foundation Additions subspec
 
-    #import <TDTChocolate/FoundationAdditions.h>
+    #import <TDTChocolate/TDTFoundationAdditions.h>
 
 ## Contributing
 
