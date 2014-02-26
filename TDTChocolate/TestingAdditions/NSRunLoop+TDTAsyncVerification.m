@@ -62,7 +62,7 @@ const NSTimeInterval TDTAsyncVerificationTimeoutDefault = 0.1;
   NSDate *loopUntil = [NSDate dateWithTimeIntervalSinceNow:timeout];
   while ([loopUntil timeIntervalSinceNow] > 0) {
     [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode
-                             beforeDate:[NSDate date]];
+                             beforeDate:loopUntil];
   }
 }
 
