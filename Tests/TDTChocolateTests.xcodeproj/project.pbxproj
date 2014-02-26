@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		142ED92B1E204E6887EDC348 /* libPods-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C6CC271A614C068905497B /* libPods-ios.a */; };
+		6904D8DB18BE00BF0016E88A /* NSRunLoop_TDTAsyncVerification_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6904D8DA18BE00BF0016E88A /* NSRunLoop_TDTAsyncVerification_Tests.m */; };
+		6904D8DC18BE00BF0016E88A /* NSRunLoop_TDTAsyncVerification_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6904D8DA18BE00BF0016E88A /* NSRunLoop_TDTAsyncVerification_Tests.m */; };
 		6919A161185058C5000AB434 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6919A14618504BD4000AB434 /* XCTest.framework */; };
 		6919A167185058C5000AB434 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6919A165185058C5000AB434 /* InfoPlist.strings */; };
 		6919A17318505B4C000AB434 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6919A14618504BD4000AB434 /* XCTest.framework */; };
@@ -62,6 +64,7 @@
 /* Begin PBXFileReference section */
 		1E8E579B402948FEB0484223 /* Pods-ios.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.xcconfig"; path = "Pods/Pods-ios.xcconfig"; sourceTree = "<group>"; };
 		66F91BDB14454ABB9E945B66 /* Pods-osx.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osx.xcconfig"; path = "Pods/Pods-osx.xcconfig"; sourceTree = "<group>"; };
+		6904D8DA18BE00BF0016E88A /* NSRunLoop_TDTAsyncVerification_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSRunLoop_TDTAsyncVerification_Tests.m; sourceTree = "<group>"; };
 		6919A13518504BD4000AB434 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		6919A13818504BD4000AB434 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6919A13918504BD4000AB434 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -234,6 +237,7 @@
 				69C0196D187D3AD400DFF308 /* TDTSizeofArrayTests.m */,
 				69C4DB03187D448A00BDB0C2 /* TDTNSDataFromByteArrayTests.m */,
 				699FF3D6187FC9FB00F8257C /* TDTRandomTests.m */,
+				6904D8DA18BE00BF0016E88A /* NSRunLoop_TDTAsyncVerification_Tests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -415,6 +419,7 @@
 				6961BA84185B384900C6B2EF /* TDTUmbrellaHeaderTextualSanityTests.m in Sources */,
 				69C0196B187D327400DFF308 /* NSOperationQueue_TDTSerialQueueAdditions_Tests.m in Sources */,
 				69CB6FD41851B98F004D35DB /* NSString_TDTAdditions_Tests.m in Sources */,
+				6904D8DB18BE00BF0016E88A /* NSRunLoop_TDTAsyncVerification_Tests.m in Sources */,
 				69C2DEF41872935A0004C535 /* TDTNSStringExtendedComparisonTests.m in Sources */,
 				699FF3D7187FC9FB00F8257C /* TDTRandomTests.m in Sources */,
 				69CB6FCD18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m in Sources */,
@@ -443,6 +448,7 @@
 				6961BA85185B384900C6B2EF /* TDTUmbrellaHeaderTextualSanityTests.m in Sources */,
 				69C0196C187D327400DFF308 /* NSOperationQueue_TDTSerialQueueAdditions_Tests.m in Sources */,
 				69CB6FD51851B98F004D35DB /* NSString_TDTAdditions_Tests.m in Sources */,
+				6904D8DC18BE00BF0016E88A /* NSRunLoop_TDTAsyncVerification_Tests.m in Sources */,
 				69C2DEF51872935A0004C535 /* TDTNSStringExtendedComparisonTests.m in Sources */,
 				699FF3D8187FC9FB00F8257C /* TDTRandomTests.m in Sources */,
 				69CB6FCE18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m in Sources */,
