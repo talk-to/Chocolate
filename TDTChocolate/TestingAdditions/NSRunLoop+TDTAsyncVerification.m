@@ -1,6 +1,7 @@
 #import "NSRunLoop+TDTAsyncVerification.h"
 
 const NSTimeInterval TDTAsyncVerificationTimeoutDefault = 0.1;
+static const NSTimeInterval TDTRunloopInterval = 0.001;
 
 @implementation NSRunLoop (TDTAsyncVerification)
 
@@ -11,7 +12,7 @@ const NSTimeInterval TDTAsyncVerificationTimeoutDefault = 0.1;
   NSDate *loopUntil = [NSDate dateWithTimeIntervalSinceNow:timeout];
   while (*object == nil && [loopUntil timeIntervalSinceNow] > 0) {
     [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode
-                             beforeDate:[NSDate date]];
+                             beforeDate:[NSDate dateWithTimeIntervalSinceNow:TDTRunloopInterval]];
   }
 }
 
@@ -26,7 +27,7 @@ const NSTimeInterval TDTAsyncVerificationTimeoutDefault = 0.1;
   NSDate *loopUntil = [NSDate dateWithTimeIntervalSinceNow:timeout];
   while (*completionIndicator == NO && [loopUntil timeIntervalSinceNow] > 0) {
     [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode
-                             beforeDate:[NSDate date]];
+                             beforeDate:[NSDate dateWithTimeIntervalSinceNow:TDTRunloopInterval]];
   }
 }
 
@@ -54,7 +55,7 @@ const NSTimeInterval TDTAsyncVerificationTimeoutDefault = 0.1;
   NSDate *loopUntil = [NSDate dateWithTimeIntervalSinceNow:timeout];
   while (completionTest() == NO && [loopUntil timeIntervalSinceNow] > 0) {
     [[NSRunLoop currentRunLoop] runMode:mode
-                             beforeDate:[NSDate date]];
+                             beforeDate:[NSDate dateWithTimeIntervalSinceNow:TDTRunloopInterval]];
   }
 }
 
