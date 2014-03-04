@@ -10,11 +10,11 @@
 }
 
 + (NSString *)tdt_stringWithUnsignedInteger:(NSUInteger)unsignedInteger {
-  return [self stringWithFormat:@"%lu", (unsigned long)unsignedInteger];
+  return [self stringWithFormat:@"%llu", (unsigned long long)unsignedInteger];
 }
 
 + (NSString *)tdt_stringWithInteger:(NSInteger)integer {
-  return [self stringWithFormat:@"%ld", (long)integer];
+  return [self stringWithFormat:@"%lld", (long long)integer];
 }
 
 + (NSString *)tdt_stringWithBOOL:(BOOL)b {
