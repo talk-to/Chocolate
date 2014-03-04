@@ -18,10 +18,19 @@
   XCTAssertNotEqualObjects([NSString tdt_randomUUID], [NSString tdt_randomUUID]);
 }
 
-- (void)testStringFromUIntegerConstruction {
+- (void)testStringFromUnsignedIntegerConstruction {
   XCTAssertEqualObjects([NSString tdt_stringWithUnsignedInteger:0], @"0");
   XCTAssertEqualObjects([NSString tdt_stringWithUnsignedInteger:42], @"42");
   XCTAssertEqualObjects([NSString tdt_stringWithUnsignedInteger:100000], @"100000",
+                        @"UInt -> String is using localized formatting?");
+}
+
+- (void)testStringFromIntegerConstruction {
+  XCTAssertEqualObjects([NSString tdt_stringWithInteger:0], @"0");
+  XCTAssertEqualObjects([NSString tdt_stringWithInteger:1], @"1");
+  XCTAssertEqualObjects([NSString tdt_stringWithInteger:-1], @"-1");
+
+  XCTAssertEqualObjects([NSString tdt_stringWithInteger:100000], @"100000",
                         @"UInt -> String is using localized formatting?");
 }
 

@@ -13,6 +13,11 @@
 + (NSString *)tdt_stringWithUnsignedInteger:(NSUInteger)unsignedInteger;
 
 /**
+ There is no platform agnostic format specifier for an `NSInteger`. Ergo this.
+ */
++ (NSString *)tdt_stringWithInteger:(NSInteger)integer;
+
+/**
  @return "YES" or "NO"
  */
 + (NSString *)tdt_stringWithBOOL:(BOOL)b;
