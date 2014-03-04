@@ -13,6 +13,10 @@
   return [self stringWithFormat:@"%lu", (unsigned long)unsignedInteger];
 }
 
++ (NSString *)tdt_stringWithInteger:(NSInteger)integer {
+  return [self stringWithFormat:@"%ld", (long)integer];
+}
+
 + (NSString *)tdt_stringWithBOOL:(BOOL)b {
   return b ? @"YES" : @"NO";
 }
