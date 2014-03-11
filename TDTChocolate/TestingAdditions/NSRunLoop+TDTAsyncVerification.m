@@ -1,6 +1,6 @@
 #import "NSRunLoop+TDTAsyncVerification.h"
 
-const NSTimeInterval TDTAsyncVerificationTimeoutDefault = 0.1;
+const NSTimeInterval TDTAsyncVerificationTimeoutDefault = 2;
 static const NSTimeInterval TDTRunLoopInterval = 0.001;
 
 @implementation NSRunLoop (TDTAsyncVerification)
