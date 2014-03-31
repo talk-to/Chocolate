@@ -21,3 +21,4 @@
 #import "FoundationAdditions/TDTSizeofArray.h"
 #import "FoundationAdditions/TDTNSDataFromByteArray.h"
 #import "FoundationAdditions/TDTRandom.h"
+#import "FoundationAdditions/TDTNSDesignatedInitializer.h"
