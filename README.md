@@ -31,10 +31,11 @@ and finally import the public header for the Foundation Additions subspec
 
 ## Contributing
 
-1. Go through the [Talk.to iOS Development Guidelines][ios-guides].
-
-2. Open a pull request on this repository. Tests and documentation are
-   not optional.
+You can contribute to Chocolate by opening a pull request on this
+repository. Make sure you go through the
+[Talk.to iOS Development Guidelines][ios-guides] first to get an idea
+of the expectations. Once your pull request is reviewed by one of the
+maintainers, you can merge your changes into the mainline.
 
 [CocoaPods]: http://cocoapods.org/
 [ios-guides]: https://github.com/talk-to/ios-guides
