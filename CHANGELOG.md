@@ -1,4 +1,4 @@
-1.0.3, 31-Mar-2014
+1.0.3, 2-Apr-2014
 
   * Expose interim `NS_DESIGNATED_INITIALIZER`.
 
