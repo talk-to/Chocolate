@@ -289,7 +289,7 @@
 		6919A12A18504BD4000AB434 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Talk.to;
 				TargetAttributes = {
 					6919A17118505B4C000AB434 = {
@@ -550,6 +550,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 66F91BDB14454ABB9E945B66 /* Pods-osx.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
@@ -570,6 +571,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 66F91BDB14454ABB9E945B66 /* Pods-osx.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
@@ -586,7 +588,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1E8E579B402948FEB0484223 /* Pods-ios.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -611,7 +612,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1E8E579B402948FEB0484223 /* Pods-ios.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
