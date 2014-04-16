@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'TDTChocolate'
-  s.version  = '1.0.3'
+  s.version  = '1.0.4'
   s.summary  = 'Library containing additions to Cocoa and Cocoa Touch'
   s.homepage = 'https://github.com/talk-to/Chocolate'
   s.author   = 'Talk.to'
@@ -15,12 +15,12 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = '10.9'
 
   s.header_mappings_dir = 'TDTChocolate'
-  
+
   s.subspec 'FoundationAdditions' do |ss|
     ss.source_files = [ 'TDTChocolate/FoundationAdditions/*.{h,m}',
                         'TDTChocolate/TDTFoundationAdditions.h' ]
   end
-  
+
   s.subspec 'TestingAdditions' do |ss|
     ss.source_files = [ 'TDTChocolate/TestingAdditions/*.{h,m}',
                         'TDTChocolate/TDTTestingAdditions.h' ]
