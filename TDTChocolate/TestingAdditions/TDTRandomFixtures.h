@@ -49,3 +49,12 @@
 + (instancetype)tdt_randomDate;
 
 @end
+
+@interface NSDictionary (TDTRandomFixtures)
+
+/**
+ @return A dictionary consisting of a random string key-value pair.
+ */
++ (instancetype)tdt_randomDictionary;
+
+@end

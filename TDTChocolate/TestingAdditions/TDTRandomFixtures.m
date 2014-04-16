@@ -68,3 +68,11 @@
 }
 
 @end
+
+@implementation NSDictionary (TDTRandomFixtures)
+
++ (instancetype)tdt_randomDictionary {
+  return @{ [NSString tdt_randomString] : [NSString tdt_randomString] };
+}
+
+@end
