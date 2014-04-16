@@ -14,9 +14,8 @@ return (type)[tmp integerValue]; \
 
 #define TDT_COREDATA_CREATE_INT_SETTER(key, type, setter, primitiveAccessor) \
 - (void)setter : (type)x { \
-NSNumber *tmp = [[NSNumber alloc] initWithInt:x]; \
 [self willChangeValueForKey:key]; \
-self.primitiveAccessor = tmp; \
+self.primitiveAccessor = @(x); \
 [self didChangeValueForKey:key]; \
 }
 
@@ -35,9 +34,8 @@ return [tmp boolValue]; \
 
 #define TDT_COREDATA_CREATE_BOOL_SETTER(key, type, setter, primitiveAccessor) \
 - (void)setter : (type)x { \
-NSNumber *tmp = [[NSNumber alloc] initWithBool:x]; \
 [self willChangeValueForKey:key]; \
-self.primitiveAccessor = tmp; \
+self.primitiveAccessor = @(x); \
 [self didChangeValueForKey:key]; \
 }
 
@@ -55,9 +53,8 @@ return (type)[tmp floatValue]; \
 
 #define TDT_COREDATA_CREATE_FLOAT_SETTER(key, type, setter, primitiveAccessor) \
 - (void)setter : (type)x { \
-NSNumber *tmp = [[NSNumber alloc] initWithFloat:x]; \
 [self willChangeValueForKey:key]; \
-self.primitiveAccessor = tmp; \
+self.primitiveAccessor = @(x); \
 [self didChangeValueForKey:key]; \
 }
 
