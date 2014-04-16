@@ -1,3 +1,7 @@
+1.0.?, ??-???-2014
+
+  * Create random fixture for dictionaries.
+
 1.0.3, 2-Apr-2014
 
   * Expose interim `NS_DESIGNATED_INITIALIZER`.
