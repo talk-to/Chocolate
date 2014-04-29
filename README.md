@@ -37,5 +37,21 @@ repository. Make sure you go through the
 of the expectations. Once your pull request is reviewed by one of the
 maintainers, you can merge your changes into the mainline.
 
+### Release Checklist
+
+* Update the CHANGELOG.
+
+* Modify the version in the Podspec.
+
+* Update the version of Chocolate used by the Tests
+
+        cd Tests/ && pod update --no-repo-update
+
+* Run the tests.
+
+* Commit and push the changes.
+
+* Create a tag with the version, and push it to remote.
+
 [CocoaPods]: http://cocoapods.org/
 [ios-guides]: https://github.com/talk-to/ios-guides
