@@ -158,10 +158,10 @@
             location = "group:NSArray+TDTNullNormalization.h">
          </FileRef>
          <FileRef
-            location = "group:NSDictionary+TDTNullNormalization.h">
+            location = "group:NSArray+TDTNullNormalization.m">
          </FileRef>
          <FileRef
-            location = "group:NSArray+TDTNullNormalization.m">
+            location = "group:NSDictionary+TDTNullNormalization.h">
          </FileRef>
          <FileRef
             location = "group:NSDictionary+TDTNullNormalization.m">
