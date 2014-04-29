@@ -9,7 +9,7 @@
     if ([obj isKindOfClass:[NSDictionary class]]) {
       [modifiedArray addObject:[obj tdt_dictionaryByRemovingNulls]];
     } else if ([obj isKindOfClass:[NSArray class]]) {
-      [modifiedArray addObject:[obj arrayByRemovingNulls]];
+      [modifiedArray addObject:[obj tdt_arrayByRemovingNulls]];
     } else if ([obj isKindOfClass:[NSNull class]]) {
       // ignore
     } else {

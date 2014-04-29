@@ -9,7 +9,7 @@
     if ([obj isKindOfClass:[NSDictionary class]]) {
       modifiedDictionary[key] = [obj tdt_dictionaryByRemovingNulls];
     } else if ([obj isKindOfClass:[NSArray class]]) {
-      modifiedDictionary[key] = [obj arrayByRemovingNulls];
+      modifiedDictionary[key] = [obj tdt_arrayByRemovingNulls];
     } else if ([obj isKindOfClass:[NSNull class]]) {
       // ignore
     } else {
