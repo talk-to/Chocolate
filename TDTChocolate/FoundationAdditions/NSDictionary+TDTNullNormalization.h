@@ -1,9 +1,5 @@
 #import <Foundation/Foundation.h>
 
-// This category provides a method to construct a dictionary by removing all
-// keys with the value of class NSNull.
-// Related: `NSArray+TDTNullNormalization`
-
 // Motivation:
 // JSON responses frequently contain 'null'. For our purposes, a JSON object with
 // a null property is equivalent to the same object with that property missing.
@@ -14,6 +10,12 @@
 
 @interface NSDictionary (TDTNullNormalization)
 
+/**
+ @return NSDictionary created by removing all enteries whose @p value is an
+ instance of @p NSNull.
+
+ @see NSArray+TDTNullNormalization
+ */
 - (NSDictionary *)tdt_dictionaryByRemovingNulls;
 
 @end
