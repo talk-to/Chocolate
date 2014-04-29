@@ -1,3 +1,8 @@
+1.1.0, 29-Apr-2014
+
+  * Add convenience accessors to handle URL query components.
+  * Add Null normalization helpers for collections.
+
 1.0.4, 16-Apr-2014
 
   * Modify Core Data utility macros to let the compiler determine the scalar's type.
