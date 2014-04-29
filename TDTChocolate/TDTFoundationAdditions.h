@@ -22,3 +22,4 @@
 #import "FoundationAdditions/TDTNSDataFromByteArray.h"
 #import "FoundationAdditions/TDTRandom.h"
 #import "FoundationAdditions/TDTNSDesignatedInitializer.h"
+#import "FoundationAdditions/TDTURLQueryComponents.h"

@@ -148,6 +148,12 @@
          <FileRef
             location = "group:TDTNSDesignatedInitializer.h">
          </FileRef>
+         <FileRef
+            location = "group:TDTURLQueryComponents.h">
+         </FileRef>
+         <FileRef
+            location = "group:TDTURLQueryComponents.m">
+         </FileRef>
       </Group>
       <Group
          location = "group:TestingAdditions"
