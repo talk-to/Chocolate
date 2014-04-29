@@ -3,7 +3,7 @@
 
 @implementation NSArray (TDTNullNormalization)
 
-- (NSArray *)arrayByRemovingNulls {
+- (NSArray *)tdt_arrayByRemovingNulls {
   NSMutableArray *modifiedArray = [NSMutableArray arrayWithCapacity:self.count];
   for (id obj in self) {
     if ([obj isKindOfClass:[NSDictionary class]]) {

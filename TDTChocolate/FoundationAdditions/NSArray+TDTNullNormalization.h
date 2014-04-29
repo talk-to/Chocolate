@@ -7,6 +7,6 @@
 
  @see NSDictionary+TDTNullNormalization
  */
-- (NSArray *)arrayByRemovingNulls;
+- (NSArray *)tdt_arrayByRemovingNulls;
 
 @end
