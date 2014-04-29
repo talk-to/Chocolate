@@ -47,6 +47,8 @@ maintainers, you can merge your changes into the mainline.
 
         cd Tests/ && pod update --no-repo-update
 
+* Run the tests.
+
 * Commit and push the changes.
 
 * Create a tag with the version, and push it to remote.
