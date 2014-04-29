@@ -16,10 +16,28 @@
 
 @implementation NSArray_TDTNullNormalization_Tests
 
+- (void)testItDoesNotChangeArrayWithNoNulls {
+  NSArray *array = @[[NSString tdt_randomString],
+                     [NSString tdt_randomString]];
+  NSArray *normalizedArray = [array tdt_arrayByRemovingNulls];
+  XCTAssertEqualObjects(array, normalizedArray);
+}
+
 - (void)testSingleNullIsRemoved {
   NSArray *array = @[[NSString tdt_randomString]];
   NSArray *arrayWithNull = [array arrayByAddingObject:[NSNull null]];
   NSArray *normalizedArray = [arrayWithNull tdt_arrayByRemovingNulls];
   XCTAssertEqualObjects(normalizedArray, array);
 }
+
+- (void)testMultipleNullsAreRemoved {
+  NSArray *array = @[[NSString tdt_randomString],
+                     [NSString tdt_randomString]];
+  NSMutableArray *arrayWithNulls = [NSMutableArray arrayWithArray:array];
+  [arrayWithNulls addObject:[NSNull null]];
+  [arrayWithNulls addObject:[NSNull null]];
+  NSArray *normalizedArray = [arrayWithNulls tdt_arrayByRemovingNulls];
+  XCTAssertEqualObjects(normalizedArray, array);
+}
+
 @end
