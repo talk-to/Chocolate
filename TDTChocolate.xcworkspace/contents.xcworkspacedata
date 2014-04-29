@@ -154,6 +154,18 @@
          <FileRef
             location = "group:TDTURLQueryComponents.m">
          </FileRef>
+         <FileRef
+            location = "group:NSArray+TDTNullNormalization.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSDictionary+TDTNullNormalization.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSArray+TDTNullNormalization.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSDictionary+TDTNullNormalization.m">
+         </FileRef>
       </Group>
       <Group
          location = "group:TestingAdditions"
