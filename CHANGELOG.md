@@ -1,3 +1,7 @@
+2.0.0, 14-May-2014
+
+  * Fixed a technical bug - semicolon now mandatory at end of assert statements.
+
 1.1.0, 29-Apr-2014
 
   * Add convenience accessors to handle URL query components.
