@@ -8,14 +8,6 @@
 
 @implementation NSDictionary_TDTMerging_Tests
 
-- (void)setUp {
-  [super setUp];
-}
-
-- (void)tearDown {
-  [super tearDown];
-}
-
 - (void)testItRetainsOriginalEntries {
   NSString *key = [NSString tdt_randomString];
   NSString *value = [NSString tdt_randomString];
