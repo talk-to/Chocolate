@@ -28,4 +28,14 @@
   XCTAssertEqual(value, res[key]);
 }
 
+- (void)testForSameKeyItUsesValueFromTheArgumentDictionary {
+  NSString *key = [NSString tdt_randomString];
+  NSString *value = [NSString tdt_randomString];
+  NSDictionary *receiver = @{key: [NSString tdt_randomString]};
+  NSDictionary *arg = @{key: value};
+  NSDictionary *res = [receiver tdt_dictionaryByMergingDictionary:arg];
+
+  XCTAssertEqual(value, res[key]);
+}
+
 @end
