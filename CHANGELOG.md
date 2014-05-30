@@ -1,3 +1,7 @@
+2.1.0, 30-May-2014
+
+  * Add method for merging dictionaries.
+
 2.0.0, 14-May-2014
 
   * Fixed a technical bug - semicolon now mandatory at end of assert statements.
