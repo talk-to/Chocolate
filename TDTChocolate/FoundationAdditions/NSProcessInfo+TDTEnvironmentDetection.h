@@ -12,7 +12,7 @@
  \code
  - (BOOL)application:(UIApplication *)app didFinishLaunchingWithOptions:(id)options {
  #ifdef DEBUG
- if ([[NSProcessInfo processInfo] isRunningTests]) return YES;
+ if ([[NSProcessInfo processInfo] tdt_isRunningTests]) return YES;
  #endif
  ...
  return YES;
