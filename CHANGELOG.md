@@ -1,3 +1,7 @@
+2.?.?, ??-???-2014
+
+  * Add method for removing characters from string.
+
 2.1.0, 30-May-2014
 
   * Add method for merging dictionaries.

@@ -111,4 +111,18 @@
   XCTAssertEqual([outOfRangeNumberString tdt_unsignedIntegerValue], (NSUInteger)NSUIntegerMax);
 }
 
+- (void)testRemovalOfCharactersInSet {
+  NSString *receiver = @"...a.b.c.d....";
+  NSCharacterSet *characters = [NSCharacterSet characterSetWithCharactersInString:@"."];
+  NSString *result = [receiver tdt_stringByRemovingCharacters:characters];
+  XCTAssertEqualObjects(@"abcd", result);
+}
+
+- (void)testStringsWithoutRemovalCharacterAreKeptIntact {
+  NSString *receiver = @"x";
+  NSCharacterSet *characters = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+  NSString *result = [receiver tdt_stringByRemovingCharacters:characters];
+  XCTAssertEqualObjects(receiver, result);
+}
+
 @end

@@ -72,4 +72,8 @@
   return (NSUInteger)ul;
 }
 
+- (NSString *)tdt_stringByRemovingCharacters:(NSCharacterSet *)characters {
+  return [[self componentsSeparatedByCharactersInSet:characters] componentsJoinedByString:@""];
+}
+
 @end

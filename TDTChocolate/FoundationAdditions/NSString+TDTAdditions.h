@@ -66,4 +66,10 @@
  */
 - (NSUInteger)tdt_unsignedIntegerValue;
 
+/**
+ @return String obtained by removing all occurrences of any of the characters
+ in the @p characters set.
+ */
+- (NSString *)tdt_stringByRemovingCharacters:(NSCharacterSet *)characters;
+
 @end
