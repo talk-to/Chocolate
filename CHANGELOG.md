@@ -1,5 +1,6 @@
 2.?.?, ??-???-2014
 
+  * Provide a version of moveFile that overwrites the destination.
   * Add method for interpreting (key, value) pairs as a dictionary.
   * Add dictionary method for transforming values.
   * Add method for removing characters from string.
