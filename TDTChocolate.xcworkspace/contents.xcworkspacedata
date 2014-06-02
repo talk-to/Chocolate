@@ -41,6 +41,12 @@
             location = "group:NSSet+TDTFunctionalAdditions.m">
          </FileRef>
          <FileRef
+            location = "group:NSDictionary+TDTFunctionalAdditions.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSDictionary+TDTFunctionalAdditions.m">
+         </FileRef>
+         <FileRef
             location = "group:TDTFunctionalAdditionsBlockTypedefs.h">
          </FileRef>
          <FileRef
