@@ -50,6 +50,10 @@
 		69C4DB02187D419900BDB0C2 /* TDTSizeofArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C0196D187D3AD400DFF308 /* TDTSizeofArrayTests.m */; };
 		69C4DB04187D448A00BDB0C2 /* TDTNSDataFromByteArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C4DB03187D448A00BDB0C2 /* TDTNSDataFromByteArrayTests.m */; };
 		69C4DB05187D448A00BDB0C2 /* TDTNSDataFromByteArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C4DB03187D448A00BDB0C2 /* TDTNSDataFromByteArrayTests.m */; };
+		69C96B89193CA23700D18C0E /* NSNumber_TDTFixedWidthAccessors_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C96B87193CA23700D18C0E /* NSNumber_TDTFixedWidthAccessors_Tests.m */; };
+		69C96B8A193CA23700D18C0E /* NSNumber_TDTFixedWidthAccessors_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C96B87193CA23700D18C0E /* NSNumber_TDTFixedWidthAccessors_Tests.m */; };
+		69C96B8B193CA23700D18C0E /* NSString_TDTFixedWidthAccessors_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C96B88193CA23700D18C0E /* NSString_TDTFixedWidthAccessors_Tests.m */; };
+		69C96B8C193CA23700D18C0E /* NSString_TDTFixedWidthAccessors_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C96B88193CA23700D18C0E /* NSString_TDTFixedWidthAccessors_Tests.m */; };
 		69CB6FCA18517E63004D35DB /* NSArray_TDTFunctionalAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CB6FC918517E63004D35DB /* NSArray_TDTFunctionalAdditions_Tests.m */; };
 		69CB6FCB18517E63004D35DB /* NSArray_TDTFunctionalAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CB6FC918517E63004D35DB /* NSArray_TDTFunctionalAdditions_Tests.m */; };
 		69CB6FCD18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CB6FCC18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m */; };
@@ -107,6 +111,8 @@
 		69C2DF121872D3BB0004C535 /* NSData_TDTAdditions_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSData_TDTAdditions_Tests.m; sourceTree = "<group>"; };
 		69C2DF151872E0100004C535 /* NSString_TDTVersionComparison_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSString_TDTVersionComparison_Tests.m; sourceTree = "<group>"; };
 		69C4DB03187D448A00BDB0C2 /* TDTNSDataFromByteArrayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTNSDataFromByteArrayTests.m; sourceTree = "<group>"; };
+		69C96B87193CA23700D18C0E /* NSNumber_TDTFixedWidthAccessors_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNumber_TDTFixedWidthAccessors_Tests.m; sourceTree = "<group>"; };
+		69C96B88193CA23700D18C0E /* NSString_TDTFixedWidthAccessors_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSString_TDTFixedWidthAccessors_Tests.m; sourceTree = "<group>"; };
 		69CB6FC918517E63004D35DB /* NSArray_TDTFunctionalAdditions_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_TDTFunctionalAdditions_Tests.m; sourceTree = "<group>"; };
 		69CB6FCC18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSSet_TDTFunctionalAdditions_Tests.m; sourceTree = "<group>"; };
 		69CB6FCF1851B57D004D35DB /* NSArray_TDTAdditions_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_TDTAdditions_Tests.m; sourceTree = "<group>"; };
@@ -258,6 +264,8 @@
 				6904D8DA18BE00BF0016E88A /* NSRunLoop_TDTAsyncVerification_Tests.m */,
 				696E48C41934782400BD30A9 /* NSDictionary_TDTMerging_Tests.m */,
 				6958D1B6193C9FC80005145D /* NSCalendar_TDTComponents_Tests.m */,
+				69C96B87193CA23700D18C0E /* NSNumber_TDTFixedWidthAccessors_Tests.m */,
+				69C96B88193CA23700D18C0E /* NSString_TDTFixedWidthAccessors_Tests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -442,6 +450,7 @@
 				69D1554C18601BC700D5B392 /* NSArray_TDTRangeAdditions_Tests.m in Sources */,
 				69C4DB04187D448A00BDB0C2 /* TDTNSDataFromByteArrayTests.m in Sources */,
 				6961BA84185B384900C6B2EF /* TDTUmbrellaHeaderTextualSanityTests.m in Sources */,
+				69C96B8B193CA23700D18C0E /* NSString_TDTFixedWidthAccessors_Tests.m in Sources */,
 				69C0196B187D327400DFF308 /* NSOperationQueue_TDTSerialQueueAdditions_Tests.m in Sources */,
 				69CB6FD41851B98F004D35DB /* NSString_TDTAdditions_Tests.m in Sources */,
 				6904D8DB18BE00BF0016E88A /* NSRunLoop_TDTAsyncVerification_Tests.m in Sources */,
@@ -449,6 +458,7 @@
 				699FF3D7187FC9FB00F8257C /* TDTRandomTests.m in Sources */,
 				69CB6FCD18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m in Sources */,
 				69CB6FD01851B57D004D35DB /* NSArray_TDTAdditions_Tests.m in Sources */,
+				69C96B89193CA23700D18C0E /* NSNumber_TDTFixedWidthAccessors_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +486,7 @@
 				69D1554D18601BC700D5B392 /* NSArray_TDTRangeAdditions_Tests.m in Sources */,
 				69C4DB05187D448A00BDB0C2 /* TDTNSDataFromByteArrayTests.m in Sources */,
 				6961BA85185B384900C6B2EF /* TDTUmbrellaHeaderTextualSanityTests.m in Sources */,
+				69C96B8C193CA23700D18C0E /* NSString_TDTFixedWidthAccessors_Tests.m in Sources */,
 				69C0196C187D327400DFF308 /* NSOperationQueue_TDTSerialQueueAdditions_Tests.m in Sources */,
 				69CB6FD51851B98F004D35DB /* NSString_TDTAdditions_Tests.m in Sources */,
 				6904D8DC18BE00BF0016E88A /* NSRunLoop_TDTAsyncVerification_Tests.m in Sources */,
@@ -483,6 +494,7 @@
 				699FF3D8187FC9FB00F8257C /* TDTRandomTests.m in Sources */,
 				69CB6FCE18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m in Sources */,
 				69CB6FD11851B57D004D35DB /* NSArray_TDTAdditions_Tests.m in Sources */,
+				69C96B8A193CA23700D18C0E /* NSNumber_TDTFixedWidthAccessors_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

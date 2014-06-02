@@ -28,3 +28,5 @@
 #import "FoundationAdditions/NSDictionary+TDTNullNormalization.h"
 #import "FoundationAdditions/NSDictionary+TDTMerging.h"
 #import "FoundationAdditions/NSCalendar+TDTComponents.h"
+#import "FoundationAdditions/NSNumber+TDTFixedWidthAccessors.h"
+#import "FoundationAdditions/NSString+TDTFixedWidthAccessors.h"
