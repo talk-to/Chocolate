@@ -1,5 +1,6 @@
 2.?.?, ??-???-2014
 
+  * Add convenience accessors for calendar components.
   * Provide a version of moveFile that overwrites the destination.
   * Add method for interpreting (key, value) pairs as a dictionary.
   * Add dictionary method for transforming values.

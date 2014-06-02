@@ -22,6 +22,8 @@
 		6919A17D18505B4D000AB434 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6919A17B18505B4D000AB434 /* InfoPlist.strings */; };
 		6958D1B4193C9BFA0005145D /* NSDictionary_TDTFunctionalAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6958D1B3193C9BFA0005145D /* NSDictionary_TDTFunctionalAdditions_Tests.m */; };
 		6958D1B5193C9BFA0005145D /* NSDictionary_TDTFunctionalAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6958D1B3193C9BFA0005145D /* NSDictionary_TDTFunctionalAdditions_Tests.m */; };
+		6958D1B7193C9FC80005145D /* NSCalendar_TDTComponents_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6958D1B6193C9FC80005145D /* NSCalendar_TDTComponents_Tests.m */; };
+		6958D1B8193C9FCE0005145D /* NSCalendar_TDTComponents_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6958D1B6193C9FC80005145D /* NSCalendar_TDTComponents_Tests.m */; };
 		6961BA84185B384900C6B2EF /* TDTUmbrellaHeaderTextualSanityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6961BA83185B384900C6B2EF /* TDTUmbrellaHeaderTextualSanityTests.m */; };
 		6961BA85185B384900C6B2EF /* TDTUmbrellaHeaderTextualSanityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6961BA83185B384900C6B2EF /* TDTUmbrellaHeaderTextualSanityTests.m */; };
 		696E48C51934782400BD30A9 /* NSDictionary_TDTMerging_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 696E48C41934782400BD30A9 /* NSDictionary_TDTMerging_Tests.m */; };
@@ -91,6 +93,7 @@
 		6919A17C18505B4D000AB434 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6919A18018505B4D000AB434 /* iOSTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSTests-Prefix.pch"; sourceTree = "<group>"; };
 		6958D1B3193C9BFA0005145D /* NSDictionary_TDTFunctionalAdditions_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_TDTFunctionalAdditions_Tests.m; sourceTree = "<group>"; };
+		6958D1B6193C9FC80005145D /* NSCalendar_TDTComponents_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCalendar_TDTComponents_Tests.m; sourceTree = "<group>"; };
 		6961BA83185B384900C6B2EF /* TDTUmbrellaHeaderTextualSanityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTUmbrellaHeaderTextualSanityTests.m; sourceTree = "<group>"; };
 		696E48C41934782400BD30A9 /* NSDictionary_TDTMerging_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_TDTMerging_Tests.m; sourceTree = "<group>"; };
 		697F99721859D1B600DDF2A3 /* TDTSmokeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTSmokeTests.m; sourceTree = "<group>"; };
@@ -254,6 +257,7 @@
 				699FF3D6187FC9FB00F8257C /* TDTRandomTests.m */,
 				6904D8DA18BE00BF0016E88A /* NSRunLoop_TDTAsyncVerification_Tests.m */,
 				696E48C41934782400BD30A9 /* NSDictionary_TDTMerging_Tests.m */,
+				6958D1B6193C9FC80005145D /* NSCalendar_TDTComponents_Tests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -426,6 +430,7 @@
 				69C01968187D2DB400DFF308 /* NSMutableArray_TDTQueueing_Tests.m in Sources */,
 				69C2DF161872E0100004C535 /* NSString_TDTVersionComparison_Tests.m in Sources */,
 				69C2DF131872D3BB0004C535 /* NSData_TDTAdditions_Tests.m in Sources */,
+				6958D1B7193C9FC80005145D /* NSCalendar_TDTComponents_Tests.m in Sources */,
 				2A39BC7E190F8DB200124D96 /* NSArray_TDTNullNormalization_Tests.m in Sources */,
 				69CB6FCA18517E63004D35DB /* NSArray_TDTFunctionalAdditions_Tests.m in Sources */,
 				6958D1B4193C9BFA0005145D /* NSDictionary_TDTFunctionalAdditions_Tests.m in Sources */,
@@ -459,6 +464,7 @@
 				69C01969187D2DB400DFF308 /* NSMutableArray_TDTQueueing_Tests.m in Sources */,
 				69C2DF171872E0100004C535 /* NSString_TDTVersionComparison_Tests.m in Sources */,
 				69C2DF141872D3BB0004C535 /* NSData_TDTAdditions_Tests.m in Sources */,
+				6958D1B8193C9FCE0005145D /* NSCalendar_TDTComponents_Tests.m in Sources */,
 				2A39BC7F190F8DB200124D96 /* NSArray_TDTNullNormalization_Tests.m in Sources */,
 				69CB6FCB18517E63004D35DB /* NSArray_TDTFunctionalAdditions_Tests.m in Sources */,
 				6958D1B5193C9BFA0005145D /* NSDictionary_TDTFunctionalAdditions_Tests.m in Sources */,
