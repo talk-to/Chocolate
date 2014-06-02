@@ -70,4 +70,14 @@
   return NO;
 }
 
+#pragma mark Dictionary from Key-Value Pairs
+
+- (NSDictionary *)tdt_dictionaryFromPairs {
+  NSMutableDictionary *result = [[NSMutableDictionary alloc] initWithCapacity:self.count];
+  [self tdt_applyBlock:^(NSArray *pair) {
+    result[[pair firstObject]] = [pair lastObject];
+  }];
+  return result;
+}
+
 @end

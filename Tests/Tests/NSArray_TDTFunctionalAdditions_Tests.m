@@ -116,4 +116,17 @@
   XCTAssertFalse([array tdt_anyWithBlock:predicateMatchingNoElement]);
 }
 
+- (void)testDictionaryConstructionFromKeyValuePairs {
+  NSString *keyOne = [NSString tdt_randomString];
+  NSString *valueOne = [NSString tdt_randomString];
+  NSString *keyTwo = [NSString tdt_randomString];
+  NSString *valueTwo = [NSString tdt_randomString];
+
+  NSArray *receiver = @[@[keyOne, valueOne], @[keyTwo, valueTwo]];
+  NSDictionary *result = [receiver tdt_dictionaryFromPairs];
+
+  XCTAssertEqualObjects(valueOne, result[keyOne]);
+  XCTAssertEqualObjects(valueTwo, result[keyTwo]);
+}
+
 @end
