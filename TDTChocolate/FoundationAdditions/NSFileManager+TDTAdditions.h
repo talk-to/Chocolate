@@ -23,8 +23,8 @@
  Extend the @p moveItemAtPath: method to remove the @p destinationPath if
  it already exists.
  */
-- (BOOL)forceMoveItemAtPath:(NSString *)sourcePath
-                     toPath:(NSString *)destinationPath
-                      error:(NSError **)error;
+- (BOOL)tdt_forceMoveItemAtPath:(NSString *)sourcePath
+                         toPath:(NSString *)destinationPath
+                          error:(NSError **)error;
 
 @end

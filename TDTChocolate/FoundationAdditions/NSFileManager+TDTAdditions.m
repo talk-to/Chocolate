@@ -29,9 +29,9 @@
   return [NSURL fileURLWithPath:tempFilePath];
 }
 
-- (BOOL)forceMoveItemAtPath:(NSString *)sourcePath
-                     toPath:(NSString *)destinationPath
-                      error:(NSError **)error {
+- (BOOL)tdt_forceMoveItemAtPath:(NSString *)sourcePath
+                         toPath:(NSString *)destinationPath
+                          error:(NSError **)error {
   if ([self fileExistsAtPath:destinationPath]) {
     [self removeItemAtPath:destinationPath error:NULL];
   }
