@@ -1,7 +1,7 @@
 #import "NSCalendar+TDTComponents.h"
 #import "TDTAssert.h"
 
-@implementation NSCalendar (TDTTimeIntervalDecomposition)
+@implementation NSCalendar (TDTComponents)
 
 - (NSInteger)tdt_hoursSinceDate:(NSDate *)date {
   TDTParameterAssert(date);
