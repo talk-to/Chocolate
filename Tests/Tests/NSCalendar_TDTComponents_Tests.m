@@ -60,8 +60,13 @@
   NSCalendar *calendar = [NSCalendar currentCalendar];
   NSDate *now = [NSDate date];
   NSInteger days = 2;
-  NSDate *twoDaysFutureDate = [now dateByAddingTimeInterval:60*60*24*days];
-  XCTAssertEqual([calendar tdt_daysSinceDate:twoDaysFutureDate], -(days - 1));
+  // We want the date to rollover to the next day, so we add 1 second to the
+  // exact date. Further, since the method under test is called after some
+  // delay, we add a buffer of 1 second to ensure that the test does not fail
+  // when the second rolls over by the time we execute the method.
+  NSTimeInterval buffer = 1 + 1;
+  NSDate *twoDaysFutureDate = [now dateByAddingTimeInterval:60*60*24*days + buffer];
+  XCTAssertEqual([calendar tdt_daysSinceDate:twoDaysFutureDate], -days);
 }
 
 @end
