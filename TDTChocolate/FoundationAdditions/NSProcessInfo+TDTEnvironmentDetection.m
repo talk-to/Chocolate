@@ -16,6 +16,20 @@ static NSString *const XCTestBundlePathExtension = @"xctest";
 }
 
 - (BOOL)tdt_isDebugged {
+#ifdef DEBUG
+  return [self tdt_isDebugged_UsingUnstableAPI];
+#else
+  return isatty(STDERR_FILENO);
+#endif
+}
+
+/**
+ Source: Technical Q&A QA1361 "Detecting the Debugger"
+
+ @note This method relies on a public but unstable Apple API. It
+ should not be used in a release build.
+ */
+- (BOOL)tdt_isDebugged_UsingUnstableAPI {
   int                 junk;
   int                 mib[4];
   struct kinfo_proc   info;
