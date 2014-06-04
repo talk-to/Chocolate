@@ -1,4 +1,4 @@
-2.?.?, ??-???-2014
+2.2.0, 4-June-2014
 
   * Add fixed width accessors on strings and numbers.
   * Add convenience accessors for calendar components.
