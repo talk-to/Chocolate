@@ -41,6 +41,12 @@
             location = "group:NSSet+TDTFunctionalAdditions.m">
          </FileRef>
          <FileRef
+            location = "group:NSDictionary+TDTFunctionalAdditions.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSDictionary+TDTFunctionalAdditions.m">
+         </FileRef>
+         <FileRef
             location = "group:TDTFunctionalAdditionsBlockTypedefs.h">
          </FileRef>
          <FileRef
@@ -171,6 +177,24 @@
          </FileRef>
          <FileRef
             location = "group:NSDictionary+TDTMerging.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSCalendar+TDTComponents.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSCalendar+TDTComponents.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSNumber+TDTFixedWidthAccessors.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSNumber+TDTFixedWidthAccessors.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSString+TDTFixedWidthAccessors.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSString+TDTFixedWidthAccessors.m">
          </FileRef>
       </Group>
       <Group

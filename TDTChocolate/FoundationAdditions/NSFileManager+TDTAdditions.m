@@ -29,4 +29,15 @@
   return [NSURL fileURLWithPath:tempFilePath];
 }
 
+- (BOOL)tdt_forceMoveItemAtPath:(NSString *)sourcePath
+                         toPath:(NSString *)destinationPath
+                          error:(NSError **)error {
+  if ([self fileExistsAtPath:destinationPath]) {
+    [self removeItemAtPath:destinationPath error:NULL];
+  }
+  return [self moveItemAtPath:sourcePath
+                       toPath:destinationPath
+                        error:error];
+}
+
 @end

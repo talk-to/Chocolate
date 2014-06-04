@@ -1,3 +1,12 @@
+2.?.?, ??-???-2014
+
+  * Add fixed width accessors on strings and numbers.
+  * Add convenience accessors for calendar components.
+  * Provide a version of moveFile that overwrites the destination.
+  * Add method for interpreting (key, value) pairs as a dictionary.
+  * Add dictionary method for transforming values.
+  * Add method for removing characters from string.
+
 2.1.0, 30-May-2014
 
   * Add method for merging dictionaries.
