@@ -1,3 +1,7 @@
+2.?.?, ?-June-2014
+
+  * Add method for decrypting small chunks of AES data.
+
 2.2.0, 4-June-2014
 
   * Add fixed width accessors on strings and numbers.
