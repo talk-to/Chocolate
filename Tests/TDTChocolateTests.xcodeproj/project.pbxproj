@@ -14,6 +14,8 @@
 		2A39BC82190F8FED00124D96 /* NSDictionary_TDTNullNormalization_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A39BC80190F8FED00124D96 /* NSDictionary_TDTNullNormalization_Tests.m */; };
 		6904D8DB18BE00BF0016E88A /* NSRunLoop_TDTAsyncVerification_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6904D8DA18BE00BF0016E88A /* NSRunLoop_TDTAsyncVerification_Tests.m */; };
 		6904D8DC18BE00BF0016E88A /* NSRunLoop_TDTAsyncVerification_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6904D8DA18BE00BF0016E88A /* NSRunLoop_TDTAsyncVerification_Tests.m */; };
+		690C09ED1940305B0005719D /* NSData_TDTAESDecryption_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 690C09EC1940305B0005719D /* NSData_TDTAESDecryption_Tests.m */; };
+		690C09EE1940305B0005719D /* NSData_TDTAESDecryption_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 690C09EC1940305B0005719D /* NSData_TDTAESDecryption_Tests.m */; };
 		6919A161185058C5000AB434 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6919A14618504BD4000AB434 /* XCTest.framework */; };
 		6919A167185058C5000AB434 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6919A165185058C5000AB434 /* InfoPlist.strings */; };
 		6919A17318505B4C000AB434 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6919A14618504BD4000AB434 /* XCTest.framework */; };
@@ -81,6 +83,7 @@
 		2A39BC80190F8FED00124D96 /* NSDictionary_TDTNullNormalization_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_TDTNullNormalization_Tests.m; sourceTree = "<group>"; };
 		66F91BDB14454ABB9E945B66 /* Pods-osx.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osx.xcconfig"; path = "Pods/Pods-osx.xcconfig"; sourceTree = "<group>"; };
 		6904D8DA18BE00BF0016E88A /* NSRunLoop_TDTAsyncVerification_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSRunLoop_TDTAsyncVerification_Tests.m; sourceTree = "<group>"; };
+		690C09EC1940305B0005719D /* NSData_TDTAESDecryption_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSData_TDTAESDecryption_Tests.m; sourceTree = "<group>"; };
 		6919A13518504BD4000AB434 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		6919A13818504BD4000AB434 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6919A13918504BD4000AB434 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -266,6 +269,7 @@
 				6958D1B6193C9FC80005145D /* NSCalendar_TDTComponents_Tests.m */,
 				69C96B87193CA23700D18C0E /* NSNumber_TDTFixedWidthAccessors_Tests.m */,
 				69C96B88193CA23700D18C0E /* NSString_TDTFixedWidthAccessors_Tests.m */,
+				690C09EC1940305B0005719D /* NSData_TDTAESDecryption_Tests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -458,6 +462,7 @@
 				699FF3D7187FC9FB00F8257C /* TDTRandomTests.m in Sources */,
 				69CB6FCD18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m in Sources */,
 				69CB6FD01851B57D004D35DB /* NSArray_TDTAdditions_Tests.m in Sources */,
+				690C09ED1940305B0005719D /* NSData_TDTAESDecryption_Tests.m in Sources */,
 				69C96B89193CA23700D18C0E /* NSNumber_TDTFixedWidthAccessors_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +499,7 @@
 				699FF3D8187FC9FB00F8257C /* TDTRandomTests.m in Sources */,
 				69CB6FCE18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m in Sources */,
 				69CB6FD11851B57D004D35DB /* NSArray_TDTAdditions_Tests.m in Sources */,
+				690C09EE1940305B0005719D /* NSData_TDTAESDecryption_Tests.m in Sources */,
 				69C96B8A193CA23700D18C0E /* NSNumber_TDTFixedWidthAccessors_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

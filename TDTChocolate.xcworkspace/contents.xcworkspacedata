@@ -196,6 +196,12 @@
          <FileRef
             location = "group:NSString+TDTFixedWidthAccessors.m">
          </FileRef>
+         <FileRef
+            location = "group:NSData+TDTAESDecryption.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSData+TDTAESDecryption.m">
+         </FileRef>
       </Group>
       <Group
          location = "group:TestingAdditions"
