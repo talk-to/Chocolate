@@ -1,6 +1,8 @@
 2.?.?, ?-June-2014
 
   * Add method for decrypting small chunks of AES data.
+  * Add "onlyObject" selector and "all" predicate to arrays.
+  * Add method to map dictionaries entries to arrays.
 
 2.2.0, 4-June-2014
 
