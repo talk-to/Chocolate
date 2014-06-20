@@ -12,25 +12,34 @@ static TDTMapBlock identity = ^id(id value) {
 
 @implementation NSDictionary_TDTFunctionalAdditions_Tests
 
-- (void)testMapOfEmptyDictionary {
+- (void)testValueMapOfEmptyDictionary {
   NSDictionary *receiver = @{};
   NSDictionary *result = [receiver tdt_dictionaryByMappingValuesWithBlock:identity];
   XCTAssertEqualObjects(receiver, result);
 }
 
-- (void)testMapWithIdentity {
+- (void)testValueMapWithIdentity {
   NSDictionary *receiver = [NSDictionary tdt_randomDictionary];
   NSDictionary *result = [receiver tdt_dictionaryByMappingValuesWithBlock:identity];
   XCTAssertEqualObjects(receiver, result);
 }
 
-- (void)testMapWithTransformation {
+- (void)testValueMapWithTransformation {
   NSString *key = [NSString tdt_randomString];
   NSDictionary *receiver = @{ key: @(10) };
   NSDictionary *result = [receiver tdt_dictionaryByMappingValuesWithBlock:^id(id value) {
     return @([value intValue] + 1);
   }];
   XCTAssertEqualObjects(@(11), result[key]);
+}
+
+- (void)testEntryMapWithTransformation {
+  NSDictionary *receiver = @{ @(1): @(2), @(2): @(3) };
+  NSArray *result = [receiver tdt_arrayByMappingEntriesWithBlock:^id(NSNumber *key, NSNumber *value) {
+    return @([key unsignedIntegerValue] + [value unsignedIntegerValue]);
+  }];
+  TDTXCTAssertContains(result, @(3));
+  TDTXCTAssertContains(result, @(5));
 }
 
 @end
