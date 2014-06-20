@@ -49,6 +49,11 @@
 - (BOOL)tdt_anyWithBlock:(TDTPredicateBlock)predicate;
 
 /**
+ @return YES if all object in the receiver satisfy `predicate`.
+ */
+- (BOOL)tdt_allWithBlock:(TDTPredicateBlock)predicate;
+
+/**
  Construct a dictionary from (key, value) pairs.
 
  @pre The reciever is expected to be of the form @p @[@[key, value] ..].
