@@ -16,4 +16,10 @@
  */
 - (BOOL)tdt_isNonEmpty;
 
+/**
+ If the receiver contains only one object, then return that object;
+ otherwise return @p nil.
+ */
+- (id)tdt_onlyObject;
+
 @end
