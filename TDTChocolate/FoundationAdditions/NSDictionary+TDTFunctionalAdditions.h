@@ -9,4 +9,10 @@
  */
 - (NSDictionary *)tdt_dictionaryByMappingValuesWithBlock:(TDTMapBlock)block;
 
+/**
+ @return Array obtained by transforming each @p (key, value) pair in
+ the receiver with @p block(key, value).
+ */
+- (NSArray *)tdt_arrayByMappingEntriesWithBlock:(TDTMapEntryBlock)block;
+
 @end

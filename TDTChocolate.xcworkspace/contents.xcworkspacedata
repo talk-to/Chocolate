@@ -230,6 +230,9 @@
          <FileRef
             location = "group:TDTPrimitiveConstants.m">
          </FileRef>
+         <FileRef
+            location = "group:XCTAssert+TDTAdditions.h">
+         </FileRef>
       </Group>
       <Group
          location = "group:CoreDataAdditions"

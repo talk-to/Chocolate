@@ -108,6 +108,22 @@
   XCTAssertTrue([array tdt_anyWithBlock:predicateMatchingAllElements]);
 }
 
+- (void)testAllWithPredicateSuccess {
+  NSArray *receiver = @[@(1), @(2), @(3)];
+  BOOL result = [receiver tdt_allWithBlock:^BOOL(NSNumber *number) {
+    return ([number unsignedIntegerValue] <= 3);
+  }];
+  XCTAssertTrue(result);
+}
+
+- (void)testAllWithPredicateFailure {
+  NSArray *receiver = @[@(1), @(2), @(3)];
+  BOOL result = [receiver tdt_allWithBlock:^BOOL(NSNumber *number) {
+    return ([number unsignedIntegerValue] < 3);
+  }];
+  XCTAssertFalse(result);
+}
+
 - (void)testItReturnsFalseIfNoElementSatisfiesPredicate {
   NSArray *array = @[@34, @3, @4];
   TDTPredicateBlock predicateMatchingNoElement = ^BOOL (id obj) {

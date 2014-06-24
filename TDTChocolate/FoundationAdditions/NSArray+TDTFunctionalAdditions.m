@@ -59,7 +59,7 @@
   return @[matching, notMatching];
 }
 
-#pragma mark Any
+#pragma mark Collective Predicates
 
 - (BOOL)tdt_anyWithBlock:(TDTPredicateBlock)predicate {
   for (id obj in self) {
@@ -68,6 +68,12 @@
     }
   }
   return NO;
+}
+
+- (BOOL)tdt_allWithBlock:(TDTPredicateBlock)predicate {
+  return !([self tdt_anyWithBlock:^BOOL (id obj) {
+    return !predicate(obj);
+  }]);
 }
 
 #pragma mark Dictionary from Key-Value Pairs

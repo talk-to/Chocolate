@@ -10,4 +10,8 @@
   return (self.count > 0);
 }
 
+- (id)tdt_onlyObjectOrNil {
+  return (self.count == 1) ? [self firstObject] : nil;
+}
+
 @end
