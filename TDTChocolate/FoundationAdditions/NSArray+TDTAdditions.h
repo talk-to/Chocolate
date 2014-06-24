@@ -17,9 +17,12 @@
 - (BOOL)tdt_isNonEmpty;
 
 /**
- If the receiver contains only one object, then return that object;
+ If the receiver contains exactly one object, then return that object;
  otherwise return @p nil.
+
+ @warn This method will return @p nil if the receiver contains more
+ than one object.
  */
-- (id)tdt_onlyObject;
+- (id)tdt_onlyObjectOrNil;
 
 @end

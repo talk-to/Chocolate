@@ -46,18 +46,18 @@
   XCTAssertFalse([@[] tdt_isNonEmpty]);
 }
 
-- (void)testOnlyObjectReturnsNilIfReceiverIsEmpty {
-  XCTAssertNil([@[] tdt_onlyObject]);
+- (void)testOnlyObjectOrNilReturnsNilIfReceiverIsEmpty {
+  XCTAssertNil([@[] tdt_onlyObjectOrNil]);
 }
 
-- (void)testOnlyObjectReturnsObjectIfReceiverHasOnlyOneObject {
+- (void)testOnlyObjectOrNilReturnsObjectIfReceiverHasOnlyOneObject {
   id object = [NSString tdt_randomString];
-  XCTAssertEqualObjects(object, [@[object] tdt_onlyObject]);
+  XCTAssertEqualObjects(object, [@[object] tdt_onlyObjectOrNil]);
 }
 
-- (void)testOnlyObjectReturnsNilIfReceiverHasMoreThanOneObject {
+- (void)testOnlyObjectOrNilReturnsNilIfReceiverHasMoreThanOneObject {
   NSArray *receiver = @[ [NSString tdt_randomString], [NSString tdt_randomString] ];
-  XCTAssertNil([receiver tdt_onlyObject]);
+  XCTAssertNil([receiver tdt_onlyObjectOrNil]);
 }
 
 @end
