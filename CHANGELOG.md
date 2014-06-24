@@ -1,4 +1,4 @@
-2.?.?, ?-June-2014
+2.3.0, 23-June-2014
 
   * Add method for decrypting small chunks of AES data.
   * Add "onlyObjectOrNil" selector and "all" predicate to arrays.
