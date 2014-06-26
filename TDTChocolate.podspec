@@ -22,11 +22,13 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'TestingAdditions' do |ss|
+    ss.dependency 'TDTChocolate/FoundationAdditions'
     ss.source_files = [ 'TDTChocolate/TestingAdditions/*.{h,m}',
                         'TDTChocolate/TDTTestingAdditions.h' ]
   end
 
   s.subspec 'CoreDataAdditions' do |ss|
+    ss.dependency 'TDTChocolate/FoundationAdditions'
     ss.source_files = [ 'TDTChocolate/CoreDataAdditions/*.{h,m}',
                         'TDTChocolate/TDTCoreDataAdditions.h' ]
     ss.frameworks = 'CoreData'
