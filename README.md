@@ -46,9 +46,9 @@ and finally import the public header for the Foundation Additions subspec
 
 * Run the tests.
 
-* Commit and push the changes.
-
-* Create a tag with the version, and push it to remote.
+* Publish, via `rake publish`. This does the following:
+    - Create a tag with the current podspec version, and push it to remote.
+    - Push the current podspec to CocoaPods trunk.
 
 [CocoaPods]: http://cocoapods.org/
 [ios-guides]: https://github.com/talk-to/ios-guides
