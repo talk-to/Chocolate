@@ -31,13 +31,9 @@ and finally import the public header for the Foundation Additions subspec
 
 ## Contributing
 
-You can contribute to Chocolate by opening a pull request on this
-repository. Make sure you go through the
-[Talk.to iOS Development Guidelines][ios-guides] first to get an idea
-of the expectations. Once your pull request is reviewed by one of the
-maintainers, you can merge your changes into the mainline.
+[Pull Requests are welcome!][using-pull-requests]
 
-### Release Checklist
+## Release Checklist for Maintainers
 
 * Update the CHANGELOG.
 
@@ -55,3 +51,4 @@ maintainers, you can merge your changes into the mainline.
 
 [CocoaPods]: http://cocoapods.org/
 [ios-guides]: https://github.com/talk-to/ios-guides
+[using-pull-requests]: https://help.github.com/articles/using-pull-requests
