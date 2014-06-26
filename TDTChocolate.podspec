@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary  = 'Library containing additions to Cocoa and Cocoa Touch'
   s.homepage = 'https://github.com/talk-to/Chocolate'
   s.author   = 'Talk.to'
-  s.license  = { :type => 'COMMERCIAL', :text => 'Property of Talk.to FZC' }
+  s.license  = 'BSD'
   s.source   = {
     :git => 'https://github.com/talk-to/Chocolate.git',
     :tag => "#{s.version}"
