@@ -1,7 +1,7 @@
 Chocolate is a library containing additions to Cocoa and Cocoa Touch that
 simplify writing Objective C code for OSX/iOS. The things that Apple forgot.
 
-Chocolate consists of three "sub-libraries":
+Chocolate consists of three modules:
 
 1. Foundation Additions - Categories on the Foundation classes. These
    are intended to be useful for all Objective C code.
@@ -15,9 +15,10 @@ Chocolate consists of three "sub-libraries":
 ## Usage
 
 Chocolate is published as a [CocoaPod][CocoaPods], with each the
-three "sub-libraries" above listed as a separate "subspec".
+three modules above listed as a separate subspec.
 
-For example, to use the first public release of Chocolate's Foundation Additions, we will need to add the following to our `Podfile`
+For example, to use the first public release of Chocolate's Foundation
+Additions, we will need to add the following to our `Podfile`
 
     pod 'TDTChocolate/FoundationAdditions', :git => 'git@github.com:talk-to/Chocolate', :tag => '1.0.0'
 
@@ -31,13 +32,9 @@ and finally import the public header for the Foundation Additions subspec
 
 ## Contributing
 
-You can contribute to Chocolate by opening a pull request on this
-repository. Make sure you go through the
-[Talk.to iOS Development Guidelines][ios-guides] first to get an idea
-of the expectations. Once your pull request is reviewed by one of the
-maintainers, you can merge your changes into the mainline.
+[Pull Requests are welcome!][using-pull-requests]
 
-### Release Checklist
+## Release Checklist for Maintainers
 
 * Update the CHANGELOG.
 
@@ -49,9 +46,10 @@ maintainers, you can merge your changes into the mainline.
 
 * Run the tests.
 
-* Commit and push the changes.
-
-* Create a tag with the version, and push it to remote.
+* Publish, via `rake publish`. This does the following:
+    - Create a tag with the current podspec version, and push it to remote.
+    - Push the current podspec to CocoaPods trunk.
 
 [CocoaPods]: http://cocoapods.org/
 [ios-guides]: https://github.com/talk-to/ios-guides
+[using-pull-requests]: https://help.github.com/articles/using-pull-requests
