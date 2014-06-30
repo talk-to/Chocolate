@@ -6,7 +6,7 @@
 - (void)tdt_performFetch {
   NSError *error;
   BOOL res = [self performFetch:&error];
-  TDTAssert_CD(res, @"%@", error);
+  TDTCDAAssert(res, @"%@", error);
 }
 
 @end

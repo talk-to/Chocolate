@@ -33,7 +33,7 @@
                      inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext {
   NSArray *results = [self tdt_fetchObjectsForPredicate:predicate
                                  inManagedObjectContext:managedObjectContext];
-  TDTAssert_CD([results count] <= 1, @"Multiple objects matching predicate (%@): %@", predicate, results);
+  TDTCDAAssert([results count] <= 1, @"Multiple objects matching predicate (%@): %@", predicate, results);
   return [results firstObject];
 }
 
@@ -45,7 +45,7 @@
   NSError *error;
   NSUInteger count = [managedObjectContext countForFetchRequest:fetchRequest
                                                           error:&error];
-  TDTAssert_CD(count != NSNotFound, @"%@", error);
+  TDTCDAAssert(count != NSNotFound, @"%@", error);
   return count;
 }
 

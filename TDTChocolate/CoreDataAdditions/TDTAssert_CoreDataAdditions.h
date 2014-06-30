@@ -17,7 +17,7 @@
 #endif
 #endif
 
-#define TDTAssert_CD(condition, format...)	\
+#define TDTCDAAssert(condition, format...)	\
 do {				\
 __PRAGMA_PUSH_NO_EXTRA_ARG_WARNINGS \
 if (!(condition)) {		\
