@@ -258,6 +258,9 @@
          <FileRef
             location = "group:TDTCoreDataUtilityMacros.h">
          </FileRef>
+         <FileRef
+            location = "group:TDTAssert_CoreDataAdditions.h">
+         </FileRef>
       </Group>
    </Group>
    <FileRef
