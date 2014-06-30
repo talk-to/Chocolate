@@ -1,5 +1,4 @@
 #import "TDTRandomFixtures.h"
-#import "../FoundationAdditions/TDTAssert.h"
 
 @implementation NSString (TDTRandomFixtures)
 
@@ -41,8 +40,6 @@
       case 2:
         randomObject = [NSArray tdt_randomArrayOfLength:1];
         break;
-      default:
-        TDTAssertFailure();
     }
     [result addObject:randomObject];
   }
