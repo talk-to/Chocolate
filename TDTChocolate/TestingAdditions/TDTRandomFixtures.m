@@ -1,6 +1,5 @@
 #import "TDTRandomFixtures.h"
 #import "../FoundationAdditions/TDTAssert.h"
-#import "../FoundationAdditions/TDTRandom.h"
 
 @implementation NSString (TDTRandomFixtures)
 
@@ -63,7 +62,7 @@
 @implementation NSDate (TDTRandomFixtures)
 
 + (instancetype)tdt_randomDate {
-  NSTimeInterval randomTimeInterval = TDTRandomDouble() * arc4random();
+  NSTimeInterval randomTimeInterval = arc4random();
   return [self dateWithTimeIntervalSince1970:randomTimeInterval];
 }
 
