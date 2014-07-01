@@ -1,6 +1,8 @@
 2.5.?, ??-June-2014
 
   * Fix SHA1 computation for Unicode strings.
+  * Remove dependency between Foundation and Testing additions.
+  * Make dependency between Foundation and Core Data additions explicit.
 
 2.4.0, 26-June-2014
 
