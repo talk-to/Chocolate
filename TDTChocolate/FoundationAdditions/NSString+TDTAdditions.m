@@ -23,7 +23,8 @@
 
 - (NSString *)tdt_SHA1Digest {
   const char *cstr = [self cStringUsingEncoding:NSUTF8StringEncoding];
-  NSData *data = [NSData dataWithBytes:cstr length:self.length];
+  NSUInteger characterCount = [self lengthOfBytesUsingEncoding:NSUTF8StringEncoding];
+  NSData *data = [NSData dataWithBytes:cstr length:characterCount];
 
   uint8_t digest[CC_SHA1_DIGEST_LENGTH];
 
