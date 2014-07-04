@@ -1,6 +1,7 @@
 2.5.?, ??-June-2014
 
   * ???
+  * Deprecate TDTObjectOrDefault.
 
 2.4.0, 26-June-2014
 
