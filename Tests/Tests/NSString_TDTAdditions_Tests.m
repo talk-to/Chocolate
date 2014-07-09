@@ -46,6 +46,13 @@
   XCTAssertEqualObjects([testString tdt_SHA1Digest], SHA1Digest);
 }
 
+- (void)testSHA1SumForUnicodeCharacters {
+  NSString *receiver = @"🐶";
+  // $ shasum <(echo -n "🐶")
+  NSString *expected = @"e00b00d657dfa936551432f4c4563ea4d08b2cbb";
+  XCTAssertEqualObjects(expected, [receiver tdt_SHA1Digest]);
+}
+
 - (void)testStringByTrimmingWhitespaceAndNewline {
   NSString *empty = @"";
   XCTAssertEqualObjects([empty tdt_stringByTrimmingWhitespaceAndNewlines], empty);

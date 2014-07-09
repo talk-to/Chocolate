@@ -1,6 +1,6 @@
 2.5.?, ??-June-2014
 
-  * ???
+  * Fix SHA1 computation for Unicode strings.
   * Deprecate TDTObjectOrDefault.
 
 2.4.0, 26-June-2014
