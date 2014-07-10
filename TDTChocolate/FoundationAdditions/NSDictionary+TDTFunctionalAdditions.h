@@ -15,4 +15,10 @@
  */
 - (NSArray *)tdt_arrayByMappingEntriesWithBlock:(TDTMapEntryBlock)block;
 
+/**
+ @return Dictionary obtained by retaining only those (key, value) pairs from
+ the receiver that satisfy @p predicate.
+ */
+- (NSDictionary *)tdt_dictionaryByFilteringUsingPredicate:(BOOL (^)(id key, id value))predicate;
+
 @end

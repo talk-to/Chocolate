@@ -2,6 +2,7 @@
 
   * Fix SHA1 computation for Unicode strings.
   * Add method to construct dictionary by removing a key.
+  * Add method to filter entries from a dictionary.
 
 2.4.0, 26-June-2014
 
