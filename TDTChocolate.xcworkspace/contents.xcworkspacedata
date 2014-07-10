@@ -196,6 +196,12 @@
          <FileRef
             location = "group:NSData+TDTAESDecryption.m">
          </FileRef>
+         <FileRef
+            location = "group:NSURL+TDTQueryParameterEncoding.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSURL+TDTQueryParameterEncoding.m">
+         </FileRef>
       </Group>
       <Group
          location = "group:TestingAdditions"
