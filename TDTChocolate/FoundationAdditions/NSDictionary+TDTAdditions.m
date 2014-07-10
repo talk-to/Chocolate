@@ -8,4 +8,10 @@
   return result;
 }
 
+- (NSDictionary *)tdt_dictionaryByRemovingEntryForKey:(id)key {
+  NSMutableDictionary *dict = [self mutableCopy];
+  [dict removeObjectForKey:key];
+  return [dict copy];
+}
+
 @end

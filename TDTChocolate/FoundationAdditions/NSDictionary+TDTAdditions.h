@@ -10,4 +10,13 @@
  */
 - (NSDictionary *)tdt_dictionaryByMergingDictionary:(NSDictionary *)dict;
 
+/**
+ Construct a dictionary by removing an entry corresponding to @p key
+ from the receiver.
+
+ The receiver is returned unchanged if the @p key is not present.
+ @note @p key should not be @p nil.
+ */
+- (NSDictionary *)tdt_dictionaryByRemovingEntryForKey:(id)key;
+
 @end

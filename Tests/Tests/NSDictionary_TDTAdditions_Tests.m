@@ -38,4 +38,16 @@
   XCTAssertEqual(value, res[key]);
 }
 
+- (void)testItRemovesExistingKey {
+  NSDictionary *dict = @{ @"key": @"value" };
+  NSDictionary *result = [dict tdt_dictionaryByRemovingEntryForKey:@"key"];
+  XCTAssertEqualObjects(@{}, result);
+}
+
+- (void)testDictionaryNotChangedIfKeyDoesNotExist {
+  NSDictionary *dict = @{ @"key": @"value" };
+  NSDictionary *result = [dict tdt_dictionaryByRemovingEntryForKey:@"not-key"];
+  XCTAssertEqualObjects(dict, result);
+}
+
 @end
