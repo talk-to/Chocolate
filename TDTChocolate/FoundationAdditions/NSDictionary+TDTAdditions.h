@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-@interface NSDictionary (TDTMerging)
+@interface NSDictionary (TDTAdditions)
 
 /**
  Construct a dictionary by adding entries from @p dict into the receiver.

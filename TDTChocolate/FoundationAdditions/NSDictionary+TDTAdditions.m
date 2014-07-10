@@ -1,6 +1,6 @@
-#import "NSDictionary+TDTMerging.h"
+#import "NSDictionary+TDTAdditions.h"
 
-@implementation NSDictionary (TDTMerging)
+@implementation NSDictionary (TDTAdditions)
 
 - (NSDictionary *)tdt_dictionaryByMergingDictionary:(NSDictionary *)dict {
   NSMutableDictionary *result = [self mutableCopy];

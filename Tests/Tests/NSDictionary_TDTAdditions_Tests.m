@@ -2,11 +2,11 @@
 #import <TDTChocolate/TDTFoundationAdditions.h>
 #import <TDTChocolate/TDTTestingAdditions.h>
 
-@interface NSDictionary_TDTMerging_Tests : XCTestCase
+@interface NSDictionary_TDTAdditions_Tests : XCTestCase
 
 @end
 
-@implementation NSDictionary_TDTMerging_Tests
+@implementation NSDictionary_TDTAdditions_Tests
 
 - (void)testItRetainsOriginalEntries {
   NSString *key = [NSString tdt_randomString];
