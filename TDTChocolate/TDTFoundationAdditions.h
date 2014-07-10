@@ -32,3 +32,4 @@
 #import "FoundationAdditions/NSString+TDTFixedWidthAccessors.h"
 #import "FoundationAdditions/NSData+TDTAESDecryption.h"
 #import "FoundationAdditions/NSURL+TDTQueryParameterEncoding.h"
+#import "FoundationAdditions/NSDictionary+TDTSubsetEquality.h"
