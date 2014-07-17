@@ -3,7 +3,7 @@
 @interface NSArray (TDTSubsetEquality)
 
 /**
- Internal helper method for use by @p - [NSDictionary tdt_isSubsetOf]
+ Internal helper method for use by `- [NSDictionary tdt_isSubsetOf]`.
  */
 - (BOOL)tdt_isSubsetOf:(NSArray *)array;
 
