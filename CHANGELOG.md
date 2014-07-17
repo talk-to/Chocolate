@@ -6,6 +6,7 @@
   * Add alternative URL Query parameter encoding implementation.
   * Add method to determine if one dictionary is a subset of another.
   * Add method to construct dictionary by combining pairs.
+  * Add custom XCTAsserts for dates and strings.
 
 2.4.0, 26-June-2014
 
