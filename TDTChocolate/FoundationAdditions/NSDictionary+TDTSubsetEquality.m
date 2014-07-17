@@ -5,7 +5,7 @@
 /**
  Internal helper method for use by @p - [NSDictionary tdt_isSubsetOf]
  */
-- (BOOL)tdt_dictHelper_isSubsetOf:(NSArray *)array;
+- (BOOL)tdt_isSubsetOf:(NSArray *)array;
 
 @end
 
@@ -19,7 +19,7 @@ static BOOL TDTPartialStructureEqualityIsMatch(id obj, id otherObj) {
     }
   } else if ([obj isKindOfClass:[NSArray class]]) {
     if (![otherObj isKindOfClass:[NSArray class]]
-        || ![obj tdt_dictHelper_isSubsetOf:otherObj]) {
+        || ![obj tdt_isSubsetOf:otherObj]) {
       return NO;
     }
   } else if (![obj isEqual:otherObj]) {
@@ -30,7 +30,7 @@ static BOOL TDTPartialStructureEqualityIsMatch(id obj, id otherObj) {
 
 @implementation NSArray (TDTPartialStructureEquality)
 
-- (BOOL)tdt_dictHelper_isSubsetOf:(NSArray *)array {
+- (BOOL)tdt_isSubsetOf:(NSArray *)array {
   if (self.count != array.count) {
     return NO;
   }
