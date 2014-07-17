@@ -12,16 +12,8 @@
 static BOOL TDTPartialStructureEqualityIsMatch(id obj, id otherObj) {
   if (!otherObj) {
     return NO;
-  } else if ([obj isKindOfClass:[NSDictionary class]]) {
-    if (![otherObj isKindOfClass:[NSDictionary class]]
-        || ![obj tdt_isSubsetOf:otherObj]) {
-      return NO;
-    }
-  } else if ([obj isKindOfClass:[NSArray class]]) {
-    if (![otherObj isKindOfClass:[NSArray class]]
-        || ![obj tdt_isSubsetOf:otherObj]) {
-      return NO;
-    }
+  } else if ([obj respondsToSelector:@selector(tdt_isSubsetOf:)]) {
+    return [obj tdt_isSubsetOf:otherObj];
   } else if (![obj isEqual:otherObj]) {
     return NO;
   }
@@ -31,6 +23,10 @@ static BOOL TDTPartialStructureEqualityIsMatch(id obj, id otherObj) {
 @implementation NSArray (TDTPartialStructureEquality)
 
 - (BOOL)tdt_isSubsetOf:(NSArray *)array {
+  if (![array isKindOfClass:[self class]]) {
+    return NO;
+  }
+
   if (self.count != array.count) {
     return NO;
   }
@@ -50,6 +46,10 @@ static BOOL TDTPartialStructureEqualityIsMatch(id obj, id otherObj) {
 @implementation NSDictionary (TDTPartialStructureEquality)
 
 - (BOOL)tdt_isSubsetOf:(NSDictionary *)dict {
+  if (![dict isKindOfClass:[self class]]) {
+    return NO;
+  }
+
   __block BOOL result = YES;
   [self enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
     id otherObj = dict[key];
