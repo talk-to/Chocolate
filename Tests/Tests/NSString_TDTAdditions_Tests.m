@@ -132,4 +132,16 @@
   XCTAssertEqualObjects(receiver, result);
 }
 
+- (void)testIsValidEmail {
+  NSString *email = @"abc@def.com";
+  XCTAssertTrue([email tdt_isEmail]);
+}
+
+- (void)testIsInvalidEmail {
+  XCTAssertFalse([@"abc" tdt_isEmail]);
+  XCTAssertFalse([@"abc.com" tdt_isEmail]);
+  XCTAssertFalse([@"abc@" tdt_isEmail]);
+  XCTAssertFalse([@"abc@def." tdt_isEmail]);
+}
+
 @end
