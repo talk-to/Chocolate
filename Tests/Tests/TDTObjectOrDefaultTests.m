@@ -8,6 +8,9 @@
 
 @implementation TDTObjectOrDefaultTests
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
 - (void)testNilIsReplacedByDefault {
   id defaultValue = [NSNumber tdt_randomNumber];
   XCTAssertEqualObjects(TDTObjectOrDefault(nil, defaultValue), defaultValue);
@@ -18,5 +21,7 @@
   id defaultValue = [NSNumber tdt_randomNumber];
   XCTAssertEqualObjects(TDTObjectOrDefault(object, defaultValue), object);
 }
+
+#pragma clang diagnostic pop
 
 @end
