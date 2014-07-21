@@ -55,4 +55,11 @@ XCTAssertFalse([(a) tdt_isSubsetOf:(b)], @"Expected %@ to not be a subset of %@"
   TDTXCTAssertIsNotSubset(receiver, mismatch);
 }
 
+- (void)testClassClusterIsConsideredWhenComparingClasses {
+  NSDictionary *mutableDict = [NSMutableDictionary dictionary];
+  NSDictionary *immutableDict = [NSDictionary dictionary];
+  TDTXCTAssertIsSubset(mutableDict, immutableDict);
+  TDTXCTAssertIsSubset(immutableDict, mutableDict);
+}
+
 @end
