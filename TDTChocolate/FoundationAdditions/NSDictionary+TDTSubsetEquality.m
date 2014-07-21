@@ -23,7 +23,7 @@ static BOOL TDTPartialStructureEqualityIsMatch(id obj, id otherObj) {
 @implementation NSArray (TDTPartialStructureEquality)
 
 - (BOOL)tdt_isSubsetOf:(NSArray *)array {
-  if (![array isKindOfClass:[self class]]) {
+  if (![array isKindOfClass:[NSArray class]]) {
     return NO;
   }
 
@@ -46,7 +46,7 @@ static BOOL TDTPartialStructureEqualityIsMatch(id obj, id otherObj) {
 @implementation NSDictionary (TDTPartialStructureEquality)
 
 - (BOOL)tdt_isSubsetOf:(NSDictionary *)dict {
-  if (![dict isKindOfClass:[self class]]) {
+  if (![dict isKindOfClass:[NSDictionary class]]) {
     return NO;
   }
 
