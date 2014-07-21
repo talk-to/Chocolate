@@ -1,6 +1,7 @@
 2.5.?, ??-June-2014
 
   * Fix SHA1 computation for Unicode strings.
+  * Add category method on NSString for validating email.
   * Remove dependency between Foundation and Testing additions.
   * Make dependency between Foundation and Core Data additions explicit.
   * Add method to construct dictionary by removing a key.

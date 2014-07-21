@@ -72,4 +72,9 @@
  */
 - (NSString *)tdt_stringByRemovingCharacters:(NSCharacterSet *)characters;
 
+/**
+ @return Return YES if string is valid email, otherwise NO.
+ */
+- (BOOL)tdt_isEmail;
+
 @end
