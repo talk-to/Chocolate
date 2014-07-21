@@ -70,6 +70,8 @@
 		69CB6FD51851B98F004D35DB /* NSString_TDTAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CB6FD31851B98F004D35DB /* NSString_TDTAdditions_Tests.m */; };
 		69D1554C18601BC700D5B392 /* NSArray_TDTRangeAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D1554B18601BC700D5B392 /* NSArray_TDTRangeAdditions_Tests.m */; };
 		69D1554D18601BC700D5B392 /* NSArray_TDTRangeAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D1554B18601BC700D5B392 /* NSArray_TDTRangeAdditions_Tests.m */; };
+		69DD7BD8197D34AA004DFDDE /* XCTAssert_TDTAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DD7BD7197D34AA004DFDDE /* XCTAssert_TDTAdditions_Tests.m */; };
+		69DD7BD9197D34AF004DFDDE /* XCTAssert_TDTAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DD7BD7197D34AA004DFDDE /* XCTAssert_TDTAdditions_Tests.m */; };
 		69E1C30D1850AF6B00E93E23 /* TDTObjectOrDefaultTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E1C30C1850AF6B00E93E23 /* TDTObjectOrDefaultTests.m */; };
 		69E1C30E1850AF6B00E93E23 /* TDTObjectOrDefaultTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E1C30C1850AF6B00E93E23 /* TDTObjectOrDefaultTests.m */; };
 		69ECAE411851CA63006C3176 /* NSDate_TDTAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ECAE3E1851CA63006C3176 /* NSDate_TDTAdditions_Tests.m */; };
@@ -127,6 +129,7 @@
 		69CB6FCF1851B57D004D35DB /* NSArray_TDTAdditions_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_TDTAdditions_Tests.m; sourceTree = "<group>"; };
 		69CB6FD31851B98F004D35DB /* NSString_TDTAdditions_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSString_TDTAdditions_Tests.m; sourceTree = "<group>"; };
 		69D1554B18601BC700D5B392 /* NSArray_TDTRangeAdditions_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_TDTRangeAdditions_Tests.m; sourceTree = "<group>"; };
+		69DD7BD7197D34AA004DFDDE /* XCTAssert_TDTAdditions_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCTAssert_TDTAdditions_Tests.m; sourceTree = "<group>"; };
 		69E1C30C1850AF6B00E93E23 /* TDTObjectOrDefaultTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTObjectOrDefaultTests.m; sourceTree = "<group>"; };
 		69ECAE3E1851CA63006C3176 /* NSDate_TDTAdditions_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDate_TDTAdditions_Tests.m; sourceTree = "<group>"; };
 		69ECAE401851CA63006C3176 /* NSDate_TDTComparisons_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDate_TDTComparisons_Tests.m; sourceTree = "<group>"; };
@@ -278,6 +281,7 @@
 				690C09EC1940305B0005719D /* NSData_TDTAESDecryption_Tests.m */,
 				69027FAE196EADEE005A5057 /* NSURL_TDTQueryParameterEncoding_Tests.m */,
 				69027FB1196EB126005A5057 /* NSDictionary_TDTSubsetEquality_Tests.m */,
+				69DD7BD7197D34AA004DFDDE /* XCTAssert_TDTAdditions_Tests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -457,6 +461,7 @@
 				6958D1B4193C9BFA0005145D /* NSDictionary_TDTFunctionalAdditions_Tests.m in Sources */,
 				69ECAE411851CA63006C3176 /* NSDate_TDTAdditions_Tests.m in Sources */,
 				697F99761859D4F900DDF2A3 /* TDTBlockAdditionsTests.m in Sources */,
+				69DD7BD8197D34AA004DFDDE /* XCTAssert_TDTAdditions_Tests.m in Sources */,
 				69E1C30D1850AF6B00E93E23 /* TDTObjectOrDefaultTests.m in Sources */,
 				697F99731859D1B600DDF2A3 /* TDTSmokeTests.m in Sources */,
 				696E48C51934782400BD30A9 /* NSDictionary_TDTAdditions_Tests.m in Sources */,
@@ -496,6 +501,7 @@
 				6958D1B5193C9BFA0005145D /* NSDictionary_TDTFunctionalAdditions_Tests.m in Sources */,
 				69ECAE421851CA63006C3176 /* NSDate_TDTAdditions_Tests.m in Sources */,
 				697F99771859D4F900DDF2A3 /* TDTBlockAdditionsTests.m in Sources */,
+				69DD7BD9197D34AF004DFDDE /* XCTAssert_TDTAdditions_Tests.m in Sources */,
 				69E1C30E1850AF6B00E93E23 /* TDTObjectOrDefaultTests.m in Sources */,
 				697F99741859D1B600DDF2A3 /* TDTSmokeTests.m in Sources */,
 				696E48C61934782400BD30A9 /* NSDictionary_TDTAdditions_Tests.m in Sources */,
