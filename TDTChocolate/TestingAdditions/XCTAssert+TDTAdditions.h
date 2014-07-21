@@ -19,5 +19,5 @@ XCTAssertTrue([(string) tdt_containsString:(substring)], @"Expected %@ to contai
 /**
  Assert that @p a is <= @p b.
  */
-#define TDTXCTAssertEarlierEqualDate(a, b) \
-XCTAssertTrue([(a) tdt_isEarlierThanOrEqualToDate:(b)], @"Expected %@ to be earlier than or same as %@", (a), (b))
+#define TDTXCTAssertEarlierThanOrEqualToDate(a, b) \
+XCTAssertTrue([(a) tdt_isEarlierThanOrEqualToDate:(b)], @"Expected %@ to be earlier than or equal to %@", (a), (b))
