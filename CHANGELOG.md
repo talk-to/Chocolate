@@ -1,3 +1,7 @@
+2.5.?, 21-July-2014
+
+  * Fix isSubsetOf to correctly compare mutable/immutable variants.
+
 2.5.0, 21-July-2014
 
   * Fix SHA1 computation for Unicode strings.
