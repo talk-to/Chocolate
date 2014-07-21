@@ -42,4 +42,12 @@ static TDTMapBlock identity = ^id(id value) {
   TDTXCTAssertContains(result, @(5));
 }
 
+- (void)testFilter {
+  NSDictionary *receiver = @{ @"x": @"a", @"y": @"b" };
+  NSDictionary *result = [receiver tdt_dictionaryByFilteringUsingPredicate:^BOOL(id key, id value) {
+    return ([key isEqual:@"x"] && [value isEqual:@"a"]);
+  }];
+  XCTAssertEqualObjects(@{ @"x": @"a" }, result);
+}
+
 @end

@@ -1,6 +1,14 @@
 2.5.?, ??-June-2014
 
   * Fix SHA1 computation for Unicode strings.
+  * Remove dependency between Foundation and Testing additions.
+  * Make dependency between Foundation and Core Data additions explicit.
+  * Add method to construct dictionary by removing a key.
+  * Add method to filter entries from a dictionary.
+  * Add alternative URL Query parameter encoding implementation.
+  * Add method to determine if one dictionary is a subset of another.
+  * Add method to construct dictionary by combining pairs.
+  * Add custom XCTAsserts for dates and strings.
   * Deprecate TDTObjectOrDefault.
 
 2.4.0, 26-June-2014
