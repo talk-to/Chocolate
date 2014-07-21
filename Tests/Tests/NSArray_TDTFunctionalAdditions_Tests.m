@@ -145,4 +145,11 @@
   XCTAssertEqualObjects(valueTwo, result[keyTwo]);
 }
 
+- (void)testCombinedDictionaryConstructionFromKeyValuePairs {
+  // [(k1, v1), (k2, v2), (k1, v3)] => [k1: [v1, v3], k2: [v2]]
+  NSArray *receiver = @[@[@"k1", @"v1"], @[@"k2", @"v2"], @[@"k1", @"v3"]];
+  NSDictionary *expected = @{ @"k1": @[@"v1", @"v3"], @"k2": @[@"v2"] };
+  XCTAssertEqualObjects(expected, [receiver tdt_dictionaryFromCombinedPairs]);
+}
+
 @end

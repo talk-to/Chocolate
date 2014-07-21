@@ -2,11 +2,11 @@
 #import <TDTChocolate/TDTFoundationAdditions.h>
 #import <TDTChocolate/TDTTestingAdditions.h>
 
-@interface NSDictionary_TDTMerging_Tests : XCTestCase
+@interface NSDictionary_TDTAdditions_Tests : XCTestCase
 
 @end
 
-@implementation NSDictionary_TDTMerging_Tests
+@implementation NSDictionary_TDTAdditions_Tests
 
 - (void)testItRetainsOriginalEntries {
   NSString *key = [NSString tdt_randomString];
@@ -36,6 +36,18 @@
   NSDictionary *res = [receiver tdt_dictionaryByMergingDictionary:arg];
 
   XCTAssertEqual(value, res[key]);
+}
+
+- (void)testItRemovesExistingKey {
+  NSDictionary *dict = @{ @"key": @"value" };
+  NSDictionary *result = [dict tdt_dictionaryByRemovingEntryForKey:@"key"];
+  XCTAssertEqualObjects(@{}, result);
+}
+
+- (void)testDictionaryNotChangedIfKeyDoesNotExist {
+  NSDictionary *dict = @{ @"key": @"value" };
+  NSDictionary *result = [dict tdt_dictionaryByRemovingEntryForKey:@"not-key"];
+  XCTAssertEqualObjects(dict, result);
 }
 
 @end
