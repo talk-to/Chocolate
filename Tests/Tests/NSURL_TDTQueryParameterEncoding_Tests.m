@@ -15,6 +15,14 @@
                         [result absoluteString]);
 }
 
+- (void)testEncodingOfSpacesAndPlus {
+  NSDictionary *parameters = @{@"q": @"blue+light blue"};
+  NSURL *receiver = [NSURL URLWithString:@"http://example.com"];
+  NSURL *result = [receiver tdt_URLWithQueryParameters:parameters];
+  XCTAssertEqualObjects(@"http://example.com?q=blue%2Blight%20blue",
+                        [result absoluteString]);
+}
+
 - (void)testEncodingWhenMultipleParameters {
   NSDictionary *parameters = @{ @"x": @"a", @"y": @"b" };
   NSURL *receiver = [NSURL URLWithString:@"http://example.com"];
