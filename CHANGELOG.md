@@ -1,6 +1,7 @@
 2.5.?, ??-June-2014
 
   * Fix SHA1 computation for Unicode strings.
+  * Add category method on NSString for validating email.
 
 2.4.0, 26-June-2014
 
