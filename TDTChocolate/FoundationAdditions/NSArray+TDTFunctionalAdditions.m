@@ -86,7 +86,7 @@
   return result;
 }
 
-- (NSDictionary *)hush_dictionaryFromCombinedPairs {
+- (NSDictionary *)tdt_dictionaryFromCombinedPairs {
   NSMutableDictionary *result = [NSMutableDictionary dictionary];
   [self tdt_applyBlock:^(NSArray *pair) {
     id key = pair[0];

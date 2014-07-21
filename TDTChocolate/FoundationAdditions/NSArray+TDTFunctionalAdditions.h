@@ -69,6 +69,6 @@
 
  @pre The reciever is expected to be of the form @p @[@[key, value] ..].
  */
-- (NSDictionary *)hush_dictionaryFromCombinedPairs;
+- (NSDictionary *)tdt_dictionaryFromCombinedPairs;
 
 @end
