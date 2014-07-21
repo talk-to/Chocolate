@@ -60,4 +60,15 @@
  */
 - (NSDictionary *)tdt_dictionaryFromPairs;
 
+/**
+ Construct a dictionary from (key, value) pairs by collecting values keyed
+ by the same key into arrays.
+
+ Example:
+ [(k1, v1), (k2, v2), (k1, v3)] => [k1: [v1, v3], k2: [v2]]
+
+ @pre The reciever is expected to be of the form @p @[@[key, value] ..].
+ */
+- (NSDictionary *)tdt_dictionaryFromCombinedPairs;
+
 @end

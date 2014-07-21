@@ -173,12 +173,6 @@
             location = "group:NSDictionary+TDTNullNormalization.m">
          </FileRef>
          <FileRef
-            location = "group:NSDictionary+TDTMerging.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSDictionary+TDTMerging.m">
-         </FileRef>
-         <FileRef
             location = "group:NSCalendar+TDTComponents.h">
          </FileRef>
          <FileRef
@@ -201,6 +195,24 @@
          </FileRef>
          <FileRef
             location = "group:NSData+TDTAESDecryption.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSURL+TDTQueryParameterEncoding.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSURL+TDTQueryParameterEncoding.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSDictionary+TDTAdditions.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSDictionary+TDTAdditions.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSDictionary+TDTSubsetEquality.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSDictionary+TDTSubsetEquality.m">
          </FileRef>
       </Group>
       <Group

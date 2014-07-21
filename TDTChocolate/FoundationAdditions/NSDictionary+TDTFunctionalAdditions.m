@@ -18,4 +18,14 @@
   return result;
 }
 
+- (NSDictionary *)tdt_dictionaryByFilteringUsingPredicate:(BOOL (^)(id, id))predicate {
+  NSMutableDictionary *result = [NSMutableDictionary dictionaryWithCapacity:self.count];
+  [self enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+    if (predicate(key, obj)) {
+      result[key] = obj;
+    }
+  }];
+  return result;
+}
+
 @end
