@@ -1,3 +1,7 @@
+2.5.?, 22-July-2014
+
+  * Fix variable name in macro.
+
 2.5.1, 22-July-2014
 
   * Fix isSubsetOf to correctly compare mutable/immutable variants.
