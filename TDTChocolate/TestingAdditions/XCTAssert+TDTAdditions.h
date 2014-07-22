@@ -14,10 +14,10 @@ XCTAssertTrue([(array) containsObject:(object)], @"Expected %@ to contain %@", (
  Assert that @p string contains @p substring
  */
 #define TDTXCTAssertContainsString(string, substring) \
-XCTAssertTrue([(string) tdt_containsString:(substring)], @"Expected %@ to contain %@", (string), (substring))
+XCTAssertTrue([(string) rangeOfString:(substring)].location != NSNotFound, @"Expected %@ to contain %@", (string), (substring))
 
 /**
  Assert that @p a is <= @p b.
  */
 #define TDTXCTAssertEarlierThanOrEqualToDate(a, b) \
-XCTAssertTrue([(a) tdt_isEarlierThanOrEqualToDate:(b)], @"Expected %@ to be earlier than or equal to %@", (a), (b))
+XCTAssertTrue([(a) compare:date] != NSOrderedDescending, @"Expected %@ to be earlier than or equal to %@", (a), (b))
