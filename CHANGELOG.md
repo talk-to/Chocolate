@@ -1,4 +1,4 @@
-2.5.?, 21-July-2014
+2.5.1, 22-July-2014
 
   * Fix isSubsetOf to correctly compare mutable/immutable variants.
   * Remove implicit dependency between Foundation and Testing additions.
