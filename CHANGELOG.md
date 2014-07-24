@@ -1,3 +1,7 @@
+2.5.?, ??-July-2014
+
+  * Expose isSubsetOf for arrays.
+
 2.5.1, 22-July-2014
 
   * Fix isSubsetOf to correctly compare mutable/immutable variants.
