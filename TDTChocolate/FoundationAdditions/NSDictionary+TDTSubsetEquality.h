@@ -10,7 +10,7 @@
  NSDictionary and NSArray instances respond to @p tdt_isSubsetOf in a custom
  manner. For everything else, it fall backs to an @p isEqual check.
 
- @see `- [NSArray tdt_isSubsetOf]`
+ @see `- [NSArray tdt_isSubsetOf:]`
  */
 - (BOOL)tdt_isSubsetOf:(NSDictionary *)dict;
 
