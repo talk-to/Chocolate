@@ -20,4 +20,4 @@ XCTAssertTrue([(string) rangeOfString:(substring)].location != NSNotFound, @"Exp
  Assert that @p a is <= @p b.
  */
 #define TDTXCTAssertEarlierThanOrEqualToDate(a, b) \
-XCTAssertTrue([(a) compare:date] != NSOrderedDescending, @"Expected %@ to be earlier than or equal to %@", (a), (b))
+XCTAssertTrue([(a) compare:(b)] != NSOrderedDescending, @"Expected %@ to be earlier than or equal to %@", (a), (b))

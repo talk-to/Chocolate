@@ -1,5 +1,6 @@
 2.5.?, ??-July-2014
 
+  * Fix variable name in macro.
   * Expose isSubsetOf for arrays.
 
 2.5.1, 22-July-2014
