@@ -1,6 +1,7 @@
 2.5.?, 22-July-2014
 
   * Fix variable name in macro.
+  * Add method for reversing arrays.
 
 2.5.1, 22-July-2014
 
