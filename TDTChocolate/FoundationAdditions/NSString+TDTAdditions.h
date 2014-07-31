@@ -77,4 +77,9 @@
  */
 - (BOOL)tdt_isEmail;
 
+/**
+ @return Returns YES if string contains only @p whitespace characters.
+ */
+- (BOOL)tdt_isBlank;
+
 @end
