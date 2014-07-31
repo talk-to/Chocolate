@@ -80,6 +80,6 @@
 /**
  @return Returns YES if string contains only @p whitespace characters.
  */
-- (BOOL)tdt_isBlank;
+- (BOOL)tdt_isBlankAfterTrimmingWhitespaces;
 
 @end
