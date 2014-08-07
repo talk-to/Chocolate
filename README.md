@@ -39,5 +39,4 @@ and finally import the public header for the Foundation Additions subspec
 See [Release.md]().
 
 [CocoaPods]: http://cocoapods.org/
-[ios-guides]: https://github.com/talk-to/ios-guides
 [using-pull-requests]: https://help.github.com/articles/using-pull-requests
