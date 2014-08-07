@@ -36,7 +36,7 @@ and finally import the public header for the Foundation Additions subspec
 
 ### Release Checklist for Maintainers
 
-See [Release.md]().
+See [Release.md](Release.md).
 
 [CocoaPods]: http://cocoapods.org/
 [using-pull-requests]: https://help.github.com/articles/using-pull-requests
