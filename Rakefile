@@ -16,5 +16,5 @@ def spec_version
 end
 
 def podspec
-  'TDTChocolate.podspec'
+  Dir['*.podspec'].first
 end
