@@ -38,6 +38,14 @@
 - (NSArray *)tdt_filteredArrayUsingBlock:(TDTPredicateBlock)predicate;
 
 /**
+ @return The first object in the receiver for which @p block returns true;
+ otherwise @p nil.
+
+ @p block is not invoked for subsequent objects after the first object is found.
+ */
+- (id)tdt_firstObjectPassingTest:(BOOL (^)(id object))block;
+
+/**
  @return A pair of arrays containing the objects in the receiver for which
  `predicate` returns YES and NO respectively.
  */

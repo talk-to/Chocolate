@@ -57,6 +57,32 @@
                         expectedResult);
 }
 
+- (void)testFirstObjectPassingTestOfEmptyArray {
+  id result = [@[] tdt_firstObjectPassingTest:self.tautology];
+  XCTAssertNil(result);
+}
+
+- (void)testFirstObjectPassingTestOfContradition {
+  id result = [@[@1, @2] tdt_firstObjectPassingTest:self.contradiction];
+  XCTAssertNil(result);
+}
+
+- (void)testFirstObjectPassingTestDoesNotInvokeTestAfterFindingObject {
+  __block NSUInteger count = 0;
+  [@[@1, @2, @3] tdt_firstObjectPassingTest:^BOOL(id object) {
+    count++;
+    return YES;
+  }];
+  XCTAssertEqual(1, count);
+}
+
+- (void)testFirstObjectPassingTest {
+  id result = [@[@1, @2, @3] tdt_firstObjectPassingTest:^BOOL(id object) {
+    return [object integerValue] >= 2;
+  }];
+  XCTAssertEqualObjects(@2, result);
+}
+
 - (void)testSplitOfEmptyArray {
   NSArray *partition = [self.emptyArray tdt_partitionUsingBlock:self.tautology];
   XCTAssertEqual(partition.count, (NSUInteger)2);
