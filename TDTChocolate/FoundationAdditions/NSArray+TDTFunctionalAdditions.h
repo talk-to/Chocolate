@@ -4,6 +4,16 @@
 @interface NSArray (TDTFunctionalAdditions)
 
 /**
+ Reduce from left to right, applying `newResult = block(currentResult, object)`
+ for each @p element in the receiver and return the final value of @p newResult.
+ @p initialObject is used in the first call to @p block.
+
+ Return @p initialObject if the receiver is empty.
+ */
+- (id)tdt_objectAfterReducingWithInitialObject:(id)initialObject
+                                         block:(id (^)(id accumulator, id object))block;
+
+/**
  Apply `selector` to every object in the receiver and return the array formed
  by collecting the results.
 
