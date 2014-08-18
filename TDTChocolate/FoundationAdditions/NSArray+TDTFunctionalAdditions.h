@@ -10,8 +10,8 @@
 
  Return @p initialObject if the receiver is empty.
  */
-- (id)tdt_objectAfterReducingWithInitialObject:(id)initialObject
-                                         block:(id (^)(id accumulator, id object))block;
+- (id)tdt_reduceWithInitialObject:(id)initialObject
+                            block:(id (^)(id accumulator, id object))block;
 
 /**
  Apply `selector` to every object in the receiver and return the array formed

@@ -35,7 +35,7 @@
 
 - (void)testReductionOfEmptyArrayReturnsInitialObject {
   id initialObject = @1;
-  id result = [@[] tdt_objectAfterReducingWithInitialObject:initialObject block:^id(id accumulator, id object) {
+  id result = [@[] tdt_reduceWithInitialObject:initialObject block:^id(id accumulator, id object) {
     return @2;
   }];
   XCTAssertEqualObjects(initialObject, result);
@@ -43,14 +43,14 @@
 
 - (void)testInitialObjectIsUsedInFirstCall {
   id initialObject = @1;
-  [@[@2] tdt_objectAfterReducingWithInitialObject:initialObject block:^id(id accumulator, id object) {
+  [@[@2] tdt_reduceWithInitialObject:initialObject block:^id(id accumulator, id object) {
     XCTAssertEqualObjects(initialObject, accumulator);
     return nil;
   }];
 }
 
 - (void)testReduction {
-  id result = [@[@2, @3] tdt_objectAfterReducingWithInitialObject:@1 block:^id(id accumulator, id object) {
+  id result = [@[@2, @3] tdt_reduceWithInitialObject:@1 block:^id(id accumulator, id object) {
     return @([accumulator intValue] + [object intValue]);
   }];
   XCTAssertEqualObjects(@6, result);

@@ -5,8 +5,8 @@
 
 #pragma mark Reduce
 
-- (id)tdt_objectAfterReducingWithInitialObject:(id)initialObject
-                                         block:(id (^)(id accumulator, id object))block {
+- (id)tdt_reduceWithInitialObject:(id)initialObject
+                            block:(id (^)(id accumulator, id object))block {
   __block id accumulator = initialObject;
   [self tdt_applyBlock:^(id object) {
     accumulator = block(accumulator, object);
