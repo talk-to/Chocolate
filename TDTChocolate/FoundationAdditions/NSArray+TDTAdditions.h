@@ -25,4 +25,9 @@
  */
 - (id)tdt_onlyObjectOrNil;
 
+/**
+ @return array with the receiver's entries in reverse order.
+ */
+- (NSArray *)tdt_reversedArray;
+
 @end

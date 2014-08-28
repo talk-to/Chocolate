@@ -60,4 +60,11 @@
   XCTAssertNil([receiver tdt_onlyObjectOrNil]);
 }
 
+- (void)testReversing {
+  NSArray *receiver = @[@1, @2, @3, @4];
+  NSArray *expected = @[@4, @3, @2, @1];
+  NSArray *result = [receiver tdt_reversedArray];
+  XCTAssertEqualObjects(expected, result);
+}
+
 @end
