@@ -84,4 +84,9 @@
   return isValid;
 }
 
+- (BOOL)tdt_isBlankAfterTrimmingWhitespaces {
+  NSString *trimmedString = [self tdt_stringByTrimmingWhitespaceAndNewlines];
+  return ![trimmedString tdt_isNonEmpty];
+}
+
 @end

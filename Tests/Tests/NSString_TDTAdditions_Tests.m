@@ -144,4 +144,9 @@
   XCTAssertFalse([@"abc@def." tdt_isEmail]);
 }
 
+- (void)testIsBlank {
+  XCTAssertTrue([@" \n\t" tdt_isBlankAfterTrimmingWhitespaces]);
+  XCTAssertFalse([@" non blank string" tdt_isBlankAfterTrimmingWhitespaces]);
+}
+
 @end

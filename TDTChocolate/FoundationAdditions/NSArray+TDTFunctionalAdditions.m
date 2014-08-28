@@ -3,6 +3,17 @@
 
 @implementation NSArray (TDTFunctionalAdditions)
 
+#pragma mark Reduce
+
+- (id)tdt_reduceWithInitialObject:(id)initialObject
+                            block:(id (^)(id accumulator, id object))block {
+  __block id accumulator = initialObject;
+  [self tdt_applyBlock:^(id object) {
+    accumulator = block(accumulator, object);
+  }];
+  return accumulator;
+}
+
 #pragma mark Map
 
 - (NSArray *)tdt_arrayByMappingWithBlock:(TDTMapBlock)block {

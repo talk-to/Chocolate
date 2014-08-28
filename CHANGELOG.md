@@ -1,6 +1,8 @@
 2.5.?, 22-July-2014
 
   * Fix variable name in macro.
+  * Add method to check blank string.
+  * Add method for array reduction.
   * Add method for reversing arrays.
 
 2.5.1, 22-July-2014
