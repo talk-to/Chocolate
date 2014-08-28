@@ -1,14 +1,5 @@
 #import "NSDictionary+TDTSubsetEquality.h"
 
-@interface NSArray (TDTSubsetEquality)
-
-/**
- Internal helper method for use by `- [NSDictionary tdt_isSubsetOf]`.
- */
-- (BOOL)tdt_isSubsetOf:(NSArray *)array;
-
-@end
-
 static BOOL TDTPartialStructureEqualityIsMatch(id obj, id otherObj) {
   if (!otherObj) {
     return NO;

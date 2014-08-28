@@ -214,6 +214,9 @@
          <FileRef
             location = "group:NSDictionary+TDTSubsetEquality.m">
          </FileRef>
+         <FileRef
+            location = "group:NSArray+TDTSubsetEquality.h">
+         </FileRef>
       </Group>
       <Group
          location = "group:TestingAdditions"
