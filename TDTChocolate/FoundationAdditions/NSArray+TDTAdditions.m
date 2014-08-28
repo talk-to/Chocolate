@@ -14,4 +14,8 @@
   return (self.count == 1) ? [self firstObject] : nil;
 }
 
+- (NSArray *)tdt_reversedArray {
+  return [[self reverseObjectEnumerator] allObjects];
+}
+
 @end
