@@ -44,7 +44,7 @@
   return [self filteredArrayUsingPredicate:predicate];
 }
 
-- (id)tdt_firstObjectPassingTest:(BOOL (^)(id object))block {
+- (id)tdt_objectPassingTest:(BOOL (^)(id object))block {
   for (id object in self) {
     if (block(object)) {
       return object;

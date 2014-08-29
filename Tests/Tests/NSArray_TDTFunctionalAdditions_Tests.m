@@ -58,18 +58,18 @@
 }
 
 - (void)testFirstObjectPassingTestOfEmptyArray {
-  id result = [@[] tdt_firstObjectPassingTest:self.tautology];
+  id result = [@[] tdt_objectPassingTest:self.tautology];
   XCTAssertNil(result);
 }
 
 - (void)testFirstObjectPassingTestOfContradition {
-  id result = [@[@1, @2] tdt_firstObjectPassingTest:self.contradiction];
+  id result = [@[@1, @2] tdt_objectPassingTest:self.contradiction];
   XCTAssertNil(result);
 }
 
 - (void)testFirstObjectPassingTestDoesNotInvokeTestAfterFindingObject {
   __block NSUInteger count = 0;
-  [@[@1, @2, @3] tdt_firstObjectPassingTest:^BOOL(id object) {
+  [@[@1, @2, @3] tdt_objectPassingTest:^BOOL(id object) {
     count++;
     return YES;
   }];
@@ -77,7 +77,7 @@
 }
 
 - (void)testFirstObjectPassingTest {
-  id result = [@[@1, @2, @3] tdt_firstObjectPassingTest:^BOOL(id object) {
+  id result = [@[@1, @2, @3] tdt_objectPassingTest:^BOOL(id object) {
     return [object integerValue] >= 2;
   }];
   XCTAssertEqualObjects(@2, result);

@@ -43,7 +43,7 @@
 
  @p block is not invoked for subsequent objects after the first object is found.
  */
-- (id)tdt_firstObjectPassingTest:(BOOL (^)(id object))block;
+- (id)tdt_objectPassingTest:(BOOL (^)(id object))block;
 
 /**
  @return A pair of arrays containing the objects in the receiver for which
