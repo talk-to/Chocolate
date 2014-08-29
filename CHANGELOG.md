@@ -3,7 +3,7 @@
   * Fix variable name in macro.
   * Add method to check blank string.
 
-  * Add method to extract first object passing test from array.
+  * Add method to extract the first object passing test from an array.
 
 2.5.1, 22-July-2014
 
