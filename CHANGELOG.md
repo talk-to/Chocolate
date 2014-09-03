@@ -6,6 +6,8 @@
   * Add method for reversing arrays.
   * Expose isSubsetOf for arrays.
 
+  * Add onlyObjectOrNil for sets.
+
 2.5.1, 22-July-2014
 
   * Fix isSubsetOf to correctly compare mutable/immutable variants.
