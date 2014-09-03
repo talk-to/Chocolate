@@ -50,4 +50,18 @@
   XCTAssertEqualObjects(dict, result);
 }
 
+- (void)testWritesInBinaryFormat {
+  // A suitable candidate to test that the file was indeed written in the
+  // binary format is to use an NSDate value, because the fractional part of
+  // dates are truncated in the XML format.
+  NSDate *date = [NSDate dateWithTimeIntervalSince1970:1.25];
+  NSDictionary *dict = @{@"date": date};
+
+  [[NSFileManager defaultManager] tdt_withTemporaryPath:^(NSString *path) {
+    [dict tdt_writeInBinaryFormatToFile:path atomically:YES];
+    NSDictionary *result = [NSDictionary dictionaryWithContentsOfFile:path];
+    XCTAssertEqualWithAccuracy(1.25, [result[@"date"] timeIntervalSince1970], 0.01);
+  }];
+}
+
 @end

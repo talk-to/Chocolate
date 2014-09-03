@@ -19,4 +19,15 @@
  */
 - (NSDictionary *)tdt_dictionaryByRemovingEntryForKey:(id)key;
 
+/**
+ Write a plist in the @p NSPropertyListBinaryFormat_v1_0 format.
+
+ This file can be later read-in via the stock @p dictionaryWithContentsOfFile.
+
+ @discussion Milliseconds in dates are not preserved when writing dictionaries
+ in the XML format (as is done by the stock @p writeToFile:atomically method).
+ */
+- (BOOL)tdt_writeInBinaryFormatToFile:(NSString *)path
+                           atomically:(BOOL)useAuxiliaryFile;
+
 @end

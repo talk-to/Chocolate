@@ -11,6 +11,9 @@
 
   * Add method to extract the first object passing test from an array.
 
+  * Add test methods to simplify working with temporary file paths.
+  * Add method for writing property lists in the binary format.
+
 2.5.1, 22-July-2014
 
   * Fix isSubsetOf to correctly compare mutable/immutable variants.
