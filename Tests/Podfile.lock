@@ -16,6 +16,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  TDTChocolate: 1cbbb14b9c964cfe9dbd723a490a416a63651e3c
+  TDTChocolate: 6384bb37c066e240a1a14b0a2f7dab9628d218a3
 
 COCOAPODS: 0.33.1
