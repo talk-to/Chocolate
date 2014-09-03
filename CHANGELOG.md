@@ -5,6 +5,7 @@
   * Add method for array reduction.
   * Add method for reversing arrays.
   * Expose isSubsetOf for arrays.
+  * Change OSX minimum deployment target to 10.8
 
 2.5.1, 22-July-2014
 
