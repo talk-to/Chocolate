@@ -55,6 +55,15 @@
   return [self filteredArrayUsingPredicate:predicate];
 }
 
+- (id)tdt_objectPassingTest:(BOOL (^)(id object))block {
+  for (id object in self) {
+    if (block(object)) {
+      return object;
+    }
+  }
+  return nil;
+}
+
 #pragma mark Partition
 
 - (NSArray *)tdt_partitionUsingBlock:(TDTPredicateBlock)predicate {
