@@ -1,4 +1,5 @@
 #import "NSDictionary+TDTAdditions.h"
+#import "TDTAssert.h"
 
 @implementation NSDictionary (TDTAdditions)
 
@@ -16,6 +17,7 @@
 
 - (BOOL)tdt_writeInBinaryFormatToFile:(NSString *)path
                            atomically:(BOOL)useAuxiliaryFile {
+  TDTParameterAssert(path);
   NSData *data = [NSPropertyListSerialization dataWithPropertyList:self
                                                             format:NSPropertyListBinaryFormat_v1_0
                                                            options:0
