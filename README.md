@@ -46,7 +46,7 @@ release notes.
 
     rake release
 
-Subsequently, you need select the "Add release notes" on the
+Subsequently, you need to select the "Add release notes" on the
 [GitHub tags listing][tags] for the release to show up on the
 [Releases][releases] page.
 
