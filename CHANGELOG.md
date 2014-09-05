@@ -3,6 +3,7 @@
   * Fix variable name in macro.
   * Add method to check blank string.
   * Add method for array reduction.
+  * Fix nil handling in custom asserts.
   * Add method for reversing arrays.
   * Expose isSubsetOf for arrays.
   * Change OSX minimum deployment target to 10.8
