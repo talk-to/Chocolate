@@ -32,7 +32,7 @@ and finally import the public header for the Foundation Additions subspec
 
 ## Changes
 
-See the [Release Notes][releases]
+See the [Release Notes][releases].
 
 ## Contributing
 
