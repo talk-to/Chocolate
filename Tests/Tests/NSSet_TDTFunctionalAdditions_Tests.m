@@ -37,4 +37,18 @@
   XCTAssertFalse([set tdt_anyWithBlock:predicateMatchingNoElement]);
 }
 
+- (void)testOnlyObjectForEmptySet {
+  XCTAssertNil([[NSSet set] tdt_onlyObjectOrNil]);
+}
+
+- (void)testOnlyObjectForSetWithOneElement {
+  NSSet *receiver = [NSSet setWithObject:@1];
+  XCTAssertEqualObjects(@1, [receiver tdt_onlyObjectOrNil]);
+}
+
+- (void)testOnlyObjectForSetWithMultipleElements {
+  NSSet *receiver = [NSSet setWithObjects:@1, @2, nil];
+  XCTAssertNil([receiver tdt_onlyObjectOrNil]);
+}
+
 @end

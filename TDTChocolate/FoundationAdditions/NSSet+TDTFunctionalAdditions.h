@@ -44,4 +44,9 @@
  */
 - (BOOL)tdt_anyWithBlock:(TDTPredicateBlock)predicate;
 
+/**
+ @see -[NSArray tdt_onlyObjectOrNil]
+ */
+- (id)tdt_onlyObjectOrNil;
+
 @end

@@ -62,4 +62,15 @@ XCTAssertFalse([(a) tdt_isSubsetOf:(b)], @"Expected %@ to not be a subset of %@"
   TDTXCTAssertIsSubset(immutableDict, mutableDict);
 }
 
+- (void)testArraysCompareMemberwise {
+  NSArray *receiver = @[@1, @{ @2: @3 }];
+  NSArray *argument = @[@1, @{ @2: @3, @4: @5 }];
+  TDTXCTAssertIsSubset(receiver, argument);
+}
+
+- (void)testSubsetsAreNotProper {
+  NSDictionary *receiver = [NSDictionary dictionary];
+  XCTAssertTrue([receiver tdt_isSubsetOf:receiver]);
+}
+
 @end

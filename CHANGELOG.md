@@ -1,9 +1,16 @@
-2.5.?, 22-July-2014
+2.5.?, ??-July-2014
 
   * Fix variable name in macro.
   * Add method to check blank string.
   * Add method for array reduction.
   * Fix nil handling in custom asserts.
+  * Add method for reversing arrays.
+  * Expose isSubsetOf for arrays.
+  * Change OSX minimum deployment target to 10.8
+
+  * Add onlyObjectOrNil for sets.
+
+  * Add method to extract the first object passing test from an array.
 
 2.5.1, 22-July-2014
 

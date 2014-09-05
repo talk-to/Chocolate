@@ -68,4 +68,10 @@
   return NO;
 }
 
+#pragma mark -
+
+- (id)tdt_onlyObjectOrNil {
+  return (self.count == 1) ? [self anyObject] : nil;
+}
+
 @end

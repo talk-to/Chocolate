@@ -33,3 +33,4 @@
 #import "FoundationAdditions/NSData+TDTAESDecryption.h"
 #import "FoundationAdditions/NSURL+TDTQueryParameterEncoding.h"
 #import "FoundationAdditions/NSDictionary+TDTSubsetEquality.h"
+#import "FoundationAdditions/NSArray+TDTSubsetEquality.h"
