@@ -34,21 +34,9 @@ and finally import the public header for the Foundation Additions subspec
 
 [Pull Requests are welcome!][using-pull-requests]
 
-## Release Checklist for Maintainers
+### Releasing a new version
 
-* Update the CHANGELOG.
-
-* Modify the version in the Podspec.
-
-* Update the version of Chocolate used by the Tests
-
-        cd Tests/ && pod update --no-repo-update
-
-* Run the tests.
-
-* Commit your changes.
-
-* `rake publish`
+    rake release
 
 [CocoaPods]: http://cocoapods.org/
 [ios-guides]: https://github.com/talk-to/ios-guides
