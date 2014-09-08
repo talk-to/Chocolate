@@ -3,3 +3,4 @@
 #import "TestingAdditions/NSInvocation+TDTIndexTranslation.h"
 #import "TestingAdditions/TDTPrimitiveConstants.h"
 #import "TestingAdditions/XCTAssert+TDTAdditions.h"
+#import "TestingAdditions/NSFileManager+TDTTemporaryFilePaths.h"

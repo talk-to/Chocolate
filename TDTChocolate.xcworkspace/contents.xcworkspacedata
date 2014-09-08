@@ -240,6 +240,12 @@
             location = "group:NSInvocation+TDTIndexTranslation.m">
          </FileRef>
          <FileRef
+            location = "group:NSFileManager+TDTTemporaryFilePaths.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSFileManager+TDTTemporaryFilePaths.m">
+         </FileRef>
+         <FileRef
             location = "group:TDTPrimitiveConstants.h">
          </FileRef>
          <FileRef
