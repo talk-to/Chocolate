@@ -30,14 +30,28 @@ and finally import the public header for the Foundation Additions subspec
 
     #import <TDTChocolate/TDTFoundationAdditions.h>
 
+## Changes
+
+See the [Release Notes][releases].
+
 ## Contributing
 
 [Pull Requests are welcome!][using-pull-requests]
 
-### Releasing a new version
+### [For Maintainers] Releasing a new version
+
+Use the following rake task to create a new release. This will ask you
+for the new version, and then open up an editor for you to enter the
+release notes.
 
     rake release
+
+Subsequently, you need to select the "Add release notes" on the
+[GitHub tags listing][tags] for the release to show up on the
+[Releases][releases] page.
 
 [CocoaPods]: http://cocoapods.org/
 [ios-guides]: https://github.com/talk-to/ios-guides
 [using-pull-requests]: https://help.github.com/articles/using-pull-requests
+[releases]: https://github.com/talk-to/Chocolate/releases
+[tags]: https://github.com/talk-to/Chocolate/tags
