@@ -142,6 +142,7 @@
   XCTAssertFalse([@"abc.com" tdt_isEmail]);
   XCTAssertFalse([@"abc@" tdt_isEmail]);
   XCTAssertFalse([@"abc@def." tdt_isEmail]);
+  XCTAssertFalse([@"abc@def..com" tdt_isEmail]);
 }
 
 - (void)testIsBlank {
