@@ -50,7 +50,7 @@
 }
 
 - (NSString *)tdt_stringByNillingBlanks {
-  return [self tdt_isNonEmpty] ? self : nil;
+  return [self tdt_isBlankAfterTrimmingWhitespaces] ? nil : self;
 }
 
 - (BOOL)tdt_containsString:(NSString *)string {
