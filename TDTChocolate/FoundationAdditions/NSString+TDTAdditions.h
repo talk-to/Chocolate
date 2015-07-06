@@ -78,6 +78,12 @@
 - (BOOL)tdt_isEmail;
 
 /**
+ This method is using the simpler regex than the regex in the existing method.
+ @return Return YES if string is valid email, otherwise NO.
+ */
+- (BOOL)tdt_isEmail2;
+
+/**
  @return Returns YES if string contains only @p whitespace characters.
  */
 - (BOOL)tdt_isBlankAfterTrimmingWhitespaces;
