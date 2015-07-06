@@ -133,8 +133,8 @@
 }
 
 - (void)testIsValidEmail {
-  NSString *email = @"abc@def.com";
-  XCTAssertTrue([email tdt_isEmail]);
+  XCTAssertTrue([@"abc@def.com" tdt_isEmail]);
+  XCTAssertTrue([@"abcDef@ghi.com" tdt_isEmail]);
 }
 
 - (void)testIsInvalidEmail {
@@ -143,7 +143,19 @@
   XCTAssertFalse([@"abc@" tdt_isEmail]);
   XCTAssertFalse([@"abc@def." tdt_isEmail]);
   XCTAssertFalse([@"abc@def..com" tdt_isEmail]);
-  XCAssertTrue([@"abcDef@ghi.com" tdt_isEmail]);
+}
+
+- (void)testIsValidEmail2 {
+  XCTAssertTrue([@"abc@def.com" tdt_isEmail2]);
+  XCTAssertTrue([@"abcDef@ghi.com" tdt_isEmail2]);
+  XCTAssertTrue([@"abc@def..com" tdt_isEmail2]);
+}
+
+- (void)testIsInvalidEmail2 {
+  XCTAssertFalse([@"abc" tdt_isEmail2]);
+  XCTAssertFalse([@"abc.com" tdt_isEmail2]);
+  XCTAssertFalse([@"abc@" tdt_isEmail2]);
+  XCTAssertFalse([@"abc@def." tdt_isEmail2]);
 }
 
 - (void)testIsBlank {
