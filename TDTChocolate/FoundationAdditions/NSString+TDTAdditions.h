@@ -78,7 +78,8 @@
 - (BOOL)tdt_isEmail;
 
 /**
- This method is using the simpler regex than the regex in the existing method.
+ Variant of @pre tdt_isEmail that uses a simpler regex with the aim:
+ "Never disallow a valid email address, and disallow _most_ invalid ones"
  @return Return YES if string is valid email, otherwise NO.
  */
 - (BOOL)tdt_isEmail2;
