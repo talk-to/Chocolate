@@ -146,7 +146,7 @@ def tag_with_message(current_version, new_version)
   File.write(path, template)
   sh "git log ^#{current_version} HEAD | sed 's/^/# /' >>#{path}"
 
-  sh "$EDITOR #{path}"
+  sh "${EDITOR:-vi} #{path}"
   sh "git tag -a #{new_version} -F '#{path}'"
 
   File.delete(path)
