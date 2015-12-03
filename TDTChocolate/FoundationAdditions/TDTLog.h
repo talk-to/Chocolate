@@ -16,15 +16,16 @@
 
  @note Make sure that 'format' is a literal Objective-C string. We need it to
  be a literal since we are relying on string literal contatenation here.
-
- Clients can set the `TDTLogErrorWarningHook` function pointer to point to
- a function which will then be invoked with the formatted log message whenever
- a log message with ERROR or WARN level is emitted.
  */
 
 typedef void (*TDTLogErrorWarningHookFunction)(NSString *message) DEPRECATED_MSG_ATTRIBUTE("Use @p TDTLoggingHookFunction instead. @p TDTLogErrorWarningHookFunction will be removed in next major release.");
 typedef void (*TDTLoggingHookFunction)(NSString *message);
 
+/**
+ Clients can set the `TDTLogErrorWarningHook` function pointer to point to
+ a function which will then be invoked with the formatted log message whenever
+ a log message with ERROR or WARN level is emitted.
+ */
 extern TDTLoggingHookFunction TDTLogErrorWarningHook;
 
 /**
