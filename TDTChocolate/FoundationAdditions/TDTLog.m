@@ -2,7 +2,8 @@
 #import "../FoundationAdditions/NSDateFormatter+TDTISO8601Formatting.h"
 #import <libkern/OSAtomic.h>
 
-TDTLogErrorWarningHookFunction TDTLogErrorWarningHook;
+TDTLoggingHookFunction TDTLogErrorWarningHook;
+TDTLoggingHookFunction TDTLoggingHook;
 
 static NSDateFormatter *SharedISO8601DateFormatter() {
   static NSDateFormatter *formatter;
