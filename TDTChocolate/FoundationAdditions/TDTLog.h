@@ -24,6 +24,15 @@
 
 typedef void (*TDTLogErrorWarningHookFunction)(NSString *message);
 extern TDTLogErrorWarningHookFunction TDTLogErrorWarningHook;
+typedef void (*TDTLoggingHookFunction)(NSString *message);
+
+
+/**
+ Clients can set the `TDTLoggingHook` function pointer to point to a function
+ which will then be invoked with the formatted log message whenever a log
+ message is emitted.
+ */
+extern TDTLoggingHookFunction TDTLoggingHook;
 
 #define TDTLogError(format, ...) \
 do { \
@@ -32,6 +41,9 @@ NSString *__msg00 = [[NSString alloc] initWithFormat:(@"ERROR %s #%d " format), 
 TDTLog(@"%@", __msg00); \
 if (TDTLogErrorWarningHook != NULL) { \
 TDTLogErrorWarningHook(__msg00); \
+} \
+if (TDTLoggingHook != NULL) { \
+TDTLoggingHook(__msg00); \
 } \
 } \
 } while (0)
@@ -44,20 +56,31 @@ TDTLog(@"%@", __msg00); \
 if (TDTLogErrorWarningHook != NULL) { \
 TDTLogErrorWarningHook(__msg00); \
 } \
+if (TDTLoggingHook != NULL) { \
+TDTLoggingHook(__msg00); \
+} \
 } \
 } while (0)
 
 #define TDTLogInfo(format, ...) \
 do { \
 if (DEBUG_INFO) { \
-TDTLog((@"INFO %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__); \
+NSString *__msg = [[NSString alloc] initWithFormat:(@"INFO %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__]; \
+TDTLog(@"%@", __msg); \
+if (TDTLoggingHook != NULL) { \
+TDTLoggingHook(__msg); \
+} \
 } \
 } while (0)
 
 #define TDTLogVerbose(format, ...) \
 do { \
 if (DEBUG_VERBOSE) { \
-TDTLog((@"VERBOSE %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__); \
+NSString *__msg = [[NSString alloc] initWithFormat:(@"VERBOSE %s #%d " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__]; \
+TDTLog(@"%@", __msg); \
+if (TDTLoggingHook != NULL) { \
+TDTLoggingHook(__msg); \
+} \
 } \
 } while (0)
 
