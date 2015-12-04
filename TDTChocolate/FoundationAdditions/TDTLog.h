@@ -22,10 +22,10 @@
  a log message with ERROR or WARN level is emitted.
  */
 
-typedef void (*TDTLogErrorWarningHookFunction)(NSString *message);
-extern TDTLogErrorWarningHookFunction TDTLogErrorWarningHook;
+typedef void (*TDTLogErrorWarningHookFunction)(NSString *message) DEPRECATED_MSG_ATTRIBUTE("Use @p TDTLoggingHookFunction instead. @p TDTLogErrorWarningHookFunction will be removed in next major release.");
 typedef void (*TDTLoggingHookFunction)(NSString *message);
 
+extern TDTLoggingHookFunction TDTLogErrorWarningHook;
 
 /**
  Clients can set the `TDTLoggingHook` function pointer to point to a function
