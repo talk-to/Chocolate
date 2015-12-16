@@ -217,6 +217,12 @@
          <FileRef
             location = "group:NSArray+TDTSubsetEquality.h">
          </FileRef>
+         <FileRef
+            location = "group:NSTimeZone+TDTAdditions.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSTimeZone+TDTAdditions.m">
+         </FileRef>
       </Group>
       <Group
          location = "group:TestingAdditions"
