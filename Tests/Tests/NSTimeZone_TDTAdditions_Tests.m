@@ -45,4 +45,8 @@
   [self checkTimeNumoffset:@"-05:30" forSecondsFromGMT:-19800];
 }
 
+- (void)testItAddsPositiveSignForGMTTimeZone {
+  [self checkTimeNumoffset:@"+00:00" forSecondsFromGMT:0];
+}
+
 @end
