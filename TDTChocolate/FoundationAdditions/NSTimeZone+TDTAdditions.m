@@ -16,11 +16,9 @@ static const NSInteger NumMinutesInHour = 60;
 
 - (NSString *)tdt_timeNumoffset {
   NSInteger seconds = self.secondsFromGMT;
-  NSString *sign = @"+";
-  if (seconds < 0) {
-    seconds = -seconds;
-    sign = @"-";
-  }
+  NSString *sign = (seconds < 0) ? @"-" : @"+";
+  seconds = abs(seconds);
+
   int minutes = (seconds / NumSecondsInMinute) % NumMinutesInHour;
   int hours = (int)seconds / (NumSecondsInMinute * NumMinutesInHour);
   
