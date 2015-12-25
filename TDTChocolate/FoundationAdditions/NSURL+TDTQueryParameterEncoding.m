@@ -30,8 +30,9 @@
   }];
   NSArray *URLComponents = @[[self absoluteString],
                              [encodedParameters componentsJoinedByString:@"&"]];
-  return [NSURL URLWithString:
-          [URLComponents componentsJoinedByString:@"?"]];
+  return (([URLComponents[0] rangeOfString:@"?"].location != NSNotFound)
+          ? [NSURL URLWithString:[URLComponents componentsJoinedByString:@"&"]]
+          : [NSURL URLWithString:[URLComponents componentsJoinedByString:@"?"]]);
 }
 
 @end
