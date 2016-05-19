@@ -2,17 +2,10 @@
 #import "TDTAssert.h"
 #include <sys/sysctl.h>
 
-static NSString *const InjectedBundleEnvironmentKey = @"XCInjectBundle";
-static NSString *const OCTestBundlePathExtension = @"octest";
-static NSString *const XCTestBundlePathExtension = @"xctest";
-
 @implementation NSProcessInfo (TDTEnvironmentDetection)
 
 - (BOOL)tdt_isRunningTests {
-  NSString *injectedBundle = self.environment[InjectedBundleEnvironmentKey];
-  NSArray *knownTestBundleExtensions = @[OCTestBundlePathExtension,
-                                         XCTestBundlePathExtension];
-  return [knownTestBundleExtensions containsObject:injectedBundle.pathExtension];
+  return (NSClassFromString(@"XCTest") != nil);
 }
 
 - (BOOL)tdt_isDebugged {
