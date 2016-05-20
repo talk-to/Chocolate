@@ -4,7 +4,7 @@
 
 - (NSString *)tdt_temporaryFilePath {
   NSString *UUID = [[NSUUID UUID] UUIDString];
-  return [NSTemporaryDirectory() stringByAppendingString:UUID];
+  return [NSTemporaryDirectory() stringByAppendingPathComponent:UUID];
 }
 
 - (void)tdt_withTemporaryPath:(void (^)(NSString *path))block {
