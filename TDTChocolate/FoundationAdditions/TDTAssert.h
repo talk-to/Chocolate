@@ -69,7 +69,7 @@ TDTAssert((__TDT_v1 == __TDT_v2) || [__TDT_v1 isEqual:__TDT_v2], ## format); \
 #define TDTAssertTrue(expr, format...) TDTAssert(expr, ## format)
 
 /// Signal an assertion failure if `expr` is YES.
-#define TDTAssertFalse(expr, format...) TDTAssert(expr == NO, ## format)
+#define TDTAssertFalse(expr, format...) TDTAssert((expr) == NO, ## format)
 
 /// Signal an assertion failure if `expr` is nil.
 #define TDTAssertNotNil(expr, format...) TDTAssert((expr) != nil, ## format)
