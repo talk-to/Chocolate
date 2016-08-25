@@ -14,7 +14,7 @@
 }
 
 + (NSString *)tdt_stringWithUInt64:(uint64_t)uInt64 {
-  return [self stringWithFormat:@"%PRIu64", uInt64];
+  return [self stringWithFormat:@"%" PRIu64, uInt64];
 }
 
 + (NSString *)tdt_stringWithInteger:(NSInteger)integer {
