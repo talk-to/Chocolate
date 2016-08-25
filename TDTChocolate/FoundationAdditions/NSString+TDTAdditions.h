@@ -12,7 +12,7 @@
  */
 + (NSString *)tdt_stringWithUnsignedInteger:(NSUInteger)unsignedInteger;
 
-+ (NSString *)tdt_stringWithUnsignedLongLong:(uint64_t)unsignedLongLong;
++ (NSString *)tdt_stringWithUInt64:(uint64_t)uInt64;
 
 /**
  There is no platform agnostic format specifier for an `NSInteger`. Ergo this.

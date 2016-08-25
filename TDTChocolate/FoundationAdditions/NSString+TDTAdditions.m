@@ -13,8 +13,8 @@
   return [self stringWithFormat:@"%llu", (unsigned long long)unsignedInteger];
 }
 
-+ (NSString *)tdt_stringWithUnsignedLongLong:(uint64_t)unsignedLongLong {
-  return [self stringWithFormat:@"%llu", unsignedLongLong];
++ (NSString *)tdt_stringWithUInt64:(uint64_t)uInt64 {
+  return [self stringWithFormat:@"%PRIu64", uInt64];
 }
 
 + (NSString *)tdt_stringWithInteger:(NSInteger)integer {
