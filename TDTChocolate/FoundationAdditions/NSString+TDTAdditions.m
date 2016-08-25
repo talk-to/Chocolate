@@ -77,7 +77,7 @@
   return (NSUInteger)ul;
 }
 
-- (uint64_t)tdt_unsignedLongLongValue {
+- (uint64_t)tdt_uInt64 {
   unsigned long long ull = strtoull([self cStringUsingEncoding:NSUTF8StringEncoding], NULL, 10);
   return (uint64_t)ull;
 }
