@@ -67,6 +67,12 @@
 - (NSUInteger)tdt_unsignedIntegerValue;
 
 /**
+ @return The uint64_t value of the receiver’s text, assuming a decimal
+ representation.
+ */
+- (uint64_t)tdt_unsignedLongLongValue;
+
+/**
  @return String obtained by removing all occurrences of any of the characters
  in the @p characters set.
  */

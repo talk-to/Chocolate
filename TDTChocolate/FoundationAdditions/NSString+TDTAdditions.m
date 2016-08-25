@@ -73,6 +73,11 @@
   return (NSUInteger)ul;
 }
 
+- (uint64_t)tdt_unsignedLongLongValue {
+  unsigned long long ull = strtoull([self cStringUsingEncoding:NSUTF8StringEncoding], NULL, 10);
+  return (uint64_t)ull;
+}
+
 - (NSString *)tdt_stringByRemovingCharacters:(NSCharacterSet *)characters {
   return [[self componentsSeparatedByCharactersInSet:characters] componentsJoinedByString:@""];
 }
