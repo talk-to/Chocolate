@@ -12,6 +12,8 @@
  */
 + (NSString *)tdt_stringWithUnsignedInteger:(NSUInteger)unsignedInteger;
 
++ (NSString *)tdt_stringWithUInt64:(uint64_t)uInt64;
+
 /**
  There is no platform agnostic format specifier for an `NSInteger`. Ergo this.
  */
@@ -65,6 +67,12 @@
  value is `NSUIntegerMax`.
  */
 - (NSUInteger)tdt_unsignedIntegerValue;
+
+/**
+ @return The uint64_t value of the receiver’s text, assuming a decimal
+ representation.
+ */
+- (uint64_t)tdt_uInt64;
 
 /**
  @return String obtained by removing all occurrences of any of the characters

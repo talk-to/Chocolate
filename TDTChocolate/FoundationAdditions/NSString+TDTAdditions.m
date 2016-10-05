@@ -13,6 +13,10 @@
   return [self stringWithFormat:@"%llu", (unsigned long long)unsignedInteger];
 }
 
++ (NSString *)tdt_stringWithUInt64:(uint64_t)uInt64 {
+  return [self stringWithFormat:@"%" PRIu64, uInt64];
+}
+
 + (NSString *)tdt_stringWithInteger:(NSInteger)integer {
   return [self stringWithFormat:@"%lld", (long long)integer];
 }
@@ -71,6 +75,11 @@
     ul = NSUIntegerMax;
   }
   return (NSUInteger)ul;
+}
+
+- (uint64_t)tdt_uInt64 {
+  unsigned long long ull = strtoull([self cStringUsingEncoding:NSUTF8StringEncoding], NULL, 10);
+  return (uint64_t)ull;
 }
 
 - (NSString *)tdt_stringByRemovingCharacters:(NSCharacterSet *)characters {
