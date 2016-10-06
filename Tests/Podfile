@@ -1,18 +1,13 @@
-xcodeproj 'TDTChocolateTests'
 workspace '../TDTChocolate'
 
 def import_pods
-  pod 'TDTChocolate', :path => '../'
+    pod 'TDTChocolate', :path => '../'
 end
 
-target :ios do
-  platform :ios, '7.0'
-  link_with 'iOSTests'
+target 'iOSTests' do
   import_pods
 end
 
-target :osx do
-  platform :osx, '10.9'
-  link_with 'OSXTests'
+target 'OSXTests' do
   import_pods
 end
