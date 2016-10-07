@@ -51,7 +51,7 @@ release notes.
 
 Subsequently, you need to select the "Add release notes" on the
 [GitHub tags listing][tags] for the release to show up on the
-[Releases][releases] page.
+[Releases][releases] page. Or you can "Draft a new release" on [releases page][releases].
 
 [CocoaPods]: http://cocoapods.org/
 [ios-guides]: https://github.com/talk-to/ios-guides
