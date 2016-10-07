@@ -37,6 +37,10 @@ See the [Release Notes][releases].
 
 [Pull Requests are welcome!][using-pull-requests]
 
+## License
+
+Available under the BSD license. See the [LICENSE][LICENSE] file for more info.
+
 ### [For Maintainers] Releasing a new version
 
 Use the following rake task to create a new release. This will ask you
@@ -57,3 +61,4 @@ Subsequently, you need to select the "Add release notes" on the
 [FoundationAdditions]: https://github.com/talk-to/Chocolate/tree/master/TDTChocolate/FoundationAdditions
 [CoreDataAdditions]: https://github.com/talk-to/Chocolate/tree/master/TDTChocolate/CoreDataAdditions
 [TestingAdditions]: https://github.com/talk-to/Chocolate/tree/master/TDTChocolate/TestingAdditions
+[LICENSE]: LICENSE
