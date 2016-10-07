@@ -17,10 +17,9 @@ Chocolate consists of three modules:
 Chocolate is published as a [CocoaPod][CocoaPods], with each the
 three modules above listed as a separate subspec.
 
-For example, to use the first public release of Chocolate's Foundation
-Additions, we will need to add the following to our `Podfile`
+For example, to use Chocolate's [Foundation Additions][FoundationAdditions], add the following to your `Podfile`
 
-    pod 'TDTChocolate/FoundationAdditions', :git => 'git@github.com:talk-to/Chocolate', :tag => '1.0.0'
+    pod 'TDTChocolate/FoundationAdditions'
 
 then run
 
