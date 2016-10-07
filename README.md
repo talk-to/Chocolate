@@ -3,12 +3,12 @@ simplify writing Objective C code for OSX/iOS. The things that Apple forgot.
 
 Chocolate consists of three modules:
 
-1. Foundation Additions - Categories on the Foundation classes. These
+1. [Foundation Additions][FoundationAdditions] - Categories on the Foundation classes. These
    are intended to be useful for all Objective C code.
 
-2. Core Data Additions - Categories on Core Data classes.
+2. [Core Data Additions][CoreDataAdditions] - Categories on Core Data classes.
 
-3. Testing Additions - Categories on Foundation classes that provide
+3. [Testing Additions][TestingAdditions] - Categories on Foundation classes that provide
    functionality useful when writing Unit Tests. These are not
    intended to be linked in the actual Application code.
 
@@ -26,7 +26,7 @@ then run
 
     $ pod install
 
-and finally import the public header for the Foundation Additions subspec
+and finally import the public header for the [Foundation Additions][FoundationAdditions] subspec
 
     #import <TDTChocolate/TDTFoundationAdditions.h>
 
@@ -55,3 +55,6 @@ Subsequently, you need to select the "Add release notes" on the
 [using-pull-requests]: https://help.github.com/articles/using-pull-requests
 [releases]: https://github.com/talk-to/Chocolate/releases
 [tags]: https://github.com/talk-to/Chocolate/tags
+[FoundationAdditions]: https://github.com/talk-to/Chocolate/tree/master/TDTChocolate/FoundationAdditions
+[CoreDataAdditions]: https://github.com/talk-to/Chocolate/tree/master/TDTChocolate/CoreDataAdditions
+[TestingAdditions]: https://github.com/talk-to/Chocolate/tree/master/TDTChocolate/TestingAdditions
