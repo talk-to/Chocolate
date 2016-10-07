@@ -1,3 +1,7 @@
+[![Version](https://img.shields.io/cocoapods/v/TDTChocolate.svg)][Cocoapods]
+[![License](https://img.shields.io/cocoapods/l/TDTChocolate.svg)][LICENSE]
+[![Platform](https://img.shields.io/cocoapods/p/TDTChocolate.svg)][CocoaDocsDocset]
+
 Chocolate is a library containing additions to Cocoa and Cocoa Touch that
 simplify writing Objective C code for OSX/iOS. The things that Apple forgot.
 
@@ -62,3 +66,5 @@ Subsequently, you need to select the "Add release notes" on the
 [CoreDataAdditions]: https://github.com/talk-to/Chocolate/tree/master/TDTChocolate/CoreDataAdditions
 [TestingAdditions]: https://github.com/talk-to/Chocolate/tree/master/TDTChocolate/TestingAdditions
 [LICENSE]: LICENSE
+[CocoaDocsDocset]: http://cocoadocs.org/docsets/TDTChocolate/
+[Cocoapods]: https://cocoapods.org/pods/TDTChocolate
