@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version  = '2.10.0'
   s.summary  = 'Library containing additions to Cocoa and Cocoa Touch'
   s.homepage = 'https://github.com/talk-to/Chocolate'
-  s.author   = 'Talk.to'
+  s.author   = 'Directi'
   s.license  = 'BSD'
   s.source   = {
     :git => 'https://github.com/talk-to/Chocolate.git',
