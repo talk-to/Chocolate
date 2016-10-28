@@ -64,4 +64,15 @@
   }];
 }
 
+- (void)testItCorreclyConvertsDictionaryToJSONString {
+  NSDictionary *dictionary = @{@"str": @"chocolate",
+                               @"arr": @[@"a", @(1)],
+                               @"num": @(2),
+                               @"dict": @{@"key": @"val"}};
+  NSString *string = dictionary.tdt_JSONString;
+  
+  XCTAssertEqualObjects(@"{\"num\":2,\"arr\":[\"a\",1],\"dict\":{\"key\":\"val\"},\"str\":\"chocolate\"}",
+                        string);
+}
+
 @end

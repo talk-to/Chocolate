@@ -1,5 +1,6 @@
 #import "NSDictionary+TDTAdditions.h"
 #import "TDTAssert.h"
+#import "TDTLog.h"
 
 @implementation NSDictionary (TDTAdditions)
 
@@ -27,6 +28,19 @@
   }
 
   return [data writeToFile:path atomically:useAuxiliaryFile];
+}
+
+- (NSString *)tdt_JSONString {
+  NSError *error;
+  NSData *JSONData = [NSJSONSerialization dataWithJSONObject:self
+                                                     options:0
+                                                       error:&error];
+  
+  if (JSONData == nil) {
+    TDTLogWarn(@"Parsing for JSON: %@ failed with error: %@", self, error);
+    return nil;
+  }
+  return [[NSString alloc] initWithData:JSONData encoding:NSUTF8StringEncoding];
 }
 
 @end
