@@ -1,18 +1,13 @@
-xcodeproj 'TDTChocolateTests'
 workspace '../TDTChocolate'
 
 def import_pods
   pod 'TDTChocolate', :path => '../'
 end
 
-abstract_target 'CommonPods' do
-  target :iOSTests do
-    platform :ios, '7.0'
-    import_pods
-  end
-  
-  target :OSXTests do
-    platform :osx, '10.9'
-    import_pods
-  end
+target 'iOSTests' do
+  import_pods
+end
+
+target 'OSXTests' do
+  import_pods
 end
