@@ -11,7 +11,6 @@
 		2A39BC7F190F8DB200124D96 /* NSArray_TDTNullNormalization_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A39BC7D190F8DB200124D96 /* NSArray_TDTNullNormalization_Tests.m */; };
 		2A39BC81190F8FED00124D96 /* NSDictionary_TDTNullNormalization_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A39BC80190F8FED00124D96 /* NSDictionary_TDTNullNormalization_Tests.m */; };
 		2A39BC82190F8FED00124D96 /* NSDictionary_TDTNullNormalization_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A39BC80190F8FED00124D96 /* NSDictionary_TDTNullNormalization_Tests.m */; };
-		35C27BDC916CD3B29254F846 /* libPods-CommonPods-OSXTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FE3510A988B898331E0DFEE /* libPods-CommonPods-OSXTests.a */; };
 		4EABDFAE552D4EC8C798647E /* libPods-iOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF18CF68CF42055DF989A3A6 /* libPods-iOSTests.a */; };
 		638DC85E1C2182A20038819F /* NSTimeZone_TDTAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 638DC85D1C2182A20038819F /* NSTimeZone_TDTAdditions_Tests.m */; };
 		638DC85F1C2182A80038819F /* NSTimeZone_TDTAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 638DC85D1C2182A20038819F /* NSTimeZone_TDTAdditions_Tests.m */; };
@@ -86,7 +85,6 @@
 		69ECAE461851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ECAE451851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m */; };
 		69ECAE471851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ECAE451851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m */; };
 		BECBA94687E4222CD65ECC99 /* libPods-OSXTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3DAD3B2B972F1F0DAF554FF /* libPods-OSXTests.a */; };
-		F81D8D6FE8F1BF5562DAFDBC /* libPods-CommonPods-iOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B3D89DE5C1327A79C84C1A7 /* libPods-CommonPods-iOSTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -161,7 +159,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6919A161185058C5000AB434 /* XCTest.framework in Frameworks */,
-				35C27BDC916CD3B29254F846 /* libPods-CommonPods-OSXTests.a in Frameworks */,
 				BECBA94687E4222CD65ECC99 /* libPods-OSXTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,7 +170,6 @@
 				6919A17318505B4C000AB434 /* XCTest.framework in Frameworks */,
 				6919A17718505B4D000AB434 /* UIKit.framework in Frameworks */,
 				6919A17518505B4D000AB434 /* Foundation.framework in Frameworks */,
-				F81D8D6FE8F1BF5562DAFDBC /* libPods-CommonPods-iOSTests.a in Frameworks */,
 				4EABDFAE552D4EC8C798647E /* libPods-iOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
