@@ -30,6 +30,8 @@
 
 + (instancetype)tdt_randomNumber;
 
++ (instancetype)tdt_randomNumberBetweenMin:(NSNumber *)min max:(NSNumber *)max;
+
 @end
 
 @interface NSArray (TDTRandomFixtures)
