@@ -45,7 +45,7 @@
  @param min Lower bound on the possible values
  @param max Upper bound on the possible values. Value will always be less than upper bound.
  
- @return NSNumber with value between min <= value < max
+ @return NSNumber with value between min <= value < max. Returns @p nil for incorrect intervals.s
  */
 + (instancetype)tdt_randomNumberBetweenMin:(NSNumber *)min max:(NSNumber *)max;
 
