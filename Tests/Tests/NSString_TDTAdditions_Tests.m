@@ -73,6 +73,7 @@
 
 - (void)testBlanksShouldBeNilled {
   XCTAssertNil([@"" tdt_stringByNillingBlanks]);
+  XCTAssertNil([@" " tdt_stringByNillingBlanks]);
 }
 
 - (void)testNonBlanksShouldBePassedUnchanged {
