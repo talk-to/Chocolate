@@ -84,6 +84,8 @@
 		69ECAE441851CA63006C3176 /* NSDate_TDTComparisons_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ECAE401851CA63006C3176 /* NSDate_TDTComparisons_Tests.m */; };
 		69ECAE461851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ECAE451851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m */; };
 		69ECAE471851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ECAE451851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m */; };
+		800315BB1DED775C003E1CFD /* TDTRandomFixtures_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 800315BA1DED775C003E1CFD /* TDTRandomFixtures_Tests.m */; };
+		800315BC1DED775C003E1CFD /* TDTRandomFixtures_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 800315BA1DED775C003E1CFD /* TDTRandomFixtures_Tests.m */; };
 		BECBA94687E4222CD65ECC99 /* libPods-OSXTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3DAD3B2B972F1F0DAF554FF /* libPods-OSXTests.a */; };
 /* End PBXBuildFile section */
 
@@ -142,6 +144,7 @@
 		69ECAE401851CA63006C3176 /* NSDate_TDTComparisons_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDate_TDTComparisons_Tests.m; sourceTree = "<group>"; };
 		69ECAE451851D2AC006C3176 /* NSFileManager_TDTAdditions_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFileManager_TDTAdditions_Tests.m; sourceTree = "<group>"; };
 		7ACA7B4694C1AFC76D130605 /* Pods-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTests/Pods-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		800315BA1DED775C003E1CFD /* TDTRandomFixtures_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTRandomFixtures_Tests.m; sourceTree = "<group>"; };
 		9B3D89DE5C1327A79C84C1A7 /* libPods-CommonPods-iOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CommonPods-iOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25F159C66FAF8A89EB45AAA /* Pods-OSXTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSXTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OSXTests/Pods-OSXTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A3095AD057F2D9F8C9A1C8C7 /* Pods-CommonPods-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonPods-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CommonPods-iOSTests/Pods-CommonPods-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -314,6 +317,7 @@
 				69027FB1196EB126005A5057 /* NSDictionary_TDTSubsetEquality_Tests.m */,
 				69DD7BD7197D34AA004DFDDE /* XCTAssert_TDTAdditions_Tests.m */,
 				696D4A1719B75B6600EE9A95 /* NSFileManager_TDTTemporaryFilePaths_Tests.m */,
+				800315BA1DED775C003E1CFD /* TDTRandomFixtures_Tests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -539,6 +543,7 @@
 				6904D8DB18BE00BF0016E88A /* NSRunLoop_TDTAsyncVerification_Tests.m in Sources */,
 				69027FB2196EB126005A5057 /* NSDictionary_TDTSubsetEquality_Tests.m in Sources */,
 				69C2DEF41872935A0004C535 /* TDTNSStringExtendedComparisonTests.m in Sources */,
+				800315BB1DED775C003E1CFD /* TDTRandomFixtures_Tests.m in Sources */,
 				699FF3D7187FC9FB00F8257C /* TDTRandomTests.m in Sources */,
 				69CB6FCD18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m in Sources */,
 				696D4A1819B75B6600EE9A95 /* NSFileManager_TDTTemporaryFilePaths_Tests.m in Sources */,
@@ -581,6 +586,7 @@
 				6904D8DC18BE00BF0016E88A /* NSRunLoop_TDTAsyncVerification_Tests.m in Sources */,
 				69027FB3196EB12B005A5057 /* NSDictionary_TDTSubsetEquality_Tests.m in Sources */,
 				69C2DEF51872935A0004C535 /* TDTNSStringExtendedComparisonTests.m in Sources */,
+				800315BC1DED775C003E1CFD /* TDTRandomFixtures_Tests.m in Sources */,
 				699FF3D8187FC9FB00F8257C /* TDTRandomTests.m in Sources */,
 				69CB6FCE18517E78004D35DB /* NSSet_TDTFunctionalAdditions_Tests.m in Sources */,
 				696D4A1919B75B6600EE9A95 /* NSFileManager_TDTTemporaryFilePaths_Tests.m in Sources */,

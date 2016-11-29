@@ -25,7 +25,9 @@
 + (instancetype)tdt_randomNumberBetweenMin:(NSNumber *)min max:(NSNumber *)max {
   long minValue = [min longValue];
   long maxValue = [max longValue];
-  return [NSNumber numberWithLong:(minValue + arc4random_uniform(maxValue - minValue))];
+  return (minValue < maxValue
+          ? [NSNumber numberWithLong:(minValue + arc4random_uniform(maxValue - minValue))]
+          : nil);
 }
 
 @end
