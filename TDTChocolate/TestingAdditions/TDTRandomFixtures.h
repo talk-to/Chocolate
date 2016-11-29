@@ -30,6 +30,23 @@
 
 + (instancetype)tdt_randomNumber;
 
+/**
+ *
+ *
+ *  @param min
+ *  @param max
+ *
+ *  @return
+ */
+/**
+ Method will return a uniformly distributed random number greater than or equal to @p min
+ and less than @p max.
+
+ @param min Lower bound on the possible values
+ @param max Upper bound on the possible values. Value will always be less than upper bound.
+ 
+ @return NSNumber with value between min <= value < max
+ */
 + (instancetype)tdt_randomNumberBetweenMin:(NSNumber *)min max:(NSNumber *)max;
 
 @end
