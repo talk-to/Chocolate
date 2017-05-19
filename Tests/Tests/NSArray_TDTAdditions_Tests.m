@@ -1,6 +1,7 @@
 #import <XCTest/XCTest.h>
 #import <TDTChocolate/TDTTestingAdditions.h>
 #import <TDTChocolate/FoundationAdditions/NSArray+TDTAdditions.h>
+#import <TDTChocolate/FoundationAdditions/NSArray+TDTFunctionalAdditions.h>
 
 @interface NSArray_TDTAdditions_Tests : XCTestCase
 
@@ -65,6 +66,39 @@
   NSArray *expected = @[@4, @3, @2, @1];
   NSArray *result = [receiver tdt_reversedArray];
   XCTAssertEqualObjects(expected, result);
+}
+
+- (NSDictionary *)histogramForArray:(NSArray *)array {
+  __block NSMutableDictionary *histogram = [NSMutableDictionary dictionary];
+  [array tdt_applyBlock:^(id obj) {
+    if (histogram[obj] == nil) {
+      histogram[obj] = @0;
+    }
+    histogram[obj] = @([histogram[obj] longValue] + 1);
+  }];
+  return histogram;
+}
+
+- (BOOL)array:(NSArray *)array1 hasSameElementsAsInArray:(NSArray *)array2 {
+  return [[self histogramForArray:array1] isEqual:[self histogramForArray:array2]];
+}
+
+- (void)testShuffling {
+  NSArray *receiver = @[@1, @2, @3, @4, @5, @6, @7, @8];
+  NSArray *result1 = [receiver tdt_shuffledArray];
+  NSArray *result2 = [receiver tdt_shuffledArray];
+  XCTAssertTrue([self array:receiver hasSameElementsAsInArray:result1]);
+  XCTAssertTrue([self array:receiver hasSameElementsAsInArray:result2]);
+  BOOL shuffledArraysAreDifferent = ![result1 isEqual:receiver] && ![result2 isEqual:result1];
+  for (NSUInteger i = 0; i < 100; i++) {
+    if (shuffledArraysAreDifferent) {
+      break;
+    }
+    result1 = [receiver tdt_shuffledArray];
+    result2 = [receiver tdt_shuffledArray];
+    shuffledArraysAreDifferent = ![result1 isEqual:receiver] && ![result2 isEqual:result1];
+  }
+  XCTAssertTrue(shuffledArraysAreDifferent);
 }
 
 @end
