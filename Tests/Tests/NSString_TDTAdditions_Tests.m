@@ -158,6 +158,11 @@
   XCTAssertFalse([@"abc@def." tdt_isEmail2]);
 }
 
+- (void)testEmailDomainIsCorrect {
+  XCTAssertEqualObjects(@"abc@def.com", @"def.com");
+  XCTAssertEqualObjects(@"abc123@456def.com", @"456def.com");
+}
+
 - (void)testIsBlank {
   XCTAssertTrue([@" \n\t" tdt_isBlankAfterTrimmingWhitespaces]);
   XCTAssertFalse([@" non blank string" tdt_isBlankAfterTrimmingWhitespaces]);
