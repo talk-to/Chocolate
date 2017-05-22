@@ -159,8 +159,8 @@
 }
 
 - (void)testEmailDomainIsCorrect {
-  XCTAssertEqualObjects(@"abc@def.com", @"def.com");
-  XCTAssertEqualObjects(@"abc123@456def.com", @"456def.com");
+  XCTAssertEqualObjects([@"abc@def.com" tdt_emailDomain], @"def.com");
+  XCTAssertEqualObjects([@"abc123@456def.com" tdt_emailDomain], @"456def.com");
 }
 
 - (void)testIsBlank {
