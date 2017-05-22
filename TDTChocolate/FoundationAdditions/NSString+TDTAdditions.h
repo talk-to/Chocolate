@@ -93,6 +93,12 @@
 - (BOOL)tdt_isEmail2;
 
 /**
+ @returns the domain of the email (string followed by the '@').
+ If the string is not an email, nil is returned.
+ */
+- (NSString *)tdt_emailDomain;
+
+/**
  @return Returns YES if string contains only @p whitespace characters.
  */
 - (BOOL)tdt_isBlankAfterTrimmingWhitespaces;

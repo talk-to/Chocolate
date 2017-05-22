@@ -18,4 +18,16 @@
   return [[self reverseObjectEnumerator] allObjects];
 }
 
+- (NSArray *)tdt_shuffledArray {
+  NSMutableArray *mutableArray = [NSMutableArray arrayWithArray:self];
+  srandom((unsigned)time(NULL));
+  NSUInteger count = mutableArray.count;
+  for (NSUInteger i = 0; i < count; ++i) {
+    NSUInteger nElements = count - i;
+    NSUInteger n = ((NSUInteger)arc4random() % nElements) + i;
+    [mutableArray exchangeObjectAtIndex:i withObjectAtIndex:n];
+  }
+  return mutableArray;
+}
+
 @end

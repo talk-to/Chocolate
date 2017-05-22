@@ -18,4 +18,14 @@
                  (int64_t)(seconds * 1000));
 }
 
+- (void)testDateIsThatOfEpochForZeroMillisecondsSinceEpoch {
+  XCTAssertEqualObjects([NSDate tdt_dateFromMillisecondsSinceUnixEpoch:0],
+                        [NSDate dateWithTimeIntervalSince1970:0]);
+}
+
+- (void)testDateFromMillisecondsSinceUnixEpochIsCorrect {
+  XCTAssertEqualObjects([NSDate tdt_dateFromMillisecondsSinceUnixEpoch:1495205100],
+                        [NSDate dateWithString:@"2017-05-19 20:15:00 +0530"]);
+}
+
 @end

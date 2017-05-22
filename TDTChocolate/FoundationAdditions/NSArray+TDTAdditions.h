@@ -30,4 +30,9 @@
  */
 - (NSArray *)tdt_reversedArray;
 
+/**
+ @returns array with the receiver's entries shuffled in random order.
+ */
+- (NSArray *)tdt_shuffledArray;
+
 @end

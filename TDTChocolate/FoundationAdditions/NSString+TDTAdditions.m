@@ -113,4 +113,11 @@
   return ![trimmedString tdt_isNonEmpty];
 }
 
+- (NSString *)tdt_emailDomain {
+  if (![self tdt_isEmail2]) {
+    return nil;
+  }
+  return [[self componentsSeparatedByString:@"@"] lastObject];
+}
+
 @end
