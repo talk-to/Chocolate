@@ -68,21 +68,6 @@
   XCTAssertEqualObjects(expected, result);
 }
 
-- (NSDictionary *)histogramForArray:(NSArray *)array {
-  __block NSMutableDictionary *histogram = [NSMutableDictionary dictionary];
-  [array tdt_applyBlock:^(id obj) {
-    if (histogram[obj] == nil) {
-      histogram[obj] = @0;
-    }
-    histogram[obj] = @([histogram[obj] longValue] + 1);
-  }];
-  return histogram;
-}
-
-- (BOOL)array:(NSArray *)array1 hasSameElementsAsInArray:(NSArray *)array2 {
-  return [[self histogramForArray:array1] isEqual:[self histogramForArray:array2]];
-}
-
 - (void)testShuffling {
   NSArray *receiver = @[@1, @2, @3, @4, @5, @6, @7, @8];
   NSArray *result1 = [receiver tdt_shuffledArray];
@@ -99,6 +84,23 @@
     shuffledArraysAreDifferent = ![result1 isEqual:receiver] && ![result2 isEqual:result1];
   }
   XCTAssertTrue(shuffledArraysAreDifferent);
+}
+
+# pragma mark - Helper methods
+
+- (BOOL)array:(NSArray *)array1 hasSameElementsAsInArray:(NSArray *)array2 {
+  return [[self histogramForArray:array1] isEqual:[self histogramForArray:array2]];
+}
+
+- (NSDictionary *)histogramForArray:(NSArray *)array {
+  __block NSMutableDictionary *histogram = [NSMutableDictionary dictionary];
+  [array tdt_applyBlock:^(id obj) {
+    if (histogram[obj] == nil) {
+      histogram[obj] = @0;
+    }
+    histogram[obj] = @([histogram[obj] longValue] + 1);
+  }];
+  return histogram;
 }
 
 @end
