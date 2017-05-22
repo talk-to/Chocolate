@@ -86,6 +86,28 @@
   XCTAssertTrue(shuffledArraysAreDifferent);
 }
 
+- (void)testShuffledArrayHasSameElementsAsTheOriginalArray {
+  NSArray *receiver = @[@1, @2, @3, @4, @5, @6, @7, @8];
+  NSArray *result = [receiver tdt_shuffledArray];
+  XCTAssertTrue([self array:receiver hasSameElementsAsInArray:result]);
+}
+
+- (void)testTwoShuffledArraysAreDifferentForSameElements {
+  NSArray *receiver = @[@1, @2, @3, @4, @5, @6, @7, @8];
+  NSArray *result1 = [receiver tdt_shuffledArray];
+  NSArray *result2 = [receiver tdt_shuffledArray];
+  BOOL shuffledArraysAreDifferent = ![result1 isEqual:receiver] && ![result2 isEqual:result1];
+  for (NSUInteger i = 0; i < 100; i++) {
+    if (shuffledArraysAreDifferent) {
+      break;
+    }
+    result1 = [receiver tdt_shuffledArray];
+    result2 = [receiver tdt_shuffledArray];
+    shuffledArraysAreDifferent = ![result1 isEqual:receiver] && ![result2 isEqual:result1];
+  }
+  XCTAssertTrue(shuffledArraysAreDifferent);
+}
+
 # pragma mark - Helper methods
 
 - (BOOL)array:(NSArray *)array1 hasSameElementsAsInArray:(NSArray *)array2 {
