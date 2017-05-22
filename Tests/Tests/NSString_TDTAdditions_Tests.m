@@ -158,9 +158,14 @@
   XCTAssertFalse([@"abc@def." tdt_isEmail2]);
 }
 
-- (void)testEmailDomainIsCorrect {
+- (void)testEmailDomainIsCorrectIfValidEmail {
   XCTAssertEqualObjects([@"abc@def.com" tdt_emailDomain], @"def.com");
   XCTAssertEqualObjects([@"abc123@456def.com" tdt_emailDomain], @"456def.com");
+}
+
+- (void)testEmailDomainIsNilIfNotValidEmail {
+  XCTAssertNil([@"abcdef.com" tdt_emailDomain]);
+  XCTAssertNil([@"abc@com" tdt_emailDomain]);
 }
 
 - (void)testIsBlank {

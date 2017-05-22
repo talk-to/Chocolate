@@ -94,7 +94,7 @@
 
 /**
  @returns the domain of the email (string followed by the '@').
- The method fails if the string is not an email.
+ If the string is not an email, nil is returned.
  */
 - (NSString *)tdt_emailDomain;
 

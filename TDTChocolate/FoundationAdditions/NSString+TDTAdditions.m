@@ -114,7 +114,9 @@
 }
 
 - (NSString *)tdt_emailDomain {
-  TDTAssert([self tdt_isEmail2]);
+  if (![self tdt_isEmail2]) {
+    return nil;
+  }
   return [[self componentsSeparatedByString:@"@"] lastObject];
 }
 
