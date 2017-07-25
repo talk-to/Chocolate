@@ -49,4 +49,13 @@
   return count;
 }
 
+- (void)tdt_resetAttributes {
+  NSDictionary *attributes = [[NSEntityDescription
+                               entityForName:[[self class] tdt_entityName] inManagedObjectContext:self.managedObjectContext] attributesByName];
+  for (NSString *attributeName in attributes) {
+    NSAttributeDescription *attributeDescription = [attributes objectForKey:attributeName];
+    [self setValue:attributeDescription.defaultValue forKey:attributeName];
+  }
+}
+
 @end

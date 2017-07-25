@@ -44,4 +44,9 @@
 + (NSUInteger)tdt_countForPredicate:(NSPredicate *)predicate
              inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 
+/**
+ Resets the attributes for any NSManagedObject to their default values
+ */
+- (void)tdt_resetAttributes;
+
 @end
