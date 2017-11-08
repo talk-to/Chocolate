@@ -97,4 +97,11 @@
  */
 - (BOOL)tdt_isBlankAfterTrimmingWhitespaces;
 
+/*
+ Whenever we use mic icon for speech to text from keyboard, then while processing speech, a special
+ object replacement character \uFFFC is shown in the text view.
+ @return Return YES if string contains the above mentioned character, otherwise NO.
+ */
+- (BOOL)tdt_isDictationCharacterPresent;
+
 @end
