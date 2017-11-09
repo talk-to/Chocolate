@@ -83,11 +83,11 @@ TDTAssert((__TDT_v1 == __TDT_v2) || [__TDT_v1 isEqual:__TDT_v2], ## format); \
 /// Ensure that the current line is not executed on the main thread
 #define TDTAssertIsNotMainThread() \
 TDTAssert(![NSThread isMainThread], \
-@"attempt to run background thread method from main thread. stack trace: %@",\
+@"Attempted to run on MAIN thread when not expected. Stack trace: %@",\
 [NSThread callStackSymbols])
 
 /// Ensure that the current line is executed on the main thread
 #define TDTAssertIsMainThread() \
 TDTAssert([NSThread isMainThread], \
-@"attempt to run background thread method from main thread. stack trace: %@",\
+@"Attempted to run on thread OTHER than main thread when not expected. Stack trace: %@",\
 [NSThread callStackSymbols])
