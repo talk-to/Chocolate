@@ -1,12 +1,12 @@
 PODS:
-  - TDTChocolate (2.12.0):
-    - TDTChocolate/CoreDataAdditions (= 2.12.0)
-    - TDTChocolate/FoundationAdditions (= 2.12.0)
-    - TDTChocolate/TestingAdditions (= 2.12.0)
-  - TDTChocolate/CoreDataAdditions (2.12.0):
+  - TDTChocolate (2.13.0):
+    - TDTChocolate/CoreDataAdditions (= 2.13.0)
+    - TDTChocolate/FoundationAdditions (= 2.13.0)
+    - TDTChocolate/TestingAdditions (= 2.13.0)
+  - TDTChocolate/CoreDataAdditions (2.13.0):
     - TDTChocolate/FoundationAdditions
-  - TDTChocolate/FoundationAdditions (2.12.0)
-  - TDTChocolate/TestingAdditions (2.12.0)
+  - TDTChocolate/FoundationAdditions (2.13.0)
+  - TDTChocolate/TestingAdditions (2.13.0)
 
 DEPENDENCIES:
   - TDTChocolate (from `../`)
@@ -16,8 +16,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  TDTChocolate: cfe420907e309b3e70ef31189f036aecee8cd21e
+  TDTChocolate: 85abf00b779241ea291296236976ba35ce77d37e
 
 PODFILE CHECKSUM: f8e50f5c05726a6efa7b8fbe50c99c5f565e5ed8
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0
