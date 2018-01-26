@@ -1,6 +1,7 @@
 #import "NSManagedObject+TDTAdditions.h"
 #import "NSManagedObjectContext+TDTAdditions.h"
 #import "../FoundationAdditions/TDTAssert.h"
+#import "NSArray+TDTFunctionalAdditions.h"
 
 @implementation NSManagedObject (TDTAdditions)
 
@@ -33,7 +34,12 @@
                      inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext {
   NSArray *results = [self tdt_fetchObjectsForPredicate:predicate
                                  inManagedObjectContext:managedObjectContext];
-  TDTAssert([results count] <= 1, @"Multiple objects matching predicate (%@): %@", predicate, results);
+  if ([results count] > 1) {
+    [results tdt_applyBlock:^(id obj) {
+      [obj willAccessValueForKey:nil];
+    }];
+    TDTAssertFailure(@"Multiple objects matching predicate (%@): %@", predicate, results);
+  }
   return [results firstObject];
 }
 
