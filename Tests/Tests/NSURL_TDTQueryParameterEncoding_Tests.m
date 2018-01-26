@@ -30,4 +30,11 @@
   XCTAssertEqualObjects(@"http://example.com?x=a&y=b", [result absoluteString]);
 }
 
+- (void)testEncodingOfPipeCharacter {
+  NSDictionary *parameters = @{ @"x": @"a|b", @"y": @"b|c" };
+  NSURL *receiver = [NSURL URLWithString:@"http://example.com"];
+  NSURL *result = [receiver tdt_URLWithQueryParameters:parameters];
+  XCTAssertEqualObjects(@"http://example.com?x=a%7Cb&y=b%7Cc", [result absoluteString]);
+}
+
 @end
