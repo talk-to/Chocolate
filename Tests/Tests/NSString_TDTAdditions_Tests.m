@@ -163,4 +163,11 @@
   XCTAssertFalse([@" non blank string" tdt_isBlankAfterTrimmingWhitespaces]);
 }
 
+- (void)testMD5IsCorrectlyCalculated {
+  NSString *testString = @"interesting";
+  // $ md5 <(echo -n "interesting")
+  NSString *md5 = @"a76637b62ea99acda12f5859313f539a";
+  XCTAssertEqualObjects(md5, [testString tdt_md5]);
+}
+
 @end
