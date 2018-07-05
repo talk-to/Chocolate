@@ -30,4 +30,11 @@
 - (BOOL)tdt_writeInBinaryFormatToFile:(NSString *)path
                            atomically:(BOOL)useAuxiliaryFile;
 
+/**
+ *  Gives the JSON representation of the receiver.
+ *
+ *  @return JSON in string.
+ */
+- (NSString *)tdt_JSONString;
+
 @end

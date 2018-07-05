@@ -113,4 +113,10 @@
   return ![trimmedString tdt_isNonEmpty];
 }
 
+- (BOOL)tdt_isDictationCharacterPresent {
+  NSCharacterSet *dictationPlaceholderCharacterSet = [NSCharacterSet characterSetWithCharactersInString:@"\uFFFC"];
+  NSRange range = [self rangeOfCharacterFromSet:dictationPlaceholderCharacterSet];
+  return range.location != NSNotFound;
+}
+
 @end
