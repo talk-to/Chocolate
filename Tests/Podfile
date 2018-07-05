@@ -1,4 +1,3 @@
-workspace '../TDTChocolate'
 
 def import_pods
     pod 'TDTChocolate', :path => '../'
