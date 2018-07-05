@@ -26,7 +26,8 @@ static BOOL TDTPartialStructureEqualityIsMatch(id obj, id otherObj) {
   [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
     id otherObj = array[idx];
     if (!TDTPartialStructureEqualityIsMatch(obj, otherObj)) {
-      *stop = YES, result = NO;
+      *stop = YES;
+      result = NO;
     }
   }];
   return result;
@@ -45,7 +46,8 @@ static BOOL TDTPartialStructureEqualityIsMatch(id obj, id otherObj) {
   [self enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
     id otherObj = dict[key];
     if (!TDTPartialStructureEqualityIsMatch(obj, otherObj)) {
-      *stop = YES, result = NO;
+      *stop = YES;
+      result = NO;
     }
   }];
   return result;
