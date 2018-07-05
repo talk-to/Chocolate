@@ -1,6 +1,8 @@
 source 'https://github.com/CocoaPods/Specs.git'
 source 'git@github.com:talk-to/private-cocoapod-specs.git'
 
+use_frameworks!
+
 abstract_target 'CommonPods' do
     pod 'TDTChocolate', :path => '../'
 
