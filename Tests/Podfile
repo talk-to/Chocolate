@@ -1,12 +1,13 @@
+source 'https://github.com/CocoaPods/Specs.git'
+source 'git@github.com:talk-to/private-cocoapod-specs.git'
 
-def import_pods
+abstract_target 'CommonPods' do
     pod 'TDTChocolate', :path => '../'
-end
 
-target 'iOSTests' do
-  import_pods
-end
-
-target 'OSXTests' do
-  import_pods
+    target :iOSTests do
+        platform :ios, '8.0'
+    end
+    target :OSXTests do
+        platform :osx, '10.9'
+    end
 end
