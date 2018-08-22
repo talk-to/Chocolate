@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version  = '2.14.1'
   s.summary  = 'Library containing additions to Cocoa and Cocoa Touch'
   s.homepage = 'https://github.com/talk-to/Chocolate'
-  s.author   = 'Talk.to'
+  s.author   = 'Directi'
   s.license  = 'BSD'
   s.source   = {
     :git => 'https://github.com/talk-to/Chocolate.git',
@@ -11,8 +11,8 @@ Pod::Spec.new do |s|
   }
   s.requires_arc = true
 
-  s.ios.deployment_target = '7.0'
-  s.osx.deployment_target = '10.8'
+  s.ios.deployment_target = '8.0'
+  s.osx.deployment_target = '10.9'
 
   s.header_mappings_dir = 'TDTChocolate'
 

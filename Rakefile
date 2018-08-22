@@ -51,7 +51,7 @@ def release(**options)
   end
 
   replace_spec_version(podspec_path, current_version, new_version)
-  sh "cd Tests && pod update --no-repo-update TDTChocolate"
+  sh "pod update --no-repo-update TDTChocolate --project-directory=Tests"
 
   sh "git commit -m 'Update version to #{new_version}' -- #{podspec_path} Tests/Podfile.lock"
 

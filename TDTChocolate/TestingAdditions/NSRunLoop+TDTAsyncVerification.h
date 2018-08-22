@@ -13,7 +13,7 @@
 
 extern const NSTimeInterval TDTAsyncVerificationTimeoutDefault;
 
-typedef BOOL (^TDTAsyncVerificationCompletionTest)();
+typedef BOOL (^TDTAsyncVerificationCompletionTest)(void);
 
 @interface NSRunLoop (TDTAsyncVerification)
 

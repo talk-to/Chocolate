@@ -26,7 +26,7 @@
   long minValue = [min longValue];
   long maxValue = [max longValue];
   return (minValue < maxValue
-          ? [NSNumber numberWithLong:(minValue + arc4random_uniform(maxValue - minValue))]
+          ? [NSNumber numberWithLong:(minValue + arc4random_uniform((uint32_t)(maxValue - minValue)))]
           : nil);
 }
 

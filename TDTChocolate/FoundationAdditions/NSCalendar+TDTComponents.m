@@ -5,7 +5,7 @@
 
 - (NSInteger)tdt_hoursSinceDate:(NSDate *)date {
   TDTParameterAssert(date);
-  NSDateComponents *dateComponents = [self components:NSHourCalendarUnit
+  NSDateComponents *dateComponents = [self components:NSCalendarUnitHour
                                              fromDate:date
                                                toDate:[NSDate date]
                                               options:0];
@@ -14,7 +14,7 @@
 
 - (NSInteger)tdt_daysSinceDate:(NSDate *)date {
   TDTParameterAssert(date);
-  NSDateComponents *dateComponents = [self components:NSDayCalendarUnit
+  NSDateComponents *dateComponents = [self components:NSCalendarUnitDay
                                              fromDate:date
                                                toDate:[NSDate date]
                                               options:0];

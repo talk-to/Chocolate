@@ -1,14 +1,18 @@
+[![Version](https://img.shields.io/cocoapods/v/TDTChocolate.svg)][Cocoapods]
+[![License](https://img.shields.io/cocoapods/l/TDTChocolate.svg)][LICENSE]
+[![Platform](https://img.shields.io/cocoapods/p/TDTChocolate.svg)][CocoaDocsDocset]
+
 Chocolate is a library containing additions to Cocoa and Cocoa Touch that
 simplify writing Objective C code for OSX/iOS. The things that Apple forgot.
 
 Chocolate consists of three modules:
 
-1. Foundation Additions - Categories on the Foundation classes. These
+1. [Foundation Additions][FoundationAdditions] - Categories on the Foundation classes. These
    are intended to be useful for all Objective C code.
 
-2. Core Data Additions - Categories on Core Data classes.
+2. [Core Data Additions][CoreDataAdditions] - Categories on Core Data classes.
 
-3. Testing Additions - Categories on Foundation classes that provide
+3. [Testing Additions][TestingAdditions] - Categories on Foundation classes that provide
    functionality useful when writing Unit Tests. These are not
    intended to be linked in the actual Application code.
 
@@ -17,16 +21,15 @@ Chocolate consists of three modules:
 Chocolate is published as a [CocoaPod][CocoaPods], with each the
 three modules above listed as a separate subspec.
 
-For example, to use the first public release of Chocolate's Foundation
-Additions, we will need to add the following to our `Podfile`
+For example, to use Chocolate's [Foundation Additions][FoundationAdditions], add the following to your `Podfile`
 
-    pod 'TDTChocolate/FoundationAdditions', :git => 'git@github.com:talk-to/Chocolate', :tag => '1.0.0'
+    pod 'TDTChocolate/FoundationAdditions'
 
 then run
 
     $ pod install
 
-and finally import the public header for the Foundation Additions subspec
+and finally import the public header for the [Foundation Additions][FoundationAdditions] subspec
 
     #import <TDTChocolate/TDTFoundationAdditions.h>
 
@@ -38,6 +41,10 @@ See the [Release Notes][releases].
 
 [Pull Requests are welcome!][using-pull-requests]
 
+## License
+
+Available under the BSD license. See the [LICENSE][LICENSE] file for more info.
+
 ### [For Maintainers] Releasing a new version
 
 Use the following rake task to create a new release. This will ask you
@@ -48,10 +55,16 @@ release notes.
 
 Subsequently, you need to select the "Add release notes" on the
 [GitHub tags listing][tags] for the release to show up on the
-[Releases][releases] page.
+[Releases][releases] page. Or you can "Draft a new release" on [releases page][releases].
 
 [CocoaPods]: http://cocoapods.org/
 [ios-guides]: https://github.com/talk-to/ios-guides
 [using-pull-requests]: https://help.github.com/articles/using-pull-requests
 [releases]: https://github.com/talk-to/Chocolate/releases
 [tags]: https://github.com/talk-to/Chocolate/tags
+[FoundationAdditions]: https://github.com/talk-to/Chocolate/tree/master/TDTChocolate/FoundationAdditions
+[CoreDataAdditions]: https://github.com/talk-to/Chocolate/tree/master/TDTChocolate/CoreDataAdditions
+[TestingAdditions]: https://github.com/talk-to/Chocolate/tree/master/TDTChocolate/TestingAdditions
+[LICENSE]: LICENSE
+[CocoaDocsDocset]: http://cocoadocs.org/docsets/TDTChocolate/
+[Cocoapods]: https://cocoapods.org/pods/TDTChocolate

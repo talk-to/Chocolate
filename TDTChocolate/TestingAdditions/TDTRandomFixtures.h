@@ -31,14 +31,6 @@
 + (instancetype)tdt_randomNumber;
 
 /**
- *
- *
- *  @param min
- *  @param max
- *
- *  @return
- */
-/**
  Method will return a uniformly distributed random number greater than or equal to @p min
  and less than @p max.
 
