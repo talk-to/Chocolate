@@ -12,7 +12,7 @@
 @implementation NSString (TDTQueryParameterEncoding)
 
 - (NSString *)tdt_stringByEncodingQueryParameter {
-  NSString *charactersToEscape = @"!*'();:@&=+$,/?%#[]\" |";
+  NSString *charactersToEscape = @"!*'();:@&=+$,/?%#[]\" |<>{}`^~\\";
   NSCharacterSet *allowedCharacters = [[NSCharacterSet characterSetWithCharactersInString:charactersToEscape] invertedSet];
   return [self stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacters];
 }
