@@ -1,4 +1,5 @@
 #import "FoundationAdditions/TDTLog.h"
+#import "FoundationAdditions/NSString+TDTDeprecatedMethodResurrections.h"
 #import "FoundationAdditions/TDTAssert.h"
 #import "FoundationAdditions/TDTSuppressPerformSelectorLeakWarning.h"
 #import "FoundationAdditions/NSArray+TDTFunctionalAdditions.h"
