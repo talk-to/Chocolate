@@ -104,4 +104,9 @@
  */
 - (BOOL)tdt_isDictationCharacterPresent;
 
+/**
+ @return The MD5 of the receiver
+ */
+- (NSString *)tdt_md5;
+
 @end
